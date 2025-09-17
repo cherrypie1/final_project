@@ -1,0 +1,28 @@
+[2025-09-06T18:10:35.847+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: raw_to_dds.load_dds_users manual__2025-09-06T18:10:22.699813+00:00 [queued]>
+[2025-09-06T18:10:35.882+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: raw_to_dds.load_dds_users manual__2025-09-06T18:10:22.699813+00:00 [queued]>
+[2025-09-06T18:10:35.883+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 3
+[2025-09-06T18:10:35.935+0000] {taskinstance.py:1327} INFO - Executing <Task(PostgresOperator): load_dds_users> on 2025-09-06 18:10:22.699813+00:00
+[2025-09-06T18:10:36.017+0000] {standard_task_runner.py:57} INFO - Started process 617 to run task
+[2025-09-06T18:10:36.055+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'raw_to_dds', 'load_dds_users', 'manual__2025-09-06T18:10:22.699813+00:00', '--job-id', '60', '--raw', '--subdir', 'DAGS_FOLDER/raw_to_dds.py', '--cfg-path', '/tmp/tmp8jo1iotu']
+[2025-09-06T18:10:36.077+0000] {standard_task_runner.py:85} INFO - Job 60: Subtask load_dds_users
+[2025-09-06T18:10:36.192+0000] {logging_mixin.py:150} WARNING - /home/***/.local/lib/python3.7/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-09-06T18:10:36.477+0000] {task_command.py:410} INFO - Running <TaskInstance: raw_to_dds.load_dds_users manual__2025-09-06T18:10:22.699813+00:00 [running]> on host ef9bb72bce84
+[2025-09-06T18:10:36.837+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='raw_to_dds' AIRFLOW_CTX_TASK_ID='load_dds_users' AIRFLOW_CTX_EXECUTION_DATE='2025-09-06T18:10:22.699813+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-09-06T18:10:22.699813+00:00'
+[2025-09-06T18:10:36.840+0000] {sql.py:265} INFO - Executing: 
+        INSERT INTO dds.users (user_id, city, country)
+        SELECT DISTINCT user_id, city, country
+        FROM raw.events
+        ON CONFLICT (user_id) DO NOTHING;
+        
+[2025-09-06T18:10:36.885+0000] {base.py:73} INFO - Using connection ID 'postgres_default' for task execution.
+[2025-09-06T18:10:37.369+0000] {base.py:73} INFO - Using connection ID 'postgres_default' for task execution.
+[2025-09-06T18:10:37.407+0000] {sql.py:375} INFO - Running statement: 
+        INSERT INTO dds.users (user_id, city, country)
+        SELECT DISTINCT user_id, city, country
+        FROM raw.events
+        ON CONFLICT (user_id) DO NOTHING;
+        , parameters: None
+[2025-09-06T18:10:37.419+0000] {sql.py:384} INFO - Rows affected: 0
+[2025-09-06T18:10:37.458+0000] {taskinstance.py:1350} INFO - Marking task as SUCCESS. dag_id=raw_to_dds, task_id=load_dds_users, execution_date=20250906T181022, start_date=20250906T181035, end_date=20250906T181037
+[2025-09-06T18:10:37.543+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 0
+[2025-09-06T18:10:37.733+0000] {taskinstance.py:2653} INFO - 0 downstream tasks scheduled from follow-on schedule check

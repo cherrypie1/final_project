@@ -1,0 +1,168 @@
+[2025-09-14T20:19:51.426+0000] {processor.py:157} INFO - Started process (PID=15736) to work on /opt/airflow/dags/dds_to_clickhouse.py
+[2025-09-14T20:19:51.427+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dds_to_clickhouse.py for tasks to queue
+[2025-09-14T20:19:51.429+0000] {logging_mixin.py:150} INFO - [2025-09-14T20:19:51.429+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dds_to_clickhouse.py
+[2025-09-14T20:19:51.876+0000] {logging_mixin.py:150} INFO - [2025-09-14T20:19:51.862+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/dds_to_clickhouse.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/dds_to_clickhouse.py", line 5, in <module>
+    from clickhouse_driver import Client
+ModuleNotFoundError: No module named 'clickhouse_driver'
+[2025-09-14T20:19:51.878+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/dds_to_clickhouse.py
+[2025-09-14T20:19:51.911+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dds_to_clickhouse.py took 0.488 seconds
+[2025-09-14T20:20:22.105+0000] {processor.py:157} INFO - Started process (PID=15790) to work on /opt/airflow/dags/dds_to_clickhouse.py
+[2025-09-14T20:20:22.107+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dds_to_clickhouse.py for tasks to queue
+[2025-09-14T20:20:22.109+0000] {logging_mixin.py:150} INFO - [2025-09-14T20:20:22.109+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dds_to_clickhouse.py
+[2025-09-14T20:20:22.749+0000] {logging_mixin.py:150} INFO - [2025-09-14T20:20:22.741+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/dds_to_clickhouse.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/dds_to_clickhouse.py", line 5, in <module>
+    from clickhouse_driver import Client
+ModuleNotFoundError: No module named 'clickhouse_driver'
+[2025-09-14T20:20:22.750+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/dds_to_clickhouse.py
+[2025-09-14T20:20:22.788+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dds_to_clickhouse.py took 0.688 seconds
+[2025-09-14T20:20:53.219+0000] {processor.py:157} INFO - Started process (PID=15844) to work on /opt/airflow/dags/dds_to_clickhouse.py
+[2025-09-14T20:20:53.220+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dds_to_clickhouse.py for tasks to queue
+[2025-09-14T20:20:53.223+0000] {logging_mixin.py:150} INFO - [2025-09-14T20:20:53.222+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dds_to_clickhouse.py
+[2025-09-14T20:20:54.029+0000] {logging_mixin.py:150} INFO - [2025-09-14T20:20:54.019+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/dds_to_clickhouse.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/dds_to_clickhouse.py", line 5, in <module>
+    from clickhouse_driver import Client
+ModuleNotFoundError: No module named 'clickhouse_driver'
+[2025-09-14T20:20:54.032+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/dds_to_clickhouse.py
+[2025-09-14T20:20:54.083+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dds_to_clickhouse.py took 0.870 seconds
+[2025-09-14T20:21:24.504+0000] {processor.py:157} INFO - Started process (PID=15898) to work on /opt/airflow/dags/dds_to_clickhouse.py
+[2025-09-14T20:21:24.505+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dds_to_clickhouse.py for tasks to queue
+[2025-09-14T20:21:24.507+0000] {logging_mixin.py:150} INFO - [2025-09-14T20:21:24.506+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dds_to_clickhouse.py
+[2025-09-14T20:21:25.034+0000] {logging_mixin.py:150} INFO - [2025-09-14T20:21:25.026+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/dds_to_clickhouse.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/dds_to_clickhouse.py", line 5, in <module>
+    from clickhouse_driver import Client
+ModuleNotFoundError: No module named 'clickhouse_driver'
+[2025-09-14T20:21:25.036+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/dds_to_clickhouse.py
+[2025-09-14T20:21:25.075+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dds_to_clickhouse.py took 0.576 seconds
+[2025-09-14T20:21:55.878+0000] {processor.py:157} INFO - Started process (PID=15952) to work on /opt/airflow/dags/dds_to_clickhouse.py
+[2025-09-14T20:21:55.880+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dds_to_clickhouse.py for tasks to queue
+[2025-09-14T20:21:55.881+0000] {logging_mixin.py:150} INFO - [2025-09-14T20:21:55.881+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dds_to_clickhouse.py
+[2025-09-14T20:21:56.375+0000] {logging_mixin.py:150} INFO - [2025-09-14T20:21:56.366+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/dds_to_clickhouse.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/dds_to_clickhouse.py", line 5, in <module>
+    from clickhouse_driver import Client
+ModuleNotFoundError: No module named 'clickhouse_driver'
+[2025-09-14T20:21:56.377+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/dds_to_clickhouse.py
+[2025-09-14T20:21:56.408+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dds_to_clickhouse.py took 0.535 seconds
+[2025-09-14T20:22:27.236+0000] {processor.py:157} INFO - Started process (PID=16011) to work on /opt/airflow/dags/dds_to_clickhouse.py
+[2025-09-14T20:22:27.237+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dds_to_clickhouse.py for tasks to queue
+[2025-09-14T20:22:27.238+0000] {logging_mixin.py:150} INFO - [2025-09-14T20:22:27.238+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dds_to_clickhouse.py
+[2025-09-14T20:22:27.798+0000] {logging_mixin.py:150} INFO - [2025-09-14T20:22:27.792+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/dds_to_clickhouse.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/dds_to_clickhouse.py", line 5, in <module>
+    from clickhouse_driver import Client
+ModuleNotFoundError: No module named 'clickhouse_driver'
+[2025-09-14T20:22:27.799+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/dds_to_clickhouse.py
+[2025-09-14T20:22:27.827+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dds_to_clickhouse.py took 0.595 seconds
+[2025-09-14T20:22:57.904+0000] {processor.py:157} INFO - Started process (PID=16065) to work on /opt/airflow/dags/dds_to_clickhouse.py
+[2025-09-14T20:22:57.906+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dds_to_clickhouse.py for tasks to queue
+[2025-09-14T20:22:57.907+0000] {logging_mixin.py:150} INFO - [2025-09-14T20:22:57.907+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dds_to_clickhouse.py
+[2025-09-14T20:22:58.666+0000] {logging_mixin.py:150} INFO - [2025-09-14T20:22:58.656+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/dds_to_clickhouse.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/dds_to_clickhouse.py", line 5, in <module>
+    from clickhouse_driver import Client
+ModuleNotFoundError: No module named 'clickhouse_driver'
+[2025-09-14T20:22:58.669+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/dds_to_clickhouse.py
+[2025-09-14T20:22:58.721+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dds_to_clickhouse.py took 0.822 seconds
+[2025-09-14T20:23:29.131+0000] {processor.py:157} INFO - Started process (PID=16119) to work on /opt/airflow/dags/dds_to_clickhouse.py
+[2025-09-14T20:23:29.133+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dds_to_clickhouse.py for tasks to queue
+[2025-09-14T20:23:29.134+0000] {logging_mixin.py:150} INFO - [2025-09-14T20:23:29.134+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dds_to_clickhouse.py
+[2025-09-14T20:23:29.614+0000] {logging_mixin.py:150} INFO - [2025-09-14T20:23:29.606+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/dds_to_clickhouse.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/dds_to_clickhouse.py", line 5, in <module>
+    from clickhouse_driver import Client
+ModuleNotFoundError: No module named 'clickhouse_driver'
+[2025-09-14T20:23:29.616+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/dds_to_clickhouse.py
+[2025-09-14T20:23:29.642+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dds_to_clickhouse.py took 0.516 seconds
+[2025-09-14T20:23:59.807+0000] {processor.py:157} INFO - Started process (PID=16173) to work on /opt/airflow/dags/dds_to_clickhouse.py
+[2025-09-14T20:23:59.809+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dds_to_clickhouse.py for tasks to queue
+[2025-09-14T20:23:59.813+0000] {logging_mixin.py:150} INFO - [2025-09-14T20:23:59.812+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dds_to_clickhouse.py
+[2025-09-14T20:24:00.997+0000] {logging_mixin.py:150} INFO - [2025-09-14T20:24:00.987+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/dds_to_clickhouse.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/dds_to_clickhouse.py", line 5, in <module>
+    from clickhouse_driver import Client
+ModuleNotFoundError: No module named 'clickhouse_driver'
+[2025-09-14T20:24:01.000+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/dds_to_clickhouse.py
+[2025-09-14T20:24:01.073+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dds_to_clickhouse.py took 1.273 seconds
+[2025-09-14T20:24:31.648+0000] {processor.py:157} INFO - Started process (PID=16227) to work on /opt/airflow/dags/dds_to_clickhouse.py
+[2025-09-14T20:24:31.650+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dds_to_clickhouse.py for tasks to queue
+[2025-09-14T20:24:31.655+0000] {logging_mixin.py:150} INFO - [2025-09-14T20:24:31.653+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dds_to_clickhouse.py
+[2025-09-14T20:24:33.145+0000] {logging_mixin.py:150} INFO - [2025-09-14T20:24:33.134+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/dds_to_clickhouse.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/dds_to_clickhouse.py", line 5, in <module>
+    from clickhouse_driver import Client
+ModuleNotFoundError: No module named 'clickhouse_driver'
+[2025-09-14T20:24:33.148+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/dds_to_clickhouse.py
+[2025-09-14T20:24:33.192+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dds_to_clickhouse.py took 1.564 seconds
+[2025-09-14T20:25:03.580+0000] {processor.py:157} INFO - Started process (PID=16281) to work on /opt/airflow/dags/dds_to_clickhouse.py
+[2025-09-14T20:25:03.583+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dds_to_clickhouse.py for tasks to queue
+[2025-09-14T20:25:03.585+0000] {logging_mixin.py:150} INFO - [2025-09-14T20:25:03.585+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dds_to_clickhouse.py
+[2025-09-14T20:25:04.753+0000] {logging_mixin.py:150} INFO - [2025-09-14T20:25:04.741+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/dds_to_clickhouse.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/dds_to_clickhouse.py", line 5, in <module>
+    from clickhouse_driver import Client
+ModuleNotFoundError: No module named 'clickhouse_driver'
+[2025-09-14T20:25:04.756+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/dds_to_clickhouse.py
+[2025-09-14T20:25:04.821+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dds_to_clickhouse.py took 1.248 seconds
+[2025-09-14T20:25:35.379+0000] {processor.py:157} INFO - Started process (PID=16335) to work on /opt/airflow/dags/dds_to_clickhouse.py
+[2025-09-14T20:25:35.381+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dds_to_clickhouse.py for tasks to queue
+[2025-09-14T20:25:35.382+0000] {logging_mixin.py:150} INFO - [2025-09-14T20:25:35.381+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dds_to_clickhouse.py
+[2025-09-14T20:25:35.851+0000] {logging_mixin.py:150} INFO - [2025-09-14T20:25:35.845+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/dds_to_clickhouse.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/dds_to_clickhouse.py", line 5, in <module>
+    from clickhouse_driver import Client
+ModuleNotFoundError: No module named 'clickhouse_driver'
+[2025-09-14T20:25:35.853+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/dds_to_clickhouse.py
+[2025-09-14T20:25:35.881+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dds_to_clickhouse.py took 0.507 seconds

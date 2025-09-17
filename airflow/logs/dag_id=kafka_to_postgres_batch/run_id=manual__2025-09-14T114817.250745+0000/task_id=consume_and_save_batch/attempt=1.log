@@ -1,0 +1,50 @@
+[2025-09-14T11:57:48.457+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: kafka_to_postgres_batch.consume_and_save_batch manual__2025-09-14T11:48:17.250745+00:00 [queued]>
+[2025-09-14T11:57:48.479+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: kafka_to_postgres_batch.consume_and_save_batch manual__2025-09-14T11:48:17.250745+00:00 [queued]>
+[2025-09-14T11:57:48.479+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 3
+[2025-09-14T11:57:48.507+0000] {taskinstance.py:1327} INFO - Executing <Task(PythonOperator): consume_and_save_batch> on 2025-09-14 11:48:17.250745+00:00
+[2025-09-14T11:57:48.517+0000] {standard_task_runner.py:57} INFO - Started process 2062 to run task
+[2025-09-14T11:57:48.528+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'kafka_to_postgres_batch', 'consume_and_save_batch', 'manual__2025-09-14T11:48:17.250745+00:00', '--job-id', '75', '--raw', '--subdir', 'DAGS_FOLDER/dags.py', '--cfg-path', '/tmp/tmp6yn_8iuz']
+[2025-09-14T11:57:48.533+0000] {standard_task_runner.py:85} INFO - Job 75: Subtask consume_and_save_batch
+[2025-09-14T11:57:48.564+0000] {logging_mixin.py:150} WARNING - /home/***/.local/lib/python3.7/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-09-14T11:57:48.761+0000] {task_command.py:410} INFO - Running <TaskInstance: kafka_to_postgres_batch.consume_and_save_batch manual__2025-09-14T11:48:17.250745+00:00 [running]> on host 3deaa5b4a23c
+[2025-09-14T11:57:49.135+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='kafka_to_postgres_batch' AIRFLOW_CTX_TASK_ID='consume_and_save_batch' AIRFLOW_CTX_EXECUTION_DATE='2025-09-14T11:48:17.250745+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-09-14T11:48:17.250745+00:00'
+[2025-09-14T11:57:49.156+0000] {conn.py:397} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:29092 <connecting> [IPv4 ('172.23.0.4', 29092)]>: connecting to kafka:29092 [('172.23.0.4', 29092) IPv4]
+[2025-09-14T11:57:49.188+0000] {conn.py:618} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:29092 <checking_api_versions_recv> [IPv4 ('172.23.0.4', 29092)]>: Broker version identified as 2.6
+[2025-09-14T11:57:49.195+0000] {conn.py:457} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:29092 <connected> [IPv4 ('172.23.0.4', 29092)]>: Connection complete.
+[2025-09-14T11:57:49.200+0000] {subscription_state.py:181} INFO - Updating subscribed topics to: ('user_events',)
+[2025-09-14T11:57:49.247+0000] {conn.py:397} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1 host=kafka:29092 <connecting> [IPv4 ('172.23.0.4', 29092)]>: connecting to kafka:29092 [('172.23.0.4', 29092) IPv4]
+[2025-09-14T11:57:49.248+0000] {conn.py:457} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1 host=kafka:29092 <connected> [IPv4 ('172.23.0.4', 29092)]>: Connection complete.
+[2025-09-14T11:57:49.250+0000] {conn.py:945} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:29092 <connected> [IPv4 ('172.23.0.4', 29092)]>: Closing connection. 
+[2025-09-14T11:57:49.361+0000] {cluster.py:401} INFO - Coordinator for group/***_batch_consumer is ('coordinator-1', 'kafka', 29092, None)
+[2025-09-14T11:57:49.363+0000] {base.py:789} INFO - Discovered coordinator coordinator-1 for group ***_batch_consumer
+[2025-09-14T11:57:49.364+0000] {base.py:848} INFO - Starting new heartbeat thread
+[2025-09-14T11:57:49.366+0000] {consumer.py:366} INFO - Revoking previously assigned partitions () for group ***_batch_consumer
+[2025-09-14T11:57:49.379+0000] {base.py:419} INFO - Failed to join group ***_batch_consumer: NodeNotReadyError: coordinator-1
+[2025-09-14T11:57:49.382+0000] {conn.py:397} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=coordinator-1 host=kafka:29092 <connecting> [IPv4 ('172.23.0.4', 29092)]>: connecting to kafka:29092 [('172.23.0.4', 29092) IPv4]
+[2025-09-14T11:57:49.388+0000] {conn.py:457} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=coordinator-1 host=kafka:29092 <connected> [IPv4 ('172.23.0.4', 29092)]>: Connection complete.
+[2025-09-14T11:57:49.491+0000] {base.py:532} INFO - (Re-)joining group ***_batch_consumer
+[2025-09-14T11:57:49.500+0000] {base.py:638} INFO - Received member id kafka-python-2.2.15-950c73a6-00e1-40ae-8280-129666f61d91 for group ***_batch_consumer; will retry join-group
+[2025-09-14T11:57:49.501+0000] {base.py:419} INFO - Failed to join group ***_batch_consumer: [Error 79] MemberIdRequiredError
+[2025-09-14T11:57:49.503+0000] {base.py:532} INFO - (Re-)joining group ***_batch_consumer
+[2025-09-14T11:57:49.898+0000] {base.py:594} INFO - Successfully joined group ***_batch_consumer <Generation 5 (member_id: kafka-python-2.2.15-950c73a6-00e1-40ae-8280-129666f61d91, protocol: range)>
+[2025-09-14T11:57:50.081+0000] {subscription_state.py:254} INFO - Updated partition assignment: [('user_events', 0)]
+[2025-09-14T11:57:50.082+0000] {consumer.py:250} INFO - Setting newly assigned partitions (('user_events', 0),) for group ***_batch_consumer
+[2025-09-14T11:58:17.520+0000] {base.py:952} WARNING - Heartbeat failed for group ***_batch_consumer because it is rebalancing
+[2025-09-14T11:58:17.579+0000] {consumer.py:366} INFO - Revoking previously assigned partitions (('user_events', 0),) for group ***_batch_consumer
+[2025-09-14T11:58:17.581+0000] {base.py:532} INFO - (Re-)joining group ***_batch_consumer
+[2025-09-14T11:58:17.602+0000] {base.py:594} INFO - Successfully joined group ***_batch_consumer <Generation 6 (member_id: kafka-python-2.2.15-950c73a6-00e1-40ae-8280-129666f61d91, protocol: range)>
+[2025-09-14T11:58:17.603+0000] {base.py:597} INFO - Elected group leader -- performing partition assignments using range
+[2025-09-14T11:58:17.625+0000] {subscription_state.py:254} INFO - Updated partition assignment: [('user_events', 0)]
+[2025-09-14T11:58:17.627+0000] {consumer.py:250} INFO - Setting newly assigned partitions (('user_events', 0),) for group ***_batch_consumer
+[2025-09-14T11:58:43.148+0000] {dags_utils.py:163} INFO - [SUCCESS] Consumer finished and flushed buffers
+[2025-09-14T11:58:43.160+0000] {base.py:1052} INFO - Stopping heartbeat thread
+[2025-09-14T11:58:43.164+0000] {base.py:891} INFO - Leaving consumer group (***_batch_consumer).
+[2025-09-14T11:58:43.185+0000] {base.py:907} INFO - LeaveGroup request for group ***_batch_consumer returned successfully
+[2025-09-14T11:58:43.189+0000] {conn.py:945} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1 host=kafka:29092 <connected> [IPv4 ('172.23.0.4', 29092)]>: Closing connection. 
+[2025-09-14T11:58:43.194+0000] {fetcher.py:786} INFO - Fetch to node 1 failed: Cancelled: <BrokerConnection client_id=kafka-python-2.2.15, node_id=1 host=kafka:29092 <connected> [IPv4 ('172.23.0.4', 29092)]>
+[2025-09-14T11:58:43.196+0000] {conn.py:945} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=coordinator-1 host=kafka:29092 <connected> [IPv4 ('172.23.0.4', 29092)]>: Closing connection. 
+[2025-09-14T11:58:43.203+0000] {python.py:183} INFO - Done. Returned value was: None
+[2025-09-14T11:58:43.468+0000] {taskinstance.py:1350} INFO - Marking task as SUCCESS. dag_id=kafka_to_postgres_batch, task_id=consume_and_save_batch, execution_date=20250914T114817, start_date=20250914T115748, end_date=20250914T115843
+[2025-09-14T11:58:43.513+0000] {logging_mixin.py:150} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:205 AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+[2025-09-14T11:58:44.674+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 0
+[2025-09-14T11:58:45.176+0000] {taskinstance.py:2653} INFO - 0 downstream tasks scheduled from follow-on schedule check

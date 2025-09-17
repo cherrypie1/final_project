@@ -1,0 +1,84 @@
+[2025-09-14T11:45:22.674+0000] {logging_mixin.py:150} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/sqlalchemy.py:124 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-09-14T11:45:22.735+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: raw_to_dds_enhanced.load_events scheduled__2025-09-14T10:34:56.253606+00:00 [queued]>
+[2025-09-14T11:45:22.803+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: raw_to_dds_enhanced.load_events scheduled__2025-09-14T10:34:56.253606+00:00 [queued]>
+[2025-09-14T11:45:22.808+0000] {taskinstance.py:1308} INFO - Starting attempt 3 of 4
+[2025-09-14T11:45:22.942+0000] {taskinstance.py:1327} INFO - Executing <Task(PythonOperator): load_events> on 2025-09-14 10:34:56.253606+00:00
+[2025-09-14T11:45:23.065+0000] {standard_task_runner.py:57} INFO - Started process 1048 to run task
+[2025-09-14T11:45:23.191+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'raw_to_dds_enhanced', 'load_events', 'scheduled__2025-09-14T10:34:56.253606+00:00', '--job-id', '54', '--raw', '--subdir', 'DAGS_FOLDER/raw_to_dds.py', '--cfg-path', '/tmp/tmpeg7s6xk8']
+[2025-09-14T11:45:23.544+0000] {standard_task_runner.py:85} INFO - Job 54: Subtask load_events
+[2025-09-14T11:45:23.724+0000] {logging_mixin.py:150} WARNING - /home/***/.local/lib/python3.7/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-09-14T11:45:23.943+0000] {task_command.py:410} INFO - Running <TaskInstance: raw_to_dds_enhanced.load_events scheduled__2025-09-14T10:34:56.253606+00:00 [running]> on host 3deaa5b4a23c
+[2025-09-14T11:45:24.025+0000] {logging_mixin.py:150} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/sqlalchemy.py:124 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-09-14T11:45:24.480+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='raw_to_dds_enhanced' AIRFLOW_CTX_TASK_ID='load_events' AIRFLOW_CTX_EXECUTION_DATE='2025-09-14T10:34:56.253606+00:00' AIRFLOW_CTX_TRY_NUMBER='3' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-09-14T10:34:56.253606+00:00'
+[2025-09-14T11:45:24.663+0000] {dags_utils.py:33} WARNING - ❌ Отброшена строка {'event_id': 1, 'user_id': '1889', 'session_id': '1c332c00-4ed5-4484-b9e6-fbcc75f20e36', 'event_type': 'session_start', 'product_id': nan, 'order_id': None, 'quantity': nan, 'city': 'Weddell Sea', 'country': None, 'lat': -76.118308, 'lon': -29.152568, 'cost_usd': 648.43, 'cost_eur': 552.8, 'cost_rub': 54523.56, 'weather_temp': -18.79, 'weather_desc': 'overcast clouds', 'timestamp': Timestamp('2025-09-13 22:14:55.733938')} → 2 validation errors for EventModel
+product_id
+  value is not a valid integer (type=type_error.integer)
+quantity
+  value is not a valid integer (type=type_error.integer)
+[2025-09-14T11:45:24.856+0000] {taskinstance.py:1824} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1911, in _execute_context
+    cursor, statement, parameters, context
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/default.py", line 736, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.errors.UndefinedColumn: column "order_id" of relation "events" does not exist
+LINE 1: ...d, event_type, timestamp, session_id, product_id, order_id, ...
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 181, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 198, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/raw_to_dds.py", line 77, in validate_and_load_events
+    df.to_sql("events", engine, schema="dds", if_exists="append", index=False)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/core/generic.py", line 2882, in to_sql
+    method=method,
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/sql.py", line 728, in to_sql
+    **engine_kwargs,
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/sql.py", line 1770, in to_sql
+    **engine_kwargs,
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/sql.py", line 1350, in insert_records
+    raise err
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/sql.py", line 1340, in insert_records
+    table.insert(chunksize=chunksize, method=method)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/sql.py", line 967, in insert
+    exec_insert(conn, keys, chunk_iter)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/sql.py", line 882, in _execute_insert
+    conn.execute(self.table.insert(), data)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1385, in execute
+    return meth(self, multiparams, params, _EMPTY_EXECUTION_OPTS)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/sql/elements.py", line 335, in _execute_on_connection
+    self, multiparams, params, execution_options
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1587, in _execute_clauseelement
+    cache_hit=cache_hit,
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1954, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 2135, in _handle_dbapi_exception
+    sqlalchemy_exception, with_traceback=exc_info[2], from_=e
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1911, in _execute_context
+    cursor, statement, parameters, context
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/default.py", line 736, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.ProgrammingError: (psycopg2.errors.UndefinedColumn) column "order_id" of relation "events" does not exist
+LINE 1: ...d, event_type, timestamp, session_id, product_id, order_id, ...
+                                                             ^
+
+[SQL: INSERT INTO dds.events (user_id, event_type, timestamp, session_id, product_id, order_id, quantity, cost_usd, cost_eur, cost_rub, weather_temp, weather_desc, city, country, lat, lon) VALUES (%(user_id)s, %(event_type)s, %(timestamp)s, %(session_id)s, %(product_id)s, %(order_id)s, %(quantity)s, %(cost_usd)s, %(cost_eur)s, %(cost_rub)s, %(weather_temp)s, %(weather_desc)s, %(city)s, %(country)s, %(lat)s, %(lon)s)]
+[parameters: {'user_id': 1889, 'event_type': 'add_to_cart', 'timestamp': datetime.datetime(2025, 9, 13, 22, 14, 57, 139721), 'session_id': '0fecf236-8f2b-4aa9-9dca-0f7fc0f5ceeb', 'product_id': 295, 'order_id': '9339e4e7-a3f5-4985-858c-0d1774231dcf', 'quantity': 5, 'cost_usd': 789.1, 'cost_eur': 672.72, 'cost_rub': 66351.86, 'weather_temp': 23.86, 'weather_desc': 'clear sky', 'city': 'South Atlantic Ocean', 'country': None, 'lat': -8.167767, 'lon': -18.561612}]
+(Background on this error at: https://sqlalche.me/e/14/f405)
+[2025-09-14T11:45:25.132+0000] {taskinstance.py:1350} INFO - Marking task as UP_FOR_RETRY. dag_id=raw_to_dds_enhanced, task_id=load_events, execution_date=20250914T103456, start_date=20250914T114522, end_date=20250914T114525
+[2025-09-14T11:45:25.202+0000] {standard_task_runner.py:109} ERROR - Failed to execute job 54 for task load_events ((psycopg2.errors.UndefinedColumn) column "order_id" of relation "events" does not exist
+LINE 1: ...d, event_type, timestamp, session_id, product_id, order_id, ...
+                                                             ^
+
+[SQL: INSERT INTO dds.events (user_id, event_type, timestamp, session_id, product_id, order_id, quantity, cost_usd, cost_eur, cost_rub, weather_temp, weather_desc, city, country, lat, lon) VALUES (%(user_id)s, %(event_type)s, %(timestamp)s, %(session_id)s, %(product_id)s, %(order_id)s, %(quantity)s, %(cost_usd)s, %(cost_eur)s, %(cost_rub)s, %(weather_temp)s, %(weather_desc)s, %(city)s, %(country)s, %(lat)s, %(lon)s)]
+[parameters: {'user_id': 1889, 'event_type': 'add_to_cart', 'timestamp': datetime.datetime(2025, 9, 13, 22, 14, 57, 139721), 'session_id': '0fecf236-8f2b-4aa9-9dca-0f7fc0f5ceeb', 'product_id': 295, 'order_id': '9339e4e7-a3f5-4985-858c-0d1774231dcf', 'quantity': 5, 'cost_usd': 789.1, 'cost_eur': 672.72, 'cost_rub': 66351.86, 'weather_temp': 23.86, 'weather_desc': 'clear sky', 'city': 'South Atlantic Ocean', 'country': None, 'lat': -8.167767, 'lon': -18.561612}]
+(Background on this error at: https://sqlalche.me/e/14/f405); 1048)
+[2025-09-14T11:45:25.248+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 1
+[2025-09-14T11:45:25.330+0000] {taskinstance.py:2653} INFO - 0 downstream tasks scheduled from follow-on schedule check

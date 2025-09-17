@@ -1,0 +1,36 @@
+[2025-09-12T23:37:25.671+0000] {logging_mixin.py:150} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/sqlalchemy.py:124 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-09-12T23:37:25.685+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: generate_events_minutely.produce_entities_and_events scheduled__2025-09-12T23:34:36.445545+00:00 [queued]>
+[2025-09-12T23:37:25.698+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: generate_events_minutely.produce_entities_and_events scheduled__2025-09-12T23:34:36.445545+00:00 [queued]>
+[2025-09-12T23:37:25.699+0000] {taskinstance.py:1308} INFO - Starting attempt 2 of 2
+[2025-09-12T23:37:25.722+0000] {taskinstance.py:1327} INFO - Executing <Task(PythonOperator): produce_entities_and_events> on 2025-09-12 23:34:36.445545+00:00
+[2025-09-12T23:37:25.728+0000] {standard_task_runner.py:57} INFO - Started process 481 to run task
+[2025-09-12T23:37:25.732+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'generate_events_minutely', 'produce_entities_and_events', 'scheduled__2025-09-12T23:34:36.445545+00:00', '--job-id', '170', '--raw', '--subdir', 'DAGS_FOLDER/generator_dag.py', '--cfg-path', '/tmp/tmp2z13s64f']
+[2025-09-12T23:37:25.735+0000] {standard_task_runner.py:85} INFO - Job 170: Subtask produce_entities_and_events
+[2025-09-12T23:37:25.758+0000] {logging_mixin.py:150} WARNING - /home/***/.local/lib/python3.7/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-09-12T23:37:25.812+0000] {task_command.py:410} INFO - Running <TaskInstance: generate_events_minutely.produce_entities_and_events scheduled__2025-09-12T23:34:36.445545+00:00 [running]> on host 7b2e4533a3f5
+[2025-09-12T23:37:25.834+0000] {logging_mixin.py:150} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/sqlalchemy.py:124 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-09-12T23:37:25.948+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='generate_events_minutely' AIRFLOW_CTX_TASK_ID='produce_entities_and_events' AIRFLOW_CTX_EXECUTION_DATE='2025-09-12T23:34:36.445545+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-09-12T23:34:36.445545+00:00'
+[2025-09-12T23:37:29.260+0000] {logging_mixin.py:150} INFO - [DEBUG] Kafka connection error: [Errno -2] Name or service not known
+[2025-09-12T23:37:29.261+0000] {generator_dag.py:37} ERROR - Producer failed
+Traceback (most recent call last):
+  File "/opt/airflow/dags/generator_dag.py", line 33, in produce_task
+    sent = produce_batch(send_count_users=1, events_per_user=2, broker=KAFKA_BROKER)
+  File "/opt/airflow/dags/generator.py", line 158, in produce_batch
+    raise RuntimeError(f"Kafka broker {broker} недоступен")
+RuntimeError: Kafka broker kafka:29092 недоступен
+[2025-09-12T23:37:29.266+0000] {taskinstance.py:1824} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 181, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 198, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/generator_dag.py", line 33, in produce_task
+    sent = produce_batch(send_count_users=1, events_per_user=2, broker=KAFKA_BROKER)
+  File "/opt/airflow/dags/generator.py", line 158, in produce_batch
+    raise RuntimeError(f"Kafka broker {broker} недоступен")
+RuntimeError: Kafka broker kafka:29092 недоступен
+[2025-09-12T23:37:29.280+0000] {taskinstance.py:1350} INFO - Marking task as FAILED. dag_id=generate_events_minutely, task_id=produce_entities_and_events, execution_date=20250912T233436, start_date=20250912T233725, end_date=20250912T233729
+[2025-09-12T23:37:29.282+0000] {logging_mixin.py:150} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:205 AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+[2025-09-12T23:37:29.662+0000] {standard_task_runner.py:109} ERROR - Failed to execute job 170 for task produce_entities_and_events (Kafka broker kafka:29092 недоступен; 481)
+[2025-09-12T23:37:29.689+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 1
+[2025-09-12T23:37:29.716+0000] {taskinstance.py:2653} INFO - 0 downstream tasks scheduled from follow-on schedule check

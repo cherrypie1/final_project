@@ -1,0 +1,37 @@
+[2025-09-12T23:41:41.308+0000] {logging_mixin.py:150} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/sqlalchemy.py:124 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-09-12T23:41:41.508+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: kafka_to_postgres_batch.wait_for_kafka scheduled__2025-09-12T23:05:36.624564+00:00 [queued]>
+[2025-09-12T23:41:41.527+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: kafka_to_postgres_batch.wait_for_kafka scheduled__2025-09-12T23:05:36.624564+00:00 [queued]>
+[2025-09-12T23:41:41.532+0000] {taskinstance.py:1308} INFO - Starting attempt 2 of 3
+[2025-09-12T23:41:41.654+0000] {taskinstance.py:1327} INFO - Executing <Task(PythonSensor): wait_for_kafka> on 2025-09-12 23:05:36.624564+00:00
+[2025-09-12T23:41:41.681+0000] {standard_task_runner.py:57} INFO - Started process 335 to run task
+[2025-09-12T23:41:41.686+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'kafka_to_postgres_batch', 'wait_for_kafka', 'scheduled__2025-09-12T23:05:36.624564+00:00', '--job-id', '181', '--raw', '--subdir', 'DAGS_FOLDER/dags.py', '--cfg-path', '/tmp/tmphxat2urm']
+[2025-09-12T23:41:41.691+0000] {standard_task_runner.py:85} INFO - Job 181: Subtask wait_for_kafka
+[2025-09-12T23:41:41.731+0000] {logging_mixin.py:150} WARNING - /home/***/.local/lib/python3.7/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-09-12T23:41:41.811+0000] {task_command.py:410} INFO - Running <TaskInstance: kafka_to_postgres_batch.wait_for_kafka scheduled__2025-09-12T23:05:36.624564+00:00 [running]> on host 7b2e4533a3f5
+[2025-09-12T23:41:41.839+0000] {logging_mixin.py:150} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/sqlalchemy.py:124 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-09-12T23:41:41.993+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='kafka_to_postgres_batch' AIRFLOW_CTX_TASK_ID='wait_for_kafka' AIRFLOW_CTX_EXECUTION_DATE='2025-09-12T23:05:36.624564+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-09-12T23:05:36.624564+00:00'
+[2025-09-12T23:41:41.995+0000] {python.py:72} INFO - Poking callable: <function check_kafka_message at 0x7f004da9ef80>
+[2025-09-12T23:41:45.305+0000] {conn.py:1521} WARNING - DNS lookup failed for kafka:29092, exception was [Errno -2] Name or service not known. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2025-09-12T23:41:45.305+0000] {conn.py:324} ERROR - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:29092 <connecting> [unspecified None]>: DNS lookup failed for kafka:29092 (AddressFamily.AF_UNSPEC)
+[2025-09-12T23:41:45.306+0000] {conn.py:945} ERROR - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:29092 <connecting> [unspecified None]>: Closing connection. KafkaConnectionError: DNS failure
+[2025-09-12T23:41:45.307+0000] {taskinstance.py:1824} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/sensors/base.py", line 225, in execute
+    raise e
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/sensors/base.py", line 212, in execute
+    poke_return = self.poke(context)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/sensors/python.py", line 73, in poke
+    return_value = self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/dags_utils.py", line 198, in check_kafka_message
+    consumer_timeout_ms=5000
+  File "/home/airflow/.local/lib/python3.7/site-packages/kafka/consumer/group.py", line 387, in __init__
+    self._client = self.config['kafka_client'](metrics=self._metrics, **self.config)
+  File "/home/airflow/.local/lib/python3.7/site-packages/kafka/client_async.py", line 262, in __init__
+    self.config['api_version'] = self.check_version()
+  File "/home/airflow/.local/lib/python3.7/site-packages/kafka/client_async.py", line 1074, in check_version
+    raise Errors.NoBrokersAvailable()
+kafka.errors.NoBrokersAvailable: NoBrokersAvailable
+[2025-09-12T23:41:45.328+0000] {taskinstance.py:1350} INFO - Marking task as UP_FOR_RETRY. dag_id=kafka_to_postgres_batch, task_id=wait_for_kafka, execution_date=20250912T230536, start_date=20250912T234141, end_date=20250912T234145
+[2025-09-12T23:41:45.354+0000] {standard_task_runner.py:109} ERROR - Failed to execute job 181 for task wait_for_kafka (NoBrokersAvailable; 335)
+[2025-09-12T23:41:45.396+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 1
+[2025-09-12T23:41:45.444+0000] {taskinstance.py:2653} INFO - 0 downstream tasks scheduled from follow-on schedule check

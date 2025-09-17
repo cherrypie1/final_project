@@ -1,0 +1,45 @@
+[2025-09-06T12:29:43.635+0000] {logging_mixin.py:150} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/sqlalchemy.py:124 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-09-06T12:29:43.726+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: kafka_to_postgres_batch.consume_and_save_batch scheduled__2025-09-06T11:49:18.546849+00:00 [queued]>
+[2025-09-06T12:29:43.771+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: kafka_to_postgres_batch.consume_and_save_batch scheduled__2025-09-06T11:49:18.546849+00:00 [queued]>
+[2025-09-06T12:29:43.772+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 3
+[2025-09-06T12:29:43.813+0000] {taskinstance.py:1327} INFO - Executing <Task(PythonOperator): consume_and_save_batch> on 2025-09-06 11:49:18.546849+00:00
+[2025-09-06T12:29:43.823+0000] {standard_task_runner.py:57} INFO - Started process 405 to run task
+[2025-09-06T12:29:43.831+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'kafka_to_postgres_batch', 'consume_and_save_batch', 'scheduled__2025-09-06T11:49:18.546849+00:00', '--job-id', '36', '--raw', '--subdir', 'DAGS_FOLDER/dags.py', '--cfg-path', '/tmp/tmpyfbel0r_']
+[2025-09-06T12:29:43.837+0000] {standard_task_runner.py:85} INFO - Job 36: Subtask consume_and_save_batch
+[2025-09-06T12:29:44.265+0000] {logging_mixin.py:150} WARNING - /home/***/.local/lib/python3.7/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-09-06T12:29:44.601+0000] {task_command.py:410} INFO - Running <TaskInstance: kafka_to_postgres_batch.consume_and_save_batch scheduled__2025-09-06T11:49:18.546849+00:00 [running]> on host ef9bb72bce84
+[2025-09-06T12:29:44.635+0000] {logging_mixin.py:150} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/sqlalchemy.py:124 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-09-06T12:29:45.584+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='kafka_to_postgres_batch' AIRFLOW_CTX_TASK_ID='consume_and_save_batch' AIRFLOW_CTX_EXECUTION_DATE='2025-09-06T11:49:18.546849+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-09-06T11:49:18.546849+00:00'
+[2025-09-06T12:29:45.590+0000] {dags_utils.py:42} INFO - Starting consumer with batch_size=50, timeout=30
+[2025-09-06T12:29:45.606+0000] {conn.py:397} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.23.0.5', 9092)]>: connecting to kafka:9092 [('172.23.0.5', 9092) IPv4]
+[2025-09-06T12:29:45.620+0000] {conn.py:618} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <checking_api_versions_recv> [IPv4 ('172.23.0.5', 9092)]>: Broker version identified as 2.6
+[2025-09-06T12:29:45.621+0000] {conn.py:457} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connected> [IPv4 ('172.23.0.5', 9092)]>: Connection complete.
+[2025-09-06T12:29:45.626+0000] {subscription_state.py:181} INFO - Updating subscribed topics to: ('user_events',)
+[2025-09-06T12:29:45.656+0000] {conn.py:397} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1 host=host.docker.internal:9092 <connecting> [IPv4 ('192.168.65.254', 9092)]>: connecting to host.docker.internal:9092 [('192.168.65.254', 9092) IPv4]
+[2025-09-06T12:29:45.759+0000] {conn.py:457} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1 host=host.docker.internal:9092 <connected> [IPv4 ('192.168.65.254', 9092)]>: Connection complete.
+[2025-09-06T12:29:45.760+0000] {conn.py:945} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connected> [IPv4 ('172.23.0.5', 9092)]>: Closing connection. 
+[2025-09-06T12:29:55.223+0000] {cluster.py:401} INFO - Coordinator for group/***_batch_consumer is ('coordinator-1', 'host.docker.internal', 9092, None)
+[2025-09-06T12:29:55.225+0000] {base.py:789} INFO - Discovered coordinator coordinator-1 for group ***_batch_consumer
+[2025-09-06T12:29:55.227+0000] {base.py:848} INFO - Starting new heartbeat thread
+[2025-09-06T12:29:55.230+0000] {consumer.py:366} INFO - Revoking previously assigned partitions () for group ***_batch_consumer
+[2025-09-06T12:29:55.232+0000] {base.py:419} INFO - Failed to join group ***_batch_consumer: NodeNotReadyError: coordinator-1
+[2025-09-06T12:29:55.245+0000] {conn.py:397} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=coordinator-1 host=host.docker.internal:9092 <connecting> [IPv4 ('192.168.65.254', 9092)]>: connecting to host.docker.internal:9092 [('192.168.65.254', 9092) IPv4]
+[2025-09-06T12:29:55.347+0000] {base.py:419} INFO - Failed to join group ***_batch_consumer: NodeNotReadyError: coordinator-1
+[2025-09-06T12:29:55.348+0000] {conn.py:457} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=coordinator-1 host=host.docker.internal:9092 <connected> [IPv4 ('192.168.65.254', 9092)]>: Connection complete.
+[2025-09-06T12:29:55.449+0000] {base.py:532} INFO - (Re-)joining group ***_batch_consumer
+[2025-09-06T12:29:55.465+0000] {base.py:638} INFO - Received member id kafka-python-2.2.15-db649e3d-3571-4dd4-8980-ce45eb924b30 for group ***_batch_consumer; will retry join-group
+[2025-09-06T12:29:55.466+0000] {base.py:419} INFO - Failed to join group ***_batch_consumer: [Error 79] MemberIdRequiredError
+[2025-09-06T12:29:55.467+0000] {base.py:532} INFO - (Re-)joining group ***_batch_consumer
+[2025-09-06T12:30:01.838+0000] {base.py:594} INFO - Successfully joined group ***_batch_consumer <Generation 1 (member_id: kafka-python-2.2.15-db649e3d-3571-4dd4-8980-ce45eb924b30, protocol: range)>
+[2025-09-06T12:30:02.469+0000] {subscription_state.py:254} INFO - Updated partition assignment: []
+[2025-09-06T12:30:02.477+0000] {consumer.py:250} INFO - Setting newly assigned partitions () for group ***_batch_consumer
+[2025-09-06T12:30:15.642+0000] {dags_utils.py:95} INFO - [INFO] No new messages from Kafka
+[2025-09-06T12:30:15.643+0000] {base.py:1052} INFO - Stopping heartbeat thread
+[2025-09-06T12:30:15.644+0000] {base.py:891} INFO - Leaving consumer group (***_batch_consumer).
+[2025-09-06T12:30:15.656+0000] {base.py:907} INFO - LeaveGroup request for group ***_batch_consumer returned successfully
+[2025-09-06T12:30:15.657+0000] {conn.py:945} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1 host=host.docker.internal:9092 <connected> [IPv4 ('192.168.65.254', 9092)]>: Closing connection. 
+[2025-09-06T12:30:15.658+0000] {conn.py:945} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=coordinator-1 host=host.docker.internal:9092 <connected> [IPv4 ('192.168.65.254', 9092)]>: Closing connection. 
+[2025-09-06T12:30:15.660+0000] {python.py:183} INFO - Done. Returned value was: None
+[2025-09-06T12:30:15.685+0000] {taskinstance.py:1350} INFO - Marking task as SUCCESS. dag_id=kafka_to_postgres_batch, task_id=consume_and_save_batch, execution_date=20250906T114918, start_date=20250906T122943, end_date=20250906T123015
+[2025-09-06T12:30:15.744+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 0
+[2025-09-06T12:30:15.775+0000] {taskinstance.py:2653} INFO - 0 downstream tasks scheduled from follow-on schedule check

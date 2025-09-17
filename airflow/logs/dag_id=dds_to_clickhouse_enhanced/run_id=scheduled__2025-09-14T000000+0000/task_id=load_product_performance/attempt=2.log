@@ -1,0 +1,17 @@
+[2025-09-15T23:05:11.729+0000] {logging_mixin.py:150} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/sqlalchemy.py:124 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-09-15T23:05:11.857+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dds_to_clickhouse_enhanced.load_product_performance scheduled__2025-09-14T00:00:00+00:00 [queued]>
+[2025-09-15T23:05:11.949+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dds_to_clickhouse_enhanced.load_product_performance scheduled__2025-09-14T00:00:00+00:00 [queued]>
+[2025-09-15T23:05:11.954+0000] {taskinstance.py:1308} INFO - Starting attempt 2 of 3
+[2025-09-15T23:05:12.115+0000] {taskinstance.py:1327} INFO - Executing <Task(PythonOperator): load_product_performance> on 2025-09-14 00:00:00+00:00
+[2025-09-15T23:05:12.199+0000] {standard_task_runner.py:57} INFO - Started process 698 to run task
+[2025-09-15T23:05:12.295+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'dds_to_clickhouse_enhanced', 'load_product_performance', 'scheduled__2025-09-14T00:00:00+00:00', '--job-id', '518', '--raw', '--subdir', 'DAGS_FOLDER/dds_to_clickhouse.py', '--cfg-path', '/tmp/tmpig2ajyjr']
+[2025-09-15T23:05:12.353+0000] {standard_task_runner.py:85} INFO - Job 518: Subtask load_product_performance
+[2025-09-15T23:05:12.651+0000] {logging_mixin.py:150} WARNING - /home/***/.local/lib/python3.7/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-09-15T23:05:13.188+0000] {task_command.py:410} INFO - Running <TaskInstance: dds_to_clickhouse_enhanced.load_product_performance scheduled__2025-09-14T00:00:00+00:00 [running]> on host 71d7292233fc
+[2025-09-15T23:05:13.366+0000] {logging_mixin.py:150} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/sqlalchemy.py:124 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-09-15T23:05:14.154+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dds_to_clickhouse_enhanced' AIRFLOW_CTX_TASK_ID='load_product_performance' AIRFLOW_CTX_EXECUTION_DATE='2025-09-14T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-09-14T00:00:00+00:00'
+[2025-09-15T23:05:14.903+0000] {dds_to_clickhouse.py:106} INFO - ✅ Загружено 25 строк в product_performance
+[2025-09-15T23:05:14.910+0000] {python.py:183} INFO - Done. Returned value was: None
+[2025-09-15T23:05:14.998+0000] {taskinstance.py:1350} INFO - Marking task as SUCCESS. dag_id=dds_to_clickhouse_enhanced, task_id=load_product_performance, execution_date=20250914T000000, start_date=20250915T230511, end_date=20250915T230514
+[2025-09-15T23:05:15.144+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 0
+[2025-09-15T23:05:15.329+0000] {taskinstance.py:2653} INFO - 0 downstream tasks scheduled from follow-on schedule check

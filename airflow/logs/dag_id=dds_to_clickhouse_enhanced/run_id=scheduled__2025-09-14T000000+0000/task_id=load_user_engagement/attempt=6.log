@@ -1,0 +1,17 @@
+[2025-09-15T23:05:11.721+0000] {logging_mixin.py:150} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/sqlalchemy.py:124 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-09-15T23:05:11.836+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dds_to_clickhouse_enhanced.load_user_engagement scheduled__2025-09-14T00:00:00+00:00 [queued]>
+[2025-09-15T23:05:11.916+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dds_to_clickhouse_enhanced.load_user_engagement scheduled__2025-09-14T00:00:00+00:00 [queued]>
+[2025-09-15T23:05:11.923+0000] {taskinstance.py:1308} INFO - Starting attempt 6 of 7
+[2025-09-15T23:05:12.072+0000] {taskinstance.py:1327} INFO - Executing <Task(PythonOperator): load_user_engagement> on 2025-09-14 00:00:00+00:00
+[2025-09-15T23:05:12.134+0000] {standard_task_runner.py:57} INFO - Started process 696 to run task
+[2025-09-15T23:05:12.161+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'dds_to_clickhouse_enhanced', 'load_user_engagement', 'scheduled__2025-09-14T00:00:00+00:00', '--job-id', '516', '--raw', '--subdir', 'DAGS_FOLDER/dds_to_clickhouse.py', '--cfg-path', '/tmp/tmpgp6u12lr']
+[2025-09-15T23:05:12.213+0000] {standard_task_runner.py:85} INFO - Job 516: Subtask load_user_engagement
+[2025-09-15T23:05:12.488+0000] {logging_mixin.py:150} WARNING - /home/***/.local/lib/python3.7/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-09-15T23:05:13.050+0000] {task_command.py:410} INFO - Running <TaskInstance: dds_to_clickhouse_enhanced.load_user_engagement scheduled__2025-09-14T00:00:00+00:00 [running]> on host 71d7292233fc
+[2025-09-15T23:05:13.268+0000] {logging_mixin.py:150} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/sqlalchemy.py:124 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-09-15T23:05:14.222+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dds_to_clickhouse_enhanced' AIRFLOW_CTX_TASK_ID='load_user_engagement' AIRFLOW_CTX_EXECUTION_DATE='2025-09-14T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='6' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-09-14T00:00:00+00:00'
+[2025-09-15T23:05:14.897+0000] {dds_to_clickhouse.py:160} INFO - ✅ Загружено 44 строк в user_engagement
+[2025-09-15T23:05:14.908+0000] {python.py:183} INFO - Done. Returned value was: None
+[2025-09-15T23:05:15.033+0000] {taskinstance.py:1350} INFO - Marking task as SUCCESS. dag_id=dds_to_clickhouse_enhanced, task_id=load_user_engagement, execution_date=20250914T000000, start_date=20250915T230511, end_date=20250915T230515
+[2025-09-15T23:05:15.217+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 0
+[2025-09-15T23:05:15.471+0000] {taskinstance.py:2653} INFO - 0 downstream tasks scheduled from follow-on schedule check

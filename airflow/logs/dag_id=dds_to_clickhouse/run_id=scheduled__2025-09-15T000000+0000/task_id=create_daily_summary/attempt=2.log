@@ -1,0 +1,26 @@
+[2025-09-16T12:55:57.990+0000] {logging_mixin.py:150} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/sqlalchemy.py:124 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-09-16T12:55:58.042+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dds_to_clickhouse.create_daily_summary scheduled__2025-09-15T00:00:00+00:00 [queued]>
+[2025-09-16T12:55:58.069+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dds_to_clickhouse.create_daily_summary scheduled__2025-09-15T00:00:00+00:00 [queued]>
+[2025-09-16T12:55:58.071+0000] {taskinstance.py:1308} INFO - Starting attempt 2 of 3
+[2025-09-16T12:55:58.155+0000] {taskinstance.py:1327} INFO - Executing <Task(PythonOperator): create_daily_summary> on 2025-09-15 00:00:00+00:00
+[2025-09-16T12:55:58.184+0000] {standard_task_runner.py:57} INFO - Started process 350 to run task
+[2025-09-16T12:55:58.244+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'dds_to_clickhouse', 'create_daily_summary', 'scheduled__2025-09-15T00:00:00+00:00', '--job-id', '689', '--raw', '--subdir', 'DAGS_FOLDER/dds_to_clickhouse.py', '--cfg-path', '/tmp/tmpj5scoegm']
+[2025-09-16T12:55:58.274+0000] {standard_task_runner.py:85} INFO - Job 689: Subtask create_daily_summary
+[2025-09-16T12:55:58.439+0000] {logging_mixin.py:150} WARNING - /home/***/.local/lib/python3.7/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-09-16T12:55:58.849+0000] {task_command.py:410} INFO - Running <TaskInstance: dds_to_clickhouse.create_daily_summary scheduled__2025-09-15T00:00:00+00:00 [running]> on host d6e2a7c8b3ee
+[2025-09-16T12:55:58.912+0000] {logging_mixin.py:150} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/sqlalchemy.py:124 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-09-16T12:55:59.094+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dds_to_clickhouse' AIRFLOW_CTX_TASK_ID='create_daily_summary' AIRFLOW_CTX_EXECUTION_DATE='2025-09-15T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-09-15T00:00:00+00:00'
+[2025-09-16T12:55:59.097+0000] {ch_utils.py:39} ERROR - ❌ Ошибка при выполнении SQL ch_create_daily_business_summary.sql: [Errno 2] No such file or directory: '/opt/***/sql/ch_create_daily_business_summary.sql'
+[2025-09-16T12:55:59.098+0000] {taskinstance.py:1824} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 181, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 198, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/ch_utils.py", line 33, in execute_ch_sql_file
+    with open(path, "r") as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/opt/airflow/sql/ch_create_daily_business_summary.sql'
+[2025-09-16T12:55:59.120+0000] {taskinstance.py:1350} INFO - Marking task as UP_FOR_RETRY. dag_id=dds_to_clickhouse, task_id=create_daily_summary, execution_date=20250915T000000, start_date=20250916T125558, end_date=20250916T125559
+[2025-09-16T12:55:59.141+0000] {standard_task_runner.py:109} ERROR - Failed to execute job 689 for task create_daily_summary ([Errno 2] No such file or directory: '/opt/airflow/sql/ch_create_daily_business_summary.sql'; 350)
+[2025-09-16T12:55:59.173+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 1
+[2025-09-16T12:55:59.225+0000] {taskinstance.py:2653} INFO - 0 downstream tasks scheduled from follow-on schedule check

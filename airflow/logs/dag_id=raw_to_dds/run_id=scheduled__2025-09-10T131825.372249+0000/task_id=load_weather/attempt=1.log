@@ -1,0 +1,49 @@
+[2025-09-10T14:18:30.922+0000] {logging_mixin.py:150} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/sqlalchemy.py:124 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-09-10T14:18:31.070+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: raw_to_dds.load_weather scheduled__2025-09-10T13:18:25.372249+00:00 [queued]>
+[2025-09-10T14:18:31.086+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: raw_to_dds.load_weather scheduled__2025-09-10T13:18:25.372249+00:00 [queued]>
+[2025-09-10T14:18:31.087+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 3
+[2025-09-10T14:18:31.108+0000] {taskinstance.py:1327} INFO - Executing <Task(PostgresOperator): load_weather> on 2025-09-10 13:18:25.372249+00:00
+[2025-09-10T14:18:31.121+0000] {standard_task_runner.py:57} INFO - Started process 2045 to run task
+[2025-09-10T14:18:31.146+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'raw_to_dds', 'load_weather', 'scheduled__2025-09-10T13:18:25.372249+00:00', '--job-id', '120', '--raw', '--subdir', 'DAGS_FOLDER/raw_to_dds.py', '--cfg-path', '/tmp/tmpetnvyya9']
+[2025-09-10T14:18:31.169+0000] {standard_task_runner.py:85} INFO - Job 120: Subtask load_weather
+[2025-09-10T14:18:31.273+0000] {logging_mixin.py:150} WARNING - /home/***/.local/lib/python3.7/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-09-10T14:18:31.444+0000] {task_command.py:410} INFO - Running <TaskInstance: raw_to_dds.load_weather scheduled__2025-09-10T13:18:25.372249+00:00 [running]> on host c905ba028b15
+[2025-09-10T14:18:31.496+0000] {logging_mixin.py:150} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/sqlalchemy.py:124 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-09-10T14:18:31.750+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='raw_to_dds' AIRFLOW_CTX_TASK_ID='load_weather' AIRFLOW_CTX_EXECUTION_DATE='2025-09-10T13:18:25.372249+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-09-10T13:18:25.372249+00:00'
+[2025-09-10T14:18:31.752+0000] {sql.py:265} INFO - Executing: 
+        INSERT INTO dictionary.weather (city, country, lat, lon, temp, description, recorded_at)
+        SELECT DISTINCT city, country, lat, lon, weather_temp, weather_desc, NOW()
+        FROM raw.events re
+        WHERE re.weather_temp IS NOT NULL
+          AND re.weather_desc IS NOT NULL
+        ON CONFLICT DO NOTHING;
+        
+[2025-09-10T14:18:31.766+0000] {base.py:73} INFO - Using connection ID 'postgres_default' for task execution.
+[2025-09-10T14:18:31.844+0000] {base.py:73} INFO - Using connection ID 'postgres_default' for task execution.
+[2025-09-10T14:18:31.851+0000] {sql.py:375} INFO - Running statement: 
+        INSERT INTO dictionary.weather (city, country, lat, lon, temp, description, recorded_at)
+        SELECT DISTINCT city, country, lat, lon, weather_temp, weather_desc, NOW()
+        FROM raw.events re
+        WHERE re.weather_temp IS NOT NULL
+          AND re.weather_desc IS NOT NULL
+        ON CONFLICT DO NOTHING;
+        , parameters: None
+[2025-09-10T14:18:31.856+0000] {taskinstance.py:1824} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/common/sql/operators/sql.py", line 277, in execute
+    **extra_kwargs,
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/common/sql/hooks/sql.py", line 349, in run
+    self._run_command(cur, sql_statement, parameters)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/common/sql/hooks/sql.py", line 380, in _run_command
+    cur.execute(sql_statement)
+psycopg2.errors.UndefinedColumn: column "city" of relation "weather" does not exist
+LINE 2:         INSERT INTO dictionary.weather (city, country, lat, ...
+                                                ^
+
+[2025-09-10T14:18:31.871+0000] {taskinstance.py:1350} INFO - Marking task as UP_FOR_RETRY. dag_id=raw_to_dds, task_id=load_weather, execution_date=20250910T131825, start_date=20250910T141831, end_date=20250910T141831
+[2025-09-10T14:18:31.890+0000] {standard_task_runner.py:109} ERROR - Failed to execute job 120 for task load_weather (column "city" of relation "weather" does not exist
+LINE 2:         INSERT INTO dictionary.weather (city, country, lat, ...
+                                                ^
+; 2045)
+[2025-09-10T14:18:31.917+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 1
+[2025-09-10T14:18:31.942+0000] {taskinstance.py:2653} INFO - 0 downstream tasks scheduled from follow-on schedule check

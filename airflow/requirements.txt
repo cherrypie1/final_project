@@ -1,0 +1,6 @@
+faker
+kafka-python
+psycopg2-binary
+requests
+apache-airflow-providers-postgres
+clickhouse-driver

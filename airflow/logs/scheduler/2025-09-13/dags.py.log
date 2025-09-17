@@ -1,0 +1,1064 @@
+[2025-09-13T13:04:28.311+0000] {processor.py:157} INFO - Started process (PID=168) to work on /opt/airflow/dags/dags.py
+[2025-09-13T13:04:28.314+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-09-13T13:04:28.316+0000] {logging_mixin.py:150} INFO - [2025-09-13T13:04:28.315+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-09-13T13:04:31.345+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_batch']) retrieved from /opt/airflow/dags/dags.py
+[2025-09-13T13:04:31.866+0000] {logging_mixin.py:150} INFO - [2025-09-13T13:04:31.865+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-09-13T13:04:31.932+0000] {logging_mixin.py:150} INFO - [2025-09-13T13:04:31.931+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_batch to 2025-09-13T12:34:31.931175+00:00, run_after=2025-09-13T13:04:31.931175+00:00
+[2025-09-13T13:04:31.986+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dags.py took 3.684 seconds
+[2025-09-13T13:05:02.111+0000] {processor.py:157} INFO - Started process (PID=206) to work on /opt/airflow/dags/dags.py
+[2025-09-13T13:05:02.113+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-09-13T13:05:02.114+0000] {logging_mixin.py:150} INFO - [2025-09-13T13:05:02.114+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-09-13T13:05:03.965+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_batch']) retrieved from /opt/airflow/dags/dags.py
+[2025-09-13T13:05:04.150+0000] {logging_mixin.py:150} INFO - [2025-09-13T13:05:04.148+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-09-13T13:05:04.243+0000] {logging_mixin.py:150} INFO - [2025-09-13T13:05:04.242+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_batch to 2025-09-13T12:35:04.242514+00:00, run_after=2025-09-13T13:05:04.242514+00:00
+[2025-09-13T13:05:04.294+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dags.py took 2.188 seconds
+[2025-09-13T13:05:34.500+0000] {processor.py:157} INFO - Started process (PID=247) to work on /opt/airflow/dags/dags.py
+[2025-09-13T13:05:34.501+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-09-13T13:05:34.503+0000] {logging_mixin.py:150} INFO - [2025-09-13T13:05:34.502+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-09-13T13:05:35.492+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_batch']) retrieved from /opt/airflow/dags/dags.py
+[2025-09-13T13:05:35.586+0000] {logging_mixin.py:150} INFO - [2025-09-13T13:05:35.585+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-09-13T13:05:35.699+0000] {logging_mixin.py:150} INFO - [2025-09-13T13:05:35.699+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_batch to 2025-09-13T12:35:35.699293+00:00, run_after=2025-09-13T13:05:35.699293+00:00
+[2025-09-13T13:05:35.753+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dags.py took 1.259 seconds
+[2025-09-13T13:06:06.530+0000] {processor.py:157} INFO - Started process (PID=288) to work on /opt/airflow/dags/dags.py
+[2025-09-13T13:06:06.535+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-09-13T13:06:06.537+0000] {logging_mixin.py:150} INFO - [2025-09-13T13:06:06.536+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-09-13T13:06:07.454+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_batch']) retrieved from /opt/airflow/dags/dags.py
+[2025-09-13T13:06:07.518+0000] {logging_mixin.py:150} INFO - [2025-09-13T13:06:07.517+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-09-13T13:06:07.553+0000] {logging_mixin.py:150} INFO - [2025-09-13T13:06:07.552+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_batch to 2025-09-13T12:36:07.552562+00:00, run_after=2025-09-13T13:06:07.552562+00:00
+[2025-09-13T13:06:07.585+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dags.py took 1.070 seconds
+[2025-09-13T13:06:38.518+0000] {processor.py:157} INFO - Started process (PID=339) to work on /opt/airflow/dags/dags.py
+[2025-09-13T13:06:38.519+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-09-13T13:06:38.520+0000] {logging_mixin.py:150} INFO - [2025-09-13T13:06:38.519+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-09-13T13:06:39.307+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_batch']) retrieved from /opt/airflow/dags/dags.py
+[2025-09-13T13:06:39.359+0000] {logging_mixin.py:150} INFO - [2025-09-13T13:06:39.358+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-09-13T13:06:39.395+0000] {logging_mixin.py:150} INFO - [2025-09-13T13:06:39.394+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_batch to 2025-09-13T12:36:39.394680+00:00, run_after=2025-09-13T13:06:39.394680+00:00
+[2025-09-13T13:06:39.424+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dags.py took 0.910 seconds
+[2025-09-13T13:07:09.759+0000] {processor.py:157} INFO - Started process (PID=385) to work on /opt/airflow/dags/dags.py
+[2025-09-13T13:07:09.760+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-09-13T13:07:09.762+0000] {logging_mixin.py:150} INFO - [2025-09-13T13:07:09.761+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-09-13T13:07:10.508+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_batch']) retrieved from /opt/airflow/dags/dags.py
+[2025-09-13T13:07:10.562+0000] {logging_mixin.py:150} INFO - [2025-09-13T13:07:10.561+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-09-13T13:07:10.593+0000] {logging_mixin.py:150} INFO - [2025-09-13T13:07:10.593+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_batch to 2025-09-13T12:37:10.593062+00:00, run_after=2025-09-13T13:07:10.593062+00:00
+[2025-09-13T13:07:10.622+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dags.py took 0.867 seconds
+[2025-09-13T13:07:41.069+0000] {processor.py:157} INFO - Started process (PID=426) to work on /opt/airflow/dags/dags.py
+[2025-09-13T13:07:41.071+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-09-13T13:07:41.072+0000] {logging_mixin.py:150} INFO - [2025-09-13T13:07:41.072+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-09-13T13:07:41.751+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_batch']) retrieved from /opt/airflow/dags/dags.py
+[2025-09-13T13:07:41.808+0000] {logging_mixin.py:150} INFO - [2025-09-13T13:07:41.807+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-09-13T13:07:41.836+0000] {logging_mixin.py:150} INFO - [2025-09-13T13:07:41.836+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_batch to 2025-09-13T12:37:41.836113+00:00, run_after=2025-09-13T13:07:41.836113+00:00
+[2025-09-13T13:07:41.865+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dags.py took 0.800 seconds
+[2025-09-13T13:08:11.919+0000] {processor.py:157} INFO - Started process (PID=467) to work on /opt/airflow/dags/dags.py
+[2025-09-13T13:08:11.920+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-09-13T13:08:11.921+0000] {logging_mixin.py:150} INFO - [2025-09-13T13:08:11.921+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-09-13T13:08:12.668+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_batch']) retrieved from /opt/airflow/dags/dags.py
+[2025-09-13T13:08:12.728+0000] {logging_mixin.py:150} INFO - [2025-09-13T13:08:12.727+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-09-13T13:08:12.765+0000] {logging_mixin.py:150} INFO - [2025-09-13T13:08:12.765+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_batch to 2025-09-13T12:38:12.765240+00:00, run_after=2025-09-13T13:08:12.765240+00:00
+[2025-09-13T13:08:12.914+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dags.py took 0.999 seconds
+[2025-09-13T13:08:43.180+0000] {processor.py:157} INFO - Started process (PID=508) to work on /opt/airflow/dags/dags.py
+[2025-09-13T13:08:43.182+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-09-13T13:08:43.183+0000] {logging_mixin.py:150} INFO - [2025-09-13T13:08:43.182+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-09-13T13:08:43.804+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_batch']) retrieved from /opt/airflow/dags/dags.py
+[2025-09-13T13:08:43.894+0000] {logging_mixin.py:150} INFO - [2025-09-13T13:08:43.893+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-09-13T13:08:44.052+0000] {logging_mixin.py:150} INFO - [2025-09-13T13:08:44.052+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_batch to 2025-09-13T12:38:44.051925+00:00, run_after=2025-09-13T13:08:44.051925+00:00
+[2025-09-13T13:08:44.079+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dags.py took 0.903 seconds
+[2025-09-13T13:09:14.324+0000] {processor.py:157} INFO - Started process (PID=549) to work on /opt/airflow/dags/dags.py
+[2025-09-13T13:09:14.325+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-09-13T13:09:14.327+0000] {logging_mixin.py:150} INFO - [2025-09-13T13:09:14.326+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-09-13T13:09:14.945+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_batch']) retrieved from /opt/airflow/dags/dags.py
+[2025-09-13T13:09:15.093+0000] {logging_mixin.py:150} INFO - [2025-09-13T13:09:15.001+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-09-13T13:09:15.132+0000] {logging_mixin.py:150} INFO - [2025-09-13T13:09:15.131+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_batch to 2025-09-13T12:39:15.131752+00:00, run_after=2025-09-13T13:09:15.131752+00:00
+[2025-09-13T13:09:15.195+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dags.py took 0.874 seconds
+[2025-09-13T13:09:45.716+0000] {processor.py:157} INFO - Started process (PID=590) to work on /opt/airflow/dags/dags.py
+[2025-09-13T13:09:45.717+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-09-13T13:09:45.719+0000] {logging_mixin.py:150} INFO - [2025-09-13T13:09:45.718+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-09-13T13:09:46.266+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_batch']) retrieved from /opt/airflow/dags/dags.py
+[2025-09-13T13:09:46.320+0000] {logging_mixin.py:150} INFO - [2025-09-13T13:09:46.319+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-09-13T13:09:46.350+0000] {logging_mixin.py:150} INFO - [2025-09-13T13:09:46.349+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_batch to 2025-09-13T12:39:46.349636+00:00, run_after=2025-09-13T13:09:46.349636+00:00
+[2025-09-13T13:09:46.380+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dags.py took 0.668 seconds
+[2025-09-13T13:10:16.540+0000] {processor.py:157} INFO - Started process (PID=631) to work on /opt/airflow/dags/dags.py
+[2025-09-13T13:10:16.542+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-09-13T13:10:16.544+0000] {logging_mixin.py:150} INFO - [2025-09-13T13:10:16.543+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-09-13T13:10:17.241+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_batch']) retrieved from /opt/airflow/dags/dags.py
+[2025-09-13T13:10:17.300+0000] {logging_mixin.py:150} INFO - [2025-09-13T13:10:17.299+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-09-13T13:10:17.339+0000] {logging_mixin.py:150} INFO - [2025-09-13T13:10:17.338+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_batch to 2025-09-13T12:40:17.338702+00:00, run_after=2025-09-13T13:10:17.338702+00:00
+[2025-09-13T13:10:17.500+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dags.py took 0.964 seconds
+[2025-09-13T13:10:48.232+0000] {processor.py:157} INFO - Started process (PID=672) to work on /opt/airflow/dags/dags.py
+[2025-09-13T13:10:48.235+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-09-13T13:10:48.237+0000] {logging_mixin.py:150} INFO - [2025-09-13T13:10:48.237+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-09-13T13:10:48.837+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_batch']) retrieved from /opt/airflow/dags/dags.py
+[2025-09-13T13:10:48.898+0000] {logging_mixin.py:150} INFO - [2025-09-13T13:10:48.897+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-09-13T13:10:49.051+0000] {logging_mixin.py:150} INFO - [2025-09-13T13:10:49.050+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_batch to 2025-09-13T12:40:49.050472+00:00, run_after=2025-09-13T13:10:49.050472+00:00
+[2025-09-13T13:10:49.079+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dags.py took 0.853 seconds
+[2025-09-13T13:11:19.588+0000] {processor.py:157} INFO - Started process (PID=713) to work on /opt/airflow/dags/dags.py
+[2025-09-13T13:11:19.589+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-09-13T13:11:19.591+0000] {logging_mixin.py:150} INFO - [2025-09-13T13:11:19.590+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-09-13T13:11:20.343+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_batch']) retrieved from /opt/airflow/dags/dags.py
+[2025-09-13T13:11:20.535+0000] {logging_mixin.py:150} INFO - [2025-09-13T13:11:20.534+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-09-13T13:11:20.569+0000] {logging_mixin.py:150} INFO - [2025-09-13T13:11:20.568+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_batch to 2025-09-13T12:41:20.568671+00:00, run_after=2025-09-13T13:11:20.568671+00:00
+[2025-09-13T13:11:20.603+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dags.py took 1.018 seconds
+[2025-09-13T13:11:50.692+0000] {processor.py:157} INFO - Started process (PID=754) to work on /opt/airflow/dags/dags.py
+[2025-09-13T13:11:50.693+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-09-13T13:11:50.694+0000] {logging_mixin.py:150} INFO - [2025-09-13T13:11:50.693+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-09-13T13:11:51.276+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_batch']) retrieved from /opt/airflow/dags/dags.py
+[2025-09-13T13:11:51.336+0000] {logging_mixin.py:150} INFO - [2025-09-13T13:11:51.336+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-09-13T13:11:51.370+0000] {logging_mixin.py:150} INFO - [2025-09-13T13:11:51.369+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_batch to 2025-09-13T12:41:51.369476+00:00, run_after=2025-09-13T13:11:51.369476+00:00
+[2025-09-13T13:11:51.397+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dags.py took 0.709 seconds
+[2025-09-13T13:12:21.978+0000] {processor.py:157} INFO - Started process (PID=795) to work on /opt/airflow/dags/dags.py
+[2025-09-13T13:12:21.980+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-09-13T13:12:21.981+0000] {logging_mixin.py:150} INFO - [2025-09-13T13:12:21.981+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-09-13T13:12:22.663+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_batch']) retrieved from /opt/airflow/dags/dags.py
+[2025-09-13T13:12:22.809+0000] {logging_mixin.py:150} INFO - [2025-09-13T13:12:22.808+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-09-13T13:12:22.910+0000] {logging_mixin.py:150} INFO - [2025-09-13T13:12:22.910+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_batch to 2025-09-13T12:42:22.909761+00:00, run_after=2025-09-13T13:12:22.909761+00:00
+[2025-09-13T13:12:23.235+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dags.py took 1.263 seconds
+[2025-09-13T13:12:53.310+0000] {processor.py:157} INFO - Started process (PID=836) to work on /opt/airflow/dags/dags.py
+[2025-09-13T13:12:53.311+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-09-13T13:12:53.312+0000] {logging_mixin.py:150} INFO - [2025-09-13T13:12:53.312+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-09-13T13:12:53.916+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_batch']) retrieved from /opt/airflow/dags/dags.py
+[2025-09-13T13:12:53.965+0000] {logging_mixin.py:150} INFO - [2025-09-13T13:12:53.964+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-09-13T13:12:54.117+0000] {logging_mixin.py:150} INFO - [2025-09-13T13:12:54.117+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_batch to 2025-09-13T12:42:54.117153+00:00, run_after=2025-09-13T13:12:54.117153+00:00
+[2025-09-13T13:12:54.143+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dags.py took 0.837 seconds
+[2025-09-13T13:13:24.485+0000] {processor.py:157} INFO - Started process (PID=877) to work on /opt/airflow/dags/dags.py
+[2025-09-13T13:13:24.489+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-09-13T13:13:24.491+0000] {logging_mixin.py:150} INFO - [2025-09-13T13:13:24.491+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-09-13T13:13:25.295+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_batch']) retrieved from /opt/airflow/dags/dags.py
+[2025-09-13T13:13:25.520+0000] {logging_mixin.py:150} INFO - [2025-09-13T13:13:25.360+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-09-13T13:13:25.555+0000] {logging_mixin.py:150} INFO - [2025-09-13T13:13:25.555+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_batch to 2025-09-13T12:43:25.555150+00:00, run_after=2025-09-13T13:13:25.555150+00:00
+[2025-09-13T13:13:25.584+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dags.py took 1.113 seconds
+[2025-09-13T13:13:55.698+0000] {processor.py:157} INFO - Started process (PID=918) to work on /opt/airflow/dags/dags.py
+[2025-09-13T13:13:55.699+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-09-13T13:13:55.700+0000] {logging_mixin.py:150} INFO - [2025-09-13T13:13:55.700+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-09-13T13:13:56.332+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_batch']) retrieved from /opt/airflow/dags/dags.py
+[2025-09-13T13:13:56.569+0000] {logging_mixin.py:150} INFO - [2025-09-13T13:13:56.569+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-09-13T13:13:56.616+0000] {logging_mixin.py:150} INFO - [2025-09-13T13:13:56.616+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_batch to 2025-09-13T12:43:56.616424+00:00, run_after=2025-09-13T13:13:56.616424+00:00
+[2025-09-13T13:13:56.699+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dags.py took 1.005 seconds
+[2025-09-13T13:14:27.449+0000] {processor.py:157} INFO - Started process (PID=959) to work on /opt/airflow/dags/dags.py
+[2025-09-13T13:14:27.450+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-09-13T13:14:27.452+0000] {logging_mixin.py:150} INFO - [2025-09-13T13:14:27.452+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-09-13T13:14:28.125+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_batch']) retrieved from /opt/airflow/dags/dags.py
+[2025-09-13T13:14:28.185+0000] {logging_mixin.py:150} INFO - [2025-09-13T13:14:28.184+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-09-13T13:14:28.221+0000] {logging_mixin.py:150} INFO - [2025-09-13T13:14:28.221+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_batch to 2025-09-13T12:44:28.220934+00:00, run_after=2025-09-13T13:14:28.220934+00:00
+[2025-09-13T13:14:28.390+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dags.py took 0.946 seconds
+[2025-09-13T13:14:58.500+0000] {processor.py:157} INFO - Started process (PID=1000) to work on /opt/airflow/dags/dags.py
+[2025-09-13T13:14:58.501+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-09-13T13:14:58.502+0000] {logging_mixin.py:150} INFO - [2025-09-13T13:14:58.502+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-09-13T13:14:59.094+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_batch']) retrieved from /opt/airflow/dags/dags.py
+[2025-09-13T13:14:59.164+0000] {logging_mixin.py:150} INFO - [2025-09-13T13:14:59.163+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-09-13T13:14:59.319+0000] {logging_mixin.py:150} INFO - [2025-09-13T13:14:59.319+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_batch to 2025-09-13T12:44:59.319177+00:00, run_after=2025-09-13T13:14:59.319177+00:00
+[2025-09-13T13:14:59.348+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dags.py took 0.851 seconds
+[2025-09-13T13:15:29.599+0000] {processor.py:157} INFO - Started process (PID=1041) to work on /opt/airflow/dags/dags.py
+[2025-09-13T13:15:29.601+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-09-13T13:15:29.603+0000] {logging_mixin.py:150} INFO - [2025-09-13T13:15:29.603+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-09-13T13:15:30.496+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_batch']) retrieved from /opt/airflow/dags/dags.py
+[2025-09-13T13:15:30.742+0000] {logging_mixin.py:150} INFO - [2025-09-13T13:15:30.582+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-09-13T13:15:30.791+0000] {logging_mixin.py:150} INFO - [2025-09-13T13:15:30.791+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_batch to 2025-09-13T12:45:30.790952+00:00, run_after=2025-09-13T13:15:30.790952+00:00
+[2025-09-13T13:15:30.829+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dags.py took 1.235 seconds
+[2025-09-13T13:16:01.153+0000] {processor.py:157} INFO - Started process (PID=1082) to work on /opt/airflow/dags/dags.py
+[2025-09-13T13:16:01.155+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-09-13T13:16:01.156+0000] {logging_mixin.py:150} INFO - [2025-09-13T13:16:01.156+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-09-13T13:23:48.403+0000] {processor.py:157} INFO - Started process (PID=195) to work on /opt/airflow/dags/dags.py
+[2025-09-13T13:23:48.406+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-09-13T13:23:48.408+0000] {logging_mixin.py:150} INFO - [2025-09-13T13:23:48.407+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-09-13T13:23:51.973+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_batch']) retrieved from /opt/airflow/dags/dags.py
+[2025-09-13T13:23:52.706+0000] {logging_mixin.py:150} INFO - [2025-09-13T13:23:52.706+0000] {manager.py:504} INFO - Created Permission View: can read on DAG:kafka_to_postgres_batch
+[2025-09-13T13:23:52.734+0000] {logging_mixin.py:150} INFO - [2025-09-13T13:23:52.734+0000] {manager.py:504} INFO - Created Permission View: can edit on DAG:kafka_to_postgres_batch
+[2025-09-13T13:23:52.756+0000] {logging_mixin.py:150} INFO - [2025-09-13T13:23:52.756+0000] {manager.py:504} INFO - Created Permission View: can delete on DAG:kafka_to_postgres_batch
+[2025-09-13T13:23:52.790+0000] {logging_mixin.py:150} INFO - [2025-09-13T13:23:52.789+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-09-13T13:23:52.825+0000] {logging_mixin.py:150} INFO - [2025-09-13T13:23:52.824+0000] {dag.py:2763} INFO - Creating ORM DAG for kafka_to_postgres_batch
+[2025-09-13T13:23:52.858+0000] {logging_mixin.py:150} INFO - [2025-09-13T13:23:52.857+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_batch to 2025-09-13T12:53:52.857133+00:00, run_after=2025-09-13T13:23:52.857133+00:00
+[2025-09-13T13:23:52.936+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dags.py took 4.548 seconds
+[2025-09-13T13:24:24.149+0000] {processor.py:157} INFO - Started process (PID=244) to work on /opt/airflow/dags/dags.py
+[2025-09-13T13:24:24.196+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-09-13T13:24:24.207+0000] {logging_mixin.py:150} INFO - [2025-09-13T13:24:24.204+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-09-13T13:24:26.844+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_batch']) retrieved from /opt/airflow/dags/dags.py
+[2025-09-13T13:24:26.920+0000] {logging_mixin.py:150} INFO - [2025-09-13T13:24:26.920+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-09-13T13:24:26.962+0000] {logging_mixin.py:150} INFO - [2025-09-13T13:24:26.962+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_batch to 2025-09-13T12:54:26.962425+00:00, run_after=2025-09-13T13:24:26.962425+00:00
+[2025-09-13T13:24:26.999+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dags.py took 3.015 seconds
+[2025-09-13T13:24:57.196+0000] {processor.py:157} INFO - Started process (PID=278) to work on /opt/airflow/dags/dags.py
+[2025-09-13T13:24:57.198+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-09-13T13:24:57.200+0000] {logging_mixin.py:150} INFO - [2025-09-13T13:24:57.199+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-09-13T13:25:01.953+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_batch']) retrieved from /opt/airflow/dags/dags.py
+[2025-09-13T13:25:02.163+0000] {logging_mixin.py:150} INFO - [2025-09-13T13:25:02.161+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-09-13T13:25:02.230+0000] {logging_mixin.py:150} INFO - [2025-09-13T13:25:02.230+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_batch to 2025-09-13T12:55:02.230018+00:00, run_after=2025-09-13T13:25:02.230018+00:00
+[2025-09-13T13:25:02.277+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dags.py took 5.086 seconds
+[2025-09-13T13:25:33.168+0000] {processor.py:157} INFO - Started process (PID=319) to work on /opt/airflow/dags/dags.py
+[2025-09-13T13:25:33.190+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-09-13T13:25:33.199+0000] {logging_mixin.py:150} INFO - [2025-09-13T13:25:33.198+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-09-13T13:25:39.599+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_batch']) retrieved from /opt/airflow/dags/dags.py
+[2025-09-13T13:25:39.749+0000] {logging_mixin.py:150} INFO - [2025-09-13T13:25:39.747+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-09-13T13:25:39.846+0000] {logging_mixin.py:150} INFO - [2025-09-13T13:25:39.846+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_batch to 2025-09-13T12:55:39.845957+00:00, run_after=2025-09-13T13:25:39.845957+00:00
+[2025-09-13T13:25:39.926+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dags.py took 6.852 seconds
+[2025-09-13T13:26:10.506+0000] {processor.py:157} INFO - Started process (PID=394) to work on /opt/airflow/dags/dags.py
+[2025-09-13T13:26:10.510+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-09-13T13:26:10.513+0000] {logging_mixin.py:150} INFO - [2025-09-13T13:26:10.512+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-09-13T13:26:12.453+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_batch']) retrieved from /opt/airflow/dags/dags.py
+[2025-09-13T13:26:12.531+0000] {logging_mixin.py:150} INFO - [2025-09-13T13:26:12.530+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-09-13T13:26:12.584+0000] {logging_mixin.py:150} INFO - [2025-09-13T13:26:12.583+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_batch to 2025-09-13T13:25:39.845957+00:00, run_after=2025-09-13T13:55:39.845957+00:00
+[2025-09-13T13:26:12.630+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dags.py took 2.132 seconds
+[2025-09-13T13:26:43.418+0000] {processor.py:157} INFO - Started process (PID=435) to work on /opt/airflow/dags/dags.py
+[2025-09-13T13:26:43.421+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-09-13T13:26:43.423+0000] {logging_mixin.py:150} INFO - [2025-09-13T13:26:43.423+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-09-13T13:26:44.672+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_batch']) retrieved from /opt/airflow/dags/dags.py
+[2025-09-13T13:26:44.779+0000] {logging_mixin.py:150} INFO - [2025-09-13T13:26:44.778+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-09-13T13:26:44.839+0000] {logging_mixin.py:150} INFO - [2025-09-13T13:26:44.839+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_batch to 2025-09-13T13:25:39.845957+00:00, run_after=2025-09-13T13:55:39.845957+00:00
+[2025-09-13T13:26:44.904+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dags.py took 1.491 seconds
+[2025-09-13T13:27:15.217+0000] {processor.py:157} INFO - Started process (PID=487) to work on /opt/airflow/dags/dags.py
+[2025-09-13T13:27:15.232+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-09-13T13:27:15.239+0000] {logging_mixin.py:150} INFO - [2025-09-13T13:27:15.237+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-09-13T13:27:18.134+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_batch']) retrieved from /opt/airflow/dags/dags.py
+[2025-09-13T13:27:18.247+0000] {logging_mixin.py:150} INFO - [2025-09-13T13:27:18.246+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-09-13T13:27:18.322+0000] {logging_mixin.py:150} INFO - [2025-09-13T13:27:18.321+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_batch to 2025-09-13T13:25:39.845957+00:00, run_after=2025-09-13T13:55:39.845957+00:00
+[2025-09-13T13:27:18.378+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dags.py took 3.213 seconds
+[2025-09-13T13:27:48.634+0000] {processor.py:157} INFO - Started process (PID=530) to work on /opt/airflow/dags/dags.py
+[2025-09-13T13:27:48.636+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-09-13T13:27:48.639+0000] {logging_mixin.py:150} INFO - [2025-09-13T13:27:48.638+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-09-13T13:27:52.809+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_batch']) retrieved from /opt/airflow/dags/dags.py
+[2025-09-13T13:27:52.962+0000] {logging_mixin.py:150} INFO - [2025-09-13T13:27:52.961+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-09-13T13:27:53.397+0000] {logging_mixin.py:150} INFO - [2025-09-13T13:27:53.387+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_batch to 2025-09-13T13:25:39.845957+00:00, run_after=2025-09-13T13:55:39.845957+00:00
+[2025-09-13T13:27:53.569+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dags.py took 4.945 seconds
+[2025-09-13T13:28:24.387+0000] {processor.py:157} INFO - Started process (PID=573) to work on /opt/airflow/dags/dags.py
+[2025-09-13T13:28:24.389+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-09-13T13:28:24.392+0000] {logging_mixin.py:150} INFO - [2025-09-13T13:28:24.391+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-09-13T13:28:26.591+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_batch']) retrieved from /opt/airflow/dags/dags.py
+[2025-09-13T13:28:26.699+0000] {logging_mixin.py:150} INFO - [2025-09-13T13:28:26.695+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-09-13T13:28:26.942+0000] {logging_mixin.py:150} INFO - [2025-09-13T13:28:26.942+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_batch to 2025-09-13T13:25:39.845957+00:00, run_after=2025-09-13T13:55:39.845957+00:00
+[2025-09-13T13:28:27.008+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dags.py took 2.627 seconds
+[2025-09-13T13:28:57.761+0000] {processor.py:157} INFO - Started process (PID=614) to work on /opt/airflow/dags/dags.py
+[2025-09-13T13:28:57.763+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-09-13T13:28:57.765+0000] {logging_mixin.py:150} INFO - [2025-09-13T13:28:57.764+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-09-13T13:28:58.415+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_batch']) retrieved from /opt/airflow/dags/dags.py
+[2025-09-13T13:28:58.483+0000] {logging_mixin.py:150} INFO - [2025-09-13T13:28:58.483+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-09-13T13:28:58.521+0000] {logging_mixin.py:150} INFO - [2025-09-13T13:28:58.521+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_batch to 2025-09-13T13:25:39.845957+00:00, run_after=2025-09-13T13:55:39.845957+00:00
+[2025-09-13T13:28:58.554+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dags.py took 0.800 seconds
+[2025-09-13T13:29:28.735+0000] {processor.py:157} INFO - Started process (PID=655) to work on /opt/airflow/dags/dags.py
+[2025-09-13T13:29:28.736+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-09-13T13:29:28.738+0000] {logging_mixin.py:150} INFO - [2025-09-13T13:29:28.738+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-09-13T13:29:29.284+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_batch']) retrieved from /opt/airflow/dags/dags.py
+[2025-09-13T13:29:29.341+0000] {logging_mixin.py:150} INFO - [2025-09-13T13:29:29.340+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-09-13T13:29:29.374+0000] {logging_mixin.py:150} INFO - [2025-09-13T13:29:29.373+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_batch to 2025-09-13T13:25:39.845957+00:00, run_after=2025-09-13T13:55:39.845957+00:00
+[2025-09-13T13:29:29.407+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dags.py took 0.676 seconds
+[2025-09-13T13:29:59.962+0000] {processor.py:157} INFO - Started process (PID=696) to work on /opt/airflow/dags/dags.py
+[2025-09-13T13:29:59.964+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-09-13T13:29:59.965+0000] {logging_mixin.py:150} INFO - [2025-09-13T13:29:59.965+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-09-13T13:30:00.951+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_batch']) retrieved from /opt/airflow/dags/dags.py
+[2025-09-13T13:30:01.028+0000] {logging_mixin.py:150} INFO - [2025-09-13T13:30:01.027+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-09-13T13:30:01.422+0000] {logging_mixin.py:150} INFO - [2025-09-13T13:30:01.422+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_batch to 2025-09-13T13:25:39.845957+00:00, run_after=2025-09-13T13:55:39.845957+00:00
+[2025-09-13T13:30:01.468+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dags.py took 1.515 seconds
+[2025-09-13T13:30:31.761+0000] {processor.py:157} INFO - Started process (PID=737) to work on /opt/airflow/dags/dags.py
+[2025-09-13T13:30:31.762+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-09-13T13:30:31.763+0000] {logging_mixin.py:150} INFO - [2025-09-13T13:30:31.763+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-09-13T13:30:32.355+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_batch']) retrieved from /opt/airflow/dags/dags.py
+[2025-09-13T13:30:32.549+0000] {logging_mixin.py:150} INFO - [2025-09-13T13:30:32.435+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-09-13T13:30:32.580+0000] {logging_mixin.py:150} INFO - [2025-09-13T13:30:32.580+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_batch to 2025-09-13T13:25:39.845957+00:00, run_after=2025-09-13T13:55:39.845957+00:00
+[2025-09-13T13:30:32.607+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dags.py took 0.850 seconds
+[2025-09-13T13:31:04.025+0000] {processor.py:157} INFO - Started process (PID=801) to work on /opt/airflow/dags/dags.py
+[2025-09-13T13:31:04.030+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-09-13T13:31:04.032+0000] {logging_mixin.py:150} INFO - [2025-09-13T13:31:04.031+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-09-13T13:31:09.429+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_batch']) retrieved from /opt/airflow/dags/dags.py
+[2025-09-13T13:31:19.572+0000] {logging_mixin.py:150} INFO - [2025-09-13T13:31:19.569+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-09-13T13:31:19.671+0000] {logging_mixin.py:150} INFO - [2025-09-13T13:31:19.671+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_batch to 2025-09-13T13:25:39.845957+00:00, run_after=2025-09-13T13:55:39.845957+00:00
+[2025-09-13T13:31:19.742+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dags.py took 15.725 seconds
+[2025-09-13T13:31:49.884+0000] {processor.py:157} INFO - Started process (PID=847) to work on /opt/airflow/dags/dags.py
+[2025-09-13T13:31:49.888+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-09-13T13:31:49.891+0000] {logging_mixin.py:150} INFO - [2025-09-13T13:31:49.890+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-09-13T13:31:52.413+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_batch']) retrieved from /opt/airflow/dags/dags.py
+[2025-09-13T13:31:53.194+0000] {logging_mixin.py:150} INFO - [2025-09-13T13:31:53.191+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-09-13T13:31:53.554+0000] {logging_mixin.py:150} INFO - [2025-09-13T13:31:53.553+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_batch to 2025-09-13T13:25:39.845957+00:00, run_after=2025-09-13T13:55:39.845957+00:00
+[2025-09-13T13:31:56.265+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dags.py took 6.404 seconds
+[2025-09-13T13:32:26.772+0000] {processor.py:157} INFO - Started process (PID=908) to work on /opt/airflow/dags/dags.py
+[2025-09-13T13:32:26.774+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-09-13T13:32:26.776+0000] {logging_mixin.py:150} INFO - [2025-09-13T13:32:26.775+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-09-13T13:32:27.842+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_batch']) retrieved from /opt/airflow/dags/dags.py
+[2025-09-13T13:32:28.171+0000] {logging_mixin.py:150} INFO - [2025-09-13T13:32:28.169+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-09-13T13:32:31.806+0000] {logging_mixin.py:150} INFO - [2025-09-13T13:32:31.805+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_batch to 2025-09-13T13:25:39.845957+00:00, run_after=2025-09-13T13:55:39.845957+00:00
+[2025-09-13T13:32:31.882+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dags.py took 5.116 seconds
+[2025-09-13T13:33:02.464+0000] {processor.py:157} INFO - Started process (PID=949) to work on /opt/airflow/dags/dags.py
+[2025-09-13T13:33:02.466+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-09-13T13:33:02.467+0000] {logging_mixin.py:150} INFO - [2025-09-13T13:33:02.467+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-09-13T13:33:03.230+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_batch']) retrieved from /opt/airflow/dags/dags.py
+[2025-09-13T13:33:03.505+0000] {logging_mixin.py:150} INFO - [2025-09-13T13:33:03.504+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-09-13T13:33:03.600+0000] {logging_mixin.py:150} INFO - [2025-09-13T13:33:03.599+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_batch to 2025-09-13T13:25:39.845957+00:00, run_after=2025-09-13T13:55:39.845957+00:00
+[2025-09-13T13:33:03.669+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dags.py took 1.210 seconds
+[2025-09-13T13:33:34.235+0000] {processor.py:157} INFO - Started process (PID=990) to work on /opt/airflow/dags/dags.py
+[2025-09-13T13:33:34.237+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-09-13T13:33:34.238+0000] {logging_mixin.py:150} INFO - [2025-09-13T13:33:34.237+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-09-13T13:33:35.611+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_batch']) retrieved from /opt/airflow/dags/dags.py
+[2025-09-13T13:33:36.277+0000] {logging_mixin.py:150} INFO - [2025-09-13T13:33:36.276+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-09-13T13:33:36.343+0000] {logging_mixin.py:150} INFO - [2025-09-13T13:33:36.343+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_batch to 2025-09-13T13:25:39.845957+00:00, run_after=2025-09-13T13:55:39.845957+00:00
+[2025-09-13T13:33:36.392+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dags.py took 2.161 seconds
+[2025-09-13T13:34:06.628+0000] {processor.py:157} INFO - Started process (PID=1031) to work on /opt/airflow/dags/dags.py
+[2025-09-13T13:34:06.630+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-09-13T13:34:06.631+0000] {logging_mixin.py:150} INFO - [2025-09-13T13:34:06.631+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-09-13T13:34:07.181+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_batch']) retrieved from /opt/airflow/dags/dags.py
+[2025-09-13T13:34:07.242+0000] {logging_mixin.py:150} INFO - [2025-09-13T13:34:07.242+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-09-13T13:34:07.290+0000] {logging_mixin.py:150} INFO - [2025-09-13T13:34:07.289+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_batch to 2025-09-13T13:25:39.845957+00:00, run_after=2025-09-13T13:55:39.845957+00:00
+[2025-09-13T13:34:07.445+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dags.py took 0.821 seconds
+[2025-09-13T13:34:37.990+0000] {processor.py:157} INFO - Started process (PID=1072) to work on /opt/airflow/dags/dags.py
+[2025-09-13T13:34:37.991+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-09-13T13:34:37.993+0000] {logging_mixin.py:150} INFO - [2025-09-13T13:34:37.992+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-09-13T13:34:38.553+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_batch']) retrieved from /opt/airflow/dags/dags.py
+[2025-09-13T13:34:38.615+0000] {logging_mixin.py:150} INFO - [2025-09-13T13:34:38.614+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-09-13T13:34:38.774+0000] {logging_mixin.py:150} INFO - [2025-09-13T13:34:38.774+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_batch to 2025-09-13T13:25:39.845957+00:00, run_after=2025-09-13T13:55:39.845957+00:00
+[2025-09-13T13:34:38.808+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dags.py took 0.822 seconds
+[2025-09-13T13:35:09.770+0000] {processor.py:157} INFO - Started process (PID=1113) to work on /opt/airflow/dags/dags.py
+[2025-09-13T13:35:09.772+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-09-13T13:35:09.774+0000] {logging_mixin.py:150} INFO - [2025-09-13T13:35:09.773+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-09-13T13:35:11.993+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_batch']) retrieved from /opt/airflow/dags/dags.py
+[2025-09-13T13:35:13.080+0000] {logging_mixin.py:150} INFO - [2025-09-13T13:35:13.080+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-09-13T13:35:13.154+0000] {logging_mixin.py:150} INFO - [2025-09-13T13:35:13.153+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_batch to 2025-09-13T13:25:39.845957+00:00, run_after=2025-09-13T13:55:39.845957+00:00
+[2025-09-13T13:35:13.230+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dags.py took 3.464 seconds
+[2025-09-13T13:35:43.479+0000] {processor.py:157} INFO - Started process (PID=1154) to work on /opt/airflow/dags/dags.py
+[2025-09-13T13:35:43.482+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-09-13T13:35:43.485+0000] {logging_mixin.py:150} INFO - [2025-09-13T13:35:43.484+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-09-13T13:35:44.973+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_batch']) retrieved from /opt/airflow/dags/dags.py
+[2025-09-13T13:35:46.047+0000] {logging_mixin.py:150} INFO - [2025-09-13T13:35:46.046+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-09-13T13:35:46.115+0000] {logging_mixin.py:150} INFO - [2025-09-13T13:35:46.115+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_batch to 2025-09-13T13:25:39.845957+00:00, run_after=2025-09-13T13:55:39.845957+00:00
+[2025-09-13T13:35:46.166+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dags.py took 2.702 seconds
+[2025-09-13T13:36:16.915+0000] {processor.py:157} INFO - Started process (PID=1197) to work on /opt/airflow/dags/dags.py
+[2025-09-13T13:36:16.917+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-09-13T13:36:16.918+0000] {logging_mixin.py:150} INFO - [2025-09-13T13:36:16.917+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-09-13T13:36:17.494+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_batch']) retrieved from /opt/airflow/dags/dags.py
+[2025-09-13T13:36:17.553+0000] {logging_mixin.py:150} INFO - [2025-09-13T13:36:17.553+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-09-13T13:36:17.589+0000] {logging_mixin.py:150} INFO - [2025-09-13T13:36:17.589+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_batch to 2025-09-13T13:25:39.845957+00:00, run_after=2025-09-13T13:55:39.845957+00:00
+[2025-09-13T13:36:17.740+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dags.py took 0.829 seconds
+[2025-09-13T13:36:48.346+0000] {processor.py:157} INFO - Started process (PID=1238) to work on /opt/airflow/dags/dags.py
+[2025-09-13T13:36:48.348+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-09-13T13:36:48.349+0000] {logging_mixin.py:150} INFO - [2025-09-13T13:36:48.349+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-09-13T13:36:49.057+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_batch']) retrieved from /opt/airflow/dags/dags.py
+[2025-09-13T13:36:49.120+0000] {logging_mixin.py:150} INFO - [2025-09-13T13:36:49.119+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-09-13T13:36:49.654+0000] {logging_mixin.py:150} INFO - [2025-09-13T13:36:49.654+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_batch to 2025-09-13T13:25:39.845957+00:00, run_after=2025-09-13T13:55:39.845957+00:00
+[2025-09-13T13:36:49.708+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dags.py took 1.369 seconds
+[2025-09-13T13:37:20.294+0000] {processor.py:157} INFO - Started process (PID=1280) to work on /opt/airflow/dags/dags.py
+[2025-09-13T13:37:20.298+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-09-13T13:37:20.302+0000] {logging_mixin.py:150} INFO - [2025-09-13T13:37:20.301+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-09-13T13:37:22.732+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_batch']) retrieved from /opt/airflow/dags/dags.py
+[2025-09-13T13:37:30.516+0000] {logging_mixin.py:150} INFO - [2025-09-13T13:37:30.515+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-09-13T13:37:31.192+0000] {logging_mixin.py:150} INFO - [2025-09-13T13:37:31.174+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_batch to 2025-09-13T13:25:39.845957+00:00, run_after=2025-09-13T13:55:39.845957+00:00
+[2025-09-13T13:37:31.555+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dags.py took 11.372 seconds
+[2025-09-13T13:38:01.979+0000] {processor.py:157} INFO - Started process (PID=1333) to work on /opt/airflow/dags/dags.py
+[2025-09-13T13:38:01.981+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-09-13T13:38:01.985+0000] {logging_mixin.py:150} INFO - [2025-09-13T13:38:01.984+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-09-13T13:38:02.813+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_batch']) retrieved from /opt/airflow/dags/dags.py
+[2025-09-13T13:38:03.197+0000] {logging_mixin.py:150} INFO - [2025-09-13T13:38:03.196+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-09-13T13:38:03.240+0000] {logging_mixin.py:150} INFO - [2025-09-13T13:38:03.240+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_batch to 2025-09-13T13:25:39.845957+00:00, run_after=2025-09-13T13:55:39.845957+00:00
+[2025-09-13T13:38:03.277+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dags.py took 1.305 seconds
+[2025-09-13T21:48:44.675+0000] {processor.py:157} INFO - Started process (PID=169) to work on /opt/airflow/dags/dags.py
+[2025-09-13T21:48:44.677+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-09-13T21:48:44.679+0000] {logging_mixin.py:150} INFO - [2025-09-13T21:48:44.678+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-09-13T21:48:47.277+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_batch']) retrieved from /opt/airflow/dags/dags.py
+[2025-09-13T21:48:47.814+0000] {logging_mixin.py:150} INFO - [2025-09-13T21:48:47.813+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-09-13T21:48:47.870+0000] {logging_mixin.py:150} INFO - [2025-09-13T21:48:47.870+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_batch to 2025-09-13T21:18:47.869865+00:00, run_after=2025-09-13T21:48:47.869865+00:00
+[2025-09-13T21:48:47.919+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dags.py took 3.252 seconds
+[2025-09-13T21:49:18.077+0000] {processor.py:157} INFO - Started process (PID=247) to work on /opt/airflow/dags/dags.py
+[2025-09-13T21:49:18.081+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-09-13T21:49:18.085+0000] {logging_mixin.py:150} INFO - [2025-09-13T21:49:18.083+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-09-13T21:49:18.896+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_batch']) retrieved from /opt/airflow/dags/dags.py
+[2025-09-13T21:49:18.976+0000] {logging_mixin.py:150} INFO - [2025-09-13T21:49:18.975+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-09-13T21:49:19.099+0000] {logging_mixin.py:150} INFO - [2025-09-13T21:49:19.099+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_batch to 2025-09-13T21:48:47.869865+00:00, run_after=2025-09-13T22:18:47.869865+00:00
+[2025-09-13T21:49:19.135+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dags.py took 1.067 seconds
+[2025-09-13T21:49:50.054+0000] {processor.py:157} INFO - Started process (PID=291) to work on /opt/airflow/dags/dags.py
+[2025-09-13T21:49:50.055+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-09-13T21:49:50.056+0000] {logging_mixin.py:150} INFO - [2025-09-13T21:49:50.056+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-09-13T21:49:50.783+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_batch']) retrieved from /opt/airflow/dags/dags.py
+[2025-09-13T21:49:50.849+0000] {logging_mixin.py:150} INFO - [2025-09-13T21:49:50.849+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-09-13T21:49:50.892+0000] {logging_mixin.py:150} INFO - [2025-09-13T21:49:50.891+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_batch to 2025-09-13T21:48:47.869865+00:00, run_after=2025-09-13T22:18:47.869865+00:00
+[2025-09-13T21:49:50.927+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dags.py took 0.878 seconds
+[2025-09-13T21:50:21.174+0000] {processor.py:157} INFO - Started process (PID=332) to work on /opt/airflow/dags/dags.py
+[2025-09-13T21:50:21.176+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-09-13T21:50:21.177+0000] {logging_mixin.py:150} INFO - [2025-09-13T21:50:21.177+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-09-13T21:50:21.959+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_batch']) retrieved from /opt/airflow/dags/dags.py
+[2025-09-13T21:50:22.010+0000] {logging_mixin.py:150} INFO - [2025-09-13T21:50:22.009+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-09-13T21:50:22.040+0000] {logging_mixin.py:150} INFO - [2025-09-13T21:50:22.040+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_batch to 2025-09-13T21:48:47.869865+00:00, run_after=2025-09-13T22:18:47.869865+00:00
+[2025-09-13T21:50:22.070+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dags.py took 0.899 seconds
+[2025-09-13T21:50:52.539+0000] {processor.py:157} INFO - Started process (PID=373) to work on /opt/airflow/dags/dags.py
+[2025-09-13T21:50:52.549+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-09-13T21:50:52.551+0000] {logging_mixin.py:150} INFO - [2025-09-13T21:50:52.550+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-09-13T21:50:57.784+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_batch']) retrieved from /opt/airflow/dags/dags.py
+[2025-09-13T21:50:57.928+0000] {logging_mixin.py:150} INFO - [2025-09-13T21:50:57.927+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-09-13T21:50:57.998+0000] {logging_mixin.py:150} INFO - [2025-09-13T21:50:57.998+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_batch to 2025-09-13T21:48:47.869865+00:00, run_after=2025-09-13T22:18:47.869865+00:00
+[2025-09-13T21:50:58.050+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dags.py took 5.573 seconds
+[2025-09-13T21:51:28.273+0000] {processor.py:157} INFO - Started process (PID=414) to work on /opt/airflow/dags/dags.py
+[2025-09-13T21:51:28.274+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-09-13T21:51:28.275+0000] {logging_mixin.py:150} INFO - [2025-09-13T21:51:28.275+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-09-13T21:51:29.241+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_batch']) retrieved from /opt/airflow/dags/dags.py
+[2025-09-13T21:51:29.398+0000] {logging_mixin.py:150} INFO - [2025-09-13T21:51:29.397+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-09-13T21:51:29.455+0000] {logging_mixin.py:150} INFO - [2025-09-13T21:51:29.454+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_batch to 2025-09-13T21:48:47.869865+00:00, run_after=2025-09-13T22:18:47.869865+00:00
+[2025-09-13T21:51:29.484+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dags.py took 1.215 seconds
+[2025-09-13T21:51:59.857+0000] {processor.py:157} INFO - Started process (PID=455) to work on /opt/airflow/dags/dags.py
+[2025-09-13T21:51:59.858+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-09-13T21:51:59.859+0000] {logging_mixin.py:150} INFO - [2025-09-13T21:51:59.859+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-09-13T21:52:00.661+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_batch']) retrieved from /opt/airflow/dags/dags.py
+[2025-09-13T21:52:00.759+0000] {logging_mixin.py:150} INFO - [2025-09-13T21:52:00.758+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-09-13T21:52:00.807+0000] {logging_mixin.py:150} INFO - [2025-09-13T21:52:00.807+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_batch to 2025-09-13T21:48:47.869865+00:00, run_after=2025-09-13T22:18:47.869865+00:00
+[2025-09-13T21:52:00.845+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dags.py took 0.992 seconds
+[2025-09-13T21:52:31.068+0000] {processor.py:157} INFO - Started process (PID=496) to work on /opt/airflow/dags/dags.py
+[2025-09-13T21:52:31.069+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-09-13T21:52:31.070+0000] {logging_mixin.py:150} INFO - [2025-09-13T21:52:31.070+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-09-13T21:52:31.735+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_batch']) retrieved from /opt/airflow/dags/dags.py
+[2025-09-13T21:52:31.785+0000] {logging_mixin.py:150} INFO - [2025-09-13T21:52:31.784+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-09-13T21:52:31.814+0000] {logging_mixin.py:150} INFO - [2025-09-13T21:52:31.814+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_batch to 2025-09-13T21:48:47.869865+00:00, run_after=2025-09-13T22:18:47.869865+00:00
+[2025-09-13T21:52:31.945+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dags.py took 0.881 seconds
+[2025-09-13T21:53:02.110+0000] {processor.py:157} INFO - Started process (PID=537) to work on /opt/airflow/dags/dags.py
+[2025-09-13T21:53:02.111+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-09-13T21:53:02.112+0000] {logging_mixin.py:150} INFO - [2025-09-13T21:53:02.112+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-09-13T21:53:03.100+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_batch']) retrieved from /opt/airflow/dags/dags.py
+[2025-09-13T21:53:03.175+0000] {logging_mixin.py:150} INFO - [2025-09-13T21:53:03.174+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-09-13T21:53:03.355+0000] {logging_mixin.py:150} INFO - [2025-09-13T21:53:03.355+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_batch to 2025-09-13T21:48:47.869865+00:00, run_after=2025-09-13T22:18:47.869865+00:00
+[2025-09-13T21:53:03.415+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dags.py took 1.309 seconds
+[2025-09-13T21:53:33.904+0000] {processor.py:157} INFO - Started process (PID=578) to work on /opt/airflow/dags/dags.py
+[2025-09-13T21:53:33.906+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-09-13T21:53:33.907+0000] {logging_mixin.py:150} INFO - [2025-09-13T21:53:33.906+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-09-13T21:53:34.814+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_batch']) retrieved from /opt/airflow/dags/dags.py
+[2025-09-13T21:53:35.493+0000] {logging_mixin.py:150} INFO - [2025-09-13T21:53:35.492+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-09-13T21:53:35.562+0000] {logging_mixin.py:150} INFO - [2025-09-13T21:53:35.561+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_batch to 2025-09-13T21:48:47.869865+00:00, run_after=2025-09-13T22:18:47.869865+00:00
+[2025-09-13T21:53:35.615+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dags.py took 1.716 seconds
+[2025-09-13T21:54:06.135+0000] {processor.py:157} INFO - Started process (PID=653) to work on /opt/airflow/dags/dags.py
+[2025-09-13T21:54:06.175+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-09-13T21:54:06.195+0000] {logging_mixin.py:150} INFO - [2025-09-13T21:54:06.191+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-09-13T21:54:09.071+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_batch']) retrieved from /opt/airflow/dags/dags.py
+[2025-09-13T21:54:09.164+0000] {logging_mixin.py:150} INFO - [2025-09-13T21:54:09.164+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-09-13T21:54:09.243+0000] {logging_mixin.py:150} INFO - [2025-09-13T21:54:09.242+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_batch to 2025-09-13T21:48:47.869865+00:00, run_after=2025-09-13T22:18:47.869865+00:00
+[2025-09-13T21:54:09.296+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dags.py took 3.250 seconds
+[2025-09-13T21:54:39.465+0000] {processor.py:157} INFO - Started process (PID=690) to work on /opt/airflow/dags/dags.py
+[2025-09-13T21:54:39.466+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-09-13T21:54:39.467+0000] {logging_mixin.py:150} INFO - [2025-09-13T21:54:39.467+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-09-13T21:54:40.061+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_batch']) retrieved from /opt/airflow/dags/dags.py
+[2025-09-13T21:54:40.151+0000] {logging_mixin.py:150} INFO - [2025-09-13T21:54:40.150+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-09-13T21:54:40.389+0000] {logging_mixin.py:150} INFO - [2025-09-13T21:54:40.389+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_batch to 2025-09-13T21:48:47.869865+00:00, run_after=2025-09-13T22:18:47.869865+00:00
+[2025-09-13T21:54:40.425+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dags.py took 0.964 seconds
+[2025-09-13T21:55:10.507+0000] {processor.py:157} INFO - Started process (PID=731) to work on /opt/airflow/dags/dags.py
+[2025-09-13T21:55:10.508+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-09-13T21:55:10.509+0000] {logging_mixin.py:150} INFO - [2025-09-13T21:55:10.509+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-09-13T21:55:11.159+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_batch']) retrieved from /opt/airflow/dags/dags.py
+[2025-09-13T21:55:11.217+0000] {logging_mixin.py:150} INFO - [2025-09-13T21:55:11.215+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-09-13T21:55:11.373+0000] {logging_mixin.py:150} INFO - [2025-09-13T21:55:11.373+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_batch to 2025-09-13T21:48:47.869865+00:00, run_after=2025-09-13T22:18:47.869865+00:00
+[2025-09-13T21:55:11.401+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dags.py took 0.897 seconds
+[2025-09-13T21:55:42.096+0000] {processor.py:157} INFO - Started process (PID=772) to work on /opt/airflow/dags/dags.py
+[2025-09-13T21:55:42.098+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-09-13T21:55:42.099+0000] {logging_mixin.py:150} INFO - [2025-09-13T21:55:42.098+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-09-13T21:55:42.892+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_batch']) retrieved from /opt/airflow/dags/dags.py
+[2025-09-13T21:55:43.181+0000] {logging_mixin.py:150} INFO - [2025-09-13T21:55:43.180+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-09-13T21:55:43.212+0000] {logging_mixin.py:150} INFO - [2025-09-13T21:55:43.212+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_batch to 2025-09-13T21:48:47.869865+00:00, run_after=2025-09-13T22:18:47.869865+00:00
+[2025-09-13T21:55:43.252+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dags.py took 1.161 seconds
+[2025-09-13T21:56:13.512+0000] {processor.py:157} INFO - Started process (PID=813) to work on /opt/airflow/dags/dags.py
+[2025-09-13T21:56:13.514+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-09-13T21:56:13.516+0000] {logging_mixin.py:150} INFO - [2025-09-13T21:56:13.515+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-09-13T21:56:14.716+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_batch']) retrieved from /opt/airflow/dags/dags.py
+[2025-09-13T21:56:14.909+0000] {logging_mixin.py:150} INFO - [2025-09-13T21:56:14.908+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-09-13T21:56:14.997+0000] {logging_mixin.py:150} INFO - [2025-09-13T21:56:14.996+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_batch to 2025-09-13T21:48:47.869865+00:00, run_after=2025-09-13T22:18:47.869865+00:00
+[2025-09-13T21:56:15.054+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dags.py took 1.549 seconds
+[2025-09-13T21:56:46.308+0000] {processor.py:157} INFO - Started process (PID=854) to work on /opt/airflow/dags/dags.py
+[2025-09-13T21:56:46.309+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-09-13T21:56:46.310+0000] {logging_mixin.py:150} INFO - [2025-09-13T21:56:46.310+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-09-13T21:56:47.367+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_batch']) retrieved from /opt/airflow/dags/dags.py
+[2025-09-13T21:56:47.442+0000] {logging_mixin.py:150} INFO - [2025-09-13T21:56:47.441+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-09-13T21:56:47.496+0000] {logging_mixin.py:150} INFO - [2025-09-13T21:56:47.496+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_batch to 2025-09-13T21:48:47.869865+00:00, run_after=2025-09-13T22:18:47.869865+00:00
+[2025-09-13T21:56:48.242+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dags.py took 1.937 seconds
+[2025-09-13T21:57:18.405+0000] {processor.py:157} INFO - Started process (PID=895) to work on /opt/airflow/dags/dags.py
+[2025-09-13T21:57:18.408+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-09-13T21:57:18.410+0000] {logging_mixin.py:150} INFO - [2025-09-13T21:57:18.409+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-09-13T21:57:19.650+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_batch']) retrieved from /opt/airflow/dags/dags.py
+[2025-09-13T21:57:19.918+0000] {logging_mixin.py:150} INFO - [2025-09-13T21:57:19.917+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-09-13T21:57:21.457+0000] {logging_mixin.py:150} INFO - [2025-09-13T21:57:21.456+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_batch to 2025-09-13T21:48:47.869865+00:00, run_after=2025-09-13T22:18:47.869865+00:00
+[2025-09-13T21:57:21.528+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dags.py took 3.132 seconds
+[2025-09-13T21:57:51.817+0000] {processor.py:157} INFO - Started process (PID=936) to work on /opt/airflow/dags/dags.py
+[2025-09-13T21:57:51.818+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-09-13T21:57:51.819+0000] {logging_mixin.py:150} INFO - [2025-09-13T21:57:51.819+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-09-13T21:57:54.831+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_batch']) retrieved from /opt/airflow/dags/dags.py
+[2025-09-13T21:57:57.900+0000] {logging_mixin.py:150} INFO - [2025-09-13T21:57:57.899+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-09-13T21:57:57.960+0000] {logging_mixin.py:150} INFO - [2025-09-13T21:57:57.960+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_batch to 2025-09-13T21:48:47.869865+00:00, run_after=2025-09-13T22:18:47.869865+00:00
+[2025-09-13T21:57:58.007+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dags.py took 6.217 seconds
+[2025-09-13T21:58:28.415+0000] {processor.py:157} INFO - Started process (PID=977) to work on /opt/airflow/dags/dags.py
+[2025-09-13T21:58:28.419+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-09-13T21:58:28.421+0000] {logging_mixin.py:150} INFO - [2025-09-13T21:58:28.421+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-09-13T21:58:30.101+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_batch']) retrieved from /opt/airflow/dags/dags.py
+[2025-09-13T21:58:30.332+0000] {logging_mixin.py:150} INFO - [2025-09-13T21:58:30.331+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-09-13T21:58:30.434+0000] {logging_mixin.py:150} INFO - [2025-09-13T21:58:30.433+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_batch to 2025-09-13T21:48:47.869865+00:00, run_after=2025-09-13T22:18:47.869865+00:00
+[2025-09-13T21:58:30.508+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dags.py took 2.118 seconds
+[2025-09-13T21:59:01.072+0000] {processor.py:157} INFO - Started process (PID=1018) to work on /opt/airflow/dags/dags.py
+[2025-09-13T21:59:01.073+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-09-13T21:59:01.074+0000] {logging_mixin.py:150} INFO - [2025-09-13T21:59:01.074+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-09-13T21:59:01.944+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_batch']) retrieved from /opt/airflow/dags/dags.py
+[2025-09-13T21:59:02.073+0000] {logging_mixin.py:150} INFO - [2025-09-13T21:59:02.072+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-09-13T21:59:02.152+0000] {logging_mixin.py:150} INFO - [2025-09-13T21:59:02.151+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_batch to 2025-09-13T21:48:47.869865+00:00, run_after=2025-09-13T22:18:47.869865+00:00
+[2025-09-13T21:59:04.167+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dags.py took 3.098 seconds
+[2025-09-13T21:59:34.518+0000] {processor.py:157} INFO - Started process (PID=1094) to work on /opt/airflow/dags/dags.py
+[2025-09-13T21:59:34.525+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-09-13T21:59:34.533+0000] {logging_mixin.py:150} INFO - [2025-09-13T21:59:34.531+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-09-13T21:59:37.493+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_batch']) retrieved from /opt/airflow/dags/dags.py
+[2025-09-13T21:59:37.809+0000] {logging_mixin.py:150} INFO - [2025-09-13T21:59:37.808+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-09-13T21:59:40.117+0000] {logging_mixin.py:150} INFO - [2025-09-13T21:59:40.116+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_batch to 2025-09-13T21:48:47.869865+00:00, run_after=2025-09-13T22:18:47.869865+00:00
+[2025-09-13T21:59:40.352+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dags.py took 5.840 seconds
+[2025-09-13T22:01:33.097+0000] {processor.py:157} INFO - Started process (PID=181) to work on /opt/airflow/dags/dags.py
+[2025-09-13T22:01:33.107+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-09-13T22:01:33.113+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:01:33.111+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-09-13T22:01:37.214+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_batch']) retrieved from /opt/airflow/dags/dags.py
+[2025-09-13T22:01:37.942+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:01:37.940+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-09-13T22:01:38.048+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:01:38.047+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_batch to 2025-09-13T21:48:47.869865+00:00, run_after=2025-09-13T22:18:47.869865+00:00
+[2025-09-13T22:01:38.116+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dags.py took 5.056 seconds
+[2025-09-13T22:02:08.555+0000] {processor.py:157} INFO - Started process (PID=215) to work on /opt/airflow/dags/dags.py
+[2025-09-13T22:02:08.579+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-09-13T22:02:08.582+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:02:08.581+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-09-13T22:02:13.730+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_batch']) retrieved from /opt/airflow/dags/dags.py
+[2025-09-13T22:02:13.844+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:02:13.843+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-09-13T22:02:13.970+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:02:13.970+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_batch to 2025-09-13T21:48:47.869865+00:00, run_after=2025-09-13T22:18:47.869865+00:00
+[2025-09-13T22:02:14.030+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dags.py took 5.713 seconds
+[2025-09-13T22:02:44.762+0000] {processor.py:157} INFO - Started process (PID=256) to work on /opt/airflow/dags/dags.py
+[2025-09-13T22:02:44.764+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-09-13T22:02:44.765+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:02:44.764+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-09-13T22:02:45.985+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_batch']) retrieved from /opt/airflow/dags/dags.py
+[2025-09-13T22:02:46.060+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:02:46.059+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-09-13T22:02:46.100+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:02:46.100+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_batch to 2025-09-13T21:48:47.869865+00:00, run_after=2025-09-13T22:18:47.869865+00:00
+[2025-09-13T22:02:46.134+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dags.py took 1.375 seconds
+[2025-09-13T22:03:16.401+0000] {processor.py:157} INFO - Started process (PID=322) to work on /opt/airflow/dags/dags.py
+[2025-09-13T22:03:16.403+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-09-13T22:03:16.405+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:03:16.405+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-09-13T22:03:19.399+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_batch']) retrieved from /opt/airflow/dags/dags.py
+[2025-09-13T22:03:19.495+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:03:19.494+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-09-13T22:03:19.551+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:03:19.551+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_batch to 2025-09-13T21:48:47.869865+00:00, run_after=2025-09-13T22:18:47.869865+00:00
+[2025-09-13T22:03:19.598+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dags.py took 3.206 seconds
+[2025-09-13T22:03:49.827+0000] {processor.py:157} INFO - Started process (PID=360) to work on /opt/airflow/dags/dags.py
+[2025-09-13T22:03:49.829+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-09-13T22:03:49.830+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:03:49.829+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-09-13T22:03:50.552+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_batch']) retrieved from /opt/airflow/dags/dags.py
+[2025-09-13T22:03:50.602+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:03:50.602+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-09-13T22:03:50.633+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:03:50.632+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_batch to 2025-09-13T21:48:47.869865+00:00, run_after=2025-09-13T22:18:47.869865+00:00
+[2025-09-13T22:03:50.662+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dags.py took 0.838 seconds
+[2025-09-13T22:04:21.257+0000] {processor.py:157} INFO - Started process (PID=401) to work on /opt/airflow/dags/dags.py
+[2025-09-13T22:04:21.259+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-09-13T22:04:21.260+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:04:21.260+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-09-13T22:04:22.212+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_batch']) retrieved from /opt/airflow/dags/dags.py
+[2025-09-13T22:04:22.278+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:04:22.277+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-09-13T22:04:22.316+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:04:22.316+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_batch to 2025-09-13T21:48:47.869865+00:00, run_after=2025-09-13T22:18:47.869865+00:00
+[2025-09-13T22:04:22.347+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dags.py took 1.094 seconds
+[2025-09-13T22:04:52.978+0000] {processor.py:157} INFO - Started process (PID=447) to work on /opt/airflow/dags/dags.py
+[2025-09-13T22:04:52.979+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-09-13T22:04:52.980+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:04:52.980+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-09-13T22:04:53.730+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_batch']) retrieved from /opt/airflow/dags/dags.py
+[2025-09-13T22:04:53.795+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:04:53.794+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-09-13T22:04:53.826+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:04:53.826+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_batch to 2025-09-13T21:48:47.869865+00:00, run_after=2025-09-13T22:18:47.869865+00:00
+[2025-09-13T22:04:53.856+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dags.py took 0.882 seconds
+[2025-09-13T22:05:24.321+0000] {processor.py:157} INFO - Started process (PID=488) to work on /opt/airflow/dags/dags.py
+[2025-09-13T22:05:24.323+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-09-13T22:05:24.324+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:05:24.323+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-09-13T22:05:27.479+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_batch']) retrieved from /opt/airflow/dags/dags.py
+[2025-09-13T22:05:27.756+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:05:27.753+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-09-13T22:05:27.892+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:05:27.892+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_batch to 2025-09-13T21:48:47.869865+00:00, run_after=2025-09-13T22:18:47.869865+00:00
+[2025-09-13T22:05:28.353+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dags.py took 4.035 seconds
+[2025-09-13T22:05:58.977+0000] {processor.py:157} INFO - Started process (PID=529) to work on /opt/airflow/dags/dags.py
+[2025-09-13T22:05:58.978+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-09-13T22:05:58.979+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:05:58.979+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-09-13T22:06:00.197+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_batch']) retrieved from /opt/airflow/dags/dags.py
+[2025-09-13T22:06:00.280+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:06:00.279+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-09-13T22:06:00.326+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:06:00.326+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_batch to 2025-09-13T21:48:47.869865+00:00, run_after=2025-09-13T22:18:47.869865+00:00
+[2025-09-13T22:06:00.367+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dags.py took 1.395 seconds
+[2025-09-13T22:06:31.560+0000] {processor.py:157} INFO - Started process (PID=573) to work on /opt/airflow/dags/dags.py
+[2025-09-13T22:06:31.576+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-09-13T22:06:31.592+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:06:31.587+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-09-13T22:06:37.415+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_batch']) retrieved from /opt/airflow/dags/dags.py
+[2025-09-13T22:06:37.608+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:06:37.606+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-09-13T22:06:37.720+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:06:37.719+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_batch to 2025-09-13T21:48:47.869865+00:00, run_after=2025-09-13T22:18:47.869865+00:00
+[2025-09-13T22:06:37.791+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dags.py took 6.274 seconds
+[2025-09-13T22:07:07.992+0000] {processor.py:157} INFO - Started process (PID=624) to work on /opt/airflow/dags/dags.py
+[2025-09-13T22:07:07.993+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-09-13T22:07:07.995+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:07:07.994+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-09-13T22:07:08.894+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_batch']) retrieved from /opt/airflow/dags/dags.py
+[2025-09-13T22:07:09.078+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:07:09.077+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-09-13T22:07:09.169+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:07:09.169+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_batch to 2025-09-13T21:48:47.869865+00:00, run_after=2025-09-13T22:18:47.869865+00:00
+[2025-09-13T22:07:09.227+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dags.py took 1.239 seconds
+[2025-09-13T22:07:39.818+0000] {processor.py:157} INFO - Started process (PID=665) to work on /opt/airflow/dags/dags.py
+[2025-09-13T22:07:39.819+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-09-13T22:07:39.821+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:07:39.820+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-09-13T22:07:41.514+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_batch']) retrieved from /opt/airflow/dags/dags.py
+[2025-09-13T22:07:41.588+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:07:41.587+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-09-13T22:07:41.631+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:07:41.631+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_batch to 2025-09-13T21:48:47.869865+00:00, run_after=2025-09-13T22:18:47.869865+00:00
+[2025-09-13T22:07:41.684+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dags.py took 1.872 seconds
+[2025-09-13T22:08:12.282+0000] {processor.py:157} INFO - Started process (PID=706) to work on /opt/airflow/dags/dags.py
+[2025-09-13T22:08:12.283+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-09-13T22:08:12.284+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:08:12.283+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-09-13T22:08:13.605+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_batch']) retrieved from /opt/airflow/dags/dags.py
+[2025-09-13T22:08:13.681+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:08:13.681+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-09-13T22:08:13.732+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:08:13.732+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_batch to 2025-09-13T21:48:47.869865+00:00, run_after=2025-09-13T22:18:47.869865+00:00
+[2025-09-13T22:08:13.764+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dags.py took 1.486 seconds
+[2025-09-13T22:08:44.005+0000] {processor.py:157} INFO - Started process (PID=761) to work on /opt/airflow/dags/dags.py
+[2025-09-13T22:08:44.006+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-09-13T22:08:44.007+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:08:44.007+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-09-13T22:08:44.816+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_batch']) retrieved from /opt/airflow/dags/dags.py
+[2025-09-13T22:08:44.876+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:08:44.875+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-09-13T22:08:44.906+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:08:44.905+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_batch to 2025-09-13T21:48:47.869865+00:00, run_after=2025-09-13T22:18:47.869865+00:00
+[2025-09-13T22:08:44.936+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dags.py took 0.945 seconds
+[2025-09-13T22:09:15.196+0000] {processor.py:157} INFO - Started process (PID=802) to work on /opt/airflow/dags/dags.py
+[2025-09-13T22:09:15.198+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-09-13T22:09:15.199+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:09:15.199+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-09-13T22:09:15.891+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_batch']) retrieved from /opt/airflow/dags/dags.py
+[2025-09-13T22:09:15.946+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:09:15.945+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-09-13T22:09:15.975+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:09:15.975+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_batch to 2025-09-13T21:48:47.869865+00:00, run_after=2025-09-13T22:18:47.869865+00:00
+[2025-09-13T22:09:16.003+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dags.py took 0.812 seconds
+[2025-09-13T22:09:46.124+0000] {processor.py:157} INFO - Started process (PID=843) to work on /opt/airflow/dags/dags.py
+[2025-09-13T22:09:46.125+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-09-13T22:09:46.126+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:09:46.125+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-09-13T22:09:46.929+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_batch']) retrieved from /opt/airflow/dags/dags.py
+[2025-09-13T22:09:46.982+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:09:46.981+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-09-13T22:09:47.012+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:09:47.012+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_batch to 2025-09-13T21:48:47.869865+00:00, run_after=2025-09-13T22:18:47.869865+00:00
+[2025-09-13T22:09:47.040+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dags.py took 0.920 seconds
+[2025-09-13T22:10:17.792+0000] {processor.py:157} INFO - Started process (PID=889) to work on /opt/airflow/dags/dags.py
+[2025-09-13T22:10:17.794+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-09-13T22:10:17.795+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:10:17.795+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-09-13T22:10:21.775+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_batch']) retrieved from /opt/airflow/dags/dags.py
+[2025-09-13T22:10:21.952+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:10:21.951+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-09-13T22:10:22.002+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:10:22.002+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_batch to 2025-09-13T21:48:47.869865+00:00, run_after=2025-09-13T22:18:47.869865+00:00
+[2025-09-13T22:10:22.046+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dags.py took 4.258 seconds
+[2025-09-13T22:10:52.579+0000] {processor.py:157} INFO - Started process (PID=922) to work on /opt/airflow/dags/dags.py
+[2025-09-13T22:10:52.580+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-09-13T22:10:52.582+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:10:52.581+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-09-13T22:10:58.301+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_batch']) retrieved from /opt/airflow/dags/dags.py
+[2025-09-13T22:10:58.474+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:10:58.473+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-09-13T22:10:58.533+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:10:58.532+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_batch to 2025-09-13T21:48:47.869865+00:00, run_after=2025-09-13T22:18:47.869865+00:00
+[2025-09-13T22:10:58.573+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dags.py took 6.001 seconds
+[2025-09-13T22:11:29.432+0000] {processor.py:157} INFO - Started process (PID=963) to work on /opt/airflow/dags/dags.py
+[2025-09-13T22:11:29.434+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-09-13T22:11:29.436+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:11:29.435+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-09-13T22:11:30.728+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_batch']) retrieved from /opt/airflow/dags/dags.py
+[2025-09-13T22:11:30.831+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:11:30.830+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-09-13T22:11:30.891+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:11:30.890+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_batch to 2025-09-13T21:48:47.869865+00:00, run_after=2025-09-13T22:18:47.869865+00:00
+[2025-09-13T22:11:30.931+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dags.py took 1.507 seconds
+[2025-09-13T22:12:01.549+0000] {processor.py:157} INFO - Started process (PID=1005) to work on /opt/airflow/dags/dags.py
+[2025-09-13T22:12:01.550+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-09-13T22:12:01.551+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:12:01.551+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-09-13T22:12:03.366+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_batch']) retrieved from /opt/airflow/dags/dags.py
+[2025-09-13T22:12:03.642+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:12:03.640+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-09-13T22:12:03.748+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:12:03.748+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_batch to 2025-09-13T21:48:47.869865+00:00, run_after=2025-09-13T22:18:47.869865+00:00
+[2025-09-13T22:12:03.806+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dags.py took 2.263 seconds
+[2025-09-13T22:12:34.582+0000] {processor.py:157} INFO - Started process (PID=1057) to work on /opt/airflow/dags/dags.py
+[2025-09-13T22:12:34.583+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-09-13T22:12:34.584+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:12:34.584+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-09-13T22:12:39.560+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_batch']) retrieved from /opt/airflow/dags/dags.py
+[2025-09-13T22:12:39.755+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:12:39.754+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-09-13T22:12:39.873+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:12:39.872+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_batch to 2025-09-13T21:48:47.869865+00:00, run_after=2025-09-13T22:18:47.869865+00:00
+[2025-09-13T22:12:41.437+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dags.py took 6.859 seconds
+[2025-09-13T22:13:11.526+0000] {processor.py:157} INFO - Started process (PID=1098) to work on /opt/airflow/dags/dags.py
+[2025-09-13T22:13:11.527+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-09-13T22:13:11.529+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:13:11.528+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-09-13T22:13:12.256+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_batch']) retrieved from /opt/airflow/dags/dags.py
+[2025-09-13T22:13:12.319+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:13:12.319+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-09-13T22:13:12.350+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:13:12.350+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_batch to 2025-09-13T21:48:47.869865+00:00, run_after=2025-09-13T22:18:47.869865+00:00
+[2025-09-13T22:13:12.380+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dags.py took 0.858 seconds
+[2025-09-13T22:13:43.075+0000] {processor.py:157} INFO - Started process (PID=1139) to work on /opt/airflow/dags/dags.py
+[2025-09-13T22:13:43.077+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-09-13T22:13:43.078+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:13:43.077+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-09-13T22:13:43.860+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_batch']) retrieved from /opt/airflow/dags/dags.py
+[2025-09-13T22:13:43.915+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:13:43.914+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-09-13T22:13:43.943+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:13:43.943+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_batch to 2025-09-13T21:48:47.869865+00:00, run_after=2025-09-13T22:18:47.869865+00:00
+[2025-09-13T22:13:43.973+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dags.py took 0.902 seconds
+[2025-09-13T22:14:14.509+0000] {processor.py:157} INFO - Started process (PID=1199) to work on /opt/airflow/dags/dags.py
+[2025-09-13T22:14:14.510+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-09-13T22:14:14.511+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:14:14.511+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-09-13T22:14:15.182+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_batch']) retrieved from /opt/airflow/dags/dags.py
+[2025-09-13T22:14:15.238+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:14:15.237+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-09-13T22:14:15.268+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:14:15.268+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_batch to 2025-09-13T21:48:47.869865+00:00, run_after=2025-09-13T22:18:47.869865+00:00
+[2025-09-13T22:14:15.298+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dags.py took 0.794 seconds
+[2025-09-13T22:14:46.077+0000] {processor.py:157} INFO - Started process (PID=1250) to work on /opt/airflow/dags/dags.py
+[2025-09-13T22:14:46.079+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-09-13T22:14:46.081+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:14:46.081+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-09-13T22:14:47.559+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_batch']) retrieved from /opt/airflow/dags/dags.py
+[2025-09-13T22:14:47.621+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:14:47.620+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-09-13T22:14:47.662+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:14:47.662+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_batch to 2025-09-13T21:48:47.869865+00:00, run_after=2025-09-13T22:18:47.869865+00:00
+[2025-09-13T22:14:47.695+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dags.py took 1.628 seconds
+[2025-09-13T22:15:18.360+0000] {processor.py:157} INFO - Started process (PID=1297) to work on /opt/airflow/dags/dags.py
+[2025-09-13T22:15:18.361+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-09-13T22:15:18.362+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:15:18.361+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-09-13T22:15:19.661+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_batch']) retrieved from /opt/airflow/dags/dags.py
+[2025-09-13T22:15:19.770+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:15:19.769+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-09-13T22:15:19.826+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:15:19.825+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_batch to 2025-09-13T21:48:47.869865+00:00, run_after=2025-09-13T22:18:47.869865+00:00
+[2025-09-13T22:15:19.869+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dags.py took 1.515 seconds
+[2025-09-13T22:15:50.613+0000] {processor.py:157} INFO - Started process (PID=1338) to work on /opt/airflow/dags/dags.py
+[2025-09-13T22:15:50.614+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-09-13T22:15:50.615+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:15:50.615+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-09-13T22:15:51.571+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_batch']) retrieved from /opt/airflow/dags/dags.py
+[2025-09-13T22:15:51.639+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:15:51.638+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-09-13T22:15:51.682+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:15:51.682+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_batch to 2025-09-13T21:48:47.869865+00:00, run_after=2025-09-13T22:18:47.869865+00:00
+[2025-09-13T22:15:51.719+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dags.py took 1.110 seconds
+[2025-09-13T22:16:21.875+0000] {processor.py:157} INFO - Started process (PID=1379) to work on /opt/airflow/dags/dags.py
+[2025-09-13T22:16:21.876+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-09-13T22:16:21.877+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:16:21.877+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-09-13T22:16:22.639+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_batch']) retrieved from /opt/airflow/dags/dags.py
+[2025-09-13T22:16:22.688+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:16:22.688+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-09-13T22:16:22.716+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:16:22.716+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_batch to 2025-09-13T21:48:47.869865+00:00, run_after=2025-09-13T22:18:47.869865+00:00
+[2025-09-13T22:16:22.747+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dags.py took 0.876 seconds
+[2025-09-13T22:16:53.916+0000] {processor.py:157} INFO - Started process (PID=1432) to work on /opt/airflow/dags/dags.py
+[2025-09-13T22:16:53.918+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-09-13T22:16:53.919+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:16:53.919+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-09-13T22:16:54.769+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_batch']) retrieved from /opt/airflow/dags/dags.py
+[2025-09-13T22:16:54.819+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:16:54.819+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-09-13T22:16:54.849+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:16:54.849+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_batch to 2025-09-13T21:48:47.869865+00:00, run_after=2025-09-13T22:18:47.869865+00:00
+[2025-09-13T22:16:54.878+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dags.py took 0.971 seconds
+[2025-09-13T22:17:25.240+0000] {processor.py:157} INFO - Started process (PID=1466) to work on /opt/airflow/dags/dags.py
+[2025-09-13T22:17:25.241+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-09-13T22:17:25.242+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:17:25.242+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-09-13T22:17:26.681+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_batch']) retrieved from /opt/airflow/dags/dags.py
+[2025-09-13T22:17:26.841+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:17:26.840+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-09-13T22:17:26.912+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:17:26.912+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_batch to 2025-09-13T21:48:47.869865+00:00, run_after=2025-09-13T22:18:47.869865+00:00
+[2025-09-13T22:17:26.959+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dags.py took 1.723 seconds
+[2025-09-13T22:17:57.490+0000] {processor.py:157} INFO - Started process (PID=1507) to work on /opt/airflow/dags/dags.py
+[2025-09-13T22:17:57.491+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-09-13T22:17:57.493+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:17:57.492+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-09-13T22:17:58.340+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_batch']) retrieved from /opt/airflow/dags/dags.py
+[2025-09-13T22:17:58.433+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:17:58.432+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-09-13T22:17:58.472+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:17:58.472+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_batch to 2025-09-13T21:48:47.869865+00:00, run_after=2025-09-13T22:18:47.869865+00:00
+[2025-09-13T22:17:58.504+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dags.py took 1.019 seconds
+[2025-09-13T22:18:29.177+0000] {processor.py:157} INFO - Started process (PID=1555) to work on /opt/airflow/dags/dags.py
+[2025-09-13T22:18:29.179+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-09-13T22:18:29.180+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:18:29.179+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-09-13T22:18:30.487+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_batch']) retrieved from /opt/airflow/dags/dags.py
+[2025-09-13T22:18:30.790+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:18:30.788+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-09-13T22:18:30.879+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:18:30.878+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_batch to 2025-09-13T21:48:47.869865+00:00, run_after=2025-09-13T22:18:47.869865+00:00
+[2025-09-13T22:18:30.933+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dags.py took 1.760 seconds
+[2025-09-13T22:19:01.054+0000] {processor.py:157} INFO - Started process (PID=1612) to work on /opt/airflow/dags/dags.py
+[2025-09-13T22:19:01.060+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-09-13T22:19:01.064+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:19:01.063+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-09-13T22:19:10.501+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_batch']) retrieved from /opt/airflow/dags/dags.py
+[2025-09-13T22:19:10.600+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:19:10.600+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-09-13T22:19:10.651+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:19:10.651+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_batch to 2025-09-13T22:18:47.869865+00:00, run_after=2025-09-13T22:48:47.869865+00:00
+[2025-09-13T22:19:10.707+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dags.py took 9.678 seconds
+[2025-09-13T22:19:41.741+0000] {processor.py:157} INFO - Started process (PID=1658) to work on /opt/airflow/dags/dags.py
+[2025-09-13T22:19:41.742+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-09-13T22:19:41.743+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:19:41.743+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-09-13T22:19:44.547+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_batch']) retrieved from /opt/airflow/dags/dags.py
+[2025-09-13T22:19:44.643+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:19:44.641+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-09-13T22:19:44.708+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:19:44.708+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_batch to 2025-09-13T22:18:47.869865+00:00, run_after=2025-09-13T22:48:47.869865+00:00
+[2025-09-13T22:19:44.758+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dags.py took 3.035 seconds
+[2025-09-13T22:20:15.313+0000] {processor.py:157} INFO - Started process (PID=1709) to work on /opt/airflow/dags/dags.py
+[2025-09-13T22:20:15.314+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-09-13T22:20:15.315+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:20:15.315+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-09-13T22:20:16.136+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_batch']) retrieved from /opt/airflow/dags/dags.py
+[2025-09-13T22:20:16.209+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:20:16.208+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-09-13T22:20:16.270+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:20:16.270+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_batch to 2025-09-13T22:18:47.869865+00:00, run_after=2025-09-13T22:48:47.869865+00:00
+[2025-09-13T22:20:16.336+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dags.py took 1.027 seconds
+[2025-09-13T22:20:47.566+0000] {processor.py:157} INFO - Started process (PID=1762) to work on /opt/airflow/dags/dags.py
+[2025-09-13T22:20:47.568+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-09-13T22:20:47.569+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:20:47.568+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-09-13T22:20:48.595+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_batch']) retrieved from /opt/airflow/dags/dags.py
+[2025-09-13T22:20:48.644+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:20:48.643+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-09-13T22:20:48.677+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:20:48.676+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_batch to 2025-09-13T22:18:47.869865+00:00, run_after=2025-09-13T22:48:47.869865+00:00
+[2025-09-13T22:20:48.703+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dags.py took 1.140 seconds
+[2025-09-13T22:21:19.302+0000] {processor.py:157} INFO - Started process (PID=1804) to work on /opt/airflow/dags/dags.py
+[2025-09-13T22:21:19.303+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-09-13T22:21:19.304+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:21:19.304+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-09-13T22:21:20.018+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_batch']) retrieved from /opt/airflow/dags/dags.py
+[2025-09-13T22:21:20.075+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:21:20.074+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-09-13T22:21:20.104+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:21:20.104+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_batch to 2025-09-13T22:18:47.869865+00:00, run_after=2025-09-13T22:48:47.869865+00:00
+[2025-09-13T22:21:20.130+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dags.py took 0.833 seconds
+[2025-09-13T22:21:50.748+0000] {processor.py:157} INFO - Started process (PID=1847) to work on /opt/airflow/dags/dags.py
+[2025-09-13T22:21:50.749+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-09-13T22:21:50.750+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:21:50.750+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-09-13T22:21:51.442+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_batch']) retrieved from /opt/airflow/dags/dags.py
+[2025-09-13T22:21:51.497+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:21:51.496+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-09-13T22:21:51.526+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:21:51.526+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_batch to 2025-09-13T22:18:47.869865+00:00, run_after=2025-09-13T22:48:47.869865+00:00
+[2025-09-13T22:21:51.553+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dags.py took 0.808 seconds
+[2025-09-13T22:22:21.952+0000] {processor.py:157} INFO - Started process (PID=1888) to work on /opt/airflow/dags/dags.py
+[2025-09-13T22:22:21.953+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-09-13T22:22:21.954+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:22:21.954+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-09-13T22:22:22.678+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_batch']) retrieved from /opt/airflow/dags/dags.py
+[2025-09-13T22:22:22.731+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:22:22.730+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-09-13T22:22:22.760+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:22:22.759+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_batch to 2025-09-13T22:18:47.869865+00:00, run_after=2025-09-13T22:48:47.869865+00:00
+[2025-09-13T22:22:22.788+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dags.py took 0.841 seconds
+[2025-09-13T22:22:53.130+0000] {processor.py:157} INFO - Started process (PID=1932) to work on /opt/airflow/dags/dags.py
+[2025-09-13T22:22:53.131+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-09-13T22:22:53.132+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:22:53.132+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-09-13T22:22:53.934+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_batch']) retrieved from /opt/airflow/dags/dags.py
+[2025-09-13T22:22:53.985+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:22:53.984+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-09-13T22:22:54.022+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:22:54.022+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_batch to 2025-09-13T22:18:47.869865+00:00, run_after=2025-09-13T22:48:47.869865+00:00
+[2025-09-13T22:22:54.051+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dags.py took 0.927 seconds
+[2025-09-13T22:23:24.675+0000] {processor.py:157} INFO - Started process (PID=1980) to work on /opt/airflow/dags/dags.py
+[2025-09-13T22:23:24.676+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-09-13T22:23:24.678+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:23:24.677+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-09-13T22:23:25.464+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_batch']) retrieved from /opt/airflow/dags/dags.py
+[2025-09-13T22:23:25.513+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:23:25.513+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-09-13T22:23:25.542+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:23:25.542+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_batch to 2025-09-13T22:18:47.869865+00:00, run_after=2025-09-13T22:48:47.869865+00:00
+[2025-09-13T22:23:25.571+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dags.py took 0.899 seconds
+[2025-09-13T22:23:56.398+0000] {processor.py:157} INFO - Started process (PID=2021) to work on /opt/airflow/dags/dags.py
+[2025-09-13T22:23:56.399+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-09-13T22:23:56.400+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:23:56.400+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-09-13T22:23:57.163+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_batch']) retrieved from /opt/airflow/dags/dags.py
+[2025-09-13T22:23:57.220+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:23:57.219+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-09-13T22:23:57.250+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:23:57.249+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_batch to 2025-09-13T22:18:47.869865+00:00, run_after=2025-09-13T22:48:47.869865+00:00
+[2025-09-13T22:23:57.279+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dags.py took 0.887 seconds
+[2025-09-13T22:24:27.969+0000] {processor.py:157} INFO - Started process (PID=2062) to work on /opt/airflow/dags/dags.py
+[2025-09-13T22:24:27.970+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-09-13T22:24:27.971+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:24:27.971+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-09-13T22:24:28.651+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_batch']) retrieved from /opt/airflow/dags/dags.py
+[2025-09-13T22:24:28.701+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:24:28.701+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-09-13T22:24:28.731+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:24:28.730+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_batch to 2025-09-13T22:18:47.869865+00:00, run_after=2025-09-13T22:48:47.869865+00:00
+[2025-09-13T22:24:28.759+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dags.py took 0.793 seconds
+[2025-09-13T22:24:58.949+0000] {processor.py:157} INFO - Started process (PID=2113) to work on /opt/airflow/dags/dags.py
+[2025-09-13T22:24:58.950+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-09-13T22:24:58.952+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:24:58.952+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-09-13T22:24:59.745+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_batch']) retrieved from /opt/airflow/dags/dags.py
+[2025-09-13T22:24:59.809+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:24:59.808+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-09-13T22:24:59.847+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:24:59.847+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_batch to 2025-09-13T22:18:47.869865+00:00, run_after=2025-09-13T22:48:47.869865+00:00
+[2025-09-13T22:24:59.880+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dags.py took 0.936 seconds
+[2025-09-13T22:25:30.033+0000] {processor.py:157} INFO - Started process (PID=2154) to work on /opt/airflow/dags/dags.py
+[2025-09-13T22:25:30.034+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-09-13T22:25:30.035+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:25:30.035+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-09-13T22:25:30.700+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_batch']) retrieved from /opt/airflow/dags/dags.py
+[2025-09-13T22:25:30.755+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:25:30.755+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-09-13T22:25:30.788+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:25:30.788+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_batch to 2025-09-13T22:18:47.869865+00:00, run_after=2025-09-13T22:48:47.869865+00:00
+[2025-09-13T22:25:30.819+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dags.py took 0.791 seconds
+[2025-09-13T22:26:00.903+0000] {processor.py:157} INFO - Started process (PID=2195) to work on /opt/airflow/dags/dags.py
+[2025-09-13T22:26:00.905+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-09-13T22:26:00.905+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:26:00.905+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-09-13T22:26:01.573+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_batch']) retrieved from /opt/airflow/dags/dags.py
+[2025-09-13T22:26:01.622+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:26:01.622+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-09-13T22:26:01.652+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:26:01.651+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_batch to 2025-09-13T22:18:47.869865+00:00, run_after=2025-09-13T22:48:47.869865+00:00
+[2025-09-13T22:26:01.681+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dags.py took 0.782 seconds
+[2025-09-13T22:26:32.368+0000] {processor.py:157} INFO - Started process (PID=2236) to work on /opt/airflow/dags/dags.py
+[2025-09-13T22:26:32.369+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-09-13T22:26:32.370+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:26:32.370+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-09-13T22:26:33.262+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_batch']) retrieved from /opt/airflow/dags/dags.py
+[2025-09-13T22:26:33.352+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:26:33.352+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-09-13T22:26:33.412+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:26:33.412+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_batch to 2025-09-13T22:18:47.869865+00:00, run_after=2025-09-13T22:48:47.869865+00:00
+[2025-09-13T22:26:33.453+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dags.py took 1.089 seconds
+[2025-09-13T22:27:03.947+0000] {processor.py:157} INFO - Started process (PID=2277) to work on /opt/airflow/dags/dags.py
+[2025-09-13T22:27:03.948+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-09-13T22:27:03.949+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:27:03.949+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-09-13T22:27:04.631+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_batch']) retrieved from /opt/airflow/dags/dags.py
+[2025-09-13T22:27:04.682+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:27:04.681+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-09-13T22:27:04.713+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:27:04.712+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_batch to 2025-09-13T22:18:47.869865+00:00, run_after=2025-09-13T22:48:47.869865+00:00
+[2025-09-13T22:27:04.741+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dags.py took 0.798 seconds
+[2025-09-13T22:27:35.233+0000] {processor.py:157} INFO - Started process (PID=2318) to work on /opt/airflow/dags/dags.py
+[2025-09-13T22:27:35.235+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-09-13T22:27:35.236+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:27:35.236+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-09-13T22:27:35.965+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_batch']) retrieved from /opt/airflow/dags/dags.py
+[2025-09-13T22:27:36.022+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:27:36.021+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-09-13T22:27:36.054+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:27:36.054+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_batch to 2025-09-13T22:18:47.869865+00:00, run_after=2025-09-13T22:48:47.869865+00:00
+[2025-09-13T22:27:36.084+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dags.py took 0.855 seconds
+[2025-09-13T22:28:06.141+0000] {processor.py:157} INFO - Started process (PID=2359) to work on /opt/airflow/dags/dags.py
+[2025-09-13T22:28:06.142+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-09-13T22:28:06.143+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:28:06.143+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-09-13T22:28:06.887+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_batch']) retrieved from /opt/airflow/dags/dags.py
+[2025-09-13T22:28:06.944+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:28:06.944+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-09-13T22:28:06.973+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:28:06.973+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_batch to 2025-09-13T22:18:47.869865+00:00, run_after=2025-09-13T22:48:47.869865+00:00
+[2025-09-13T22:28:07.000+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dags.py took 0.864 seconds
+[2025-09-13T22:28:37.510+0000] {processor.py:157} INFO - Started process (PID=2400) to work on /opt/airflow/dags/dags.py
+[2025-09-13T22:28:37.512+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-09-13T22:28:37.513+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:28:37.513+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-09-13T22:28:38.605+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_batch']) retrieved from /opt/airflow/dags/dags.py
+[2025-09-13T22:28:38.656+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:28:38.655+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-09-13T22:28:38.687+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:28:38.687+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_batch to 2025-09-13T22:18:47.869865+00:00, run_after=2025-09-13T22:48:47.869865+00:00
+[2025-09-13T22:28:38.715+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dags.py took 1.209 seconds
+[2025-09-13T22:29:09.374+0000] {processor.py:157} INFO - Started process (PID=2441) to work on /opt/airflow/dags/dags.py
+[2025-09-13T22:29:09.376+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-09-13T22:29:09.377+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:29:09.377+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-09-13T22:29:10.053+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_batch']) retrieved from /opt/airflow/dags/dags.py
+[2025-09-13T22:29:10.115+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:29:10.115+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-09-13T22:29:10.148+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:29:10.148+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_batch to 2025-09-13T22:18:47.869865+00:00, run_after=2025-09-13T22:48:47.869865+00:00
+[2025-09-13T22:29:10.179+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dags.py took 0.809 seconds
+[2025-09-13T22:29:40.791+0000] {processor.py:157} INFO - Started process (PID=2482) to work on /opt/airflow/dags/dags.py
+[2025-09-13T22:29:40.793+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-09-13T22:29:40.794+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:29:40.794+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-09-13T22:29:41.561+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_batch']) retrieved from /opt/airflow/dags/dags.py
+[2025-09-13T22:29:41.614+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:29:41.614+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-09-13T22:29:41.645+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:29:41.645+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_batch to 2025-09-13T22:18:47.869865+00:00, run_after=2025-09-13T22:48:47.869865+00:00
+[2025-09-13T22:29:41.672+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dags.py took 0.886 seconds
+[2025-09-13T22:30:12.273+0000] {processor.py:157} INFO - Started process (PID=2523) to work on /opt/airflow/dags/dags.py
+[2025-09-13T22:30:12.274+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-09-13T22:30:12.275+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:30:12.275+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-09-13T22:30:13.128+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_batch']) retrieved from /opt/airflow/dags/dags.py
+[2025-09-13T22:30:13.197+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:30:13.197+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-09-13T22:30:13.234+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:30:13.233+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_batch to 2025-09-13T22:18:47.869865+00:00, run_after=2025-09-13T22:48:47.869865+00:00
+[2025-09-13T22:30:13.269+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dags.py took 1.000 seconds
+[2025-09-13T22:30:43.665+0000] {processor.py:157} INFO - Started process (PID=2564) to work on /opt/airflow/dags/dags.py
+[2025-09-13T22:30:43.667+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-09-13T22:30:43.668+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:30:43.667+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-09-13T22:30:44.370+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_batch']) retrieved from /opt/airflow/dags/dags.py
+[2025-09-13T22:30:44.430+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:30:44.429+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-09-13T22:30:44.459+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:30:44.459+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_batch to 2025-09-13T22:18:47.869865+00:00, run_after=2025-09-13T22:48:47.869865+00:00
+[2025-09-13T22:30:44.487+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dags.py took 0.826 seconds
+[2025-09-13T22:31:15.027+0000] {processor.py:157} INFO - Started process (PID=2605) to work on /opt/airflow/dags/dags.py
+[2025-09-13T22:31:15.029+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-09-13T22:31:15.030+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:31:15.030+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-09-13T22:31:15.807+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_batch']) retrieved from /opt/airflow/dags/dags.py
+[2025-09-13T22:31:15.875+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:31:15.874+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-09-13T22:31:15.947+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:31:15.947+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_batch to 2025-09-13T22:18:47.869865+00:00, run_after=2025-09-13T22:48:47.869865+00:00
+[2025-09-13T22:31:15.999+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dags.py took 0.976 seconds
+[2025-09-13T22:31:46.174+0000] {processor.py:157} INFO - Started process (PID=2646) to work on /opt/airflow/dags/dags.py
+[2025-09-13T22:31:46.175+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-09-13T22:31:46.176+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:31:46.176+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-09-13T22:31:46.897+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_batch']) retrieved from /opt/airflow/dags/dags.py
+[2025-09-13T22:31:46.967+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:31:46.967+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-09-13T22:31:46.998+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:31:46.997+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_batch to 2025-09-13T22:18:47.869865+00:00, run_after=2025-09-13T22:48:47.869865+00:00
+[2025-09-13T22:31:47.024+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dags.py took 0.854 seconds
+[2025-09-13T22:32:17.292+0000] {processor.py:157} INFO - Started process (PID=2687) to work on /opt/airflow/dags/dags.py
+[2025-09-13T22:32:17.293+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-09-13T22:32:17.295+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:32:17.295+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-09-13T22:32:17.974+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_batch']) retrieved from /opt/airflow/dags/dags.py
+[2025-09-13T22:32:18.034+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:32:18.033+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-09-13T22:32:18.067+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:32:18.067+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_batch to 2025-09-13T22:18:47.869865+00:00, run_after=2025-09-13T22:48:47.869865+00:00
+[2025-09-13T22:32:18.097+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dags.py took 0.809 seconds
+[2025-09-13T22:32:48.435+0000] {processor.py:157} INFO - Started process (PID=2728) to work on /opt/airflow/dags/dags.py
+[2025-09-13T22:32:48.436+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-09-13T22:32:48.437+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:32:48.437+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-09-13T22:32:49.102+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_batch']) retrieved from /opt/airflow/dags/dags.py
+[2025-09-13T22:32:49.156+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:32:49.156+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-09-13T22:32:49.187+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:32:49.187+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_batch to 2025-09-13T22:18:47.869865+00:00, run_after=2025-09-13T22:48:47.869865+00:00
+[2025-09-13T22:32:49.216+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dags.py took 0.785 seconds
+[2025-09-13T22:33:19.675+0000] {processor.py:157} INFO - Started process (PID=2769) to work on /opt/airflow/dags/dags.py
+[2025-09-13T22:33:19.676+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-09-13T22:33:19.677+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:33:19.677+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-09-13T22:33:20.333+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_batch']) retrieved from /opt/airflow/dags/dags.py
+[2025-09-13T22:33:20.385+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:33:20.385+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-09-13T22:33:20.415+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:33:20.415+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_batch to 2025-09-13T22:18:47.869865+00:00, run_after=2025-09-13T22:48:47.869865+00:00
+[2025-09-13T22:33:20.442+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dags.py took 0.782 seconds
+[2025-09-13T22:33:51.051+0000] {processor.py:157} INFO - Started process (PID=2810) to work on /opt/airflow/dags/dags.py
+[2025-09-13T22:33:51.052+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-09-13T22:33:51.053+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:33:51.052+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-09-13T22:33:51.690+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_batch']) retrieved from /opt/airflow/dags/dags.py
+[2025-09-13T22:33:51.746+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:33:51.745+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-09-13T22:33:51.778+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:33:51.778+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_batch to 2025-09-13T22:18:47.869865+00:00, run_after=2025-09-13T22:48:47.869865+00:00
+[2025-09-13T22:33:51.805+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dags.py took 0.758 seconds
+[2025-09-13T22:34:21.977+0000] {processor.py:157} INFO - Started process (PID=2851) to work on /opt/airflow/dags/dags.py
+[2025-09-13T22:34:21.990+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-09-13T22:34:21.991+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:34:21.991+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-09-13T22:34:22.811+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_batch']) retrieved from /opt/airflow/dags/dags.py
+[2025-09-13T22:34:22.864+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:34:22.863+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-09-13T22:34:22.898+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:34:22.897+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_batch to 2025-09-13T22:18:47.869865+00:00, run_after=2025-09-13T22:48:47.869865+00:00
+[2025-09-13T22:34:22.926+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dags.py took 0.953 seconds
+[2025-09-13T22:34:53.110+0000] {processor.py:157} INFO - Started process (PID=2890) to work on /opt/airflow/dags/dags.py
+[2025-09-13T22:34:53.111+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-09-13T22:34:53.112+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:34:53.112+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-09-13T22:34:54.179+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_batch']) retrieved from /opt/airflow/dags/dags.py
+[2025-09-13T22:34:54.318+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:34:54.316+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-09-13T22:34:54.393+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:34:54.392+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_batch to 2025-09-13T22:18:47.869865+00:00, run_after=2025-09-13T22:48:47.869865+00:00
+[2025-09-13T22:34:54.427+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dags.py took 1.325 seconds
+[2025-09-13T22:35:24.802+0000] {processor.py:157} INFO - Started process (PID=2933) to work on /opt/airflow/dags/dags.py
+[2025-09-13T22:35:24.804+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-09-13T22:35:24.808+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:35:24.807+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-09-13T22:35:29.004+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_batch']) retrieved from /opt/airflow/dags/dags.py
+[2025-09-13T22:35:29.318+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:35:29.317+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-09-13T22:35:29.380+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:35:29.380+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_batch to 2025-09-13T22:18:47.869865+00:00, run_after=2025-09-13T22:48:47.869865+00:00
+[2025-09-13T22:35:29.562+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dags.py took 4.772 seconds
+[2025-09-13T22:35:59.887+0000] {processor.py:157} INFO - Started process (PID=2986) to work on /opt/airflow/dags/dags.py
+[2025-09-13T22:35:59.889+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-09-13T22:35:59.890+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:35:59.889+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-09-13T22:36:00.609+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_batch']) retrieved from /opt/airflow/dags/dags.py
+[2025-09-13T22:36:00.665+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:36:00.665+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-09-13T22:36:00.698+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:36:00.698+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_batch to 2025-09-13T22:18:47.869865+00:00, run_after=2025-09-13T22:48:47.869865+00:00
+[2025-09-13T22:36:00.727+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dags.py took 0.844 seconds
+[2025-09-13T22:36:31.458+0000] {processor.py:157} INFO - Started process (PID=3017) to work on /opt/airflow/dags/dags.py
+[2025-09-13T22:36:31.472+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-09-13T22:36:31.474+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:36:31.474+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-09-13T22:36:38.202+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_batch']) retrieved from /opt/airflow/dags/dags.py
+[2025-09-13T22:36:38.314+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:36:38.313+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-09-13T22:36:38.384+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:36:38.384+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_batch to 2025-09-13T22:18:47.869865+00:00, run_after=2025-09-13T22:48:47.869865+00:00
+[2025-09-13T22:36:38.451+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dags.py took 6.998 seconds
+[2025-09-13T22:37:10.450+0000] {processor.py:157} INFO - Started process (PID=3070) to work on /opt/airflow/dags/dags.py
+[2025-09-13T22:37:10.452+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-09-13T22:37:10.455+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:37:10.454+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-09-13T22:37:14.091+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_batch']) retrieved from /opt/airflow/dags/dags.py
+[2025-09-13T22:37:15.097+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:37:15.097+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-09-13T22:37:15.140+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:37:15.139+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_batch to 2025-09-13T22:18:47.869865+00:00, run_after=2025-09-13T22:48:47.869865+00:00
+[2025-09-13T22:37:15.227+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dags.py took 4.793 seconds
+[2025-09-13T22:37:46.048+0000] {processor.py:157} INFO - Started process (PID=3112) to work on /opt/airflow/dags/dags.py
+[2025-09-13T22:37:46.051+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-09-13T22:37:46.052+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:37:46.052+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-09-13T22:37:47.263+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_batch']) retrieved from /opt/airflow/dags/dags.py
+[2025-09-13T22:37:47.339+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:37:47.338+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-09-13T22:37:47.370+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:37:47.369+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_batch to 2025-09-13T22:18:47.869865+00:00, run_after=2025-09-13T22:48:47.869865+00:00
+[2025-09-13T22:37:47.443+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dags.py took 1.400 seconds
+[2025-09-13T22:38:17.717+0000] {processor.py:157} INFO - Started process (PID=3158) to work on /opt/airflow/dags/dags.py
+[2025-09-13T22:38:17.720+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-09-13T22:38:17.723+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:38:17.722+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-09-13T22:38:25.901+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_batch']) retrieved from /opt/airflow/dags/dags.py
+[2025-09-13T22:38:26.171+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:38:26.167+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-09-13T22:38:26.271+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:38:26.271+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_batch to 2025-09-13T22:18:47.869865+00:00, run_after=2025-09-13T22:48:47.869865+00:00
+[2025-09-13T22:38:26.328+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dags.py took 8.675 seconds
+[2025-09-13T22:38:57.379+0000] {processor.py:157} INFO - Started process (PID=3199) to work on /opt/airflow/dags/dags.py
+[2025-09-13T22:38:57.391+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-09-13T22:38:57.393+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:38:57.392+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-09-13T22:38:58.973+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_batch']) retrieved from /opt/airflow/dags/dags.py
+[2025-09-13T22:38:59.058+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:38:59.057+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-09-13T22:38:59.117+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:38:59.116+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_batch to 2025-09-13T22:18:47.869865+00:00, run_after=2025-09-13T22:48:47.869865+00:00
+[2025-09-13T22:38:59.157+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dags.py took 1.784 seconds
+[2025-09-13T22:39:30.018+0000] {processor.py:157} INFO - Started process (PID=3240) to work on /opt/airflow/dags/dags.py
+[2025-09-13T22:39:30.020+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-09-13T22:39:30.022+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:39:30.022+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-09-13T22:39:31.073+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_batch']) retrieved from /opt/airflow/dags/dags.py
+[2025-09-13T22:39:31.138+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:39:31.137+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-09-13T22:39:31.179+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:39:31.179+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_batch to 2025-09-13T22:18:47.869865+00:00, run_after=2025-09-13T22:48:47.869865+00:00
+[2025-09-13T22:39:31.217+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dags.py took 1.208 seconds
+[2025-09-13T22:40:01.453+0000] {processor.py:157} INFO - Started process (PID=3286) to work on /opt/airflow/dags/dags.py
+[2025-09-13T22:40:01.454+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-09-13T22:40:01.455+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:40:01.455+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-09-13T22:40:02.336+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_batch']) retrieved from /opt/airflow/dags/dags.py
+[2025-09-13T22:40:02.395+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:40:02.394+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-09-13T22:40:02.431+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:40:02.431+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_batch to 2025-09-13T22:18:47.869865+00:00, run_after=2025-09-13T22:48:47.869865+00:00
+[2025-09-13T22:40:02.463+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dags.py took 1.014 seconds
+[2025-09-13T22:40:32.763+0000] {processor.py:157} INFO - Started process (PID=3327) to work on /opt/airflow/dags/dags.py
+[2025-09-13T22:40:32.764+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-09-13T22:40:32.765+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:40:32.765+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-09-13T22:40:33.703+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_batch']) retrieved from /opt/airflow/dags/dags.py
+[2025-09-13T22:40:33.757+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:40:33.757+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-09-13T22:40:33.794+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:40:33.794+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_batch to 2025-09-13T22:18:47.869865+00:00, run_after=2025-09-13T22:48:47.869865+00:00
+[2025-09-13T22:40:33.884+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dags.py took 1.127 seconds
+[2025-09-13T22:41:06.856+0000] {processor.py:157} INFO - Started process (PID=3378) to work on /opt/airflow/dags/dags.py
+[2025-09-13T22:41:06.870+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-09-13T22:41:06.874+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:41:06.873+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-09-13T22:41:11.741+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_batch']) retrieved from /opt/airflow/dags/dags.py
+[2025-09-13T22:41:11.897+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:41:11.896+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-09-13T22:41:11.949+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:41:11.949+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_batch to 2025-09-13T22:18:47.869865+00:00, run_after=2025-09-13T22:48:47.869865+00:00
+[2025-09-13T22:41:12.016+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dags.py took 5.168 seconds
+[2025-09-13T22:41:42.620+0000] {processor.py:157} INFO - Started process (PID=3441) to work on /opt/airflow/dags/dags.py
+[2025-09-13T22:41:42.623+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-09-13T22:41:42.626+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:41:42.625+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-09-13T22:41:43.649+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_batch']) retrieved from /opt/airflow/dags/dags.py
+[2025-09-13T22:41:43.710+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:41:43.709+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-09-13T22:41:43.749+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:41:43.748+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_batch to 2025-09-13T22:18:47.869865+00:00, run_after=2025-09-13T22:48:47.869865+00:00
+[2025-09-13T22:41:43.780+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dags.py took 1.167 seconds
+[2025-09-13T22:42:14.033+0000] {processor.py:157} INFO - Started process (PID=3482) to work on /opt/airflow/dags/dags.py
+[2025-09-13T22:42:14.034+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-09-13T22:42:14.036+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:42:14.036+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-09-13T22:42:14.993+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_batch']) retrieved from /opt/airflow/dags/dags.py
+[2025-09-13T22:42:15.067+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:42:15.065+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-09-13T22:42:15.111+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:42:15.110+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_batch to 2025-09-13T22:18:47.869865+00:00, run_after=2025-09-13T22:48:47.869865+00:00
+[2025-09-13T22:42:15.143+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dags.py took 1.115 seconds
+[2025-09-13T22:42:45.338+0000] {processor.py:157} INFO - Started process (PID=3523) to work on /opt/airflow/dags/dags.py
+[2025-09-13T22:42:45.340+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-09-13T22:42:45.341+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:42:45.341+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-09-13T22:42:46.585+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_batch']) retrieved from /opt/airflow/dags/dags.py
+[2025-09-13T22:42:46.759+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:42:46.748+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-09-13T22:42:46.921+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:42:46.920+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_batch to 2025-09-13T22:18:47.869865+00:00, run_after=2025-09-13T22:48:47.869865+00:00
+[2025-09-13T22:42:47.143+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dags.py took 1.810 seconds
+[2025-09-13T22:43:17.607+0000] {processor.py:157} INFO - Started process (PID=3564) to work on /opt/airflow/dags/dags.py
+[2025-09-13T22:43:17.608+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-09-13T22:43:17.609+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:43:17.609+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-09-13T22:43:18.340+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_batch']) retrieved from /opt/airflow/dags/dags.py
+[2025-09-13T22:43:18.402+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:43:18.401+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-09-13T22:43:18.438+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:43:18.438+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_batch to 2025-09-13T22:18:47.869865+00:00, run_after=2025-09-13T22:48:47.869865+00:00
+[2025-09-13T22:43:18.470+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dags.py took 0.868 seconds
+[2025-09-13T22:43:48.561+0000] {processor.py:157} INFO - Started process (PID=3605) to work on /opt/airflow/dags/dags.py
+[2025-09-13T22:43:48.562+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-09-13T22:43:48.563+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:43:48.563+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-09-13T22:43:49.420+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_batch']) retrieved from /opt/airflow/dags/dags.py
+[2025-09-13T22:43:49.505+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:43:49.504+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-09-13T22:43:49.625+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:43:49.623+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_batch to 2025-09-13T22:18:47.869865+00:00, run_after=2025-09-13T22:48:47.869865+00:00
+[2025-09-13T22:43:49.707+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dags.py took 1.151 seconds
+[2025-09-13T22:44:20.157+0000] {processor.py:157} INFO - Started process (PID=3648) to work on /opt/airflow/dags/dags.py
+[2025-09-13T22:44:20.159+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-09-13T22:44:20.161+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:44:20.160+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-09-13T22:44:21.141+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_batch']) retrieved from /opt/airflow/dags/dags.py
+[2025-09-13T22:44:21.220+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:44:21.219+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-09-13T22:44:21.261+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:44:21.261+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_batch to 2025-09-13T22:18:47.869865+00:00, run_after=2025-09-13T22:48:47.869865+00:00
+[2025-09-13T22:44:21.296+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dags.py took 1.144 seconds
+[2025-09-13T22:44:51.626+0000] {processor.py:157} INFO - Started process (PID=3697) to work on /opt/airflow/dags/dags.py
+[2025-09-13T22:44:51.627+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-09-13T22:44:51.629+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:44:51.628+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-09-13T22:44:52.306+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_batch']) retrieved from /opt/airflow/dags/dags.py
+[2025-09-13T22:44:52.361+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:44:52.361+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-09-13T22:44:52.395+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:44:52.395+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_batch to 2025-09-13T22:18:47.869865+00:00, run_after=2025-09-13T22:48:47.869865+00:00
+[2025-09-13T22:44:52.424+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dags.py took 0.803 seconds
+[2025-09-13T22:45:22.521+0000] {processor.py:157} INFO - Started process (PID=3730) to work on /opt/airflow/dags/dags.py
+[2025-09-13T22:45:22.523+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dags.py for tasks to queue
+[2025-09-13T22:45:22.524+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:45:22.524+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dags.py
+[2025-09-13T22:45:23.795+0000] {processor.py:836} INFO - DAG(s) dict_keys(['kafka_to_postgres_batch']) retrieved from /opt/airflow/dags/dags.py
+[2025-09-13T22:45:23.933+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:45:23.933+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2025-09-13T22:45:24.046+0000] {logging_mixin.py:150} INFO - [2025-09-13T22:45:24.046+0000] {dag.py:3508} INFO - Setting next_dagrun for kafka_to_postgres_batch to 2025-09-13T22:18:47.869865+00:00, run_after=2025-09-13T22:48:47.869865+00:00
+[2025-09-13T22:45:24.087+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dags.py took 1.570 seconds

@@ -1,0 +1,34 @@
+[2025-09-10T13:18:27.606+0000] {logging_mixin.py:150} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/sqlalchemy.py:124 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-09-10T13:18:27.747+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: raw_to_dds.load_dds_events scheduled__2025-09-10T12:17:23.250163+00:00 [queued]>
+[2025-09-10T13:18:27.768+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: raw_to_dds.load_dds_events scheduled__2025-09-10T12:17:23.250163+00:00 [queued]>
+[2025-09-10T13:18:27.769+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 3
+[2025-09-10T13:18:27.801+0000] {taskinstance.py:1327} INFO - Executing <Task(PostgresOperator): load_dds_events> on 2025-09-10 12:17:23.250163+00:00
+[2025-09-10T13:18:27.809+0000] {standard_task_runner.py:57} INFO - Started process 192 to run task
+[2025-09-10T13:18:27.815+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'raw_to_dds', 'load_dds_events', 'scheduled__2025-09-10T12:17:23.250163+00:00', '--job-id', '81', '--raw', '--subdir', 'DAGS_FOLDER/raw_to_dds.py', '--cfg-path', '/tmp/tmp6mqp860g']
+[2025-09-10T13:18:27.819+0000] {standard_task_runner.py:85} INFO - Job 81: Subtask load_dds_events
+[2025-09-10T13:18:27.856+0000] {logging_mixin.py:150} WARNING - /home/***/.local/lib/python3.7/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-09-10T13:18:27.933+0000] {task_command.py:410} INFO - Running <TaskInstance: raw_to_dds.load_dds_events scheduled__2025-09-10T12:17:23.250163+00:00 [running]> on host c905ba028b15
+[2025-09-10T13:18:27.962+0000] {logging_mixin.py:150} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/sqlalchemy.py:124 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-09-10T13:18:28.162+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='raw_to_dds' AIRFLOW_CTX_TASK_ID='load_dds_events' AIRFLOW_CTX_EXECUTION_DATE='2025-09-10T12:17:23.250163+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-09-10T12:17:23.250163+00:00'
+[2025-09-10T13:18:28.164+0000] {sql.py:265} INFO - Executing: 
+        INSERT INTO dds.events (user_id, event_type, timestamp)
+        SELECT re.user_id, re.event_type, re.timestamp
+        FROM raw.events re
+        LEFT JOIN dds.events de
+        ON re.user_id = de.user_id AND re.timestamp = de.timestamp
+        WHERE de.event_id IS NULL;
+        
+[2025-09-10T13:18:28.190+0000] {base.py:73} INFO - Using connection ID 'postgres_default' for task execution.
+[2025-09-10T13:18:28.341+0000] {base.py:73} INFO - Using connection ID 'postgres_default' for task execution.
+[2025-09-10T13:18:28.356+0000] {sql.py:375} INFO - Running statement: 
+        INSERT INTO dds.events (user_id, event_type, timestamp)
+        SELECT re.user_id, re.event_type, re.timestamp
+        FROM raw.events re
+        LEFT JOIN dds.events de
+        ON re.user_id = de.user_id AND re.timestamp = de.timestamp
+        WHERE de.event_id IS NULL;
+        , parameters: None
+[2025-09-10T13:18:28.363+0000] {sql.py:384} INFO - Rows affected: 1
+[2025-09-10T13:18:28.392+0000] {taskinstance.py:1350} INFO - Marking task as SUCCESS. dag_id=raw_to_dds, task_id=load_dds_events, execution_date=20250910T121723, start_date=20250910T131827, end_date=20250910T131828
+[2025-09-10T13:18:28.469+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 0
+[2025-09-10T13:18:28.526+0000] {taskinstance.py:2653} INFO - 2 downstream tasks scheduled from follow-on schedule check

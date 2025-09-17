@@ -1,0 +1,90 @@
+[2025-09-14T14:50:31.219+0000] {logging_mixin.py:150} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/sqlalchemy.py:124 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-09-14T14:50:31.241+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: raw_to_dds_enhanced.load_sessions scheduled__2025-09-14T13:40:16.296314+00:00 [queued]>
+[2025-09-14T14:50:31.257+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: raw_to_dds_enhanced.load_sessions scheduled__2025-09-14T13:40:16.296314+00:00 [queued]>
+[2025-09-14T14:50:31.258+0000] {taskinstance.py:1308} INFO - Starting attempt 3 of 3
+[2025-09-14T14:50:31.281+0000] {taskinstance.py:1327} INFO - Executing <Task(PythonOperator): load_sessions> on 2025-09-14 13:40:16.296314+00:00
+[2025-09-14T14:50:31.289+0000] {standard_task_runner.py:57} INFO - Started process 16047 to run task
+[2025-09-14T14:50:31.297+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'raw_to_dds_enhanced', 'load_sessions', 'scheduled__2025-09-14T13:40:16.296314+00:00', '--job-id', '164', '--raw', '--subdir', 'DAGS_FOLDER/raw_to_dds.py', '--cfg-path', '/tmp/tmpttv8_yby']
+[2025-09-14T14:50:31.304+0000] {standard_task_runner.py:85} INFO - Job 164: Subtask load_sessions
+[2025-09-14T14:50:31.343+0000] {logging_mixin.py:150} WARNING - /home/***/.local/lib/python3.7/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-09-14T14:50:31.430+0000] {task_command.py:410} INFO - Running <TaskInstance: raw_to_dds_enhanced.load_sessions scheduled__2025-09-14T13:40:16.296314+00:00 [running]> on host 3deaa5b4a23c
+[2025-09-14T14:50:31.453+0000] {logging_mixin.py:150} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/sqlalchemy.py:124 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-09-14T14:50:31.562+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='raw_to_dds_enhanced' AIRFLOW_CTX_TASK_ID='load_sessions' AIRFLOW_CTX_EXECUTION_DATE='2025-09-14T13:40:16.296314+00:00' AIRFLOW_CTX_TRY_NUMBER='3' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-09-14T13:40:16.296314+00:00'
+[2025-09-14T14:50:31.580+0000] {taskinstance.py:1824} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1911, in _execute_context
+    cursor, statement, parameters, context
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/default.py", line 736, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.errors.SyntaxError: syntax error at or near ","
+LINE 5:             user_id::bigint,,
+                                    ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 181, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 198, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/raw_to_dds.py", line 151, in load_sessions
+    conn.execute(query)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1375, in execute
+    future=False,
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1681, in _exec_driver_sql
+    distilled_parameters,
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1954, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 2135, in _handle_dbapi_exception
+    sqlalchemy_exception, with_traceback=exc_info[2], from_=e
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1911, in _execute_context
+    cursor, statement, parameters, context
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/default.py", line 736, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.ProgrammingError: (psycopg2.errors.SyntaxError) syntax error at or near ","
+LINE 5:             user_id::bigint,,
+                                    ^
+
+[SQL: 
+        INSERT INTO dds.sessions (session_id, user_id, start_ts, end_ts, event_count)
+        SELECT
+            session_id::uuid,  
+            user_id::bigint,,
+            MIN(timestamp) AS start_ts,
+            MAX(timestamp) AS end_ts,
+            COUNT(*) AS event_count
+        FROM raw.events
+        WHERE session_id IS NOT NULL
+        GROUP BY session_id, user_id
+        ON CONFLICT (session_id) DO UPDATE
+        SET end_ts = EXCLUDED.end_ts,
+        event_count = EXCLUDED.event_count;
+        ]
+(Background on this error at: https://sqlalche.me/e/14/f405)
+[2025-09-14T14:50:31.614+0000] {taskinstance.py:1350} INFO - Marking task as FAILED. dag_id=raw_to_dds_enhanced, task_id=load_sessions, execution_date=20250914T134016, start_date=20250914T145031, end_date=20250914T145031
+[2025-09-14T14:50:31.617+0000] {logging_mixin.py:150} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:205 AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+[2025-09-14T14:50:32.133+0000] {standard_task_runner.py:109} ERROR - Failed to execute job 164 for task load_sessions ((psycopg2.errors.SyntaxError) syntax error at or near ","
+LINE 5:             user_id::bigint,,
+                                    ^
+
+[SQL: 
+        INSERT INTO dds.sessions (session_id, user_id, start_ts, end_ts, event_count)
+        SELECT
+            session_id::uuid,  
+            user_id::bigint,,
+            MIN(timestamp) AS start_ts,
+            MAX(timestamp) AS end_ts,
+            COUNT(*) AS event_count
+        FROM raw.events
+        WHERE session_id IS NOT NULL
+        GROUP BY session_id, user_id
+        ON CONFLICT (session_id) DO UPDATE
+        SET end_ts = EXCLUDED.end_ts,
+        event_count = EXCLUDED.event_count;
+        ]
+(Background on this error at: https://sqlalche.me/e/14/f405); 16047)
+[2025-09-14T14:50:32.148+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 1
+[2025-09-14T14:50:32.189+0000] {taskinstance.py:2653} INFO - 0 downstream tasks scheduled from follow-on schedule check

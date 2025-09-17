@@ -1,0 +1,22 @@
+[2025-09-03T19:46:44.985+0000] {logging_mixin.py:150} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/sqlalchemy.py:124 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-09-03T19:46:45.336+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: kafka_to_postgres.wait_for_kafka_messages scheduled__2025-09-03T19:15:57.550361+00:00 [queued]>
+[2025-09-03T19:46:45.383+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: kafka_to_postgres.wait_for_kafka_messages scheduled__2025-09-03T19:15:57.550361+00:00 [queued]>
+[2025-09-03T19:46:45.387+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 3
+[2025-09-03T19:46:45.471+0000] {taskinstance.py:1327} INFO - Executing <Task(KafkaMessageSensor): wait_for_kafka_messages> on 2025-09-03 19:15:57.550361+00:00
+[2025-09-03T19:46:45.498+0000] {standard_task_runner.py:57} INFO - Started process 2025 to run task
+[2025-09-03T19:46:45.518+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'kafka_to_postgres', 'wait_for_kafka_messages', 'scheduled__2025-09-03T19:15:57.550361+00:00', '--job-id', '265', '--raw', '--subdir', 'DAGS_FOLDER/dags.py', '--cfg-path', '/tmp/tmph5sq4r0j']
+[2025-09-03T19:46:45.526+0000] {standard_task_runner.py:85} INFO - Job 265: Subtask wait_for_kafka_messages
+[2025-09-03T19:46:45.690+0000] {logging_mixin.py:150} WARNING - /home/***/.local/lib/python3.7/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-09-03T19:46:45.968+0000] {task_command.py:410} INFO - Running <TaskInstance: kafka_to_postgres.wait_for_kafka_messages scheduled__2025-09-03T19:15:57.550361+00:00 [running]> on host 566c672cfab0
+[2025-09-03T19:46:46.108+0000] {logging_mixin.py:150} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/sqlalchemy.py:124 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-09-03T19:46:46.518+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='kafka_to_postgres' AIRFLOW_CTX_TASK_ID='wait_for_kafka_messages' AIRFLOW_CTX_EXECUTION_DATE='2025-09-03T19:15:57.550361+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-09-03T19:15:57.550361+00:00'
+[2025-09-03T19:46:46.538+0000] {conn.py:397} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:29092 <connecting> [IPv4 ('172.23.0.6', 29092)]>: connecting to kafka:29092 [('172.23.0.6', 29092) IPv4]
+[2025-09-03T19:46:47.799+0000] {conn.py:618} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:29092 <checking_api_versions_recv> [IPv4 ('172.23.0.6', 29092)]>: Broker version identified as 2.6
+[2025-09-03T19:46:47.805+0000] {conn.py:457} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:29092 <connected> [IPv4 ('172.23.0.6', 29092)]>: Connection complete.
+[2025-09-03T19:46:48.684+0000] {subscription_state.py:181} INFO - Updating subscribed topics to: ('user_events',)
+[2025-09-03T19:46:49.147+0000] {subscription_state.py:254} INFO - Updated partition assignment: [('user_events', 0)]
+[2025-09-03T19:46:49.156+0000] {conn.py:945} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:29092 <connected> [IPv4 ('172.23.0.6', 29092)]>: Closing connection. 
+[2025-09-03T19:46:49.176+0000] {base.py:255} INFO - Success criteria met. Exiting.
+[2025-09-03T19:46:49.361+0000] {taskinstance.py:1350} INFO - Marking task as SUCCESS. dag_id=kafka_to_postgres, task_id=wait_for_kafka_messages, execution_date=20250903T191557, start_date=20250903T194645, end_date=20250903T194649
+[2025-09-03T19:46:49.537+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 0
+[2025-09-03T19:46:50.317+0000] {taskinstance.py:2653} INFO - 1 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,43 @@
+[2025-09-16T19:24:40.903+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dds_to_clickhouse.load_daily_summary manual__2025-09-16T18:55:00.761535+00:00 [queued]>
+[2025-09-16T19:24:40.916+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dds_to_clickhouse.load_daily_summary manual__2025-09-16T18:55:00.761535+00:00 [queued]>
+[2025-09-16T19:24:40.917+0000] {taskinstance.py:1308} INFO - Starting attempt 4 of 4
+[2025-09-16T19:24:40.941+0000] {taskinstance.py:1327} INFO - Executing <Task(PythonOperator): load_daily_summary> on 2025-09-16 18:55:00.761535+00:00
+[2025-09-16T19:24:40.951+0000] {standard_task_runner.py:57} INFO - Started process 1247 to run task
+[2025-09-16T19:24:40.955+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'dds_to_clickhouse', 'load_daily_summary', 'manual__2025-09-16T18:55:00.761535+00:00', '--job-id', '773', '--raw', '--subdir', 'DAGS_FOLDER/dds_to_clickhouse.py', '--cfg-path', '/tmp/tmpo675zz8u']
+[2025-09-16T19:24:40.958+0000] {standard_task_runner.py:85} INFO - Job 773: Subtask load_daily_summary
+[2025-09-16T19:24:40.984+0000] {logging_mixin.py:150} WARNING - /home/***/.local/lib/python3.7/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-09-16T19:24:41.042+0000] {task_command.py:410} INFO - Running <TaskInstance: dds_to_clickhouse.load_daily_summary manual__2025-09-16T18:55:00.761535+00:00 [running]> on host d6e2a7c8b3ee
+[2025-09-16T19:24:41.223+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dds_to_clickhouse' AIRFLOW_CTX_TASK_ID='load_daily_summary' AIRFLOW_CTX_EXECUTION_DATE='2025-09-16T18:55:00.761535+00:00' AIRFLOW_CTX_TRY_NUMBER='4' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-09-16T18:55:00.761535+00:00'
+[2025-09-16T19:27:41.499+0000] {ch_utils.py:83} ERROR - ❌ Ошибка при переносе данных в daily_business_summary: Unexpected EOF while reading bytes
+[2025-09-16T19:27:41.529+0000] {taskinstance.py:1824} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 181, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 198, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/ch_utils.py", line 77, in transfer_table
+    client.execute(insert_query, batch)
+  File "/home/airflow/.local/lib/python3.7/site-packages/clickhouse_driver/client.py", line 370, in execute
+    with self.disconnect_on_error(query, settings):
+  File "/usr/local/lib/python3.7/contextlib.py", line 112, in __enter__
+    return next(self.gen)
+  File "/home/airflow/.local/lib/python3.7/site-packages/clickhouse_driver/client.py", line 313, in disconnect_on_error
+    self.establish_connection(settings)
+  File "/home/airflow/.local/lib/python3.7/site-packages/clickhouse_driver/client.py", line 300, in establish_connection
+    self.connection.force_connect()
+  File "/home/airflow/.local/lib/python3.7/site-packages/clickhouse_driver/connection.py", line 258, in force_connect
+    self.connect()
+  File "/home/airflow/.local/lib/python3.7/site-packages/clickhouse_driver/connection.py", line 399, in connect
+    return self._init_connection(host, port)
+  File "/home/airflow/.local/lib/python3.7/site-packages/clickhouse_driver/connection.py", line 343, in _init_connection
+    self.receive_hello()
+  File "/home/airflow/.local/lib/python3.7/site-packages/clickhouse_driver/connection.py", line 478, in receive_hello
+    packet_type = read_varint(self.fin)
+  File "clickhouse_driver/varint.pyx", line 62, in clickhouse_driver.varint.read_varint
+  File "clickhouse_driver/bufferedreader.pyx", line 55, in clickhouse_driver.bufferedreader.BufferedReader.read_one
+  File "clickhouse_driver/bufferedreader.pyx", line 240, in clickhouse_driver.bufferedreader.BufferedSocketReader.read_into_buffer
+EOFError: Unexpected EOF while reading bytes
+[2025-09-16T19:27:41.641+0000] {taskinstance.py:1350} INFO - Marking task as FAILED. dag_id=dds_to_clickhouse, task_id=load_daily_summary, execution_date=20250916T185500, start_date=20250916T192440, end_date=20250916T192741
+[2025-09-16T19:27:41.726+0000] {standard_task_runner.py:109} ERROR - Failed to execute job 773 for task load_daily_summary (Unexpected EOF while reading bytes; 1247)
+[2025-09-16T19:27:41.797+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 1
+[2025-09-16T19:27:41.876+0000] {taskinstance.py:2653} INFO - 0 downstream tasks scheduled from follow-on schedule check

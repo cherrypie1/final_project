@@ -1,0 +1,530 @@
+[2025-09-17T07:31:43.546+0000] {logging_mixin.py:150} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/sqlalchemy.py:124 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-09-17T07:31:43.782+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: raw_to_dds_enhanced.load_events scheduled__2025-09-17T06:30:38.916146+00:00 [queued]>
+[2025-09-17T07:31:43.816+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: raw_to_dds_enhanced.load_events scheduled__2025-09-17T06:30:38.916146+00:00 [queued]>
+[2025-09-17T07:31:43.817+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 3
+[2025-09-17T07:31:43.863+0000] {taskinstance.py:1327} INFO - Executing <Task(PythonOperator): load_events> on 2025-09-17 06:30:38.916146+00:00
+[2025-09-17T07:31:43.885+0000] {standard_task_runner.py:57} INFO - Started process 372 to run task
+[2025-09-17T07:31:43.897+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'raw_to_dds_enhanced', 'load_events', 'scheduled__2025-09-17T06:30:38.916146+00:00', '--job-id', '945', '--raw', '--subdir', 'DAGS_FOLDER/raw_to_dds.py', '--cfg-path', '/tmp/tmpr5flgx2j']
+[2025-09-17T07:31:43.903+0000] {standard_task_runner.py:85} INFO - Job 945: Subtask load_events
+[2025-09-17T07:31:43.966+0000] {logging_mixin.py:150} WARNING - /home/***/.local/lib/python3.7/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-09-17T07:31:44.072+0000] {task_command.py:410} INFO - Running <TaskInstance: raw_to_dds_enhanced.load_events scheduled__2025-09-17T06:30:38.916146+00:00 [running]> on host d6e2a7c8b3ee
+[2025-09-17T07:31:44.117+0000] {logging_mixin.py:150} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/sqlalchemy.py:124 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-09-17T07:31:44.351+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='raw_to_dds_enhanced' AIRFLOW_CTX_TASK_ID='load_events' AIRFLOW_CTX_EXECUTION_DATE='2025-09-17T06:30:38.916146+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-09-17T06:30:38.916146+00:00'
+[2025-09-17T07:31:44.477+0000] {dags_utils.py:46} WARNING - ❌ Отброшена строка {'event_id': 1, 'user_id': '1889', 'session_id': '1c332c00-4ed5-4484-b9e6-fbcc75f20e36', 'event_type': 'session_start', 'product_id': nan, 'order_id': None, 'quantity': nan, 'city': 'Weddell Sea', 'country': None, 'lat': -76.118308, 'lon': -29.152568, 'cost_usd': 648.43, 'cost_eur': 552.8, 'cost_rub': 54523.56, 'weather_temp': -18.79, 'weather_desc': 'overcast clouds', 'timestamp': Timestamp('2025-09-13 22:14:55.733938'), 'product_name': None, 'product_category': None} → 2 validation errors for EventModel
+product_id
+  value is not a valid integer (type=type_error.integer)
+quantity
+  value is not a valid integer (type=type_error.integer)
+[2025-09-17T07:31:44.481+0000] {dags_utils.py:46} WARNING - ❌ Отброшена строка {'event_id': 3, 'user_id': '4567', 'session_id': '9edfebd0-21c3-46b3-9458-06c4588531a0', 'event_type': 'view_product', 'product_id': 269.0, 'order_id': None, 'quantity': nan, 'city': 'Indian Ocean', 'country': None, 'lat': -34.283125, 'lon': 30.289944, 'cost_usd': 755.53, 'cost_eur': 644.15, 'cost_rub': 63545.22, 'weather_temp': 17.44, 'weather_desc': 'clear sky', 'timestamp': Timestamp('2025-09-14 11:58:11.727564'), 'product_name': None, 'product_category': None} → 1 validation error for EventModel
+quantity
+  value is not a valid integer (type=type_error.integer)
+[2025-09-17T07:31:44.482+0000] {dags_utils.py:46} WARNING - ❌ Отброшена строка {'event_id': 5, 'user_id': '791', 'session_id': 'c871b5ac-975b-4183-bfb8-3f448ed77c68', 'event_type': 'view_product', 'product_id': 464.0, 'order_id': None, 'quantity': nan, 'city': 'South Pacific Ocean', 'country': None, 'lat': -15.973097, 'lon': -104.363599, 'cost_usd': 49.87, 'cost_eur': 42.52, 'cost_rub': 4194.41, 'weather_temp': 20.76, 'weather_desc': 'overcast clouds', 'timestamp': Timestamp('2025-09-14 12:05:54.924139'), 'product_name': None, 'product_category': None} → 1 validation error for EventModel
+quantity
+  value is not a valid integer (type=type_error.integer)
+[2025-09-17T07:31:44.484+0000] {dags_utils.py:46} WARNING - ❌ Отброшена строка {'event_id': 6, 'user_id': '791', 'session_id': 'bdac6a8d-6f60-46fe-b635-b9901878e59c', 'event_type': 'session_start', 'product_id': nan, 'order_id': None, 'quantity': nan, 'city': 'South Atlantic Ocean', 'country': None, 'lat': -15.8463625, 'lon': 0.519776, 'cost_usd': 335.42, 'cost_eur': 285.97, 'cost_rub': 28211.11, 'weather_temp': 18.05, 'weather_desc': 'clear sky', 'timestamp': Timestamp('2025-09-14 12:05:56.533828'), 'product_name': None, 'product_category': None} → 2 validation errors for EventModel
+product_id
+  value is not a valid integer (type=type_error.integer)
+quantity
+  value is not a valid integer (type=type_error.integer)
+[2025-09-17T07:31:44.485+0000] {dags_utils.py:46} WARNING - ❌ Отброшена строка {'event_id': 7, 'user_id': '1280', 'session_id': '18731179-fac5-446c-819e-f76c1ee23af8', 'event_type': 'session_start', 'product_id': nan, 'order_id': None, 'quantity': nan, 'city': '822-9 下古沢', 'country': 'Japan', 'lat': 35.4574915, 'lon': 139.31487, 'cost_usd': 51.46, 'cost_eur': 43.87, 'cost_rub': 4328.14, 'weather_temp': 27.46, 'weather_desc': 'overcast clouds', 'timestamp': Timestamp('2025-09-14 12:06:12.545725'), 'product_name': None, 'product_category': None} → 2 validation errors for EventModel
+product_id
+  value is not a valid integer (type=type_error.integer)
+quantity
+  value is not a valid integer (type=type_error.integer)
+[2025-09-17T07:31:44.487+0000] {dags_utils.py:46} WARNING - ❌ Отброшена строка {'event_id': 9, 'user_id': '3709', 'session_id': '8e01614f-8230-41d4-8114-bb28002f3a6b', 'event_type': 'session_start', 'product_id': nan, 'order_id': None, 'quantity': nan, 'city': 'Coral Sea', 'country': None, 'lat': -10.5068305, 'lon': 165.757664, 'cost_usd': 629.98, 'cost_eur': 537.11, 'cost_rub': 52985.61, 'weather_temp': 27.57, 'weather_desc': 'overcast clouds', 'timestamp': Timestamp('2025-09-14 12:06:23.086625'), 'product_name': None, 'product_category': None} → 2 validation errors for EventModel
+product_id
+  value is not a valid integer (type=type_error.integer)
+quantity
+  value is not a valid integer (type=type_error.integer)
+[2025-09-17T07:31:44.488+0000] {dags_utils.py:46} WARNING - ❌ Отброшена строка {'event_id': 11, 'user_id': '4882', 'session_id': 'bab782ea-1bcc-4652-a59a-1a71057c7c71', 'event_type': 'view_product', 'product_id': 118.0, 'order_id': None, 'quantity': nan, 'city': 'Labrador Sea', 'country': None, 'lat': 56.001732, 'lon': -50.404054, 'cost_usd': 886.71, 'cost_eur': 755.99, 'cost_rub': 74578.36, 'weather_temp': 6.95, 'weather_desc': 'overcast clouds', 'timestamp': Timestamp('2025-09-14 12:06:32.574933'), 'product_name': None, 'product_category': None} → 1 validation error for EventModel
+quantity
+  value is not a valid integer (type=type_error.integer)
+[2025-09-17T07:31:44.489+0000] {dags_utils.py:46} WARNING - ❌ Отброшена строка {'event_id': 12, 'user_id': '4882', 'session_id': '9461d858-f7b1-4662-ac2a-77c239fecc3f', 'event_type': 'view_product', 'product_id': 13.0, 'order_id': None, 'quantity': nan, 'city': 'South Atlantic Ocean', 'country': None, 'lat': -39.0392975, 'lon': -18.534867, 'cost_usd': 24.1, 'cost_eur': 20.55, 'cost_rub': 2026.97, 'weather_temp': 8.79, 'weather_desc': 'light rain', 'timestamp': Timestamp('2025-09-14 12:06:34.930558'), 'product_name': None, 'product_category': None} → 1 validation error for EventModel
+quantity
+  value is not a valid integer (type=type_error.integer)
+[2025-09-17T07:31:44.492+0000] {dags_utils.py:46} WARNING - ❌ Отброшена строка {'event_id': 16, 'user_id': '2178', 'session_id': 'cea185d7-44f4-44e6-8f7f-1bf1c6fe00ca', 'event_type': 'view_product', 'product_id': 236.0, 'order_id': None, 'quantity': nan, 'city': 'Bilma', 'country': 'Niger', 'lat': 18.226402, 'lon': 14.778702, 'cost_usd': 485.06, 'cost_eur': 413.55, 'cost_rub': 40796.85, 'weather_temp': 37.83, 'weather_desc': 'few clouds', 'timestamp': Timestamp('2025-09-14 12:08:44.194374'), 'product_name': None, 'product_category': None} → 1 validation error for EventModel
+quantity
+  value is not a valid integer (type=type_error.integer)
+[2025-09-17T07:31:44.493+0000] {dags_utils.py:46} WARNING - ❌ Отброшена строка {'event_id': 17, 'user_id': '3850', 'session_id': '3833a77d-274c-4db9-bee2-245998b490ef', 'event_type': 'session_start', 'product_id': nan, 'order_id': None, 'quantity': nan, 'city': 'Monduli', 'country': 'Tanzania', 'lat': -3.7847665, 'lon': 36.187592, 'cost_usd': 145.08, 'cost_eur': 123.69, 'cost_rub': 12202.22, 'weather_temp': 31.04, 'weather_desc': 'few clouds', 'timestamp': Timestamp('2025-09-14 12:09:33.438028'), 'product_name': None, 'product_category': None} → 2 validation errors for EventModel
+product_id
+  value is not a valid integer (type=type_error.integer)
+quantity
+  value is not a valid integer (type=type_error.integer)
+[2025-09-17T07:31:44.496+0000] {dags_utils.py:46} WARNING - ❌ Отброшена строка {'event_id': 20, 'user_id': '2208', 'session_id': '27ccd6f7-7051-460e-917e-c71f2a9ea53b', 'event_type': 'view_product', 'product_id': 250.0, 'order_id': None, 'quantity': nan, 'city': 'Antarctica', 'country': 'Antarctica', 'lat': -88.1050465, 'lon': 132.91323, 'cost_usd': 488.85, 'cost_eur': 416.78, 'cost_rub': 41115.62, 'weather_temp': -51.35, 'weather_desc': 'overcast clouds', 'timestamp': Timestamp('2025-09-14 12:36:15.894190'), 'product_name': None, 'product_category': None} → 1 validation error for EventModel
+quantity
+  value is not a valid integer (type=type_error.integer)
+[2025-09-17T07:31:44.497+0000] {dags_utils.py:46} WARNING - ❌ Отброшена строка {'event_id': 21, 'user_id': '2096', 'session_id': 'f72dfa95-003b-4e0e-8327-baa22fd9ab7b', 'event_type': 'view_product', 'product_id': 10.0, 'order_id': None, 'quantity': nan, 'city': 'North Atlantic Ocean', 'country': None, 'lat': 30.9159985, 'lon': -77.231723, 'cost_usd': 779.38, 'cost_eur': 664.48, 'cost_rub': 65551.17, 'weather_temp': 26.52, 'weather_desc': 'broken clouds', 'timestamp': Timestamp('2025-09-14 19:11:14.545929'), 'product_name': None, 'product_category': 'toys'} → 1 validation error for EventModel
+quantity
+  value is not a valid integer (type=type_error.integer)
+[2025-09-17T07:31:44.499+0000] {dags_utils.py:46} WARNING - ❌ Отброшена строка {'event_id': 27, 'user_id': '461', 'session_id': '0a4b050f-e184-4cec-a942-d44971fba85e', 'event_type': 'session_start', 'product_id': nan, 'order_id': None, 'quantity': nan, 'city': 'South Pacific Ocean', 'country': None, 'lat': -51.856831, 'lon': -171.347125, 'cost_usd': 17.61, 'cost_eur': 15.01, 'cost_rub': 1481.12, 'weather_temp': 5.07, 'weather_desc': 'overcast clouds', 'timestamp': Timestamp('2025-09-14 19:56:25.286442'), 'product_name': None, 'product_category': None} → 2 validation errors for EventModel
+product_id
+  value is not a valid integer (type=type_error.integer)
+quantity
+  value is not a valid integer (type=type_error.integer)
+[2025-09-17T07:31:44.500+0000] {dags_utils.py:46} WARNING - ❌ Отброшена строка {'event_id': 28, 'user_id': '461', 'session_id': '356a3f0a-8ad4-4dd5-b12d-0f67f9b407b9', 'event_type': 'view_product', 'product_id': 10.0, 'order_id': None, 'quantity': nan, 'city': 'South Atlantic Ocean', 'country': None, 'lat': -45.1891835, 'lon': 3.673658, 'cost_usd': 949.32, 'cost_eur': 809.37, 'cost_rub': 79844.28, 'weather_temp': 3.71, 'weather_desc': 'scattered clouds', 'timestamp': Timestamp('2025-09-14 19:56:26.106394'), 'product_name': None, 'product_category': 'toys'} → 1 validation error for EventModel
+quantity
+  value is not a valid integer (type=type_error.integer)
+[2025-09-17T07:31:44.502+0000] {dags_utils.py:46} WARNING - ❌ Отброшена строка {'event_id': 29, 'user_id': '2356', 'session_id': 'a90bf066-b4a7-4bba-ab25-a7d7c091974e', 'event_type': 'view_product', 'product_id': 4.0, 'order_id': None, 'quantity': nan, 'city': 'Southern Ocean', 'country': None, 'lat': -61.8569925, 'lon': 149.240765, 'cost_usd': 41.13, 'cost_eur': 35.07, 'cost_rub': 3459.31, 'weather_temp': -8.91, 'weather_desc': 'overcast clouds', 'timestamp': Timestamp('2025-09-14 20:03:56.083541'), 'product_name': None, 'product_category': 'electronics'} → 1 validation error for EventModel
+quantity
+  value is not a valid integer (type=type_error.integer)
+[2025-09-17T07:31:44.503+0000] {dags_utils.py:46} WARNING - ❌ Отброшена строка {'event_id': 30, 'user_id': '2356', 'session_id': '987cb0eb-fa3b-460c-a879-1443e20a4472', 'event_type': 'session_start', 'product_id': nan, 'order_id': None, 'quantity': nan, 'city': 'Southern Ocean', 'country': None, 'lat': -63.9455405, 'lon': 155.937148, 'cost_usd': 96.46, 'cost_eur': 82.24, 'cost_rub': 8112.94, 'weather_temp': -14.59, 'weather_desc': 'overcast clouds', 'timestamp': Timestamp('2025-09-14 20:03:57.266608'), 'product_name': None, 'product_category': None} → 2 validation errors for EventModel
+product_id
+  value is not a valid integer (type=type_error.integer)
+quantity
+  value is not a valid integer (type=type_error.integer)
+[2025-09-17T07:31:44.504+0000] {dags_utils.py:46} WARNING - ❌ Отброшена строка {'event_id': 32, 'user_id': '3850', 'session_id': '4d2d49e2-dd48-4e5e-9c87-a3f85cf1aa6d', 'event_type': 'view_product', 'product_id': 6.0, 'order_id': None, 'quantity': nan, 'city': 'Kweneng', 'country': 'Botswana', 'lat': -23.7052415, 'lon': 24.317036, 'cost_usd': 783.46, 'cost_eur': 667.96, 'cost_rub': 65894.33, 'weather_temp': 21.16, 'weather_desc': 'clear sky', 'timestamp': Timestamp('2025-09-14 20:04:04.000026'), 'product_name': None, 'product_category': 'books'} → 1 validation error for EventModel
+quantity
+  value is not a valid integer (type=type_error.integer)
+[2025-09-17T07:31:44.505+0000] {dags_utils.py:46} WARNING - ❌ Отброшена строка {'event_id': 34, 'user_id': '790', 'session_id': '1f3e06fa-de41-46d5-a2ae-2a8e8ebf11d5', 'event_type': 'session_start', 'product_id': nan, 'order_id': None, 'quantity': nan, 'city': 'Naqu', 'country': 'China', 'lat': 35.468305, 'lon': 88.084544, 'cost_usd': 586.21, 'cost_eur': 499.79, 'cost_rub': 49304.26, 'weather_temp': 3.12, 'weather_desc': 'overcast clouds', 'timestamp': Timestamp('2025-09-14 20:07:20.151484'), 'product_name': None, 'product_category': None} → 2 validation errors for EventModel
+product_id
+  value is not a valid integer (type=type_error.integer)
+quantity
+  value is not a valid integer (type=type_error.integer)
+[2025-09-17T07:31:44.506+0000] {dags_utils.py:46} WARNING - ❌ Отброшена строка {'event_id': 35, 'user_id': '4226', 'session_id': '5df10133-f40c-4260-9aa9-8a3a8d406141', 'event_type': 'session_start', 'product_id': nan, 'order_id': None, 'quantity': nan, 'city': 'Barents Sea', 'country': None, 'lat': 75.3312055, 'lon': 39.322421, 'cost_usd': 669.86, 'cost_eur': 571.11, 'cost_rub': 56339.79, 'weather_temp': 3.22, 'weather_desc': 'light rain', 'timestamp': Timestamp('2025-09-14 20:08:09.880622'), 'product_name': None, 'product_category': None} → 2 validation errors for EventModel
+product_id
+  value is not a valid integer (type=type_error.integer)
+quantity
+  value is not a valid integer (type=type_error.integer)
+[2025-09-17T07:31:44.508+0000] {dags_utils.py:46} WARNING - ❌ Отброшена строка {'event_id': 36, 'user_id': '4226', 'session_id': '09a0e042-42a5-4d1b-9da5-66d07168f13d', 'event_type': 'view_product', 'product_id': 9.0, 'order_id': None, 'quantity': nan, 'city': 'North Pacific Ocean', 'country': None, 'lat': 39.274701, 'lon': -153.435263, 'cost_usd': 930.68, 'cost_eur': 793.48, 'cost_rub': 78276.53, 'weather_temp': 20.36, 'weather_desc': 'heavy intensity rain', 'timestamp': Timestamp('2025-09-14 20:08:10.969099'), 'product_name': None, 'product_category': 'beauty'} → 1 validation error for EventModel
+quantity
+  value is not a valid integer (type=type_error.integer)
+[2025-09-17T07:31:44.510+0000] {dags_utils.py:46} WARNING - ❌ Отброшена строка {'event_id': 37, 'user_id': '4665', 'session_id': '6922c85b-957b-4cc0-bce3-ac35168f4671', 'event_type': 'session_start', 'product_id': nan, 'order_id': None, 'quantity': nan, 'city': 'South Pacific Ocean', 'country': None, 'lat': -55.9699425, 'lon': -141.533315, 'cost_usd': 919.54, 'cost_eur': 783.98, 'cost_rub': 77339.58, 'weather_temp': 5.76, 'weather_desc': 'light rain', 'timestamp': Timestamp('2025-09-14 20:09:25.753962'), 'product_name': None, 'product_category': None} → 2 validation errors for EventModel
+product_id
+  value is not a valid integer (type=type_error.integer)
+quantity
+  value is not a valid integer (type=type_error.integer)
+[2025-09-17T07:31:44.512+0000] {dags_utils.py:46} WARNING - ❌ Отброшена строка {'event_id': 38, 'user_id': '4665', 'session_id': 'fbc4b9fb-9a27-4286-aba4-7bf64002d757', 'event_type': 'view_product', 'product_id': 4.0, 'order_id': None, 'quantity': nan, 'city': 'Anadyrskiy', 'country': 'Russia', 'lat': 64.5626505, 'lon': 170.6538, 'cost_usd': 954.81, 'cost_eur': 814.05, 'cost_rub': 80306.03, 'weather_temp': 7.15, 'weather_desc': 'clear sky', 'timestamp': Timestamp('2025-09-14 20:09:26.749049'), 'product_name': None, 'product_category': 'electronics'} → 1 validation error for EventModel
+quantity
+  value is not a valid integer (type=type_error.integer)
+[2025-09-17T07:31:44.513+0000] {dags_utils.py:46} WARNING - ❌ Отброшена строка {'event_id': 39, 'user_id': '3706', 'session_id': '101c3394-2333-4c9c-8b7f-3f8359ae0aff', 'event_type': 'view_product', 'product_id': 10.0, 'order_id': None, 'quantity': nan, 'city': 'Southern Ocean', 'country': None, 'lat': -67.405428, 'lon': -121.018942, 'cost_usd': 702.17, 'cost_eur': 598.66, 'cost_rub': 59057.28, 'weather_temp': -2.72, 'weather_desc': 'overcast clouds', 'timestamp': Timestamp('2025-09-14 20:10:21.232351'), 'product_name': None, 'product_category': 'toys'} → 1 validation error for EventModel
+quantity
+  value is not a valid integer (type=type_error.integer)
+[2025-09-17T07:31:44.514+0000] {dags_utils.py:46} WARNING - ❌ Отброшена строка {'event_id': 40, 'user_id': '3706', 'session_id': 'b28a1a55-bbcb-4597-97b2-8bd9b7d0d7b9', 'event_type': 'view_product', 'product_id': 1.0, 'order_id': None, 'quantity': nan, 'city': 'Hart', 'country': 'Australia', 'lat': -22.7114255, 'lon': 137.471036, 'cost_usd': 156.06, 'cost_eur': 133.05, 'cost_rub': 13125.71, 'weather_temp': 18.55, 'weather_desc': 'clear sky', 'timestamp': Timestamp('2025-09-14 20:10:22.755976'), 'product_name': None, 'product_category': 'electronics'} → 1 validation error for EventModel
+quantity
+  value is not a valid integer (type=type_error.integer)
+[2025-09-17T07:31:44.515+0000] {dags_utils.py:46} WARNING - ❌ Отброшена строка {'event_id': 43, 'user_id': '3855', 'session_id': 'ce894612-5c3d-41bd-8e10-01ea5a957dcd', 'event_type': 'view_product', 'product_id': 1.0, 'order_id': None, 'quantity': nan, 'city': 'Southern Ocean', 'country': None, 'lat': -61.0013955, 'lon': -126.729292, 'cost_usd': 597.47, 'cost_eur': 509.39, 'cost_rub': 50251.3, 'weather_temp': 0.68, 'weather_desc': 'overcast clouds', 'timestamp': Timestamp('2025-09-14 20:12:11.774748'), 'product_name': None, 'product_category': 'electronics'} → 1 validation error for EventModel
+quantity
+  value is not a valid integer (type=type_error.integer)
+[2025-09-17T07:31:44.516+0000] {dags_utils.py:46} WARNING - ❌ Отброшена строка {'event_id': 44, 'user_id': '3855', 'session_id': 'e1c7f630-9052-434d-baf3-87c60003a3b9', 'event_type': 'view_product', 'product_id': 1.0, 'order_id': None, 'quantity': nan, 'city': 'Caribbean Sea', 'country': None, 'lat': 16.887553, 'lon': -81.756634, 'cost_usd': 521.51, 'cost_eur': 444.63, 'cost_rub': 43862.55, 'weather_temp': 28.78, 'weather_desc': 'overcast clouds', 'timestamp': Timestamp('2025-09-14 20:12:12.778587'), 'product_name': None, 'product_category': 'electronics'} → 1 validation error for EventModel
+quantity
+  value is not a valid integer (type=type_error.integer)
+[2025-09-17T07:31:44.517+0000] {dags_utils.py:46} WARNING - ❌ Отброшена строка {'event_id': 45, 'user_id': '3356', 'session_id': 'b3126496-91d7-4e81-bb7d-2b62c7236cd1', 'event_type': 'view_product', 'product_id': 2.0, 'order_id': None, 'quantity': nan, 'city': 'Unknown', 'country': None, 'lat': -43.939266, 'lon': 177.070625, 'cost_usd': 25.53, 'cost_eur': 21.77, 'cost_rub': 2147.25, 'weather_temp': 9.66, 'weather_desc': 'overcast clouds', 'timestamp': Timestamp('2025-09-14 20:13:10.004245'), 'product_name': None, 'product_category': 'electronics'} → 1 validation error for EventModel
+quantity
+  value is not a valid integer (type=type_error.integer)
+[2025-09-17T07:31:44.519+0000] {dags_utils.py:46} WARNING - ❌ Отброшена строка {'event_id': 46, 'user_id': '3356', 'session_id': '2ec97ed0-244b-4e39-af21-c93e8fb62ec8', 'event_type': 'session_start', 'product_id': nan, 'order_id': None, 'quantity': nan, 'city': 'Indian Ocean', 'country': None, 'lat': -10.838122, 'lon': 71.748798, 'cost_usd': 461.91, 'cost_eur': 393.82, 'cost_rub': 38849.78, 'weather_temp': 24.95, 'weather_desc': 'clear sky', 'timestamp': Timestamp('2025-09-14 20:13:10.894025'), 'product_name': None, 'product_category': None} → 2 validation errors for EventModel
+product_id
+  value is not a valid integer (type=type_error.integer)
+quantity
+  value is not a valid integer (type=type_error.integer)
+[2025-09-17T07:31:44.520+0000] {dags_utils.py:46} WARNING - ❌ Отброшена строка {'event_id': 47, 'user_id': '4647', 'session_id': 'cb3f1712-7cbd-494a-a0fa-dd4de57b1c33', 'event_type': 'view_product', 'product_id': 1.0, 'order_id': None, 'quantity': nan, 'city': 'North Pacific Ocean', 'country': None, 'lat': 38.982945, 'lon': 166.097586, 'cost_usd': 225.72, 'cost_eur': 192.44, 'cost_rub': 18984.59, 'weather_temp': 23.51, 'weather_desc': 'overcast clouds', 'timestamp': Timestamp('2025-09-14 20:14:12.952331'), 'product_name': None, 'product_category': 'electronics'} → 1 validation error for EventModel
+quantity
+  value is not a valid integer (type=type_error.integer)
+[2025-09-17T07:31:44.521+0000] {dags_utils.py:46} WARNING - ❌ Отброшена строка {'event_id': 48, 'user_id': '4647', 'session_id': '3321a47b-95b0-42c7-a5c8-02cdc5a595b6', 'event_type': 'view_product', 'product_id': 10.0, 'order_id': None, 'quantity': nan, 'city': 'North Pacific Ocean', 'country': None, 'lat': 5.10667, 'lon': -173.288753, 'cost_usd': 217.62, 'cost_eur': 185.54, 'cost_rub': 18303.33, 'weather_temp': 26.36, 'weather_desc': 'broken clouds', 'timestamp': Timestamp('2025-09-14 20:14:13.877268'), 'product_name': None, 'product_category': 'toys'} → 1 validation error for EventModel
+quantity
+  value is not a valid integer (type=type_error.integer)
+[2025-09-17T07:31:44.523+0000] {dags_utils.py:46} WARNING - ❌ Отброшена строка {'event_id': 50, 'user_id': '688', 'session_id': '4f65009b-371c-46d7-a911-fe572003768f', 'event_type': 'view_product', 'product_id': 5.0, 'order_id': None, 'quantity': nan, 'city': 'Baffin Bay', 'country': None, 'lat': 71.908032, 'lon': -57.196739, 'cost_usd': 998.8, 'cost_eur': 851.56, 'cost_rub': 84005.89, 'weather_temp': 2.66, 'weather_desc': 'overcast clouds', 'timestamp': Timestamp('2025-09-14 20:15:17.222134'), 'product_name': None, 'product_category': 'clothing'} → 1 validation error for EventModel
+quantity
+  value is not a valid integer (type=type_error.integer)
+[2025-09-17T07:31:44.525+0000] {dags_utils.py:46} WARNING - ❌ Отброшена строка {'event_id': 51, 'user_id': '3218', 'session_id': '13325fe8-b409-40ef-8637-1186e50229db', 'event_type': 'view_product', 'product_id': 10.0, 'order_id': None, 'quantity': nan, 'city': "Roshtqal'a", 'country': 'Tajikistan', 'lat': 37.1778145, 'lon': 72.032269, 'cost_usd': 332.76, 'cost_eur': 283.7, 'cost_rub': 27987.38, 'weather_temp': 11.05, 'weather_desc': 'clear sky', 'timestamp': Timestamp('2025-09-14 20:16:11.429968'), 'product_name': None, 'product_category': 'toys'} → 1 validation error for EventModel
+quantity
+  value is not a valid integer (type=type_error.integer)
+[2025-09-17T07:31:44.528+0000] {dags_utils.py:46} WARNING - ❌ Отброшена строка {'event_id': 54, 'user_id': '3376', 'session_id': 'd84f3e8f-0678-4f87-897f-20b5dd1fae6c', 'event_type': 'view_product', 'product_id': 4.0, 'order_id': None, 'quantity': nan, 'city': 'Lahaul and Spiti', 'country': 'India', 'lat': 32.706643, 'lon': 77.259487, 'cost_usd': 233.09, 'cost_eur': 198.73, 'cost_rub': 19604.46, 'weather_temp': 13.18, 'weather_desc': 'overcast clouds', 'timestamp': Timestamp('2025-09-14 20:17:11.669545'), 'product_name': None, 'product_category': 'electronics'} → 1 validation error for EventModel
+quantity
+  value is not a valid integer (type=type_error.integer)
+[2025-09-17T07:31:44.532+0000] {dags_utils.py:46} WARNING - ❌ Отброшена строка {'event_id': 60, 'user_id': '2184', 'session_id': '1461d464-dcc1-4dc4-ab5e-93a8355f9468', 'event_type': 'session_start', 'product_id': nan, 'order_id': None, 'quantity': nan, 'city': 'Unknown', 'country': None, 'lat': -63.0963815, 'lon': 60.247512, 'cost_usd': 418.26, 'cost_eur': 356.68, 'cost_rub': 35122.66, 'weather_temp': -11.08, 'weather_desc': 'light snow', 'timestamp': Timestamp('2025-09-15 11:17:56.777460'), 'product_name': None, 'product_category': None} → 2 validation errors for EventModel
+product_id
+  value is not a valid integer (type=type_error.integer)
+quantity
+  value is not a valid integer (type=type_error.integer)
+[2025-09-17T07:31:44.533+0000] {dags_utils.py:46} WARNING - ❌ Отброшена строка {'event_id': 63, 'user_id': '2422', 'session_id': 'a646a569-f80a-4e2e-8376-3b1100ed9221', 'event_type': 'session_start', 'product_id': nan, 'order_id': None, 'quantity': nan, 'city': 'Unknown', 'country': None, 'lat': -75.7603095, 'lon': -86.330075, 'cost_usd': 33.75, 'cost_eur': 28.78, 'cost_rub': 2834.1, 'weather_temp': -31.62, 'weather_desc': 'few clouds', 'timestamp': Timestamp('2025-09-15 11:19:48.515614'), 'product_name': None, 'product_category': None} → 2 validation errors for EventModel
+product_id
+  value is not a valid integer (type=type_error.integer)
+quantity
+  value is not a valid integer (type=type_error.integer)
+[2025-09-17T07:31:44.535+0000] {dags_utils.py:46} WARNING - ❌ Отброшена строка {'event_id': 64, 'user_id': '2422', 'session_id': '0580b477-1343-4c1d-a9d6-9d4b51f332b1', 'event_type': 'session_start', 'product_id': nan, 'order_id': None, 'quantity': nan, 'city': 'Unknown', 'country': None, 'lat': 16.5087315, 'lon': 172.288195, 'cost_usd': 94.94, 'cost_eur': 80.96, 'cost_rub': 7972.42, 'weather_temp': 28.01, 'weather_desc': 'light rain', 'timestamp': Timestamp('2025-09-15 11:19:51.242767'), 'product_name': None, 'product_category': None} → 2 validation errors for EventModel
+product_id
+  value is not a valid integer (type=type_error.integer)
+quantity
+  value is not a valid integer (type=type_error.integer)
+[2025-09-17T07:31:44.536+0000] {dags_utils.py:46} WARNING - ❌ Отброшена строка {'event_id': 65, 'user_id': '4580', 'session_id': 'b2f2bdd6-f3a9-455b-a8d4-51cc26960323', 'event_type': 'session_start', 'product_id': nan, 'order_id': None, 'quantity': nan, 'city': 'Unknown', 'country': None, 'lat': -83.989276, 'lon': -57.405527, 'cost_usd': 664.46, 'cost_eur': 566.63, 'cost_rub': 55796.88, 'weather_temp': -18.14, 'weather_desc': 'overcast clouds', 'timestamp': Timestamp('2025-09-15 11:20:57.952374'), 'product_name': None, 'product_category': None} → 2 validation errors for EventModel
+product_id
+  value is not a valid integer (type=type_error.integer)
+quantity
+  value is not a valid integer (type=type_error.integer)
+[2025-09-17T07:31:44.537+0000] {dags_utils.py:46} WARNING - ❌ Отброшена строка {'event_id': 68, 'user_id': '282', 'session_id': 'f163e28b-7bbe-4981-b402-abc343ab7016', 'event_type': 'session_start', 'product_id': nan, 'order_id': None, 'quantity': nan, 'city': 'Unknown', 'country': None, 'lat': 62.742925, 'lon': 94.904127, 'cost_usd': 564.23, 'cost_eur': 481.16, 'cost_rub': 47380.24, 'weather_temp': 6.58, 'weather_desc': 'moderate rain', 'timestamp': Timestamp('2025-09-15 11:22:10.267188'), 'product_name': None, 'product_category': None} → 2 validation errors for EventModel
+product_id
+  value is not a valid integer (type=type_error.integer)
+quantity
+  value is not a valid integer (type=type_error.integer)
+[2025-09-17T07:31:44.538+0000] {dags_utils.py:46} WARNING - ❌ Отброшена строка {'event_id': 69, 'user_id': '1997', 'session_id': '34dd39c6-b809-493d-8361-5e5a3438d9e8', 'event_type': 'session_start', 'product_id': nan, 'order_id': None, 'quantity': nan, 'city': 'Unknown', 'country': None, 'lat': 84.953455, 'lon': -45.671007, 'cost_usd': 701.52, 'cost_eur': 598.23, 'cost_rub': 58908.93, 'weather_temp': -8.96, 'weather_desc': 'overcast clouds', 'timestamp': Timestamp('2025-09-15 11:22:51.393077'), 'product_name': None, 'product_category': None} → 2 validation errors for EventModel
+product_id
+  value is not a valid integer (type=type_error.integer)
+quantity
+  value is not a valid integer (type=type_error.integer)
+[2025-09-17T07:31:44.540+0000] {dags_utils.py:46} WARNING - ❌ Отброшена строка {'event_id': 71, 'user_id': '172', 'session_id': 'd9b3d3e9-6ff9-4abe-a15f-3f472a38e8af', 'event_type': 'logout', 'product_id': nan, 'order_id': None, 'quantity': nan, 'city': 'Unknown', 'country': None, 'lat': 46.4413805, 'lon': 126.738556, 'cost_usd': 871.54, 'cost_eur': 743.22, 'cost_rub': 73186.07, 'weather_temp': 14.09, 'weather_desc': 'overcast clouds', 'timestamp': Timestamp('2025-09-15 21:20:37.239576'), 'product_name': None, 'product_category': None} → 2 validation errors for EventModel
+product_id
+  value is not a valid integer (type=type_error.integer)
+quantity
+  value is not a valid integer (type=type_error.integer)
+[2025-09-17T07:31:44.542+0000] {dags_utils.py:46} WARNING - ❌ Отброшена строка {'event_id': 72, 'user_id': '172', 'session_id': '007fe921-1aab-440f-a083-07ddeb4c77ec', 'event_type': 'session_end', 'product_id': nan, 'order_id': None, 'quantity': nan, 'city': 'Unknown', 'country': None, 'lat': -67.702381, 'lon': -54.786173, 'cost_usd': 145.34, 'cost_eur': 123.94, 'cost_rub': 12204.68, 'weather_temp': -14.68, 'weather_desc': 'light snow', 'timestamp': Timestamp('2025-09-15 21:20:39.248282'), 'product_name': None, 'product_category': None} → 2 validation errors for EventModel
+product_id
+  value is not a valid integer (type=type_error.integer)
+quantity
+  value is not a valid integer (type=type_error.integer)
+[2025-09-17T07:31:44.544+0000] {dags_utils.py:46} WARNING - ❌ Отброшена строка {'event_id': 73, 'user_id': '234', 'session_id': '99df1ce6-4a8c-489e-b18c-30fb736d0bfc', 'event_type': 'session_end', 'product_id': nan, 'order_id': None, 'quantity': nan, 'city': 'Unknown', 'country': None, 'lat': -0.000903, 'lon': -151.733682, 'cost_usd': 476.12, 'cost_eur': 406.02, 'cost_rub': 39981.36, 'weather_temp': 26.21, 'weather_desc': 'overcast clouds', 'timestamp': Timestamp('2025-09-15 21:20:59.616075'), 'product_name': None, 'product_category': None} → 2 validation errors for EventModel
+product_id
+  value is not a valid integer (type=type_error.integer)
+quantity
+  value is not a valid integer (type=type_error.integer)
+[2025-09-17T07:31:44.545+0000] {dags_utils.py:46} WARNING - ❌ Отброшена строка {'event_id': 75, 'user_id': '3933', 'session_id': '229f7999-7d56-4dbb-9237-dab4800e846c', 'event_type': 'view_product', 'product_id': 2.0, 'order_id': None, 'quantity': nan, 'city': 'Unknown', 'country': None, 'lat': 25.5219335, 'lon': -15.027673, 'cost_usd': 24.38, 'cost_eur': 20.79, 'cost_rub': 2047.27, 'weather_temp': 21.86, 'weather_desc': 'clear sky', 'timestamp': Timestamp('2025-09-15 21:21:12.804286'), 'product_name': None, 'product_category': 'electronics'} → 1 validation error for EventModel
+quantity
+  value is not a valid integer (type=type_error.integer)
+[2025-09-17T07:31:44.546+0000] {dags_utils.py:46} WARNING - ❌ Отброшена строка {'event_id': 76, 'user_id': '3933', 'session_id': '9a1f4947-53ef-4bc6-a2e9-57c4d29a6882', 'event_type': 'signup', 'product_id': nan, 'order_id': None, 'quantity': nan, 'city': 'Unknown', 'country': None, 'lat': 34.7789565, 'lon': 134.651684, 'cost_usd': 467.01, 'cost_eur': 398.25, 'cost_rub': 39216.36, 'weather_temp': 26.6, 'weather_desc': 'few clouds', 'timestamp': Timestamp('2025-09-15 21:21:14.953682'), 'product_name': None, 'product_category': None} → 2 validation errors for EventModel
+product_id
+  value is not a valid integer (type=type_error.integer)
+quantity
+  value is not a valid integer (type=type_error.integer)
+[2025-09-17T07:31:44.547+0000] {dags_utils.py:46} WARNING - ❌ Отброшена строка {'event_id': 77, 'user_id': '2276', 'session_id': '7d333e2c-5202-4e45-8cb9-6bf2627ca6dd', 'event_type': 'logout', 'product_id': nan, 'order_id': None, 'quantity': nan, 'city': 'Unknown', 'country': None, 'lat': 59.65439, 'lon': 117.844599, 'cost_usd': 670.24, 'cost_eur': 571.56, 'cost_rub': 56282.25, 'weather_temp': 4.58, 'weather_desc': 'overcast clouds', 'timestamp': Timestamp('2025-09-15 21:22:15.868955'), 'product_name': None, 'product_category': None} → 2 validation errors for EventModel
+product_id
+  value is not a valid integer (type=type_error.integer)
+quantity
+  value is not a valid integer (type=type_error.integer)
+[2025-09-17T07:31:44.548+0000] {dags_utils.py:46} WARNING - ❌ Отброшена строка {'event_id': 78, 'user_id': '2276', 'session_id': '2fb7c1b8-2a98-48dd-8dc5-88bd7af5cfbc', 'event_type': 'view_product', 'product_id': 8.0, 'order_id': None, 'quantity': nan, 'city': 'Unknown', 'country': None, 'lat': -52.182988, 'lon': -35.40292, 'cost_usd': 418.4, 'cost_eur': 356.8, 'cost_rub': 35134.42, 'weather_temp': 2.12, 'weather_desc': 'overcast clouds', 'timestamp': Timestamp('2025-09-15 21:22:18.401343'), 'product_name': None, 'product_category': 'sports'} → 1 validation error for EventModel
+quantity
+  value is not a valid integer (type=type_error.integer)
+[2025-09-17T07:31:44.549+0000] {dags_utils.py:46} WARNING - ❌ Отброшена строка {'event_id': 79, 'user_id': '2788', 'session_id': 'c2b28c69-c657-44b1-8a0d-c6caa245930b', 'event_type': 'session_start', 'product_id': nan, 'order_id': None, 'quantity': nan, 'city': 'Unknown', 'country': None, 'lat': -25.4063295, 'lon': -61.032581, 'cost_usd': 797.41, 'cost_eur': 680.0, 'cost_rub': 66961.13, 'weather_temp': 37.11, 'weather_desc': 'clear sky', 'timestamp': Timestamp('2025-09-15 21:23:44.379829'), 'product_name': None, 'product_category': None} → 2 validation errors for EventModel
+product_id
+  value is not a valid integer (type=type_error.integer)
+quantity
+  value is not a valid integer (type=type_error.integer)
+[2025-09-17T07:31:44.550+0000] {dags_utils.py:46} WARNING - ❌ Отброшена строка {'event_id': 80, 'user_id': '2788', 'session_id': 'c9a488a5-2ed8-402e-84ab-bd4ccf099358', 'event_type': 'view_product', 'product_id': 2.0, 'order_id': None, 'quantity': nan, 'city': 'Unknown', 'country': None, 'lat': 85.875819, 'lon': -156.908732, 'cost_usd': 8.76, 'cost_eur': 7.47, 'cost_rub': 735.61, 'weather_temp': -3.19, 'weather_desc': 'overcast clouds', 'timestamp': Timestamp('2025-09-15 21:23:48.831442'), 'product_name': None, 'product_category': 'electronics'} → 1 validation error for EventModel
+quantity
+  value is not a valid integer (type=type_error.integer)
+[2025-09-17T07:31:44.551+0000] {dags_utils.py:46} WARNING - ❌ Отброшена строка {'event_id': 81, 'user_id': '301', 'session_id': '9c9668f6-68fe-4451-ac89-6f4054a34004', 'event_type': 'view_page', 'product_id': nan, 'order_id': None, 'quantity': nan, 'city': 'Unknown', 'country': None, 'lat': -42.7003115, 'lon': -159.528573, 'cost_usd': 11.02, 'cost_eur': 9.4, 'cost_rub': 925.39, 'weather_temp': 9.21, 'weather_desc': 'scattered clouds', 'timestamp': Timestamp('2025-09-15 21:28:06.780061'), 'product_name': None, 'product_category': None} → 2 validation errors for EventModel
+product_id
+  value is not a valid integer (type=type_error.integer)
+quantity
+  value is not a valid integer (type=type_error.integer)
+[2025-09-17T07:31:44.552+0000] {dags_utils.py:46} WARNING - ❌ Отброшена строка {'event_id': 82, 'user_id': '301', 'session_id': 'e6c89d35-71ad-436a-8598-80cd6ef41d1c', 'event_type': 'view_page', 'product_id': nan, 'order_id': None, 'quantity': nan, 'city': 'Unknown', 'country': None, 'lat': 65.494083, 'lon': -129.383609, 'cost_usd': 262.33, 'cost_eur': 223.71, 'cost_rub': 22028.71, 'weather_temp': 12.05, 'weather_desc': 'scattered clouds', 'timestamp': Timestamp('2025-09-15 21:28:08.321213'), 'product_name': None, 'product_category': None} → 2 validation errors for EventModel
+product_id
+  value is not a valid integer (type=type_error.integer)
+quantity
+  value is not a valid integer (type=type_error.integer)
+[2025-09-17T07:31:44.553+0000] {dags_utils.py:46} WARNING - ❌ Отброшена строка {'event_id': 84, 'user_id': '1457', 'session_id': 'bac6fd2a-e953-44e0-b478-33dce5d78596', 'event_type': 'view_page', 'product_id': nan, 'order_id': None, 'quantity': nan, 'city': 'Unknown', 'country': None, 'lat': 73.886842, 'lon': -34.329359, 'cost_usd': 634.09, 'cost_eur': 540.73, 'cost_rub': 53246.62, 'weather_temp': -23.05, 'weather_desc': 'overcast clouds', 'timestamp': Timestamp('2025-09-15 21:28:19.255529'), 'product_name': None, 'product_category': None} → 2 validation errors for EventModel
+product_id
+  value is not a valid integer (type=type_error.integer)
+quantity
+  value is not a valid integer (type=type_error.integer)
+[2025-09-17T07:31:44.554+0000] {dags_utils.py:46} WARNING - ❌ Отброшена строка {'event_id': 85, 'user_id': '4303', 'session_id': '94f6cc0d-e25c-447d-a696-a3828ed65843', 'event_type': 'view_product', 'product_id': 8.0, 'order_id': None, 'quantity': nan, 'city': 'Unknown', 'country': None, 'lat': 40.571774, 'lon': -30.027373, 'cost_usd': 54.97, 'cost_eur': 46.88, 'cost_rub': 4616.01, 'weather_temp': 22.21, 'weather_desc': 'overcast clouds', 'timestamp': Timestamp('2025-09-15 21:29:45.007713'), 'product_name': None, 'product_category': 'sports'} → 1 validation error for EventModel
+quantity
+  value is not a valid integer (type=type_error.integer)
+[2025-09-17T07:31:44.555+0000] {dags_utils.py:46} WARNING - ❌ Отброшена строка {'event_id': 86, 'user_id': '4303', 'session_id': '66bffe55-306c-4688-b4b3-d2831d09b0a5', 'event_type': 'session_start', 'product_id': nan, 'order_id': None, 'quantity': nan, 'city': 'Unknown', 'country': None, 'lat': -68.0003915, 'lon': 56.41683, 'cost_usd': 671.46, 'cost_eur': 572.6, 'cost_rub': 56384.7, 'weather_temp': -26.97, 'weather_desc': 'overcast clouds', 'timestamp': Timestamp('2025-09-15 21:29:48.740984'), 'product_name': None, 'product_category': None} → 2 validation errors for EventModel
+product_id
+  value is not a valid integer (type=type_error.integer)
+quantity
+  value is not a valid integer (type=type_error.integer)
+[2025-09-17T07:31:44.557+0000] {dags_utils.py:46} WARNING - ❌ Отброшена строка {'event_id': 87, 'user_id': '3276', 'session_id': '711c9901-0a00-47bf-ba4f-8265a57ef277', 'event_type': 'view_page', 'product_id': nan, 'order_id': None, 'quantity': nan, 'city': 'Unknown', 'country': None, 'lat': 0.046878, 'lon': 171.489577, 'cost_usd': 809.69, 'cost_eur': 690.47, 'cost_rub': 67992.32, 'weather_temp': 27.57, 'weather_desc': 'scattered clouds', 'timestamp': Timestamp('2025-09-15 21:30:31.410028'), 'product_name': None, 'product_category': None} → 2 validation errors for EventModel
+product_id
+  value is not a valid integer (type=type_error.integer)
+quantity
+  value is not a valid integer (type=type_error.integer)
+[2025-09-17T07:31:44.559+0000] {dags_utils.py:46} WARNING - ❌ Отброшена строка {'event_id': 88, 'user_id': '3276', 'session_id': 'ca3226e9-2004-4cd9-ac72-8018075de592', 'event_type': 'view_page', 'product_id': nan, 'order_id': None, 'quantity': nan, 'city': 'Unknown', 'country': None, 'lat': 87.1602825, 'lon': -102.127631, 'cost_usd': 608.9, 'cost_eur': 519.25, 'cost_rub': 51131.33, 'weather_temp': -4.86, 'weather_desc': 'overcast clouds', 'timestamp': Timestamp('2025-09-15 21:30:33.522125'), 'product_name': None, 'product_category': None} → 2 validation errors for EventModel
+product_id
+  value is not a valid integer (type=type_error.integer)
+quantity
+  value is not a valid integer (type=type_error.integer)
+[2025-09-17T07:31:44.561+0000] {dags_utils.py:46} WARNING - ❌ Отброшена строка {'event_id': 89, 'user_id': '142', 'session_id': 'b3f2d508-498d-47a9-aa2c-af7486a90984', 'event_type': 'filter', 'product_id': nan, 'order_id': None, 'quantity': nan, 'city': 'Unknown', 'country': None, 'lat': 30.582986, 'lon': -5.817775, 'cost_usd': 770.45, 'cost_eur': 657.01, 'cost_rub': 64697.21, 'weather_temp': 27.05, 'weather_desc': 'broken clouds', 'timestamp': Timestamp('2025-09-15 21:31:17.480286'), 'product_name': None, 'product_category': None} → 2 validation errors for EventModel
+product_id
+  value is not a valid integer (type=type_error.integer)
+quantity
+  value is not a valid integer (type=type_error.integer)
+[2025-09-17T07:31:44.562+0000] {dags_utils.py:46} WARNING - ❌ Отброшена строка {'event_id': 90, 'user_id': '142', 'session_id': '40272e6c-4869-4abe-bc17-2c3bcedc75a2', 'event_type': 'remove_from_cart', 'product_id': nan, 'order_id': None, 'quantity': nan, 'city': 'Unknown', 'country': None, 'lat': 18.605689, 'lon': -35.166855, 'cost_usd': 692.8, 'cost_eur': 590.79, 'cost_rub': 58176.69, 'weather_temp': 26.41, 'weather_desc': 'overcast clouds', 'timestamp': Timestamp('2025-09-15 21:31:20.168187'), 'product_name': None, 'product_category': None} → 2 validation errors for EventModel
+product_id
+  value is not a valid integer (type=type_error.integer)
+quantity
+  value is not a valid integer (type=type_error.integer)
+[2025-09-17T07:31:44.563+0000] {dags_utils.py:46} WARNING - ❌ Отброшена строка {'event_id': 91, 'user_id': '1676', 'session_id': 'bcddf298-5327-4325-8e75-24dd5ff2cc6b', 'event_type': 'signup', 'product_id': nan, 'order_id': None, 'quantity': nan, 'city': 'Unknown', 'country': None, 'lat': 14.40792, 'lon': -123.70779, 'cost_usd': 556.69, 'cost_eur': 474.73, 'cost_rub': 46747.08, 'weather_temp': 25.96, 'weather_desc': 'broken clouds', 'timestamp': Timestamp('2025-09-15 23:05:55.404414'), 'product_name': None, 'product_category': None} → 2 validation errors for EventModel
+product_id
+  value is not a valid integer (type=type_error.integer)
+quantity
+  value is not a valid integer (type=type_error.integer)
+[2025-09-17T07:31:44.564+0000] {dags_utils.py:46} WARNING - ❌ Отброшена строка {'event_id': 92, 'user_id': '1676', 'session_id': '55870174-ffe0-4000-bb06-4c486bac6a75', 'event_type': 'view_page', 'product_id': nan, 'order_id': None, 'quantity': nan, 'city': 'Unknown', 'country': None, 'lat': 69.233841, 'lon': -25.669174, 'cost_usd': 617.13, 'cost_eur': 526.27, 'cost_rub': 51822.43, 'weather_temp': -4.91, 'weather_desc': 'overcast clouds', 'timestamp': Timestamp('2025-09-15 23:05:57.465682'), 'product_name': None, 'product_category': None} → 2 validation errors for EventModel
+product_id
+  value is not a valid integer (type=type_error.integer)
+quantity
+  value is not a valid integer (type=type_error.integer)
+[2025-09-17T07:31:44.565+0000] {dags_utils.py:46} WARNING - ❌ Отброшена строка {'event_id': 93, 'user_id': '1099', 'session_id': 'dca99289-ef0f-4c7d-8942-8f9ef14536ae', 'event_type': 'view_page', 'product_id': nan, 'order_id': None, 'quantity': nan, 'city': 'Unknown', 'country': None, 'lat': 61.370032, 'lon': -65.708169, 'cost_usd': 142.14, 'cost_eur': 121.21, 'cost_rub': 11935.96, 'weather_temp': 1.06, 'weather_desc': 'overcast clouds', 'timestamp': Timestamp('2025-09-15 23:06:27.543213'), 'product_name': None, 'product_category': None} → 2 validation errors for EventModel
+product_id
+  value is not a valid integer (type=type_error.integer)
+quantity
+  value is not a valid integer (type=type_error.integer)
+[2025-09-17T07:31:44.567+0000] {dags_utils.py:46} WARNING - ❌ Отброшена строка {'event_id': 95, 'user_id': '4362', 'session_id': 'fcc55253-9243-4711-a140-d64dc9e4b9eb', 'event_type': 'logout', 'product_id': nan, 'order_id': None, 'quantity': nan, 'city': 'Unknown', 'country': None, 'lat': -8.3261425, 'lon': 147.50078, 'cost_usd': 818.09, 'cost_eur': 695.61, 'cost_rub': 67773.37, 'weather_temp': 15.19, 'weather_desc': 'scattered clouds', 'timestamp': Timestamp('2025-09-16 18:45:03.470737'), 'product_name': None, 'product_category': None} → 2 validation errors for EventModel
+product_id
+  value is not a valid integer (type=type_error.integer)
+quantity
+  value is not a valid integer (type=type_error.integer)
+[2025-09-17T07:31:44.568+0000] {dags_utils.py:46} WARNING - ❌ Отброшена строка {'event_id': 96, 'user_id': '4362', 'session_id': 'd48ba32d-5d88-46ca-9982-071888cc2860', 'event_type': 'search', 'product_id': nan, 'order_id': None, 'quantity': nan, 'city': 'Unknown', 'country': None, 'lat': 42.885559, 'lon': -70.087774, 'cost_usd': 81.81, 'cost_eur': 69.56, 'cost_rub': 6777.42, 'weather_temp': 20.27, 'weather_desc': 'overcast clouds', 'timestamp': Timestamp('2025-09-16 18:45:04.861702'), 'product_name': None, 'product_category': None} → 2 validation errors for EventModel
+product_id
+  value is not a valid integer (type=type_error.integer)
+quantity
+  value is not a valid integer (type=type_error.integer)
+[2025-09-17T07:31:44.569+0000] {dags_utils.py:46} WARNING - ❌ Отброшена строка {'event_id': 97, 'user_id': '3789', 'session_id': '25fa22b9-a856-4863-97c0-dbd828fb6363', 'event_type': 'signup', 'product_id': nan, 'order_id': None, 'quantity': nan, 'city': 'South Atlantic Ocean', 'country': None, 'lat': -57.407751, 'lon': -30.298405, 'cost_usd': 760.17, 'cost_eur': 646.36, 'cost_rub': 62975.08, 'weather_temp': -0.48, 'weather_desc': 'overcast clouds', 'timestamp': Timestamp('2025-09-16 21:14:52.005293'), 'product_name': None, 'product_category': None} → 2 validation errors for EventModel
+product_id
+  value is not a valid integer (type=type_error.integer)
+quantity
+  value is not a valid integer (type=type_error.integer)
+[2025-09-17T07:31:44.570+0000] {dags_utils.py:46} WARNING - ❌ Отброшена строка {'event_id': 98, 'user_id': '3789', 'session_id': 'd3ab43a9-545d-4a0d-8f4d-0a5968fdf3c9', 'event_type': 'view_page', 'product_id': nan, 'order_id': None, 'quantity': nan, 'city': 'Indian Ocean', 'country': None, 'lat': -32.342482, 'lon': 96.981987, 'cost_usd': 147.55, 'cost_eur': 125.46, 'cost_rub': 12223.55, 'weather_temp': 14.03, 'weather_desc': 'clear sky', 'timestamp': Timestamp('2025-09-16 21:14:54.508221'), 'product_name': None, 'product_category': None} → 2 validation errors for EventModel
+product_id
+  value is not a valid integer (type=type_error.integer)
+quantity
+  value is not a valid integer (type=type_error.integer)
+[2025-09-17T07:31:44.572+0000] {dags_utils.py:46} WARNING - ❌ Отброшена строка {'event_id': 100, 'user_id': '183', 'session_id': 'cdb37920-79ee-4e73-b639-b4d8e60e7e4f', 'event_type': 'search', 'product_id': nan, 'order_id': None, 'quantity': nan, 'city': 'Antarctica', 'country': 'Antarctica', 'lat': -67.2614195, 'lon': 135.547192, 'cost_usd': 946.54, 'cost_eur': 804.83, 'cost_rub': 78414.6, 'weather_temp': -32.14, 'weather_desc': 'clear sky', 'timestamp': Timestamp('2025-09-16 21:15:25.687017'), 'product_name': None, 'product_category': None} → 2 validation errors for EventModel
+product_id
+  value is not a valid integer (type=type_error.integer)
+quantity
+  value is not a valid integer (type=type_error.integer)
+[2025-09-17T07:31:44.573+0000] {dags_utils.py:46} WARNING - ❌ Отброшена строка {'event_id': 101, 'user_id': '3868', 'session_id': '7d29979f-109b-42b6-90d2-05f5c1837280', 'event_type': 'filter', 'product_id': nan, 'order_id': None, 'quantity': nan, 'city': 'Antarctica', 'country': 'Antarctica', 'lat': -68.5975315, 'lon': 113.996158, 'cost_usd': 167.27, 'cost_eur': 142.23, 'cost_rub': 13857.22, 'weather_temp': -30.96, 'weather_desc': 'overcast clouds', 'timestamp': Timestamp('2025-09-16 21:16:11.917911'), 'product_name': None, 'product_category': None} → 2 validation errors for EventModel
+product_id
+  value is not a valid integer (type=type_error.integer)
+quantity
+  value is not a valid integer (type=type_error.integer)
+[2025-09-17T07:31:44.575+0000] {dags_utils.py:46} WARNING - ❌ Отброшена строка {'event_id': 102, 'user_id': '3868', 'session_id': '750d03b0-75f0-4333-be7d-c8f35bee7a23', 'event_type': 'signup', 'product_id': nan, 'order_id': None, 'quantity': nan, 'city': 'Arctic Ocean', 'country': None, 'lat': 84.6358775, 'lon': -73.891833, 'cost_usd': 264.76, 'cost_eur': 225.12, 'cost_rub': 21933.62, 'weather_temp': -12.79, 'weather_desc': 'scattered clouds', 'timestamp': Timestamp('2025-09-16 21:16:14.338349'), 'product_name': None, 'product_category': None} → 2 validation errors for EventModel
+product_id
+  value is not a valid integer (type=type_error.integer)
+quantity
+  value is not a valid integer (type=type_error.integer)
+[2025-09-17T07:31:44.576+0000] {dags_utils.py:46} WARNING - ❌ Отброшена строка {'event_id': 103, 'user_id': '4648', 'session_id': 'a275a760-aad1-4aac-84c3-4f459b775941', 'event_type': 'filter', 'product_id': nan, 'order_id': None, 'quantity': nan, 'city': 'Loukoléla', 'country': 'Congo', 'lat': -0.7987855, 'lon': 17.054796, 'cost_usd': 279.28, 'cost_eur': 237.47, 'cost_rub': 23136.51, 'weather_temp': 22.78, 'weather_desc': 'overcast clouds', 'timestamp': Timestamp('2025-09-16 21:16:23.685954'), 'product_name': None, 'product_category': None} → 2 validation errors for EventModel
+product_id
+  value is not a valid integer (type=type_error.integer)
+quantity
+  value is not a valid integer (type=type_error.integer)
+[2025-09-17T07:31:44.578+0000] {dags_utils.py:46} WARNING - ❌ Отброшена строка {'event_id': 104, 'user_id': '4648', 'session_id': '838387b2-e420-458f-b1ef-6b3abdb29a3a', 'event_type': 'login', 'product_id': nan, 'order_id': None, 'quantity': nan, 'city': 'Arctic Ocean', 'country': None, 'lat': 75.820358, 'lon': 164.912442, 'cost_usd': 370.13, 'cost_eur': 314.72, 'cost_rub': 30662.83, 'weather_temp': -0.43, 'weather_desc': 'overcast clouds', 'timestamp': Timestamp('2025-09-16 21:16:25.179014'), 'product_name': None, 'product_category': None} → 2 validation errors for EventModel
+product_id
+  value is not a valid integer (type=type_error.integer)
+quantity
+  value is not a valid integer (type=type_error.integer)
+[2025-09-17T07:31:44.579+0000] {dags_utils.py:46} WARNING - ❌ Отброшена строка {'event_id': 105, 'user_id': '1930', 'session_id': 'ec633f87-6272-4432-b37c-305a74e5d9a7', 'event_type': 'remove_from_cart', 'product_id': nan, 'order_id': None, 'quantity': nan, 'city': 'Mikhajlovskiy', 'country': 'Russia', 'lat': 53.948165, 'lon': 39.011047, 'cost_usd': 869.43, 'cost_eur': 739.26, 'cost_rub': 72026.55, 'weather_temp': 12.31, 'weather_desc': 'clear sky', 'timestamp': Timestamp('2025-09-16 21:16:35.431992'), 'product_name': None, 'product_category': None} → 2 validation errors for EventModel
+product_id
+  value is not a valid integer (type=type_error.integer)
+quantity
+  value is not a valid integer (type=type_error.integer)
+[2025-09-17T07:31:44.579+0000] {dags_utils.py:46} WARNING - ❌ Отброшена строка {'event_id': 106, 'user_id': '1930', 'session_id': '90c55c22-cc51-44a1-a447-562bf88b0ec4', 'event_type': 'signup', 'product_id': nan, 'order_id': None, 'quantity': nan, 'city': 'South Atlantic Ocean', 'country': None, 'lat': -58.594853, 'lon': -29.276115, 'cost_usd': 240.17, 'cost_eur': 204.21, 'cost_rub': 19896.5, 'weather_temp': -0.8, 'weather_desc': 'overcast clouds', 'timestamp': Timestamp('2025-09-16 21:16:36.978687'), 'product_name': None, 'product_category': None} → 2 validation errors for EventModel
+product_id
+  value is not a valid integer (type=type_error.integer)
+quantity
+  value is not a valid integer (type=type_error.integer)
+[2025-09-17T07:31:44.581+0000] {dags_utils.py:46} WARNING - ❌ Отброшена строка {'event_id': 108, 'user_id': '255', 'session_id': '8439f0e0-6414-4b7b-a417-8634418b11f0', 'event_type': 'payment_success', 'product_id': nan, 'order_id': None, 'quantity': nan, 'city': 'Indian Ocean', 'country': None, 'lat': 1.163648, 'lon': 62.73581, 'cost_usd': 705.61, 'cost_eur': 599.97, 'cost_rub': 58455.14, 'weather_temp': 27.47, 'weather_desc': 'clear sky', 'timestamp': Timestamp('2025-09-16 21:16:46.341115'), 'product_name': None, 'product_category': None} → 2 validation errors for EventModel
+product_id
+  value is not a valid integer (type=type_error.integer)
+quantity
+  value is not a valid integer (type=type_error.integer)
+[2025-09-17T07:31:44.582+0000] {dags_utils.py:46} WARNING - ❌ Отброшена строка {'event_id': 109, 'user_id': '378', 'session_id': 'ce1016dc-ba73-49ba-901c-ea6b6d2206cc', 'event_type': 'logout', 'product_id': nan, 'order_id': None, 'quantity': nan, 'city': 'South China Sea', 'country': None, 'lat': 15.559996, 'lon': 109.661308, 'cost_usd': 271.33, 'cost_eur': 230.71, 'cost_rub': 22477.9, 'weather_temp': 27.24, 'weather_desc': 'light rain', 'timestamp': Timestamp('2025-09-16 21:17:03.100143'), 'product_name': None, 'product_category': None} → 2 validation errors for EventModel
+product_id
+  value is not a valid integer (type=type_error.integer)
+quantity
+  value is not a valid integer (type=type_error.integer)
+[2025-09-17T07:31:44.583+0000] {dags_utils.py:46} WARNING - ❌ Отброшена строка {'event_id': 110, 'user_id': '378', 'session_id': '36795592-56df-4eb7-8af3-915834d8af4b', 'event_type': 'signup', 'product_id': nan, 'order_id': None, 'quantity': nan, 'city': 'Wajir', 'country': 'Kenya', 'lat': 1.1727755, 'lon': 39.678864, 'cost_usd': 780.77, 'cost_eur': 663.88, 'cost_rub': 64681.65, 'weather_temp': 26.84, 'weather_desc': 'clear sky', 'timestamp': Timestamp('2025-09-16 21:17:05.479302'), 'product_name': None, 'product_category': None} → 2 validation errors for EventModel
+product_id
+  value is not a valid integer (type=type_error.integer)
+quantity
+  value is not a valid integer (type=type_error.integer)
+[2025-09-17T07:31:44.584+0000] {dags_utils.py:46} WARNING - ❌ Отброшена строка {'event_id': 112, 'user_id': '625', 'session_id': 'dcefa486-4861-4f49-a003-30e1674f062a', 'event_type': 'payment_success', 'product_id': nan, 'order_id': None, 'quantity': nan, 'city': 'North Pacific Ocean', 'country': None, 'lat': 14.841867, 'lon': -93.104964, 'cost_usd': 33.53, 'cost_eur': 28.51, 'cost_rub': 2777.74, 'weather_temp': 28.51, 'weather_desc': 'overcast clouds', 'timestamp': Timestamp('2025-09-16 21:17:16.796088'), 'product_name': None, 'product_category': None} → 2 validation errors for EventModel
+product_id
+  value is not a valid integer (type=type_error.integer)
+quantity
+  value is not a valid integer (type=type_error.integer)
+[2025-09-17T07:31:44.585+0000] {dags_utils.py:46} WARNING - ❌ Отброшена строка {'event_id': 113, 'user_id': '4962', 'session_id': 'c44c9095-4d87-49f7-91b1-a9865643e6fd', 'event_type': 'search', 'product_id': nan, 'order_id': None, 'quantity': nan, 'city': 'Limarí', 'country': 'Chile', 'lat': -30.466861, 'lon': -70.648282, 'cost_usd': 545.1, 'cost_eur': 463.49, 'cost_rub': 45157.94, 'weather_temp': 18.2, 'weather_desc': 'overcast clouds', 'timestamp': Timestamp('2025-09-16 21:17:26.560197'), 'product_name': None, 'product_category': None} → 2 validation errors for EventModel
+product_id
+  value is not a valid integer (type=type_error.integer)
+quantity
+  value is not a valid integer (type=type_error.integer)
+[2025-09-17T07:31:44.586+0000] {dags_utils.py:46} WARNING - ❌ Отброшена строка {'event_id': 114, 'user_id': '4962', 'session_id': '43d52cfe-8102-4f62-8fa3-ac828c8a2011', 'event_type': 'session_start', 'product_id': nan, 'order_id': None, 'quantity': nan, 'city': 'Arctic Ocean', 'country': None, 'lat': 88.4695165, 'lon': -98.408624, 'cost_usd': 433.78, 'cost_eur': 368.84, 'cost_rub': 35935.82, 'weather_temp': -5.15, 'weather_desc': 'overcast clouds', 'timestamp': Timestamp('2025-09-16 21:17:28.033101'), 'product_name': None, 'product_category': None} → 2 validation errors for EventModel
+product_id
+  value is not a valid integer (type=type_error.integer)
+quantity
+  value is not a valid integer (type=type_error.integer)
+[2025-09-17T07:31:44.588+0000] {dags_utils.py:46} WARNING - ❌ Отброшена строка {'event_id': 116, 'user_id': '3773', 'session_id': '3140d144-9048-4275-babf-49e738c0c691', 'event_type': 'logout', 'product_id': nan, 'order_id': None, 'quantity': nan, 'city': 'Nadezhdinskiy', 'country': 'Russia', 'lat': 43.42794, 'lon': 131.571723, 'cost_usd': 379.39, 'cost_eur': 322.59, 'cost_rub': 31429.96, 'weather_temp': 12.59, 'weather_desc': 'overcast clouds', 'timestamp': Timestamp('2025-09-16 21:17:45.241889'), 'product_name': None, 'product_category': None} → 2 validation errors for EventModel
+product_id
+  value is not a valid integer (type=type_error.integer)
+quantity
+  value is not a valid integer (type=type_error.integer)
+[2025-09-17T07:31:44.589+0000] {dags_utils.py:46} WARNING - ❌ Отброшена строка {'event_id': 117, 'user_id': '230', 'session_id': 'd68ab47f-afcc-49b4-8c5c-bf81d9f76b28', 'event_type': 'remove_from_cart', 'product_id': nan, 'order_id': None, 'quantity': nan, 'city': 'Denmark Strait', 'country': None, 'lat': 67.8813365, 'lon': -22.08929, 'cost_usd': 191.44, 'cost_eur': 162.78, 'cost_rub': 15859.54, 'weather_temp': 1.73, 'weather_desc': 'overcast clouds', 'timestamp': Timestamp('2025-09-16 21:17:52.586629'), 'product_name': None, 'product_category': None} → 2 validation errors for EventModel
+product_id
+  value is not a valid integer (type=type_error.integer)
+quantity
+  value is not a valid integer (type=type_error.integer)
+[2025-09-17T07:31:44.591+0000] {dags_utils.py:46} WARNING - ❌ Отброшена строка {'event_id': 118, 'user_id': '230', 'session_id': '2d7873be-5f14-465e-bc12-fbe500f880fb', 'event_type': 'payment_success', 'product_id': nan, 'order_id': None, 'quantity': nan, 'city': 'Maynas', 'country': 'Peru', 'lat': -0.8362845, 'lon': -75.081351, 'cost_usd': 921.9, 'cost_eur': 783.88, 'cost_rub': 76373.34, 'weather_temp': 22.38, 'weather_desc': 'overcast clouds', 'timestamp': Timestamp('2025-09-16 21:17:54.055044'), 'product_name': None, 'product_category': None} → 2 validation errors for EventModel
+product_id
+  value is not a valid integer (type=type_error.integer)
+quantity
+  value is not a valid integer (type=type_error.integer)
+[2025-09-17T07:31:44.593+0000] {dags_utils.py:46} WARNING - ❌ Отброшена строка {'event_id': 119, 'user_id': '4771', 'session_id': '15c8e60c-93a9-4ce7-8195-aeea08eff00a', 'event_type': 'filter', 'product_id': nan, 'order_id': None, 'quantity': nan, 'city': 'Arctic Ocean', 'country': None, 'lat': 82.488974, 'lon': 28.351087, 'cost_usd': 154.93, 'cost_eur': 131.73, 'cost_rub': 12834.93, 'weather_temp': -2.91, 'weather_desc': 'overcast clouds', 'timestamp': Timestamp('2025-09-16 21:18:02.458094'), 'product_name': None, 'product_category': None} → 2 validation errors for EventModel
+product_id
+  value is not a valid integer (type=type_error.integer)
+quantity
+  value is not a valid integer (type=type_error.integer)
+[2025-09-17T07:31:44.594+0000] {dags_utils.py:46} WARNING - ❌ Отброшена строка {'event_id': 120, 'user_id': '4771', 'session_id': 'df7df030-011d-4cb6-9821-a332b2a4548c', 'event_type': 'session_start', 'product_id': nan, 'order_id': None, 'quantity': nan, 'city': 'Banda Sea', 'country': None, 'lat': -4.511371, 'lon': 128.457756, 'cost_usd': 971.61, 'cost_eur': 826.14, 'cost_rub': 80491.49, 'weather_temp': 26.48, 'weather_desc': 'overcast clouds', 'timestamp': Timestamp('2025-09-16 21:18:04.010474'), 'product_name': None, 'product_category': None} → 2 validation errors for EventModel
+product_id
+  value is not a valid integer (type=type_error.integer)
+quantity
+  value is not a valid integer (type=type_error.integer)
+[2025-09-17T07:31:44.595+0000] {dags_utils.py:46} WARNING - ❌ Отброшена строка {'event_id': 121, 'user_id': '2880', 'session_id': '9bb47f19-b3fb-40ca-9361-1ef41d0240d1', 'event_type': 'remove_from_cart', 'product_id': nan, 'order_id': None, 'quantity': nan, 'city': 'North Slope Borough', 'country': 'United States', 'lat': 69.744933, 'lon': -145.481126, 'cost_usd': 925.02, 'cost_eur': 786.53, 'cost_rub': 76631.81, 'weather_temp': 3.03, 'weather_desc': 'overcast clouds', 'timestamp': Timestamp('2025-09-16 21:18:11.750864'), 'product_name': None, 'product_category': None} → 2 validation errors for EventModel
+product_id
+  value is not a valid integer (type=type_error.integer)
+quantity
+  value is not a valid integer (type=type_error.integer)
+[2025-09-17T07:31:44.597+0000] {dags_utils.py:46} WARNING - ❌ Отброшена строка {'event_id': 122, 'user_id': '2880', 'session_id': 'd5bd2c8c-51c6-456b-ab06-1f09d9d51b55', 'event_type': 'session_start', 'product_id': nan, 'order_id': None, 'quantity': nan, 'city': 'South Pacific Ocean', 'country': None, 'lat': -38.8570575, 'lon': -87.709524, 'cost_usd': 309.46, 'cost_eur': 263.13, 'cost_rub': 25636.72, 'weather_temp': 10.04, 'weather_desc': 'light rain', 'timestamp': Timestamp('2025-09-16 21:18:12.963900'), 'product_name': None, 'product_category': None} → 2 validation errors for EventModel
+product_id
+  value is not a valid integer (type=type_error.integer)
+quantity
+  value is not a valid integer (type=type_error.integer)
+[2025-09-17T07:31:44.598+0000] {dags_utils.py:46} WARNING - ❌ Отброшена строка {'event_id': 123, 'user_id': '3715', 'session_id': 'da0c0beb-f567-44e0-b435-c0af102e003f', 'event_type': 'signup', 'product_id': nan, 'order_id': None, 'quantity': nan, 'city': 'Southern Ocean', 'country': None, 'lat': -63.0821875, 'lon': 122.402169, 'cost_usd': 515.98, 'cost_eur': 438.73, 'cost_rub': 42745.54, 'weather_temp': -3.3, 'weather_desc': 'overcast clouds', 'timestamp': Timestamp('2025-09-16 21:18:19.695952'), 'product_name': None, 'product_category': None} → 2 validation errors for EventModel
+product_id
+  value is not a valid integer (type=type_error.integer)
+quantity
+  value is not a valid integer (type=type_error.integer)
+[2025-09-17T07:31:44.599+0000] {dags_utils.py:46} WARNING - ❌ Отброшена строка {'event_id': 124, 'user_id': '3715', 'session_id': '54b9a562-8700-440e-9bf6-34dd3d5400c9', 'event_type': 'payment_success', 'product_id': nan, 'order_id': None, 'quantity': nan, 'city': 'Barents Sea', 'country': None, 'lat': 80.0902945, 'lon': 44.547792, 'cost_usd': 964.22, 'cost_eur': 819.86, 'cost_rub': 79879.27, 'weather_temp': -0.73, 'weather_desc': 'overcast clouds', 'timestamp': Timestamp('2025-09-16 21:18:21.180736'), 'product_name': None, 'product_category': None} → 2 validation errors for EventModel
+product_id
+  value is not a valid integer (type=type_error.integer)
+quantity
+  value is not a valid integer (type=type_error.integer)
+[2025-09-17T07:31:44.600+0000] {dags_utils.py:46} WARNING - ❌ Отброшена строка {'event_id': 126, 'user_id': '2891', 'session_id': 'aa8d0146-fddc-4d32-afcf-925085ba412b', 'event_type': 'signup', 'product_id': nan, 'order_id': None, 'quantity': nan, 'city': 'South Pacific Ocean', 'country': None, 'lat': -39.7429375, 'lon': -80.730064, 'cost_usd': 694.45, 'cost_eur': 590.48, 'cost_rub': 57530.61, 'weather_temp': 12.87, 'weather_desc': 'overcast clouds', 'timestamp': Timestamp('2025-09-16 21:19:26.620845'), 'product_name': None, 'product_category': None} → 2 validation errors for EventModel
+product_id
+  value is not a valid integer (type=type_error.integer)
+quantity
+  value is not a valid integer (type=type_error.integer)
+[2025-09-17T07:31:44.601+0000] {dags_utils.py:46} WARNING - ❌ Отброшена строка {'event_id': 128, 'user_id': '4518', 'session_id': '7a9b4f1c-485a-4b5b-a7de-ccdf9101388f', 'event_type': 'session_start', 'product_id': nan, 'order_id': None, 'quantity': nan, 'city': 'North Pacific Ocean', 'country': None, 'lat': 23.7987015, 'lon': -148.015516, 'cost_usd': 192.36, 'cost_eur': 163.56, 'cost_rub': 15935.76, 'weather_temp': 24.67, 'weather_desc': 'clear sky', 'timestamp': Timestamp('2025-09-16 21:20:21.042987'), 'product_name': None, 'product_category': None} → 2 validation errors for EventModel
+product_id
+  value is not a valid integer (type=type_error.integer)
+quantity
+  value is not a valid integer (type=type_error.integer)
+[2025-09-17T07:31:44.602+0000] {dags_utils.py:46} WARNING - ❌ Отброшена строка {'event_id': 129, 'user_id': '820', 'session_id': '43fd9660-aeb9-4f58-8e21-3b3031914773', 'event_type': 'login', 'product_id': nan, 'order_id': None, 'quantity': nan, 'city': 'Antarctica', 'country': 'Antarctica', 'lat': -76.6875015, 'lon': 118.049075, 'cost_usd': 720.0, 'cost_eur': 612.2, 'cost_rub': 59647.26, 'weather_temp': -55.12, 'weather_desc': 'broken clouds', 'timestamp': Timestamp('2025-09-16 21:21:19.246575'), 'product_name': None, 'product_category': None} → 2 validation errors for EventModel
+product_id
+  value is not a valid integer (type=type_error.integer)
+quantity
+  value is not a valid integer (type=type_error.integer)
+[2025-09-17T07:31:44.604+0000] {dags_utils.py:46} WARNING - ❌ Отброшена строка {'event_id': 130, 'user_id': '820', 'session_id': 'f154e824-07ee-417f-ac50-552912c9125e', 'event_type': 'login', 'product_id': nan, 'order_id': None, 'quantity': nan, 'city': 'South Pacific Ocean', 'country': None, 'lat': -1.8634395, 'lon': -112.133534, 'cost_usd': 574.41, 'cost_eur': 488.41, 'cost_rub': 47586.08, 'weather_temp': 22.14, 'weather_desc': 'overcast clouds', 'timestamp': Timestamp('2025-09-16 21:21:20.588766'), 'product_name': None, 'product_category': None} → 2 validation errors for EventModel
+product_id
+  value is not a valid integer (type=type_error.integer)
+quantity
+  value is not a valid integer (type=type_error.integer)
+[2025-09-17T07:31:44.605+0000] {dags_utils.py:46} WARNING - ❌ Отброшена строка {'event_id': 131, 'user_id': '3210', 'session_id': 'fb2d99f7-d074-411b-9661-12190d2bea2d', 'event_type': 'payment_success', 'product_id': nan, 'order_id': None, 'quantity': nan, 'city': 'Weddell Sea', 'country': None, 'lat': -75.481673, 'lon': -24.166999, 'cost_usd': 319.33, 'cost_eur': 271.52, 'cost_rub': 26454.39, 'weather_temp': -13.04, 'weather_desc': 'light snow', 'timestamp': Timestamp('2025-09-16 21:22:19.726652'), 'product_name': None, 'product_category': None} → 2 validation errors for EventModel
+product_id
+  value is not a valid integer (type=type_error.integer)
+quantity
+  value is not a valid integer (type=type_error.integer)
+[2025-09-17T07:31:44.606+0000] {dags_utils.py:46} WARNING - ❌ Отброшена строка {'event_id': 132, 'user_id': '3210', 'session_id': 'ccc3cb43-1e71-487c-9082-c9c7e6a71929', 'event_type': 'signup', 'product_id': nan, 'order_id': None, 'quantity': nan, 'city': 'Indian Ocean', 'country': None, 'lat': -31.2555545, 'lon': 46.848175, 'cost_usd': 607.51, 'cost_eur': 516.56, 'cost_rub': 50328.2, 'weather_temp': 20.21, 'weather_desc': 'clear sky', 'timestamp': Timestamp('2025-09-16 21:22:21.368161'), 'product_name': None, 'product_category': None} → 2 validation errors for EventModel
+product_id
+  value is not a valid integer (type=type_error.integer)
+quantity
+  value is not a valid integer (type=type_error.integer)
+[2025-09-17T07:31:44.608+0000] {dags_utils.py:46} WARNING - ❌ Отброшена строка {'event_id': 133, 'user_id': '824', 'session_id': '37bd52c1-4d56-41ec-a38a-7885ba36e56e', 'event_type': 'view_page', 'product_id': nan, 'order_id': None, 'quantity': nan, 'city': 'North Pacific Ocean', 'country': None, 'lat': 19.453977, 'lon': -109.796967, 'cost_usd': 675.07, 'cost_eur': 574.0, 'cost_rub': 55925.1, 'weather_temp': 28.76, 'weather_desc': 'overcast clouds', 'timestamp': Timestamp('2025-09-16 21:23:20.585283'), 'product_name': None, 'product_category': None} → 2 validation errors for EventModel
+product_id
+  value is not a valid integer (type=type_error.integer)
+quantity
+  value is not a valid integer (type=type_error.integer)
+[2025-09-17T07:31:44.609+0000] {dags_utils.py:46} WARNING - ❌ Отброшена строка {'event_id': 134, 'user_id': '824', 'session_id': '2970170c-27ae-4ba9-9294-f89cdfb4e8f6', 'event_type': 'session_end', 'product_id': nan, 'order_id': None, 'quantity': nan, 'city': 'County Highway 1621', 'country': 'United States', 'lat': 47.3961015, 'lon': -98.727177, 'cost_usd': 709.09, 'cost_eur': 602.93, 'cost_rub': 58743.44, 'weather_temp': 27.8, 'weather_desc': 'scattered clouds', 'timestamp': Timestamp('2025-09-16 21:23:22.247862'), 'product_name': None, 'product_category': None} → 2 validation errors for EventModel
+product_id
+  value is not a valid integer (type=type_error.integer)
+quantity
+  value is not a valid integer (type=type_error.integer)
+[2025-09-17T07:31:44.610+0000] {dags_utils.py:46} WARNING - ❌ Отброшена строка {'event_id': 135, 'user_id': '2874', 'session_id': 'f850b988-9280-47cc-bf6e-2ae267bf64dc', 'event_type': 'signup', 'product_id': nan, 'order_id': None, 'quantity': nan, 'city': 'Barents Sea', 'country': None, 'lat': 76.4428795, 'lon': 22.128956, 'cost_usd': 229.6, 'cost_eur': 195.22, 'cost_rub': 19020.85, 'weather_temp': 1.85, 'weather_desc': 'overcast clouds', 'timestamp': Timestamp('2025-09-16 21:24:25.705991'), 'product_name': None, 'product_category': None} → 2 validation errors for EventModel
+product_id
+  value is not a valid integer (type=type_error.integer)
+quantity
+  value is not a valid integer (type=type_error.integer)
+[2025-09-17T07:31:44.612+0000] {dags_utils.py:46} WARNING - ❌ Отброшена строка {'event_id': 138, 'user_id': '2396', 'session_id': '025988b9-58e1-4943-b16c-ce9e044a873c', 'event_type': 'logout', 'product_id': nan, 'order_id': None, 'quantity': nan, 'city': 'Kivalliq', 'country': 'Canada', 'lat': 67.0318305, 'lon': -65.561625, 'cost_usd': 576.51, 'cost_eur': 490.2, 'cost_rub': 47760.06, 'weather_temp': -8.24, 'weather_desc': 'overcast clouds', 'timestamp': Timestamp('2025-09-16 21:25:22.196730'), 'product_name': None, 'product_category': None} → 2 validation errors for EventModel
+product_id
+  value is not a valid integer (type=type_error.integer)
+quantity
+  value is not a valid integer (type=type_error.integer)
+[2025-09-17T07:31:44.613+0000] {dags_utils.py:46} WARNING - ❌ Отброшена строка {'event_id': 139, 'user_id': '3741', 'session_id': '8c961a32-3348-41dc-86fa-8de671f8e206', 'event_type': 'logout', 'product_id': nan, 'order_id': None, 'quantity': nan, 'city': 'Ehvenkijskiy', 'country': 'Russia', 'lat': 61.874112, 'lon': 105.249672, 'cost_usd': 880.85, 'cost_eur': 748.97, 'cost_rub': 72972.62, 'weather_temp': -3.45, 'weather_desc': 'scattered clouds', 'timestamp': Timestamp('2025-09-16 21:26:22.486783'), 'product_name': None, 'product_category': None} → 2 validation errors for EventModel
+product_id
+  value is not a valid integer (type=type_error.integer)
+quantity
+  value is not a valid integer (type=type_error.integer)
+[2025-09-17T07:31:44.613+0000] {dags_utils.py:46} WARNING - ❌ Отброшена строка {'event_id': 140, 'user_id': '3741', 'session_id': 'b94c61da-223b-4e46-9307-6e084d4853b9', 'event_type': 'logout', 'product_id': nan, 'order_id': None, 'quantity': nan, 'city': 'South Pacific Ocean', 'country': None, 'lat': -32.77827, 'lon': 169.58284, 'cost_usd': 996.75, 'cost_eur': 847.52, 'cost_rub': 82574.17, 'weather_temp': 15.64, 'weather_desc': 'overcast clouds', 'timestamp': Timestamp('2025-09-16 21:26:25.751076'), 'product_name': None, 'product_category': None} → 2 validation errors for EventModel
+product_id
+  value is not a valid integer (type=type_error.integer)
+quantity
+  value is not a valid integer (type=type_error.integer)
+[2025-09-17T07:31:44.614+0000] {dags_utils.py:46} WARNING - ❌ Отброшена строка {'event_id': 141, 'user_id': '3711', 'session_id': 'ad0a7c93-d934-4d60-9061-7d4efa33038c', 'event_type': 'filter', 'product_id': nan, 'order_id': None, 'quantity': nan, 'city': 'Juledagan', 'country': None, 'lat': 64.8500585, 'lon': 10.992054, 'cost_usd': 43.5, 'cost_eur': 36.99, 'cost_rub': 3603.69, 'weather_temp': 11.08, 'weather_desc': 'overcast clouds', 'timestamp': Timestamp('2025-09-16 21:27:31.246892'), 'product_name': None, 'product_category': None} → 2 validation errors for EventModel
+product_id
+  value is not a valid integer (type=type_error.integer)
+quantity
+  value is not a valid integer (type=type_error.integer)
+[2025-09-17T07:31:44.615+0000] {dags_utils.py:46} WARNING - ❌ Отброшена строка {'event_id': 142, 'user_id': '3711', 'session_id': 'a7b29901-0099-447d-a2ba-16e1c827bb28', 'event_type': 'view_page', 'product_id': nan, 'order_id': None, 'quantity': nan, 'city': 'Antarctica', 'country': 'Antarctica', 'lat': -83.427015, 'lon': -86.186441, 'cost_usd': 654.15, 'cost_eur': 556.21, 'cost_rub': 54192.02, 'weather_temp': -28.91, 'weather_desc': 'overcast clouds', 'timestamp': Timestamp('2025-09-16 21:27:32.463503'), 'product_name': None, 'product_category': None} → 2 validation errors for EventModel
+product_id
+  value is not a valid integer (type=type_error.integer)
+quantity
+  value is not a valid integer (type=type_error.integer)
+[2025-09-17T07:31:44.617+0000] {dags_utils.py:46} WARNING - ❌ Отброшена строка {'event_id': 143, 'user_id': '2791', 'session_id': 'b8c0bcc4-2479-4ca4-8c2e-b8e7a95c511f', 'event_type': 'session_end', 'product_id': nan, 'order_id': None, 'quantity': nan, 'city': 'United States', 'country': 'United States', 'lat': 68.114983, 'lon': -175.899715, 'cost_usd': 774.17, 'cost_eur': 658.26, 'cost_rub': 64134.88, 'weather_temp': 4.79, 'weather_desc': 'overcast clouds', 'timestamp': Timestamp('2025-09-16 21:28:38.853677'), 'product_name': None, 'product_category': None} → 2 validation errors for EventModel
+product_id
+  value is not a valid integer (type=type_error.integer)
+quantity
+  value is not a valid integer (type=type_error.integer)
+[2025-09-17T07:31:44.618+0000] {dags_utils.py:46} WARNING - ❌ Отброшена строка {'event_id': 144, 'user_id': '2791', 'session_id': 'd2d6e723-1b0a-4236-9101-61d7fdbde3c3', 'event_type': 'view_page', 'product_id': nan, 'order_id': None, 'quantity': nan, 'city': 'Arctic Ocean', 'country': None, 'lat': 87.3559685, 'lon': 75.765302, 'cost_usd': 842.04, 'cost_eur': 715.97, 'cost_rub': 69757.47, 'weather_temp': -4.79, 'weather_desc': 'overcast clouds', 'timestamp': Timestamp('2025-09-16 21:28:40.428874'), 'product_name': None, 'product_category': None} → 2 validation errors for EventModel
+product_id
+  value is not a valid integer (type=type_error.integer)
+quantity
+  value is not a valid integer (type=type_error.integer)
+[2025-09-17T07:31:44.619+0000] {dags_utils.py:46} WARNING - ❌ Отброшена строка {'event_id': 145, 'user_id': '129', 'session_id': '8175a626-ccf5-47ed-816a-042d0b91a2c7', 'event_type': 'search', 'product_id': nan, 'order_id': None, 'quantity': nan, 'city': 'Southern Ocean', 'country': None, 'lat': -66.752337, 'lon': -169.604417, 'cost_usd': 714.49, 'cost_eur': 607.52, 'cost_rub': 59190.79, 'weather_temp': -15.77, 'weather_desc': 'overcast clouds', 'timestamp': Timestamp('2025-09-16 21:29:25.584298'), 'product_name': None, 'product_category': None} → 2 validation errors for EventModel
+product_id
+  value is not a valid integer (type=type_error.integer)
+quantity
+  value is not a valid integer (type=type_error.integer)
+[2025-09-17T07:31:44.620+0000] {dags_utils.py:46} WARNING - ❌ Отброшена строка {'event_id': 146, 'user_id': '129', 'session_id': '49cb4dfc-a19a-43d2-b14a-56edae8afdae', 'event_type': 'payment_success', 'product_id': nan, 'order_id': None, 'quantity': nan, 'city': 'North Pacific Ocean', 'country': None, 'lat': 36.8239535, 'lon': 152.067911, 'cost_usd': 187.48, 'cost_eur': 159.41, 'cost_rub': 15531.48, 'weather_temp': 23.23, 'weather_desc': 'clear sky', 'timestamp': Timestamp('2025-09-16 21:29:29.362714'), 'product_name': None, 'product_category': None} → 2 validation errors for EventModel
+product_id
+  value is not a valid integer (type=type_error.integer)
+quantity
+  value is not a valid integer (type=type_error.integer)
+[2025-09-17T07:31:44.622+0000] {dags_utils.py:46} WARNING - ❌ Отброшена строка {'event_id': 147, 'user_id': '1200', 'session_id': '942f0015-17fb-4d1d-8729-ab6c370f9216', 'event_type': 'signup', 'product_id': nan, 'order_id': None, 'quantity': nan, 'city': 'Antarctica', 'country': 'Antarctica', 'lat': -80.039974, 'lon': 156.675981, 'cost_usd': 33.74, 'cost_eur': 28.69, 'cost_rub': 2795.14, 'weather_temp': -25.13, 'weather_desc': 'overcast clouds', 'timestamp': Timestamp('2025-09-16 21:30:30.344709'), 'product_name': None, 'product_category': None} → 2 validation errors for EventModel
+product_id
+  value is not a valid integer (type=type_error.integer)
+quantity
+  value is not a valid integer (type=type_error.integer)
+[2025-09-17T07:31:44.623+0000] {dags_utils.py:46} WARNING - ❌ Отброшена строка {'event_id': 148, 'user_id': '1200', 'session_id': '7ad74f54-0cb2-433f-b951-09fe6398cc99', 'event_type': 'session_start', 'product_id': nan, 'order_id': None, 'quantity': nan, 'city': 'South Atlantic Ocean', 'country': None, 'lat': -36.7146405, 'lon': -41.523746, 'cost_usd': 9.66, 'cost_eur': 8.21, 'cost_rub': 800.27, 'weather_temp': 14.5, 'weather_desc': 'few clouds', 'timestamp': Timestamp('2025-09-16 21:30:32.134963'), 'product_name': None, 'product_category': None} → 2 validation errors for EventModel
+product_id
+  value is not a valid integer (type=type_error.integer)
+quantity
+  value is not a valid integer (type=type_error.integer)
+[2025-09-17T07:31:44.625+0000] {dags_utils.py:46} WARNING - ❌ Отброшена строка {'event_id': 150, 'user_id': '4105', 'session_id': 'cc768e90-b461-49ad-b065-a729663280da', 'event_type': 'filter', 'product_id': nan, 'order_id': None, 'quantity': nan, 'city': 'Tasman Sea', 'country': None, 'lat': -39.1673665, 'lon': 152.15756, 'cost_usd': 286.26, 'cost_eur': 243.4, 'cost_rub': 23714.76, 'weather_temp': 13.78, 'weather_desc': 'clear sky', 'timestamp': Timestamp('2025-09-16 21:31:38.553285'), 'product_name': None, 'product_category': None} → 2 validation errors for EventModel
+product_id
+  value is not a valid integer (type=type_error.integer)
+quantity
+  value is not a valid integer (type=type_error.integer)
+[2025-09-17T07:31:44.627+0000] {dags_utils.py:46} WARNING - ❌ Отброшена строка {'event_id': 151, 'user_id': '1956', 'session_id': '74fdecf7-0d5f-4896-a6da-72c9e61133d4', 'event_type': 'view_page', 'product_id': nan, 'order_id': None, 'quantity': nan, 'city': 'Southern Ocean', 'country': None, 'lat': -66.935151, 'lon': -37.703447, 'cost_usd': 85.5, 'cost_eur': 72.7, 'cost_rub': 7083.11, 'weather_temp': -6.48, 'weather_desc': 'overcast clouds', 'timestamp': Timestamp('2025-09-16 21:32:28.883812'), 'product_name': None, 'product_category': None} → 2 validation errors for EventModel
+product_id
+  value is not a valid integer (type=type_error.integer)
+quantity
+  value is not a valid integer (type=type_error.integer)
+[2025-09-17T07:31:44.628+0000] {dags_utils.py:46} WARNING - ❌ Отброшена строка {'event_id': 152, 'user_id': '1956', 'session_id': '8210458e-4287-4e7a-90bd-2a62e44cbbe1', 'event_type': 'remove_from_cart', 'product_id': nan, 'order_id': None, 'quantity': nan, 'city': 'Arctic Ocean', 'country': None, 'lat': 76.0091835, 'lon': -161.623367, 'cost_usd': 620.43, 'cost_eur': 527.54, 'cost_rub': 51398.54, 'weather_temp': -2.0, 'weather_desc': 'overcast clouds', 'timestamp': Timestamp('2025-09-16 21:32:30.270627'), 'product_name': None, 'product_category': None} → 2 validation errors for EventModel
+product_id
+  value is not a valid integer (type=type_error.integer)
+quantity
+  value is not a valid integer (type=type_error.integer)
+[2025-09-17T07:31:44.629+0000] {dags_utils.py:46} WARNING - ❌ Отброшена строка {'event_id': 153, 'user_id': '3923', 'session_id': 'dfdcd3e4-1150-43df-bee4-c8f2877f12b6', 'event_type': 'view_page', 'product_id': nan, 'order_id': None, 'quantity': nan, 'city': 'Oljutorskiy', 'country': 'Russia', 'lat': 61.1553445, 'lon': 172.317422, 'cost_usd': 249.12, 'cost_eur': 211.82, 'cost_rub': 20637.95, 'weather_temp': 7.15, 'weather_desc': 'broken clouds', 'timestamp': Timestamp('2025-09-16 21:33:43.311498'), 'product_name': None, 'product_category': None} → 2 validation errors for EventModel
+product_id
+  value is not a valid integer (type=type_error.integer)
+quantity
+  value is not a valid integer (type=type_error.integer)
+[2025-09-17T07:31:44.630+0000] {dags_utils.py:46} WARNING - ❌ Отброшена строка {'event_id': 154, 'user_id': '3923', 'session_id': 'd482c0b2-e96c-403e-be34-c640eb9b2c91', 'event_type': 'payment_success', 'product_id': nan, 'order_id': None, 'quantity': nan, 'city': 'Sargasso Sea', 'country': None, 'lat': 21.583557, 'lon': -50.724935, 'cost_usd': 291.82, 'cost_eur': 248.13, 'cost_rub': 24175.36, 'weather_temp': 27.59, 'weather_desc': 'scattered clouds', 'timestamp': Timestamp('2025-09-16 21:33:45.253195'), 'product_name': None, 'product_category': None} → 2 validation errors for EventModel
+product_id
+  value is not a valid integer (type=type_error.integer)
+quantity
+  value is not a valid integer (type=type_error.integer)
+[2025-09-17T07:31:44.632+0000] {dags_utils.py:46} WARNING - ❌ Отброшена строка {'event_id': 155, 'user_id': '2893', 'session_id': '096cbf3e-143f-4e33-9939-5431ce035be8', 'event_type': 'login', 'product_id': nan, 'order_id': None, 'quantity': nan, 'city': 'Scotia Sea', 'country': None, 'lat': -52.2538455, 'lon': -58.895524, 'cost_usd': 456.62, 'cost_eur': 388.26, 'cost_rub': 37827.96, 'weather_temp': 4.49, 'weather_desc': 'scattered clouds', 'timestamp': Timestamp('2025-09-16 21:34:24.130453'), 'product_name': None, 'product_category': None} → 2 validation errors for EventModel
+product_id
+  value is not a valid integer (type=type_error.integer)
+quantity
+  value is not a valid integer (type=type_error.integer)
+[2025-09-17T07:31:44.633+0000] {dags_utils.py:46} WARNING - ❌ Отброшена строка {'event_id': 156, 'user_id': '2893', 'session_id': 'fcb5a011-2cb5-4a57-8339-98ecc289994f', 'event_type': 'view_page', 'product_id': nan, 'order_id': None, 'quantity': nan, 'city': 'Hudson Bay', 'country': None, 'lat': 59.1595545, 'lon': -93.521509, 'cost_usd': 27.89, 'cost_eur': 23.71, 'cost_rub': 2310.5, 'weather_temp': 7.36, 'weather_desc': 'overcast clouds', 'timestamp': Timestamp('2025-09-16 21:34:26.026719'), 'product_name': None, 'product_category': None} → 2 validation errors for EventModel
+product_id
+  value is not a valid integer (type=type_error.integer)
+quantity
+  value is not a valid integer (type=type_error.integer)
+[2025-09-17T07:31:44.711+0000] {python.py:183} INFO - Done. Returned value was: 43
+[2025-09-17T07:31:44.768+0000] {taskinstance.py:1350} INFO - Marking task as SUCCESS. dag_id=raw_to_dds_enhanced, task_id=load_events, execution_date=20250917T063038, start_date=20250917T073143, end_date=20250917T073144
+[2025-09-17T07:31:44.771+0000] {logging_mixin.py:150} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:205 AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+[2025-09-17T07:31:45.111+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 0
+[2025-09-17T07:31:45.176+0000] {taskinstance.py:2653} INFO - 4 downstream tasks scheduled from follow-on schedule check

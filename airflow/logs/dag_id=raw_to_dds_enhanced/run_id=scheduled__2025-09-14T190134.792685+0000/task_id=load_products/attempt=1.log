@@ -1,0 +1,18 @@
+[2025-09-14T20:01:48.895+0000] {logging_mixin.py:150} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/sqlalchemy.py:124 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-09-14T20:01:49.308+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: raw_to_dds_enhanced.load_products scheduled__2025-09-14T19:01:34.792685+00:00 [queued]>
+[2025-09-14T20:01:49.365+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: raw_to_dds_enhanced.load_products scheduled__2025-09-14T19:01:34.792685+00:00 [queued]>
+[2025-09-14T20:01:49.370+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 3
+[2025-09-14T20:01:49.454+0000] {taskinstance.py:1327} INFO - Executing <Task(PythonOperator): load_products> on 2025-09-14 19:01:34.792685+00:00
+[2025-09-14T20:01:49.487+0000] {standard_task_runner.py:57} INFO - Started process 13776 to run task
+[2025-09-14T20:01:49.491+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'raw_to_dds_enhanced', 'load_products', 'scheduled__2025-09-14T19:01:34.792685+00:00', '--job-id', '308', '--raw', '--subdir', 'DAGS_FOLDER/raw_to_dds.py', '--cfg-path', '/tmp/tmpj5l5jyzi']
+[2025-09-14T20:01:49.500+0000] {standard_task_runner.py:85} INFO - Job 308: Subtask load_products
+[2025-09-14T20:01:49.570+0000] {logging_mixin.py:150} WARNING - /home/***/.local/lib/python3.7/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-09-14T20:01:49.755+0000] {task_command.py:410} INFO - Running <TaskInstance: raw_to_dds_enhanced.load_products scheduled__2025-09-14T19:01:34.792685+00:00 [running]> on host 3deaa5b4a23c
+[2025-09-14T20:01:49.874+0000] {logging_mixin.py:150} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/sqlalchemy.py:124 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-09-14T20:01:50.137+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='raw_to_dds_enhanced' AIRFLOW_CTX_TASK_ID='load_products' AIRFLOW_CTX_EXECUTION_DATE='2025-09-14T19:01:34.792685+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-09-14T19:01:34.792685+00:00'
+[2025-09-14T20:01:50.263+0000] {raw_to_dds.py:310} INFO - ✅ Продукты и категории обновлены
+[2025-09-14T20:01:50.264+0000] {python.py:183} INFO - Done. Returned value was: None
+[2025-09-14T20:01:50.312+0000] {taskinstance.py:1350} INFO - Marking task as SUCCESS. dag_id=raw_to_dds_enhanced, task_id=load_products, execution_date=20250914T190134, start_date=20250914T200149, end_date=20250914T200150
+[2025-09-14T20:01:50.315+0000] {logging_mixin.py:150} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:205 AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+[2025-09-14T20:01:51.406+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 0
+[2025-09-14T20:01:51.468+0000] {taskinstance.py:2653} INFO - 0 downstream tasks scheduled from follow-on schedule check
