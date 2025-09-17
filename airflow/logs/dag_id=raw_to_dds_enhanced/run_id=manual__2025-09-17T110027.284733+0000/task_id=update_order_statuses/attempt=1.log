@@ -1,0 +1,16 @@
+[2025-09-17T11:07:08.815+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: raw_to_dds_enhanced.update_order_statuses manual__2025-09-17T11:00:27.284733+00:00 [queued]>
+[2025-09-17T11:07:08.928+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: raw_to_dds_enhanced.update_order_statuses manual__2025-09-17T11:00:27.284733+00:00 [queued]>
+[2025-09-17T11:07:08.940+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 3
+[2025-09-17T11:07:10.764+0000] {taskinstance.py:1327} INFO - Executing <Task(PythonOperator): update_order_statuses> on 2025-09-17 11:00:27.284733+00:00
+[2025-09-17T11:07:10.898+0000] {standard_task_runner.py:57} INFO - Started process 1941 to run task
+[2025-09-17T11:07:10.980+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'raw_to_dds_enhanced', 'update_order_statuses', 'manual__2025-09-17T11:00:27.284733+00:00', '--job-id', '1032', '--raw', '--subdir', 'DAGS_FOLDER/raw_to_dds.py', '--cfg-path', '/tmp/tmpq4l_jxwr']
+[2025-09-17T11:07:10.990+0000] {standard_task_runner.py:85} INFO - Job 1032: Subtask update_order_statuses
+[2025-09-17T11:07:11.098+0000] {logging_mixin.py:150} WARNING - /home/***/.local/lib/python3.7/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-09-17T11:07:11.257+0000] {task_command.py:410} INFO - Running <TaskInstance: raw_to_dds_enhanced.update_order_statuses manual__2025-09-17T11:00:27.284733+00:00 [running]> on host 807cd7795f82
+[2025-09-17T11:07:11.858+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='raw_to_dds_enhanced' AIRFLOW_CTX_TASK_ID='update_order_statuses' AIRFLOW_CTX_EXECUTION_DATE='2025-09-17T11:00:27.284733+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-09-17T11:00:27.284733+00:00'
+[2025-09-17T11:07:11.968+0000] {raw_to_dds.py:415} INFO - ✅ Обновлено статусов заказов: 8
+[2025-09-17T11:07:11.985+0000] {python.py:183} INFO - Done. Returned value was: None
+[2025-09-17T11:07:12.066+0000] {taskinstance.py:1350} INFO - Marking task as SUCCESS. dag_id=raw_to_dds_enhanced, task_id=update_order_statuses, execution_date=20250917T110027, start_date=20250917T110708, end_date=20250917T110712
+[2025-09-17T11:07:12.077+0000] {logging_mixin.py:150} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:205 AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+[2025-09-17T11:07:12.983+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 0
+[2025-09-17T11:07:13.123+0000] {taskinstance.py:2653} INFO - 0 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,18 @@
+[2025-09-16T00:13:36.831+0000] {logging_mixin.py:150} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/sqlalchemy.py:124 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-09-16T00:13:40.120+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dds_to_clickhouse_enhanced.load_geo_analysis scheduled__2025-09-15T00:00:00+00:00 [queued]>
+[2025-09-16T00:13:40.214+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dds_to_clickhouse_enhanced.load_geo_analysis scheduled__2025-09-15T00:00:00+00:00 [queued]>
+[2025-09-16T00:13:40.230+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 2
+[2025-09-16T00:13:40.777+0000] {taskinstance.py:1327} INFO - Executing <Task(PythonOperator): load_geo_analysis> on 2025-09-15 00:00:00+00:00
+[2025-09-16T00:13:40.849+0000] {standard_task_runner.py:57} INFO - Started process 325 to run task
+[2025-09-16T00:13:41.049+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'dds_to_clickhouse_enhanced', 'load_geo_analysis', 'scheduled__2025-09-15T00:00:00+00:00', '--job-id', '646', '--raw', '--subdir', 'DAGS_FOLDER/dds_to_clickhouse.py', '--cfg-path', '/tmp/tmpe6vnb2w0']
+[2025-09-16T00:13:41.171+0000] {standard_task_runner.py:85} INFO - Job 646: Subtask load_geo_analysis
+[2025-09-16T00:13:43.318+0000] {logging_mixin.py:150} WARNING - /home/***/.local/lib/python3.7/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-09-16T00:13:43.629+0000] {task_command.py:410} INFO - Running <TaskInstance: dds_to_clickhouse_enhanced.load_geo_analysis scheduled__2025-09-15T00:00:00+00:00 [running]> on host 71d7292233fc
+[2025-09-16T00:13:43.692+0000] {logging_mixin.py:150} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/sqlalchemy.py:124 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-09-16T00:13:47.957+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dds_to_clickhouse_enhanced' AIRFLOW_CTX_TASK_ID='load_geo_analysis' AIRFLOW_CTX_EXECUTION_DATE='2025-09-15T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-09-15T00:00:00+00:00'
+[2025-09-16T00:13:49.792+0000] {dds_to_clickhouse.py:129} INFO - ✅ Таблица geo_analysis очищена
+[2025-09-16T00:13:51.349+0000] {dds_to_clickhouse.py:366} INFO - ✅ Загружено 17 строк в geo_analysis
+[2025-09-16T00:13:51.359+0000] {python.py:183} INFO - Done. Returned value was: None
+[2025-09-16T00:13:51.482+0000] {taskinstance.py:1350} INFO - Marking task as SUCCESS. dag_id=dds_to_clickhouse_enhanced, task_id=load_geo_analysis, execution_date=20250915T000000, start_date=20250916T001340, end_date=20250916T001351
+[2025-09-16T00:13:51.914+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 0
+[2025-09-16T00:13:52.208+0000] {taskinstance.py:2653} INFO - 0 downstream tasks scheduled from follow-on schedule check

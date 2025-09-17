@@ -1,0 +1,101 @@
+[2025-09-03T16:42:59.142+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: kafka_to_postgres_batch.consume_and_save_batch manual__2025-09-03T16:38:40.717967+00:00 [queued]>
+[2025-09-03T16:42:59.170+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: kafka_to_postgres_batch.consume_and_save_batch manual__2025-09-03T16:38:40.717967+00:00 [queued]>
+[2025-09-03T16:42:59.171+0000] {taskinstance.py:1308} INFO - Starting attempt 2 of 4
+[2025-09-03T16:42:59.213+0000] {taskinstance.py:1327} INFO - Executing <Task(PythonOperator): consume_and_save_batch> on 2025-09-03 16:38:40.717967+00:00
+[2025-09-03T16:42:59.253+0000] {standard_task_runner.py:57} INFO - Started process 234 to run task
+[2025-09-03T16:42:59.273+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'kafka_to_postgres_batch', 'consume_and_save_batch', 'manual__2025-09-03T16:38:40.717967+00:00', '--job-id', '194', '--raw', '--subdir', 'DAGS_FOLDER/dags.py', '--cfg-path', '/tmp/tmp_26v3527']
+[2025-09-03T16:42:59.291+0000] {standard_task_runner.py:85} INFO - Job 194: Subtask consume_and_save_batch
+[2025-09-03T16:42:59.386+0000] {logging_mixin.py:150} WARNING - /home/***/.local/lib/python3.7/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-09-03T16:42:59.603+0000] {task_command.py:410} INFO - Running <TaskInstance: kafka_to_postgres_batch.consume_and_save_batch manual__2025-09-03T16:38:40.717967+00:00 [running]> on host 5646b9718ecc
+[2025-09-03T16:42:59.941+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='kafka_to_postgres_batch' AIRFLOW_CTX_TASK_ID='consume_and_save_batch' AIRFLOW_CTX_EXECUTION_DATE='2025-09-03T16:38:40.717967+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-09-03T16:38:40.717967+00:00'
+[2025-09-03T16:42:59.957+0000] {conn.py:397} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.23.0.7', 9092)]>: connecting to kafka:9092 [('172.23.0.7', 9092) IPv4]
+[2025-09-03T16:43:00.693+0000] {conn.py:618} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <checking_api_versions_recv> [IPv4 ('172.23.0.7', 9092)]>: Broker version identified as 2.6
+[2025-09-03T16:43:00.694+0000] {conn.py:457} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connected> [IPv4 ('172.23.0.7', 9092)]>: Connection complete.
+[2025-09-03T16:43:00.696+0000] {subscription_state.py:181} INFO - Updating subscribed topics to: ('user_events',)
+[2025-09-03T16:43:00.946+0000] {conn.py:397} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.23.0.7', 9092)]>: connecting to kafka:9092 [('172.23.0.7', 9092) IPv4]
+[2025-09-03T16:43:00.948+0000] {conn.py:457} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1 host=kafka:9092 <connected> [IPv4 ('172.23.0.7', 9092)]>: Connection complete.
+[2025-09-03T16:43:00.949+0000] {conn.py:945} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connected> [IPv4 ('172.23.0.7', 9092)]>: Closing connection. 
+[2025-09-03T16:43:01.108+0000] {cluster.py:401} INFO - Coordinator for group/***_batch_consumer is ('coordinator-1', 'kafka', 9092, None)
+[2025-09-03T16:43:01.110+0000] {base.py:789} INFO - Discovered coordinator coordinator-1 for group ***_batch_consumer
+[2025-09-03T16:43:01.112+0000] {base.py:848} INFO - Starting new heartbeat thread
+[2025-09-03T16:43:01.116+0000] {consumer.py:366} INFO - Revoking previously assigned partitions () for group ***_batch_consumer
+[2025-09-03T16:43:01.118+0000] {base.py:419} INFO - Failed to join group ***_batch_consumer: NodeNotReadyError: coordinator-1
+[2025-09-03T16:43:01.121+0000] {conn.py:397} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=coordinator-1 host=kafka:9092 <connecting> [IPv4 ('172.23.0.7', 9092)]>: connecting to kafka:9092 [('172.23.0.7', 9092) IPv4]
+[2025-09-03T16:43:01.123+0000] {conn.py:457} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=coordinator-1 host=kafka:9092 <connected> [IPv4 ('172.23.0.7', 9092)]>: Connection complete.
+[2025-09-03T16:43:01.226+0000] {base.py:532} INFO - (Re-)joining group ***_batch_consumer
+[2025-09-03T16:43:01.416+0000] {base.py:638} INFO - Received member id kafka-python-2.2.15-670457ef-b785-4439-b4da-db9a8acfa19e for group ***_batch_consumer; will retry join-group
+[2025-09-03T16:43:01.417+0000] {base.py:419} INFO - Failed to join group ***_batch_consumer: [Error 79] MemberIdRequiredError
+[2025-09-03T16:43:01.418+0000] {base.py:532} INFO - (Re-)joining group ***_batch_consumer
+[2025-09-03T16:43:05.403+0000] {base.py:594} INFO - Successfully joined group ***_batch_consumer <Generation 6 (member_id: kafka-python-2.2.15-670457ef-b785-4439-b4da-db9a8acfa19e, protocol: range)>
+[2025-09-03T16:43:05.778+0000] {base.py:597} INFO - Elected group leader -- performing partition assignments using range
+[2025-09-03T16:43:06.176+0000] {subscription_state.py:254} INFO - Updated partition assignment: [('user_events', 0)]
+[2025-09-03T16:43:06.182+0000] {consumer.py:250} INFO - Setting newly assigned partitions (('user_events', 0),) for group ***_batch_consumer
+[2025-09-03T16:43:27.462+0000] {base.py:952} WARNING - Heartbeat failed for group ***_batch_consumer because it is rebalancing
+[2025-09-03T16:43:27.514+0000] {consumer.py:366} INFO - Revoking previously assigned partitions (('user_events', 0),) for group ***_batch_consumer
+[2025-09-03T16:43:27.517+0000] {base.py:532} INFO - (Re-)joining group ***_batch_consumer
+[2025-09-03T16:43:27.542+0000] {base.py:594} INFO - Successfully joined group ***_batch_consumer <Generation 7 (member_id: kafka-python-2.2.15-670457ef-b785-4439-b4da-db9a8acfa19e, protocol: range)>
+[2025-09-03T16:43:27.544+0000] {base.py:597} INFO - Elected group leader -- performing partition assignments using range
+[2025-09-03T16:43:27.572+0000] {subscription_state.py:254} INFO - Updated partition assignment: []
+[2025-09-03T16:43:27.574+0000] {consumer.py:250} INFO - Setting newly assigned partitions () for group ***_batch_consumer
+[2025-09-03T16:47:56.701+0000] {local_task_job_runner.py:115} ERROR - Received SIGTERM. Terminating subprocesses
+[2025-09-03T16:47:57.375+0000] {process_utils.py:135} INFO - Sending Signals.SIGTERM to group 234. PIDs of all processes in the group: [234]
+[2025-09-03T16:47:57.396+0000] {process_utils.py:86} INFO - Sending the signal Signals.SIGTERM to group 234
+[2025-09-03T16:47:57.430+0000] {taskinstance.py:1517} ERROR - Received SIGTERM. Terminating subprocesses.
+[2025-09-03T16:47:58.734+0000] {taskinstance.py:1824} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 181, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 198, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/dags_utils.py", line 43, in consume_and_save
+    for i, message in enumerate(consumer):
+  File "/home/airflow/.local/lib/python3.7/site-packages/kafka/consumer/group.py", line 1188, in __next__
+    return next(self._iterator)
+  File "/home/airflow/.local/lib/python3.7/site-packages/kafka/consumer/group.py", line 1160, in _message_generator_v2
+    record_map = self.poll(timeout_ms=timeout_ms, update_offsets=False)
+  File "/home/airflow/.local/lib/python3.7/site-packages/kafka/consumer/group.py", line 684, in poll
+    records = self._poll_once(timer, max_records, update_offsets=update_offsets)
+  File "/home/airflow/.local/lib/python3.7/site-packages/kafka/consumer/group.py", line 731, in _poll_once
+    self._client.poll(timeout_ms=poll_timeout_ms)
+  File "/home/airflow/.local/lib/python3.7/site-packages/kafka/client_async.py", line 685, in poll
+    self._poll(timeout / 1000)
+  File "/home/airflow/.local/lib/python3.7/site-packages/kafka/client_async.py", line 728, in _poll
+    ready = self._selector.select(timeout)
+  File "/usr/local/lib/python3.7/selectors.py", line 468, in select
+    fd_event_list = self._selector.poll(timeout, max_ev)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1519, in signal_handler
+    raise AirflowException("Task received SIGTERM signal")
+airflow.exceptions.AirflowException: Task received SIGTERM signal
+[2025-09-03T16:47:59.348+0000] {conn.py:945} ERROR - <BrokerConnection client_id=kafka-python-2.2.15, node_id=coordinator-1 host=kafka:9092 <connected> [IPv4 ('172.23.0.7', 9092)]>: Closing connection. KafkaConnectionError: Socket EVENT_READ without in-flight-requests
+[2025-09-03T16:47:59.483+0000] {taskinstance.py:1350} INFO - Marking task as UP_FOR_RETRY. dag_id=kafka_to_postgres_batch, task_id=consume_and_save_batch, execution_date=20250903T163840, start_date=20250903T164259, end_date=20250903T164759
+[2025-09-03T16:47:59.523+0000] {client_async.py:388} WARNING - Node coordinator-1 connection failed -- refreshing metadata
+[2025-09-03T16:47:59.585+0000] {conn.py:945} ERROR - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1 host=kafka:9092 <connected> [IPv4 ('172.23.0.7', 9092)]>: Closing connection. KafkaConnectionError: Socket EVENT_READ without in-flight-requests
+[2025-09-03T16:47:59.595+0000] {client_async.py:388} WARNING - Node 1 connection failed -- refreshing metadata
+[2025-09-03T16:47:59.783+0000] {conn.py:397} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.23.0.7', 9092)]>: connecting to kafka:9092 [('172.23.0.7', 9092) IPv4]
+[2025-09-03T16:47:59.794+0000] {conn.py:430} ERROR - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.23.0.7', 9092)]>: Connect attempt returned error 111. Disconnecting.
+[2025-09-03T16:47:59.795+0000] {conn.py:945} ERROR - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.23.0.7', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+[2025-09-03T16:47:59.803+0000] {client_async.py:388} WARNING - Node 1 connection failed -- refreshing metadata
+[2025-09-03T16:47:59.912+0000] {conn.py:397} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.23.0.7', 9092)]>: connecting to kafka:9092 [('172.23.0.7', 9092) IPv4]
+[2025-09-03T16:47:59.915+0000] {conn.py:430} ERROR - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.23.0.7', 9092)]>: Connect attempt returned error 111. Disconnecting.
+[2025-09-03T16:47:59.916+0000] {conn.py:945} ERROR - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.23.0.7', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+[2025-09-03T16:47:59.918+0000] {client_async.py:388} WARNING - Node 1 connection failed -- refreshing metadata
+[2025-09-03T16:48:00.222+0000] {conn.py:397} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.23.0.7', 9092)]>: connecting to kafka:9092 [('172.23.0.7', 9092) IPv4]
+[2025-09-03T16:48:00.224+0000] {conn.py:430} ERROR - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.23.0.7', 9092)]>: Connect attempt returned error 111. Disconnecting.
+[2025-09-03T16:48:00.225+0000] {conn.py:945} ERROR - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.23.0.7', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+[2025-09-03T16:48:00.227+0000] {client_async.py:388} WARNING - Node 1 connection failed -- refreshing metadata
+[2025-09-03T16:48:00.738+0000] {conn.py:397} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.23.0.7', 9092)]>: connecting to kafka:9092 [('172.23.0.7', 9092) IPv4]
+[2025-09-03T16:48:00.739+0000] {conn.py:430} ERROR - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.23.0.7', 9092)]>: Connect attempt returned error 111. Disconnecting.
+[2025-09-03T16:48:00.740+0000] {conn.py:945} ERROR - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.23.0.7', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+[2025-09-03T16:48:00.741+0000] {client_async.py:388} WARNING - Node 1 connection failed -- refreshing metadata
+[2025-09-03T16:48:01.660+0000] {conn.py:397} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.23.0.7', 9092)]>: connecting to kafka:9092 [('172.23.0.7', 9092) IPv4]
+[2025-09-03T16:48:01.662+0000] {conn.py:430} ERROR - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.23.0.7', 9092)]>: Connect attempt returned error 111. Disconnecting.
+[2025-09-03T16:48:01.663+0000] {conn.py:945} ERROR - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.23.0.7', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+[2025-09-03T16:48:01.664+0000] {client_async.py:388} WARNING - Node 1 connection failed -- refreshing metadata
+[2025-09-03T16:48:03.379+0000] {standard_task_runner.py:109} ERROR - Failed to execute job 194 for task consume_and_save_batch (Task received SIGTERM signal; 234)
+[2025-09-03T16:48:03.392+0000] {conn.py:397} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.23.0.7', 9092)]>: connecting to kafka:9092 [('172.23.0.7', 9092) IPv4]
+[2025-09-03T16:48:03.436+0000] {conn.py:430} ERROR - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.23.0.7', 9092)]>: Connect attempt returned error 111. Disconnecting.
+[2025-09-03T16:48:03.443+0000] {conn.py:945} ERROR - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.23.0.7', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+[2025-09-03T16:48:03.450+0000] {client_async.py:388} WARNING - Node 1 connection failed -- refreshing metadata
+[2025-09-03T16:48:03.539+0000] {process_utils.py:79} INFO - Process psutil.Process(pid=234, status='terminated', exitcode=1, started='16:42:58') (234) terminated with exit code 1
+[2025-09-03T16:48:03.565+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 143
+[2025-09-03T16:48:04.052+0000] {taskinstance.py:2653} INFO - 0 downstream tasks scheduled from follow-on schedule check

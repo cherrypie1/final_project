@@ -1,0 +1,37 @@
+[2025-09-04T14:24:47.512+0000] {logging_mixin.py:150} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/sqlalchemy.py:124 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-09-04T14:24:47.598+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: raw_to_dds.load_dds_users scheduled__2025-09-04T13:19:31.283095+00:00 [queued]>
+[2025-09-04T14:24:47.657+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: raw_to_dds.load_dds_users scheduled__2025-09-04T13:19:31.283095+00:00 [queued]>
+[2025-09-04T14:24:47.658+0000] {taskinstance.py:1308} INFO - Starting attempt 2 of 3
+[2025-09-04T14:24:47.712+0000] {taskinstance.py:1327} INFO - Executing <Task(PostgresOperator): load_dds_users> on 2025-09-04 13:19:31.283095+00:00
+[2025-09-04T14:24:47.759+0000] {standard_task_runner.py:57} INFO - Started process 292 to run task
+[2025-09-04T14:24:47.805+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'raw_to_dds', 'load_dds_users', 'scheduled__2025-09-04T13:19:31.283095+00:00', '--job-id', '23', '--raw', '--subdir', 'DAGS_FOLDER/raw_to_dds.py', '--cfg-path', '/tmp/tmpfx2wle90']
+[2025-09-04T14:24:47.809+0000] {standard_task_runner.py:85} INFO - Job 23: Subtask load_dds_users
+[2025-09-04T14:24:48.453+0000] {logging_mixin.py:150} WARNING - /home/***/.local/lib/python3.7/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-09-04T14:24:49.338+0000] {task_command.py:410} INFO - Running <TaskInstance: raw_to_dds.load_dds_users scheduled__2025-09-04T13:19:31.283095+00:00 [running]> on host 088ae817f34b
+[2025-09-04T14:24:49.543+0000] {logging_mixin.py:150} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/sqlalchemy.py:124 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-09-04T14:24:50.407+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='raw_to_dds' AIRFLOW_CTX_TASK_ID='load_dds_users' AIRFLOW_CTX_EXECUTION_DATE='2025-09-04T13:19:31.283095+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-09-04T13:19:31.283095+00:00'
+[2025-09-04T14:24:50.413+0000] {sql.py:265} INFO - Executing: 
+        INSERT INTO dds.users (user_id, city, country)
+        SELECT DISTINCT user_id, city, country
+        FROM raw.events
+        ON CONFLICT (user_id) DO NOTHING;
+        
+[2025-09-04T14:24:50.513+0000] {base.py:73} INFO - Using connection ID 'postgres_default' for task execution.
+[2025-09-04T14:24:50.907+0000] {base.py:73} INFO - Using connection ID 'postgres_default' for task execution.
+[2025-09-04T14:24:50.933+0000] {taskinstance.py:1824} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/common/sql/operators/sql.py", line 277, in execute
+    **extra_kwargs,
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/common/sql/hooks/sql.py", line 342, in run
+    with closing(self.get_conn()) as conn:
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/postgres/hooks/postgres.py", line 145, in get_conn
+    self.conn = psycopg2.connect(**conn_args)
+  File "/home/airflow/.local/lib/python3.7/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "postgres" (172.23.0.3), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+[2025-09-04T14:24:51.044+0000] {taskinstance.py:1350} INFO - Marking task as UP_FOR_RETRY. dag_id=raw_to_dds, task_id=load_dds_users, execution_date=20250904T131931, start_date=20250904T142447, end_date=20250904T142451
+[2025-09-04T14:24:51.116+0000] {standard_task_runner.py:109} ERROR - Failed to execute job 23 for task load_dds_users (connection to server at "postgres" (172.23.0.3), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+; 292)
+[2025-09-04T14:24:51.159+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 1
+[2025-09-04T14:24:51.332+0000] {taskinstance.py:2653} INFO - 0 downstream tasks scheduled from follow-on schedule check

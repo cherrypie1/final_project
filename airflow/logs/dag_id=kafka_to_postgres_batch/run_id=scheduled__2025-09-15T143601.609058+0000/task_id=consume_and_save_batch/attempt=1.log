@@ -1,0 +1,481 @@
+[2025-09-15T15:06:24.731+0000] {logging_mixin.py:150} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/sqlalchemy.py:124 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-09-15T15:06:27.092+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: kafka_to_postgres_batch.consume_and_save_batch scheduled__2025-09-15T14:36:01.609058+00:00 [queued]>
+[2025-09-15T15:06:27.157+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: kafka_to_postgres_batch.consume_and_save_batch scheduled__2025-09-15T14:36:01.609058+00:00 [queued]>
+[2025-09-15T15:06:27.183+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 3
+[2025-09-15T15:06:27.323+0000] {taskinstance.py:1327} INFO - Executing <Task(PythonOperator): consume_and_save_batch> on 2025-09-15 14:36:01.609058+00:00
+[2025-09-15T15:06:27.363+0000] {standard_task_runner.py:57} INFO - Started process 260 to run task
+[2025-09-15T15:06:27.379+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'kafka_to_postgres_batch', 'consume_and_save_batch', 'scheduled__2025-09-15T14:36:01.609058+00:00', '--job-id', '402', '--raw', '--subdir', 'DAGS_FOLDER/dags.py', '--cfg-path', '/tmp/tmpwenhenu7']
+[2025-09-15T15:06:27.418+0000] {standard_task_runner.py:85} INFO - Job 402: Subtask consume_and_save_batch
+[2025-09-15T15:06:27.550+0000] {logging_mixin.py:150} WARNING - /home/***/.local/lib/python3.7/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-09-15T15:06:27.874+0000] {task_command.py:410} INFO - Running <TaskInstance: kafka_to_postgres_batch.consume_and_save_batch scheduled__2025-09-15T14:36:01.609058+00:00 [running]> on host 3deaa5b4a23c
+[2025-09-15T15:06:28.007+0000] {logging_mixin.py:150} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/sqlalchemy.py:124 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-09-15T15:06:29.012+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='kafka_to_postgres_batch' AIRFLOW_CTX_TASK_ID='consume_and_save_batch' AIRFLOW_CTX_EXECUTION_DATE='2025-09-15T14:36:01.609058+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-09-15T14:36:01.609058+00:00'
+[2025-09-15T15:06:29.184+0000] {conn.py:397} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:29092 <connecting> [IPv4 ('172.23.0.2', 29092)]>: connecting to kafka:29092 [('172.23.0.2', 29092) IPv4]
+[2025-09-15T15:06:29.266+0000] {conn.py:618} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:29092 <checking_api_versions_recv> [IPv4 ('172.23.0.2', 29092)]>: Broker version identified as 2.6
+[2025-09-15T15:06:29.271+0000] {conn.py:457} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:29092 <connected> [IPv4 ('172.23.0.2', 29092)]>: Connection complete.
+[2025-09-15T15:06:29.290+0000] {subscription_state.py:181} INFO - Updating subscribed topics to: ('user_events',)
+[2025-09-15T15:06:29.394+0000] {conn.py:397} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1 host=kafka:29092 <connecting> [IPv4 ('172.23.0.2', 29092)]>: connecting to kafka:29092 [('172.23.0.2', 29092) IPv4]
+[2025-09-15T15:06:29.398+0000] {conn.py:457} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1 host=kafka:29092 <connected> [IPv4 ('172.23.0.2', 29092)]>: Connection complete.
+[2025-09-15T15:06:29.399+0000] {conn.py:945} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:29092 <connected> [IPv4 ('172.23.0.2', 29092)]>: Closing connection. 
+[2025-09-15T15:06:29.677+0000] {cluster.py:401} INFO - Coordinator for group/***_batch_consumer is ('coordinator-1', 'kafka', 29092, None)
+[2025-09-15T15:06:29.678+0000] {base.py:789} INFO - Discovered coordinator coordinator-1 for group ***_batch_consumer
+[2025-09-15T15:06:29.681+0000] {base.py:848} INFO - Starting new heartbeat thread
+[2025-09-15T15:06:29.684+0000] {consumer.py:366} INFO - Revoking previously assigned partitions () for group ***_batch_consumer
+[2025-09-15T15:06:29.685+0000] {base.py:419} INFO - Failed to join group ***_batch_consumer: NodeNotReadyError: coordinator-1
+[2025-09-15T15:06:29.697+0000] {conn.py:397} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=coordinator-1 host=kafka:29092 <connecting> [IPv4 ('172.23.0.2', 29092)]>: connecting to kafka:29092 [('172.23.0.2', 29092) IPv4]
+[2025-09-15T15:06:29.700+0000] {conn.py:457} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=coordinator-1 host=kafka:29092 <connected> [IPv4 ('172.23.0.2', 29092)]>: Connection complete.
+[2025-09-15T15:06:29.807+0000] {base.py:532} INFO - (Re-)joining group ***_batch_consumer
+[2025-09-15T15:06:31.591+0000] {base.py:638} INFO - Received member id kafka-python-2.2.15-12a112c9-c084-4191-b7da-3078dcf30e7e for group ***_batch_consumer; will retry join-group
+[2025-09-15T15:06:31.593+0000] {base.py:419} INFO - Failed to join group ***_batch_consumer: [Error 79] MemberIdRequiredError
+[2025-09-15T15:06:31.595+0000] {base.py:532} INFO - (Re-)joining group ***_batch_consumer
+[2025-09-15T15:06:35.583+0000] {base.py:594} INFO - Successfully joined group ***_batch_consumer <Generation 33 (member_id: kafka-python-2.2.15-12a112c9-c084-4191-b7da-3078dcf30e7e, protocol: range)>
+[2025-09-15T15:06:35.584+0000] {base.py:597} INFO - Elected group leader -- performing partition assignments using range
+[2025-09-15T15:06:37.244+0000] {subscription_state.py:254} INFO - Updated partition assignment: [('user_events', 0)]
+[2025-09-15T15:06:37.246+0000] {consumer.py:250} INFO - Setting newly assigned partitions (('user_events', 0),) for group ***_batch_consumer
+[2025-09-15T15:06:37.325+0000] {dags_utils.py:105} INFO - Received message: {
+  "type": "user_profile",
+  "user_id": 2184,
+  "name": "Dr. Joshua Moore",
+  "email": "mcneilsusan@example.net",
+  "birth_date": "1958-02-11",
+  "gender": "female",
+  "generated_at": "2025-09-15T11:17:49.334465+00:00"
+}
+[2025-09-15T15:06:37.327+0000] {dags_utils.py:105} INFO - Received message: {
+  "type": "user_device",
+  "user_id": 2184,
+  "device_type": "mobile",
+  "os": "Windows",
+  "browser": "Safari",
+  "generated_at": "2025-09-15T11:17:49.334491+00:00"
+}
+[2025-09-15T15:06:37.328+0000] {dags_utils.py:105} INFO - Received message: {
+  "type": "user_location",
+  "user_id": 2184,
+  "city": "Unknown",
+  "country": null,
+  "lat": 7.067734,
+  "lon": 162.907707,
+  "weather_temp": 28.92,
+  "weather_desc": "broken clouds",
+  "generated_at": "2025-09-15T11:17:49.334502+00:00"
+}
+[2025-09-15T15:06:37.330+0000] {dags_utils.py:105} INFO - Received message: {
+  "type": "event",
+  "user_id": 2184,
+  "session_id": "5f54832c-6c46-4f10-b542-fdab1f34aec7",
+  "event_type": "add_to_cart",
+  "product_id": 1,
+  "product_name": "Redmond \u0424\u0435\u043d",
+  "product_category": "electronics",
+  "order_id": "4af5b6a2-090f-4120-bff9-6e6493b435bb",
+  "quantity": 4,
+  "city": "Unknown",
+  "country": null,
+  "lat": -10.382039,
+  "lon": -174.948604,
+  "cost_usd": 921.31,
+  "cost_eur": 785.66,
+  "cost_rub": 77365.42,
+  "weather_temp": 27.41,
+  "weather_desc": "scattered clouds",
+  "timestamp": "2025-09-15T11:17:54.054084+00:00"
+}
+[2025-09-15T15:06:37.331+0000] {dags_utils.py:105} INFO - Received message: {
+  "type": "event",
+  "user_id": 2184,
+  "session_id": "1461d464-dcc1-4dc4-ab5e-93a8355f9468",
+  "event_type": "session_start",
+  "product_id": null,
+  "product_name": null,
+  "product_category": null,
+  "order_id": null,
+  "quantity": null,
+  "city": "Unknown",
+  "country": null,
+  "lat": -63.0963815,
+  "lon": 60.247512,
+  "cost_usd": 418.26,
+  "cost_eur": 356.68,
+  "cost_rub": 35122.66,
+  "weather_temp": -11.08,
+  "weather_desc": "light snow",
+  "timestamp": "2025-09-15T11:17:56.777460+00:00"
+}
+[2025-09-15T15:06:37.333+0000] {dags_utils.py:105} INFO - Received message: {
+  "type": "user_profile",
+  "user_id": 1612,
+  "name": "Michele Rowe",
+  "email": "jamesgibson@example.net",
+  "birth_date": "1969-03-26",
+  "gender": "male",
+  "generated_at": "2025-09-15T11:18:48.440463+00:00"
+}
+[2025-09-15T15:06:37.335+0000] {dags_utils.py:105} INFO - Received message: {
+  "type": "user_device",
+  "user_id": 1612,
+  "device_type": "desktop",
+  "os": "MacOS",
+  "browser": "Safari",
+  "generated_at": "2025-09-15T11:18:48.440498+00:00"
+}
+[2025-09-15T15:06:37.336+0000] {dags_utils.py:105} INFO - Received message: {
+  "type": "user_location",
+  "user_id": 1612,
+  "city": "Unknown",
+  "country": null,
+  "lat": 1.8135865,
+  "lon": -153.995297,
+  "weather_temp": 25.88,
+  "weather_desc": "scattered clouds",
+  "generated_at": "2025-09-15T11:18:48.440513+00:00"
+}
+[2025-09-15T15:06:37.337+0000] {dags_utils.py:105} INFO - Received message: {
+  "type": "event",
+  "user_id": 1612,
+  "session_id": "ec937236-cbd4-4324-a15d-990ee55b4489",
+  "event_type": "add_to_cart",
+  "product_id": 4,
+  "product_name": "Samsung TV",
+  "product_category": "electronics",
+  "order_id": "27df24f8-3ed6-49ba-bc74-e8cd42af514c",
+  "quantity": 1,
+  "city": "Unknown",
+  "country": null,
+  "lat": 65.576864,
+  "lon": -50.091915,
+  "cost_usd": 809.82,
+  "cost_eur": 690.59,
+  "cost_rub": 68003.24,
+  "weather_temp": -5.22,
+  "weather_desc": "scattered clouds",
+  "timestamp": "2025-09-15T11:18:50.225419+00:00"
+}
+[2025-09-15T15:06:37.338+0000] {dags_utils.py:105} INFO - Received message: {
+  "type": "event",
+  "user_id": 1612,
+  "session_id": "4515ef51-0bb0-4a90-a700-2cf918f24319",
+  "event_type": "purchase",
+  "product_id": 9,
+  "product_name": "\u041f\u043e\u043c\u0430\u0434\u0430",
+  "product_category": "beauty",
+  "order_id": "69ee01d7-03ee-4006-89bd-14eb2428f983",
+  "quantity": 5,
+  "city": "Unknown",
+  "country": null,
+  "lat": 66.243628,
+  "lon": 135.33839,
+  "cost_usd": 18.08,
+  "cost_eur": 15.42,
+  "cost_rub": 1518.24,
+  "weather_temp": 2.01,
+  "weather_desc": "overcast clouds",
+  "timestamp": "2025-09-15T11:18:51.918170+00:00"
+}
+[2025-09-15T15:06:37.340+0000] {dags_utils.py:105} INFO - Received message: {
+  "type": "order",
+  "order_id": "69ee01d7-03ee-4006-89bd-14eb2428f983",
+  "user_id": 1612,
+  "order_ts": "2025-09-15T11:18:51.918952+00:00",
+  "total_usd": 29.8,
+  "generated_at": "2025-09-15T11:18:51.918963+00:00"
+}
+[2025-09-15T15:06:37.341+0000] {dags_utils.py:105} INFO - Received message: {
+  "type": "order_item",
+  "order_id": "69ee01d7-03ee-4006-89bd-14eb2428f983",
+  "product_id": 9,
+  "quantity": 5,
+  "price_usd": 5.96,
+  "generated_at": "2025-09-15T11:18:51.918966+00:00"
+}
+[2025-09-15T15:06:37.344+0000] {dags_utils.py:105} INFO - Received message: {
+  "type": "user_profile",
+  "user_id": 2422,
+  "name": "Diana Campbell",
+  "email": "gabriel53@example.net",
+  "birth_date": "1969-11-27",
+  "gender": "female",
+  "generated_at": "2025-09-15T11:19:46.443839+00:00"
+}
+[2025-09-15T15:06:37.346+0000] {dags_utils.py:105} INFO - Received message: {
+  "type": "user_device",
+  "user_id": 2422,
+  "device_type": "tablet",
+  "os": "Windows",
+  "browser": "Safari",
+  "generated_at": "2025-09-15T11:19:46.443958+00:00"
+}
+[2025-09-15T15:06:37.348+0000] {dags_utils.py:105} INFO - Received message: {
+  "type": "user_location",
+  "user_id": 2422,
+  "city": "Unknown",
+  "country": null,
+  "lat": -2.3707775,
+  "lon": 12.74056,
+  "weather_temp": 29.49,
+  "weather_desc": "overcast clouds",
+  "generated_at": "2025-09-15T11:19:46.444002+00:00"
+}
+[2025-09-15T15:06:37.350+0000] {dags_utils.py:105} INFO - Received message: {
+  "type": "event",
+  "user_id": 2422,
+  "session_id": "a646a569-f80a-4e2e-8376-3b1100ed9221",
+  "event_type": "session_start",
+  "product_id": null,
+  "product_name": null,
+  "product_category": null,
+  "order_id": null,
+  "quantity": null,
+  "city": "Unknown",
+  "country": null,
+  "lat": -75.7603095,
+  "lon": -86.330075,
+  "cost_usd": 33.75,
+  "cost_eur": 28.78,
+  "cost_rub": 2834.1,
+  "weather_temp": -31.62,
+  "weather_desc": "few clouds",
+  "timestamp": "2025-09-15T11:19:48.515614+00:00"
+}
+[2025-09-15T15:06:37.351+0000] {dags_utils.py:105} INFO - Received message: {
+  "type": "event",
+  "user_id": 2422,
+  "session_id": "0580b477-1343-4c1d-a9d6-9d4b51f332b1",
+  "event_type": "session_start",
+  "product_id": null,
+  "product_name": null,
+  "product_category": null,
+  "order_id": null,
+  "quantity": null,
+  "city": "Unknown",
+  "country": null,
+  "lat": 16.5087315,
+  "lon": 172.288195,
+  "cost_usd": 94.94,
+  "cost_eur": 80.96,
+  "cost_rub": 7972.42,
+  "weather_temp": 28.01,
+  "weather_desc": "light rain",
+  "timestamp": "2025-09-15T11:19:51.242767+00:00"
+}
+[2025-09-15T15:06:37.353+0000] {dags_utils.py:105} INFO - Received message: {
+  "type": "user_profile",
+  "user_id": 4580,
+  "name": "Dylan Smith",
+  "email": "dramirez@example.net",
+  "birth_date": "1956-01-18",
+  "gender": "female",
+  "generated_at": "2025-09-15T11:20:56.084671+00:00"
+}
+[2025-09-15T15:06:37.355+0000] {dags_utils.py:105} INFO - Received message: {
+  "type": "user_device",
+  "user_id": 4580,
+  "device_type": "mobile",
+  "os": "Windows",
+  "browser": "Chrome",
+  "generated_at": "2025-09-15T11:20:56.084713+00:00"
+}
+[2025-09-15T15:06:37.356+0000] {dags_utils.py:105} INFO - Received message: {
+  "type": "user_location",
+  "user_id": 4580,
+  "city": "Unknown",
+  "country": null,
+  "lat": 50.5839865,
+  "lon": -3.854256,
+  "weather_temp": 12.83,
+  "weather_desc": "overcast clouds",
+  "generated_at": "2025-09-15T11:20:56.084729+00:00"
+}
+[2025-09-15T15:06:37.358+0000] {dags_utils.py:105} INFO - Received message: {
+  "type": "event",
+  "user_id": 4580,
+  "session_id": "b2f2bdd6-f3a9-455b-a8d4-51cc26960323",
+  "event_type": "session_start",
+  "product_id": null,
+  "product_name": null,
+  "product_category": null,
+  "order_id": null,
+  "quantity": null,
+  "city": "Unknown",
+  "country": null,
+  "lat": -83.989276,
+  "lon": -57.405527,
+  "cost_usd": 664.46,
+  "cost_eur": 566.63,
+  "cost_rub": 55796.88,
+  "weather_temp": -18.14,
+  "weather_desc": "overcast clouds",
+  "timestamp": "2025-09-15T11:20:57.952374+00:00"
+}
+[2025-09-15T15:06:37.359+0000] {dags_utils.py:105} INFO - Received message: {
+  "type": "event",
+  "user_id": 4580,
+  "session_id": "4a221d59-60fa-42d7-aeb8-d276bbf1e924",
+  "event_type": "add_to_cart",
+  "product_id": 5,
+  "product_name": "Levi's Jeans",
+  "product_category": "clothing",
+  "order_id": "5a522eff-b282-4939-84cd-f90bfb0815c2",
+  "quantity": 1,
+  "city": "Unknown",
+  "country": null,
+  "lat": 46.1181455,
+  "lon": -46.162424,
+  "cost_usd": 133.74,
+  "cost_eur": 114.05,
+  "cost_rub": 11230.59,
+  "weather_temp": 14.68,
+  "weather_desc": "moderate rain",
+  "timestamp": "2025-09-15T11:21:00.381023+00:00"
+}
+[2025-09-15T15:06:37.360+0000] {dags_utils.py:105} INFO - Received message: {
+  "type": "user_profile",
+  "user_id": 282,
+  "name": "Ryan Benson",
+  "email": "kellydaugherty@example.com",
+  "birth_date": "1980-02-26",
+  "gender": "male",
+  "generated_at": "2025-09-15T11:21:55.804043+00:00"
+}
+[2025-09-15T15:06:37.366+0000] {dags_utils.py:105} INFO - Received message: {
+  "type": "user_device",
+  "user_id": 282,
+  "device_type": "desktop",
+  "os": "iOS",
+  "browser": "Chrome",
+  "generated_at": "2025-09-15T11:21:55.804078+00:00"
+}
+[2025-09-15T15:06:37.370+0000] {dags_utils.py:105} INFO - Received message: {
+  "type": "user_location",
+  "user_id": 282,
+  "city": "Unknown",
+  "country": null,
+  "lat": 18.874525,
+  "lon": -55.005254,
+  "weather_temp": 27.75,
+  "weather_desc": "light rain",
+  "generated_at": "2025-09-15T11:21:55.804093+00:00"
+}
+[2025-09-15T15:06:37.371+0000] {dags_utils.py:105} INFO - Received message: {
+  "type": "event",
+  "user_id": 282,
+  "session_id": "7b960011-6812-4264-949a-c7782c7a8f66",
+  "event_type": "add_to_cart",
+  "product_id": 4,
+  "product_name": "Samsung TV",
+  "product_category": "electronics",
+  "order_id": "5342cf20-34b7-4bb1-ad65-58ee1952a663",
+  "quantity": 1,
+  "city": "Unknown",
+  "country": null,
+  "lat": 86.460737,
+  "lon": 159.435903,
+  "cost_usd": 472.5,
+  "cost_eur": 402.93,
+  "cost_rub": 39677.37,
+  "weather_temp": -3.06,
+  "weather_desc": "overcast clouds",
+  "timestamp": "2025-09-15T11:22:03.533411+00:00"
+}
+[2025-09-15T15:06:37.373+0000] {dags_utils.py:105} INFO - Received message: {
+  "type": "event",
+  "user_id": 282,
+  "session_id": "f163e28b-7bbe-4981-b402-abc343ab7016",
+  "event_type": "session_start",
+  "product_id": null,
+  "product_name": null,
+  "product_category": null,
+  "order_id": null,
+  "quantity": null,
+  "city": "Unknown",
+  "country": null,
+  "lat": 62.742925,
+  "lon": 94.904127,
+  "cost_usd": 564.23,
+  "cost_eur": 481.16,
+  "cost_rub": 47380.24,
+  "weather_temp": 6.58,
+  "weather_desc": "moderate rain",
+  "timestamp": "2025-09-15T11:22:10.267188+00:00"
+}
+[2025-09-15T15:06:37.374+0000] {dags_utils.py:105} INFO - Received message: {
+  "type": "user_profile",
+  "user_id": 1997,
+  "name": "Margaret Williams",
+  "email": "maciastyler@example.net",
+  "birth_date": "1958-03-19",
+  "gender": "other",
+  "generated_at": "2025-09-15T11:22:48.579403+00:00"
+}
+[2025-09-15T15:06:37.375+0000] {dags_utils.py:105} INFO - Received message: {
+  "type": "user_device",
+  "user_id": 1997,
+  "device_type": "tablet",
+  "os": "iOS",
+  "browser": "Safari",
+  "generated_at": "2025-09-15T11:22:48.579581+00:00"
+}
+[2025-09-15T15:06:37.377+0000] {dags_utils.py:105} INFO - Received message: {
+  "type": "user_location",
+  "user_id": 1997,
+  "city": "Unknown",
+  "country": null,
+  "lat": -68.468583,
+  "lon": -173.312957,
+  "weather_temp": -26.79,
+  "weather_desc": "overcast clouds",
+  "generated_at": "2025-09-15T11:22:48.579618+00:00"
+}
+[2025-09-15T15:06:37.379+0000] {dags_utils.py:105} INFO - Received message: {
+  "type": "event",
+  "user_id": 1997,
+  "session_id": "34dd39c6-b809-493d-8361-5e5a3438d9e8",
+  "event_type": "session_start",
+  "product_id": null,
+  "product_name": null,
+  "product_category": null,
+  "order_id": null,
+  "quantity": null,
+  "city": "Unknown",
+  "country": null,
+  "lat": 84.953455,
+  "lon": -45.671007,
+  "cost_usd": 701.52,
+  "cost_eur": 598.23,
+  "cost_rub": 58908.93,
+  "weather_temp": -8.96,
+  "weather_desc": "overcast clouds",
+  "timestamp": "2025-09-15T11:22:51.393077+00:00"
+}
+[2025-09-15T15:06:37.383+0000] {dags_utils.py:105} INFO - Received message: {
+  "type": "event",
+  "user_id": 1997,
+  "session_id": "8986fa38-91ef-4c9b-a4fa-f6f4c71ff9e9",
+  "event_type": "add_to_cart",
+  "product_id": 1,
+  "product_name": "Redmond \u0424\u0435\u043d",
+  "product_category": "electronics",
+  "order_id": "207f5ae9-f991-4c5a-aac3-d10b21b36bd5",
+  "quantity": 5,
+  "city": "Unknown",
+  "country": null,
+  "lat": 36.5551025,
+  "lon": 136.800209,
+  "cost_usd": 768.41,
+  "cost_eur": 655.27,
+  "cost_rub": 64525.91,
+  "weather_temp": 22.82,
+  "weather_desc": "broken clouds",
+  "timestamp": "2025-09-15T11:22:53.508583+00:00"
+}
+[2025-09-15T15:07:07.836+0000] {dags_utils.py:178} INFO - [SUCCESS] Consumer finished and flushed buffers
+[2025-09-15T15:07:08.046+0000] {base.py:1052} INFO - Stopping heartbeat thread
+[2025-09-15T15:07:08.122+0000] {base.py:891} INFO - Leaving consumer group (***_batch_consumer).
+[2025-09-15T15:07:08.589+0000] {base.py:907} INFO - LeaveGroup request for group ***_batch_consumer returned successfully
+[2025-09-15T15:07:08.593+0000] {conn.py:945} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1 host=kafka:29092 <connected> [IPv4 ('172.23.0.2', 29092)]>: Closing connection. 
+[2025-09-15T15:07:08.597+0000] {conn.py:945} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=coordinator-1 host=kafka:29092 <connected> [IPv4 ('172.23.0.2', 29092)]>: Closing connection. 
+[2025-09-15T15:07:08.602+0000] {python.py:183} INFO - Done. Returned value was: None
+[2025-09-15T15:07:08.729+0000] {taskinstance.py:1350} INFO - Marking task as SUCCESS. dag_id=kafka_to_postgres_batch, task_id=consume_and_save_batch, execution_date=20250915T143601, start_date=20250915T150627, end_date=20250915T150708
+[2025-09-15T15:07:08.749+0000] {logging_mixin.py:150} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:205 AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+[2025-09-15T15:07:09.823+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 0
+[2025-09-15T15:07:09.948+0000] {taskinstance.py:2653} INFO - 0 downstream tasks scheduled from follow-on schedule check

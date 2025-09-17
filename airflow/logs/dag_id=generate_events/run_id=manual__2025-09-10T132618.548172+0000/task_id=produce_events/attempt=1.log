@@ -1,0 +1,31 @@
+[2025-09-10T13:26:30.588+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: generate_events.produce_events manual__2025-09-10T13:26:18.548172+00:00 [queued]>
+[2025-09-10T13:26:30.631+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: generate_events.produce_events manual__2025-09-10T13:26:18.548172+00:00 [queued]>
+[2025-09-10T13:26:30.636+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 2
+[2025-09-10T13:26:30.718+0000] {taskinstance.py:1327} INFO - Executing <Task(PythonOperator): produce_events> on 2025-09-10 13:26:18.548172+00:00
+[2025-09-10T13:26:30.773+0000] {standard_task_runner.py:57} INFO - Started process 457 to run task
+[2025-09-10T13:26:30.780+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'generate_events', 'produce_events', 'manual__2025-09-10T13:26:18.548172+00:00', '--job-id', '95', '--raw', '--subdir', 'DAGS_FOLDER/generator_dag.py', '--cfg-path', '/tmp/tmpwdq18rhn']
+[2025-09-10T13:26:30.803+0000] {standard_task_runner.py:85} INFO - Job 95: Subtask produce_events
+[2025-09-10T13:26:31.035+0000] {logging_mixin.py:150} WARNING - /home/***/.local/lib/python3.7/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-09-10T13:26:31.632+0000] {task_command.py:410} INFO - Running <TaskInstance: generate_events.produce_events manual__2025-09-10T13:26:18.548172+00:00 [running]> on host c905ba028b15
+[2025-09-10T13:26:32.270+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='generate_events' AIRFLOW_CTX_TASK_ID='produce_events' AIRFLOW_CTX_EXECUTION_DATE='2025-09-10T13:26:18.548172+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-09-10T13:26:18.548172+00:00'
+[2025-09-10T13:26:32.275+0000] {client_async.py:278} WARNING - Configured api_version (2, 0, 2) not supported; using (2, 0)
+[2025-09-10T13:26:32.423+0000] {conn.py:397} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv6 ('::1', 9092, 0, 0)]>: connecting to localhost:9092 [('::1', 9092, 0, 0) IPv6]
+[2025-09-10T13:26:32.427+0000] {conn.py:430} ERROR - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv6 ('::1', 9092, 0, 0)]>: Connect attempt returned error 111. Disconnecting.
+[2025-09-10T13:26:32.428+0000] {conn.py:945} ERROR - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv6 ('::1', 9092, 0, 0)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+[2025-09-10T13:26:32.430+0000] {conn.py:397} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to localhost:9092 [('127.0.0.1', 9092) IPv4]
+[2025-09-10T13:26:32.432+0000] {conn.py:430} ERROR - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connect attempt returned error 111. Disconnecting.
+[2025-09-10T13:26:32.433+0000] {conn.py:945} ERROR - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+[2025-09-10T13:26:32.435+0000] {logging_mixin.py:150} INFO - [DEBUG] Kafka connection error: KafkaConnectionError: Connection to bootstrap-0 failed.
+[2025-09-10T13:26:32.436+0000] {taskinstance.py:1824} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 181, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 198, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/generator_dag.py", line 17, in produce_events
+    raise RuntimeError(f"Kafka broker {KAFKA_BROKER} недоступен")
+RuntimeError: Kafka broker kafka:29092 недоступен
+[2025-09-10T13:26:32.516+0000] {taskinstance.py:1350} INFO - Marking task as UP_FOR_RETRY. dag_id=generate_events, task_id=produce_events, execution_date=20250910T132618, start_date=20250910T132630, end_date=20250910T132632
+[2025-09-10T13:26:32.645+0000] {standard_task_runner.py:109} ERROR - Failed to execute job 95 for task produce_events (Kafka broker kafka:29092 недоступен; 457)
+[2025-09-10T13:26:32.721+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 1
+[2025-09-10T13:26:32.928+0000] {taskinstance.py:2653} INFO - 0 downstream tasks scheduled from follow-on schedule check

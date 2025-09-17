@@ -1,0 +1,69 @@
+[2025-09-15T21:25:10.820+0000] {logging_mixin.py:150} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/sqlalchemy.py:124 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-09-15T21:25:10.853+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dds_to_clickhouse_enhanced.load_daily_business_summary scheduled__2025-09-14T00:00:00+00:00 [queued]>
+[2025-09-15T21:25:10.874+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dds_to_clickhouse_enhanced.load_daily_business_summary scheduled__2025-09-14T00:00:00+00:00 [queued]>
+[2025-09-15T21:25:10.875+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 2
+[2025-09-15T21:25:10.917+0000] {taskinstance.py:1327} INFO - Executing <Task(PythonOperator): load_daily_business_summary> on 2025-09-14 00:00:00+00:00
+[2025-09-15T21:25:10.938+0000] {standard_task_runner.py:57} INFO - Started process 12757 to run task
+[2025-09-15T21:25:10.943+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'dds_to_clickhouse_enhanced', 'load_daily_business_summary', 'scheduled__2025-09-14T00:00:00+00:00', '--job-id', '454', '--raw', '--subdir', 'DAGS_FOLDER/dds_to_clickhouse.py', '--cfg-path', '/tmp/tmp9_otc9ad']
+[2025-09-15T21:25:10.956+0000] {standard_task_runner.py:85} INFO - Job 454: Subtask load_daily_business_summary
+[2025-09-15T21:25:11.026+0000] {logging_mixin.py:150} WARNING - /home/***/.local/lib/python3.7/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-09-15T21:25:11.317+0000] {task_command.py:410} INFO - Running <TaskInstance: dds_to_clickhouse_enhanced.load_daily_business_summary scheduled__2025-09-14T00:00:00+00:00 [running]> on host 4ba3580a27fc
+[2025-09-15T21:25:11.418+0000] {logging_mixin.py:150} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/sqlalchemy.py:124 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-09-15T21:25:11.996+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dds_to_clickhouse_enhanced' AIRFLOW_CTX_TASK_ID='load_daily_business_summary' AIRFLOW_CTX_EXECUTION_DATE='2025-09-14T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-09-14T00:00:00+00:00'
+[2025-09-15T21:25:13.994+0000] {taskinstance.py:1824} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 181, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 198, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/dds_to_clickhouse.py", line 53, in load_daily_business_summary
+    ch_client.execute("INSERT INTO daily_business_summary VALUES", df.to_dict("records"))
+  File "/home/airflow/.local/lib/python3.7/site-packages/clickhouse_driver/client.py", line 379, in execute
+    columnar=columnar
+  File "/home/airflow/.local/lib/python3.7/site-packages/clickhouse_driver/client.py", line 604, in process_insert_query
+    sample_block = self.receive_sample_block()
+  File "/home/airflow/.local/lib/python3.7/site-packages/clickhouse_driver/client.py", line 620, in receive_sample_block
+    raise packet.exception
+clickhouse_driver.errors.ServerException: Code: 60.
+DB::Exception: Table data_mart.daily_business_summary doesn't exist. Stack trace:
+
+0. DB::Exception::Exception(DB::Exception::MessageMasked&&, int, bool) @ 0xe2939d5 in /usr/bin/clickhouse
+1. ? @ 0x8a9f784 in /usr/bin/clickhouse
+2. DB::DatabaseCatalog::getTableImpl(DB::StorageID const&, std::shared_ptr<DB::Context const>, std::optional<DB::Exception>*) const @ 0x12f8b423 in /usr/bin/clickhouse
+3. DB::DatabaseCatalog::getTable(DB::StorageID const&, std::shared_ptr<DB::Context const>) const @ 0x12f920ea in /usr/bin/clickhouse
+4. DB::InterpreterInsertQuery::getTable(DB::ASTInsertQuery&) @ 0x139835c4 in /usr/bin/clickhouse
+5. DB::InterpreterInsertQuery::execute() @ 0x13985ef4 in /usr/bin/clickhouse
+6. ? @ 0x13d70a67 in /usr/bin/clickhouse
+7. DB::executeQuery(String const&, std::shared_ptr<DB::Context>, bool, DB::QueryProcessingStage::Enum) @ 0x13d6e00d in /usr/bin/clickhouse
+8. DB::TCPHandler::runImpl() @ 0x14b459ec in /usr/bin/clickhouse
+9. DB::TCPHandler::run() @ 0x14b5b419 in /usr/bin/clickhouse
+10. Poco::Net::TCPServerConnection::start() @ 0x17aa4954 in /usr/bin/clickhouse
+11. Poco::Net::TCPServerDispatcher::run() @ 0x17aa5b7b in /usr/bin/clickhouse
+12. Poco::PooledThread::run() @ 0x17c2d407 in /usr/bin/clickhouse
+13. Poco::ThreadImpl::runnableEntry(void*) @ 0x17c2ae3d in /usr/bin/clickhouse
+14. ? @ 0x7f789a66e609 in ?
+15. __clone @ 0x7f789a593353 in ?
+
+[2025-09-15T21:25:14.030+0000] {taskinstance.py:1350} INFO - Marking task as UP_FOR_RETRY. dag_id=dds_to_clickhouse_enhanced, task_id=load_daily_business_summary, execution_date=20250914T000000, start_date=20250915T212510, end_date=20250915T212514
+[2025-09-15T21:25:14.063+0000] {standard_task_runner.py:109} ERROR - Failed to execute job 454 for task load_daily_business_summary (Code: 60.
+DB::Exception: Table data_mart.daily_business_summary doesn't exist. Stack trace:
+
+0. DB::Exception::Exception(DB::Exception::MessageMasked&&, int, bool) @ 0xe2939d5 in /usr/bin/clickhouse
+1. ? @ 0x8a9f784 in /usr/bin/clickhouse
+2. DB::DatabaseCatalog::getTableImpl(DB::StorageID const&, std::shared_ptr<DB::Context const>, std::optional<DB::Exception>*) const @ 0x12f8b423 in /usr/bin/clickhouse
+3. DB::DatabaseCatalog::getTable(DB::StorageID const&, std::shared_ptr<DB::Context const>) const @ 0x12f920ea in /usr/bin/clickhouse
+4. DB::InterpreterInsertQuery::getTable(DB::ASTInsertQuery&) @ 0x139835c4 in /usr/bin/clickhouse
+5. DB::InterpreterInsertQuery::execute() @ 0x13985ef4 in /usr/bin/clickhouse
+6. ? @ 0x13d70a67 in /usr/bin/clickhouse
+7. DB::executeQuery(String const&, std::shared_ptr<DB::Context>, bool, DB::QueryProcessingStage::Enum) @ 0x13d6e00d in /usr/bin/clickhouse
+8. DB::TCPHandler::runImpl() @ 0x14b459ec in /usr/bin/clickhouse
+9. DB::TCPHandler::run() @ 0x14b5b419 in /usr/bin/clickhouse
+10. Poco::Net::TCPServerConnection::start() @ 0x17aa4954 in /usr/bin/clickhouse
+11. Poco::Net::TCPServerDispatcher::run() @ 0x17aa5b7b in /usr/bin/clickhouse
+12. Poco::PooledThread::run() @ 0x17c2d407 in /usr/bin/clickhouse
+13. Poco::ThreadImpl::runnableEntry(void*) @ 0x17c2ae3d in /usr/bin/clickhouse
+14. ? @ 0x7f789a66e609 in ?
+15. __clone @ 0x7f789a593353 in ?
+; 12757)
+[2025-09-15T21:25:14.084+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 1
+[2025-09-15T21:25:14.210+0000] {taskinstance.py:2653} INFO - 0 downstream tasks scheduled from follow-on schedule check

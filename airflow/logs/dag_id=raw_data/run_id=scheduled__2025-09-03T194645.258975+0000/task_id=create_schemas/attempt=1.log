@@ -1,0 +1,27 @@
+[2025-09-03T20:17:07.485+0000] {logging_mixin.py:150} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/sqlalchemy.py:124 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-09-03T20:17:07.506+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: raw_data.create_schemas scheduled__2025-09-03T19:46:45.258975+00:00 [queued]>
+[2025-09-03T20:17:07.525+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: raw_data.create_schemas scheduled__2025-09-03T19:46:45.258975+00:00 [queued]>
+[2025-09-03T20:17:07.526+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 3
+[2025-09-03T20:17:07.561+0000] {taskinstance.py:1327} INFO - Executing <Task(PostgresOperator): create_schemas> on 2025-09-03 19:46:45.258975+00:00
+[2025-09-03T20:17:07.576+0000] {standard_task_runner.py:57} INFO - Started process 2634 to run task
+[2025-09-03T20:17:07.576+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'raw_data', 'create_schemas', 'scheduled__2025-09-03T19:46:45.258975+00:00', '--job-id', '277', '--raw', '--subdir', 'DAGS_FOLDER/dags.py', '--cfg-path', '/tmp/tmpqegzdkzf']
+[2025-09-03T20:17:07.616+0000] {standard_task_runner.py:85} INFO - Job 277: Subtask create_schemas
+[2025-09-03T20:17:07.979+0000] {logging_mixin.py:150} WARNING - /home/***/.local/lib/python3.7/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-09-03T20:17:08.276+0000] {task_command.py:410} INFO - Running <TaskInstance: raw_data.create_schemas scheduled__2025-09-03T19:46:45.258975+00:00 [running]> on host 566c672cfab0
+[2025-09-03T20:17:08.343+0000] {logging_mixin.py:150} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/sqlalchemy.py:124 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-09-03T20:17:08.810+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='raw_data' AIRFLOW_CTX_TASK_ID='create_schemas' AIRFLOW_CTX_EXECUTION_DATE='2025-09-03T19:46:45.258975+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-09-03T19:46:45.258975+00:00'
+[2025-09-03T20:17:08.820+0000] {sql.py:265} INFO - Executing: 
+        CREATE SCHEMA IF NOT EXISTS raw;
+        CREATE SCHEMA IF NOT EXISTS dds;
+        CREATE SCHEMA IF NOT EXISTS dictionary;
+        
+[2025-09-03T20:17:08.857+0000] {base.py:73} INFO - Using connection ID 'postgres_default' for task execution.
+[2025-09-03T20:17:11.273+0000] {base.py:73} INFO - Using connection ID 'postgres_default' for task execution.
+[2025-09-03T20:17:11.335+0000] {sql.py:375} INFO - Running statement: 
+        CREATE SCHEMA IF NOT EXISTS raw;
+        CREATE SCHEMA IF NOT EXISTS dds;
+        CREATE SCHEMA IF NOT EXISTS dictionary;
+        , parameters: None
+[2025-09-03T20:17:11.366+0000] {taskinstance.py:1350} INFO - Marking task as SUCCESS. dag_id=raw_data, task_id=create_schemas, execution_date=20250903T194645, start_date=20250903T201707, end_date=20250903T201711
+[2025-09-03T20:17:11.410+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 0
+[2025-09-03T20:17:11.480+0000] {taskinstance.py:2653} INFO - 1 downstream tasks scheduled from follow-on schedule check

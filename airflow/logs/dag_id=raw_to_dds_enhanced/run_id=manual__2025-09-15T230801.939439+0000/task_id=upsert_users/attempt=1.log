@@ -1,0 +1,15 @@
+[2025-09-15T23:08:06.759+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: raw_to_dds_enhanced.upsert_users manual__2025-09-15T23:08:01.939439+00:00 [queued]>
+[2025-09-15T23:08:06.773+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: raw_to_dds_enhanced.upsert_users manual__2025-09-15T23:08:01.939439+00:00 [queued]>
+[2025-09-15T23:08:06.774+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 3
+[2025-09-15T23:08:06.810+0000] {taskinstance.py:1327} INFO - Executing <Task(PythonOperator): upsert_users> on 2025-09-15 23:08:01.939439+00:00
+[2025-09-15T23:08:06.825+0000] {standard_task_runner.py:57} INFO - Started process 1106 to run task
+[2025-09-15T23:08:06.829+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'raw_to_dds_enhanced', 'upsert_users', 'manual__2025-09-15T23:08:01.939439+00:00', '--job-id', '534', '--raw', '--subdir', 'DAGS_FOLDER/raw_to_dds.py', '--cfg-path', '/tmp/tmp1emgb35r']
+[2025-09-15T23:08:06.833+0000] {standard_task_runner.py:85} INFO - Job 534: Subtask upsert_users
+[2025-09-15T23:08:06.864+0000] {logging_mixin.py:150} WARNING - /home/***/.local/lib/python3.7/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-09-15T23:08:06.931+0000] {task_command.py:410} INFO - Running <TaskInstance: raw_to_dds_enhanced.upsert_users manual__2025-09-15T23:08:01.939439+00:00 [running]> on host 71d7292233fc
+[2025-09-15T23:08:07.179+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='raw_to_dds_enhanced' AIRFLOW_CTX_TASK_ID='upsert_users' AIRFLOW_CTX_EXECUTION_DATE='2025-09-15T23:08:01.939439+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-09-15T23:08:01.939439+00:00'
+[2025-09-15T23:08:07.508+0000] {python.py:183} INFO - Done. Returned value was: None
+[2025-09-15T23:08:07.529+0000] {taskinstance.py:1350} INFO - Marking task as SUCCESS. dag_id=raw_to_dds_enhanced, task_id=upsert_users, execution_date=20250915T230801, start_date=20250915T230806, end_date=20250915T230807
+[2025-09-15T23:08:07.531+0000] {logging_mixin.py:150} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:205 AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+[2025-09-15T23:08:08.007+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 0
+[2025-09-15T23:08:08.058+0000] {taskinstance.py:2653} INFO - 1 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,63 @@
+[2025-09-14T19:58:22.833+0000] {logging_mixin.py:150} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/sqlalchemy.py:124 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-09-14T19:58:23.112+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: raw_to_dds_enhanced.load_events scheduled__2025-09-14T18:57:57.503442+00:00 [queued]>
+[2025-09-14T19:58:23.158+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: raw_to_dds_enhanced.load_events scheduled__2025-09-14T18:57:57.503442+00:00 [queued]>
+[2025-09-14T19:58:23.160+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 3
+[2025-09-14T19:58:23.215+0000] {taskinstance.py:1327} INFO - Executing <Task(PythonOperator): load_events> on 2025-09-14 18:57:57.503442+00:00
+[2025-09-14T19:58:23.230+0000] {standard_task_runner.py:57} INFO - Started process 13157 to run task
+[2025-09-14T19:58:23.241+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'raw_to_dds_enhanced', 'load_events', 'scheduled__2025-09-14T18:57:57.503442+00:00', '--job-id', '270', '--raw', '--subdir', 'DAGS_FOLDER/raw_to_dds.py', '--cfg-path', '/tmp/tmp2uyom7qf']
+[2025-09-14T19:58:23.249+0000] {standard_task_runner.py:85} INFO - Job 270: Subtask load_events
+[2025-09-14T19:58:23.346+0000] {logging_mixin.py:150} WARNING - /home/***/.local/lib/python3.7/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-09-14T19:58:23.521+0000] {task_command.py:410} INFO - Running <TaskInstance: raw_to_dds_enhanced.load_events scheduled__2025-09-14T18:57:57.503442+00:00 [running]> on host 3deaa5b4a23c
+[2025-09-14T19:58:23.589+0000] {logging_mixin.py:150} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/sqlalchemy.py:124 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-09-14T19:58:23.914+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='raw_to_dds_enhanced' AIRFLOW_CTX_TASK_ID='load_events' AIRFLOW_CTX_EXECUTION_DATE='2025-09-14T18:57:57.503442+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-09-14T18:57:57.503442+00:00'
+[2025-09-14T19:58:23.998+0000] {dags_utils.py:33} WARNING - ❌ Отброшена строка {'event_id': 1, 'user_id': '1889', 'session_id': '1c332c00-4ed5-4484-b9e6-fbcc75f20e36', 'event_type': 'session_start', 'product_id': nan, 'order_id': None, 'quantity': nan, 'city': 'Weddell Sea', 'country': None, 'lat': -76.118308, 'lon': -29.152568, 'cost_usd': 648.43, 'cost_eur': 552.8, 'cost_rub': 54523.56, 'weather_temp': -18.79, 'weather_desc': 'overcast clouds', 'timestamp': Timestamp('2025-09-13 22:14:55.733938'), 'product_name': None, 'product_category': None} → 2 validation errors for EventModel
+product_id
+  value is not a valid integer (type=type_error.integer)
+quantity
+  value is not a valid integer (type=type_error.integer)
+[2025-09-14T19:58:24.001+0000] {dags_utils.py:33} WARNING - ❌ Отброшена строка {'event_id': 3, 'user_id': '4567', 'session_id': '9edfebd0-21c3-46b3-9458-06c4588531a0', 'event_type': 'view_product', 'product_id': 269.0, 'order_id': None, 'quantity': nan, 'city': 'Indian Ocean', 'country': None, 'lat': -34.283125, 'lon': 30.289944, 'cost_usd': 755.53, 'cost_eur': 644.15, 'cost_rub': 63545.22, 'weather_temp': 17.44, 'weather_desc': 'clear sky', 'timestamp': Timestamp('2025-09-14 11:58:11.727564'), 'product_name': None, 'product_category': None} → 1 validation error for EventModel
+quantity
+  value is not a valid integer (type=type_error.integer)
+[2025-09-14T19:58:24.004+0000] {dags_utils.py:33} WARNING - ❌ Отброшена строка {'event_id': 5, 'user_id': '791', 'session_id': 'c871b5ac-975b-4183-bfb8-3f448ed77c68', 'event_type': 'view_product', 'product_id': 464.0, 'order_id': None, 'quantity': nan, 'city': 'South Pacific Ocean', 'country': None, 'lat': -15.973097, 'lon': -104.363599, 'cost_usd': 49.87, 'cost_eur': 42.52, 'cost_rub': 4194.41, 'weather_temp': 20.76, 'weather_desc': 'overcast clouds', 'timestamp': Timestamp('2025-09-14 12:05:54.924139'), 'product_name': None, 'product_category': None} → 1 validation error for EventModel
+quantity
+  value is not a valid integer (type=type_error.integer)
+[2025-09-14T19:58:24.006+0000] {dags_utils.py:33} WARNING - ❌ Отброшена строка {'event_id': 6, 'user_id': '791', 'session_id': 'bdac6a8d-6f60-46fe-b635-b9901878e59c', 'event_type': 'session_start', 'product_id': nan, 'order_id': None, 'quantity': nan, 'city': 'South Atlantic Ocean', 'country': None, 'lat': -15.8463625, 'lon': 0.519776, 'cost_usd': 335.42, 'cost_eur': 285.97, 'cost_rub': 28211.11, 'weather_temp': 18.05, 'weather_desc': 'clear sky', 'timestamp': Timestamp('2025-09-14 12:05:56.533828'), 'product_name': None, 'product_category': None} → 2 validation errors for EventModel
+product_id
+  value is not a valid integer (type=type_error.integer)
+quantity
+  value is not a valid integer (type=type_error.integer)
+[2025-09-14T19:58:24.008+0000] {dags_utils.py:33} WARNING - ❌ Отброшена строка {'event_id': 7, 'user_id': '1280', 'session_id': '18731179-fac5-446c-819e-f76c1ee23af8', 'event_type': 'session_start', 'product_id': nan, 'order_id': None, 'quantity': nan, 'city': '822-9 下古沢', 'country': 'Japan', 'lat': 35.4574915, 'lon': 139.31487, 'cost_usd': 51.46, 'cost_eur': 43.87, 'cost_rub': 4328.14, 'weather_temp': 27.46, 'weather_desc': 'overcast clouds', 'timestamp': Timestamp('2025-09-14 12:06:12.545725'), 'product_name': None, 'product_category': None} → 2 validation errors for EventModel
+product_id
+  value is not a valid integer (type=type_error.integer)
+quantity
+  value is not a valid integer (type=type_error.integer)
+[2025-09-14T19:58:24.011+0000] {dags_utils.py:33} WARNING - ❌ Отброшена строка {'event_id': 9, 'user_id': '3709', 'session_id': '8e01614f-8230-41d4-8114-bb28002f3a6b', 'event_type': 'session_start', 'product_id': nan, 'order_id': None, 'quantity': nan, 'city': 'Coral Sea', 'country': None, 'lat': -10.5068305, 'lon': 165.757664, 'cost_usd': 629.98, 'cost_eur': 537.11, 'cost_rub': 52985.61, 'weather_temp': 27.57, 'weather_desc': 'overcast clouds', 'timestamp': Timestamp('2025-09-14 12:06:23.086625'), 'product_name': None, 'product_category': None} → 2 validation errors for EventModel
+product_id
+  value is not a valid integer (type=type_error.integer)
+quantity
+  value is not a valid integer (type=type_error.integer)
+[2025-09-14T19:58:24.014+0000] {dags_utils.py:33} WARNING - ❌ Отброшена строка {'event_id': 11, 'user_id': '4882', 'session_id': 'bab782ea-1bcc-4652-a59a-1a71057c7c71', 'event_type': 'view_product', 'product_id': 118.0, 'order_id': None, 'quantity': nan, 'city': 'Labrador Sea', 'country': None, 'lat': 56.001732, 'lon': -50.404054, 'cost_usd': 886.71, 'cost_eur': 755.99, 'cost_rub': 74578.36, 'weather_temp': 6.95, 'weather_desc': 'overcast clouds', 'timestamp': Timestamp('2025-09-14 12:06:32.574933'), 'product_name': None, 'product_category': None} → 1 validation error for EventModel
+quantity
+  value is not a valid integer (type=type_error.integer)
+[2025-09-14T19:58:24.016+0000] {dags_utils.py:33} WARNING - ❌ Отброшена строка {'event_id': 12, 'user_id': '4882', 'session_id': '9461d858-f7b1-4662-ac2a-77c239fecc3f', 'event_type': 'view_product', 'product_id': 13.0, 'order_id': None, 'quantity': nan, 'city': 'South Atlantic Ocean', 'country': None, 'lat': -39.0392975, 'lon': -18.534867, 'cost_usd': 24.1, 'cost_eur': 20.55, 'cost_rub': 2026.97, 'weather_temp': 8.79, 'weather_desc': 'light rain', 'timestamp': Timestamp('2025-09-14 12:06:34.930558'), 'product_name': None, 'product_category': None} → 1 validation error for EventModel
+quantity
+  value is not a valid integer (type=type_error.integer)
+[2025-09-14T19:58:24.018+0000] {dags_utils.py:33} WARNING - ❌ Отброшена строка {'event_id': 16, 'user_id': '2178', 'session_id': 'cea185d7-44f4-44e6-8f7f-1bf1c6fe00ca', 'event_type': 'view_product', 'product_id': 236.0, 'order_id': None, 'quantity': nan, 'city': 'Bilma', 'country': 'Niger', 'lat': 18.226402, 'lon': 14.778702, 'cost_usd': 485.06, 'cost_eur': 413.55, 'cost_rub': 40796.85, 'weather_temp': 37.83, 'weather_desc': 'few clouds', 'timestamp': Timestamp('2025-09-14 12:08:44.194374'), 'product_name': None, 'product_category': None} → 1 validation error for EventModel
+quantity
+  value is not a valid integer (type=type_error.integer)
+[2025-09-14T19:58:24.020+0000] {dags_utils.py:33} WARNING - ❌ Отброшена строка {'event_id': 17, 'user_id': '3850', 'session_id': '3833a77d-274c-4db9-bee2-245998b490ef', 'event_type': 'session_start', 'product_id': nan, 'order_id': None, 'quantity': nan, 'city': 'Monduli', 'country': 'Tanzania', 'lat': -3.7847665, 'lon': 36.187592, 'cost_usd': 145.08, 'cost_eur': 123.69, 'cost_rub': 12202.22, 'weather_temp': 31.04, 'weather_desc': 'few clouds', 'timestamp': Timestamp('2025-09-14 12:09:33.438028'), 'product_name': None, 'product_category': None} → 2 validation errors for EventModel
+product_id
+  value is not a valid integer (type=type_error.integer)
+quantity
+  value is not a valid integer (type=type_error.integer)
+[2025-09-14T19:58:24.023+0000] {dags_utils.py:33} WARNING - ❌ Отброшена строка {'event_id': 20, 'user_id': '2208', 'session_id': '27ccd6f7-7051-460e-917e-c71f2a9ea53b', 'event_type': 'view_product', 'product_id': 250.0, 'order_id': None, 'quantity': nan, 'city': 'Antarctica', 'country': 'Antarctica', 'lat': -88.1050465, 'lon': 132.91323, 'cost_usd': 488.85, 'cost_eur': 416.78, 'cost_rub': 41115.62, 'weather_temp': -51.35, 'weather_desc': 'overcast clouds', 'timestamp': Timestamp('2025-09-14 12:36:15.894190'), 'product_name': None, 'product_category': None} → 1 validation error for EventModel
+quantity
+  value is not a valid integer (type=type_error.integer)
+[2025-09-14T19:58:24.025+0000] {dags_utils.py:33} WARNING - ❌ Отброшена строка {'event_id': 21, 'user_id': '2096', 'session_id': 'f72dfa95-003b-4e0e-8327-baa22fd9ab7b', 'event_type': 'view_product', 'product_id': 10.0, 'order_id': None, 'quantity': nan, 'city': 'North Atlantic Ocean', 'country': None, 'lat': 30.9159985, 'lon': -77.231723, 'cost_usd': 779.38, 'cost_eur': 664.48, 'cost_rub': 65551.17, 'weather_temp': 26.52, 'weather_desc': 'broken clouds', 'timestamp': Timestamp('2025-09-14 19:11:14.545929'), 'product_name': None, 'product_category': 'toys'} → 1 validation error for EventModel
+quantity
+  value is not a valid integer (type=type_error.integer)
+[2025-09-14T19:58:24.098+0000] {python.py:183} INFO - Done. Returned value was: 12
+[2025-09-14T19:58:24.176+0000] {taskinstance.py:1350} INFO - Marking task as SUCCESS. dag_id=raw_to_dds_enhanced, task_id=load_events, execution_date=20250914T185757, start_date=20250914T195823, end_date=20250914T195824
+[2025-09-14T19:58:24.180+0000] {logging_mixin.py:150} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:205 AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+[2025-09-14T19:58:24.537+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 0
+[2025-09-14T19:58:24.593+0000] {taskinstance.py:2653} INFO - 3 downstream tasks scheduled from follow-on schedule check

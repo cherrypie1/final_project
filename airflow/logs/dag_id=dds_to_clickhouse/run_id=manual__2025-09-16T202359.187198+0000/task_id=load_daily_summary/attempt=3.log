@@ -1,0 +1,16 @@
+[2025-09-16T20:31:45.555+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dds_to_clickhouse.load_daily_summary manual__2025-09-16T20:23:59.187198+00:00 [queued]>
+[2025-09-16T20:31:45.594+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dds_to_clickhouse.load_daily_summary manual__2025-09-16T20:23:59.187198+00:00 [queued]>
+[2025-09-16T20:31:45.602+0000] {taskinstance.py:1308} INFO - Starting attempt 3 of 4
+[2025-09-16T20:31:45.716+0000] {taskinstance.py:1327} INFO - Executing <Task(PythonOperator): load_daily_summary> on 2025-09-16 20:23:59.187198+00:00
+[2025-09-16T20:31:45.775+0000] {standard_task_runner.py:57} INFO - Started process 1789 to run task
+[2025-09-16T20:31:45.791+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'dds_to_clickhouse', 'load_daily_summary', 'manual__2025-09-16T20:23:59.187198+00:00', '--job-id', '820', '--raw', '--subdir', 'DAGS_FOLDER/dds_to_clickhouse.py', '--cfg-path', '/tmp/tmpbzy0b__x']
+[2025-09-16T20:31:45.802+0000] {standard_task_runner.py:85} INFO - Job 820: Subtask load_daily_summary
+[2025-09-16T20:31:45.871+0000] {logging_mixin.py:150} WARNING - /home/***/.local/lib/python3.7/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-09-16T20:31:46.165+0000] {task_command.py:410} INFO - Running <TaskInstance: dds_to_clickhouse.load_daily_summary manual__2025-09-16T20:23:59.187198+00:00 [running]> on host d6e2a7c8b3ee
+[2025-09-16T20:31:46.684+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dds_to_clickhouse' AIRFLOW_CTX_TASK_ID='load_daily_summary' AIRFLOW_CTX_EXECUTION_DATE='2025-09-16T20:23:59.187198+00:00' AIRFLOW_CTX_TRY_NUMBER='3' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-09-16T20:23:59.187198+00:00'
+[2025-09-16T20:31:47.093+0000] {ch_utils.py:96} INFO - ✅ Загружено 3 строк в daily_business_summary
+[2025-09-16T20:31:47.095+0000] {ch_utils.py:98} INFO - 🎉 Полный перенос завершён: 3 строк в daily_business_summary
+[2025-09-16T20:31:47.097+0000] {python.py:183} INFO - Done. Returned value was: None
+[2025-09-16T20:31:47.168+0000] {taskinstance.py:1350} INFO - Marking task as SUCCESS. dag_id=dds_to_clickhouse, task_id=load_daily_summary, execution_date=20250916T202359, start_date=20250916T203145, end_date=20250916T203147
+[2025-09-16T20:31:47.262+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 0
+[2025-09-16T20:31:47.365+0000] {taskinstance.py:2653} INFO - 0 downstream tasks scheduled from follow-on schedule check

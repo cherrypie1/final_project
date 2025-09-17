@@ -1,23 +1,25 @@
-version: '3.8'
 services:
-  # ZooKeeper для Kafka
   zookeeper:
     image: confluentinc/cp-zookeeper:7.3.0
     environment:
       ZOOKEEPER_CLIENT_PORT: 2181
       ZOOKEEPER_TICK_TIME: 2000
 
+
   kafka:
     image: confluentinc/cp-kafka:7.3.0
-    depends_on:
-      - zookeeper
     ports:
       - "9092:9092"
+      - "29092:29092"
     environment:
       KAFKA_BROKER_ID: 1
       KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
-      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://localhost:9092
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,PLAINTEXT_HOST:PLAINTEXT
+      KAFKA_LISTENERS: PLAINTEXT://0.0.0.0:29092,PLAINTEXT_HOST://0.0.0.0:9092
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:29092,PLAINTEXT_HOST://host.docker.internal:9092
+      KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT
       KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+
 
   postgres:
     image: postgres:15
@@ -30,13 +32,20 @@ services:
     volumes:
       - pgdata:/var/lib/postgresql/data
 
+
   clickhouse:
-    image: clickhouse/clickhouse-server:23.8
+    image: clickhouse/clickhouse-server:23.3
+    container_name: clickhouse
     ports:
-      - "8123:8123" # HTTP
-      - "9000:9000" # Native client
+      - "8123:8123"
+      - "9000:9000"
     volumes:
       - clickhouse_data:/var/lib/clickhouse
+      - ./sql/clickhouse_init.sql:/docker-entrypoint-initdb.d/init.sql
+    environment:
+      CLICKHOUSE_DB: data_mart
+      CLICKHOUSE_USER: airflow
+      CLICKHOUSE_PASSWORD: airflow
 
   airflow-init:
     image: apache/airflow:2.6.3
@@ -59,10 +68,12 @@ services:
       AIRFLOW__CORE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres:5432/dwh
       AIRFLOW__CORE__FERNET_KEY: ""
       AIRFLOW__CORE__LOAD_EXAMPLES: "false"
+      PYTHONPATH: /opt/airflow
     volumes:
       - ./airflow/dags:/opt/airflow/dags
       - ./airflow/logs:/opt/airflow/logs
-      - ./airflow/plugins:/opt/airflow/plugins
+      - ./airflow/utils:/opt/airflow/utils
+      - ./sql:/opt/airflow/sql
 
   airflow-webserver:
     image: apache/airflow:2.6.3
@@ -73,13 +84,16 @@ services:
       AIRFLOW__CORE__EXECUTOR: LocalExecutor
       AIRFLOW__CORE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres:5432/dwh
       AIRFLOW__CORE__FERNET_KEY: ""
+      PYTHONPATH: /opt/airflow
     ports:
-      - "8080:8080"
+      - "8081:8080"
     volumes:
       - ./airflow/dags:/opt/airflow/dags
       - ./airflow/logs:/opt/airflow/logs
-      - ./airflow/plugins:/opt/airflow/plugins
-    command: webserver
+      - ./airflow/utils:/opt/airflow/utils
+      - ./sql:/opt/airflow/sql
+      - ./airflow/requirements.txt:/requirements.txt
+    command: bash -c "pip install -r /requirements.txt && airflow webserver"
 
   airflow-scheduler:
     image: apache/airflow:2.6.3
@@ -89,11 +103,15 @@ services:
     environment:
       AIRFLOW__CORE__EXECUTOR: LocalExecutor
       AIRFLOW__CORE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres:5432/dwh
+      PYTHONPATH: /opt/airflow
     volumes:
       - ./airflow/dags:/opt/airflow/dags
       - ./airflow/logs:/opt/airflow/logs
-      - ./airflow/plugins:/opt/airflow/plugins
-    command: scheduler
+      - ./airflow/utils:/opt/airflow/utils
+      - ./sql:/opt/airflow/sql
+      - ./airflow/requirements.txt:/requirements.txt
+    command: bash -c "pip install -r /requirements.txt && airflow scheduler"
+
 
 volumes:
   pgdata:

@@ -1,0 +1,57 @@
+[2025-09-03T19:42:03.242+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: kafka_to_postgres.create_dds_tables manual__2025-09-03T19:41:34.369313+00:00 [queued]>
+[2025-09-03T19:42:03.275+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: kafka_to_postgres.create_dds_tables manual__2025-09-03T19:41:34.369313+00:00 [queued]>
+[2025-09-03T19:42:03.276+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 3
+[2025-09-03T19:42:03.327+0000] {taskinstance.py:1327} INFO - Executing <Task(PostgresOperator): create_dds_tables> on 2025-09-03 19:41:34.369313+00:00
+[2025-09-03T19:42:03.346+0000] {standard_task_runner.py:57} INFO - Started process 1942 to run task
+[2025-09-03T19:42:03.354+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'kafka_to_postgres', 'create_dds_tables', 'manual__2025-09-03T19:41:34.369313+00:00', '--job-id', '252', '--raw', '--subdir', 'DAGS_FOLDER/dags.py', '--cfg-path', '/tmp/tmp6xd7rc11']
+[2025-09-03T19:42:03.362+0000] {standard_task_runner.py:85} INFO - Job 252: Subtask create_dds_tables
+[2025-09-03T19:42:03.416+0000] {logging_mixin.py:150} WARNING - /home/***/.local/lib/python3.7/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-09-03T19:42:03.547+0000] {task_command.py:410} INFO - Running <TaskInstance: kafka_to_postgres.create_dds_tables manual__2025-09-03T19:41:34.369313+00:00 [running]> on host 566c672cfab0
+[2025-09-03T19:42:03.928+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='kafka_to_postgres' AIRFLOW_CTX_TASK_ID='create_dds_tables' AIRFLOW_CTX_EXECUTION_DATE='2025-09-03T19:41:34.369313+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-09-03T19:41:34.369313+00:00'
+[2025-09-03T19:42:03.930+0000] {sql.py:265} INFO - Executing: 
+        CREATE TABLE IF NOT EXISTS dds.users (
+            id SERIAL PRIMARY KEY,
+            user_id INT UNIQUE
+        );
+
+        CREATE TABLE IF NOT EXISTS dds.facts_events (
+            id SERIAL PRIMARY KEY,
+            user_id INT REFERENCES dds.users(id),
+            event_type_id INT REFERENCES dictionary.event_types(id),
+            city_id INT REFERENCES dictionary.cities(id),
+            lat DOUBLE PRECISION,
+            lon DOUBLE PRECISION,
+            cost_usd NUMERIC(10,2),
+            cost_eur NUMERIC(10,2),
+            cost_rub NUMERIC(10,2),
+            weather_temp NUMERIC(5,2),
+            weather_desc TEXT,
+            timestamp TIMESTAMPTZ
+        );
+        
+[2025-09-03T19:42:03.960+0000] {base.py:73} INFO - Using connection ID 'postgres_default' for task execution.
+[2025-09-03T19:42:04.327+0000] {base.py:73} INFO - Using connection ID 'postgres_default' for task execution.
+[2025-09-03T19:42:04.344+0000] {sql.py:375} INFO - Running statement: 
+        CREATE TABLE IF NOT EXISTS dds.users (
+            id SERIAL PRIMARY KEY,
+            user_id INT UNIQUE
+        );
+
+        CREATE TABLE IF NOT EXISTS dds.facts_events (
+            id SERIAL PRIMARY KEY,
+            user_id INT REFERENCES dds.users(id),
+            event_type_id INT REFERENCES dictionary.event_types(id),
+            city_id INT REFERENCES dictionary.cities(id),
+            lat DOUBLE PRECISION,
+            lon DOUBLE PRECISION,
+            cost_usd NUMERIC(10,2),
+            cost_eur NUMERIC(10,2),
+            cost_rub NUMERIC(10,2),
+            weather_temp NUMERIC(5,2),
+            weather_desc TEXT,
+            timestamp TIMESTAMPTZ
+        );
+        , parameters: None
+[2025-09-03T19:42:04.373+0000] {taskinstance.py:1350} INFO - Marking task as SUCCESS. dag_id=kafka_to_postgres, task_id=create_dds_tables, execution_date=20250903T194134, start_date=20250903T194203, end_date=20250903T194204
+[2025-09-03T19:42:04.452+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 0
+[2025-09-03T19:42:04.515+0000] {taskinstance.py:2653} INFO - 1 downstream tasks scheduled from follow-on schedule check

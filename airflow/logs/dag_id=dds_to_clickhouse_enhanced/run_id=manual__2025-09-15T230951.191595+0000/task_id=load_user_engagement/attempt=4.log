@@ -1,0 +1,55 @@
+[2025-09-15T23:39:40.272+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dds_to_clickhouse_enhanced.load_user_engagement manual__2025-09-15T23:09:51.191595+00:00 [queued]>
+[2025-09-15T23:39:40.341+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dds_to_clickhouse_enhanced.load_user_engagement manual__2025-09-15T23:09:51.191595+00:00 [queued]>
+[2025-09-15T23:39:40.344+0000] {taskinstance.py:1308} INFO - Starting attempt 4 of 4
+[2025-09-15T23:39:40.495+0000] {taskinstance.py:1327} INFO - Executing <Task(PythonOperator): load_user_engagement> on 2025-09-15 23:09:51.191595+00:00
+[2025-09-15T23:39:40.673+0000] {standard_task_runner.py:57} INFO - Started process 4677 to run task
+[2025-09-15T23:39:40.689+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'dds_to_clickhouse_enhanced', 'load_user_engagement', 'manual__2025-09-15T23:09:51.191595+00:00', '--job-id', '600', '--raw', '--subdir', 'DAGS_FOLDER/dds_to_clickhouse.py', '--cfg-path', '/tmp/tmpa2n8advu']
+[2025-09-15T23:39:40.710+0000] {standard_task_runner.py:85} INFO - Job 600: Subtask load_user_engagement
+[2025-09-15T23:39:41.127+0000] {logging_mixin.py:150} WARNING - /home/***/.local/lib/python3.7/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-09-15T23:39:42.120+0000] {task_command.py:410} INFO - Running <TaskInstance: dds_to_clickhouse_enhanced.load_user_engagement manual__2025-09-15T23:09:51.191595+00:00 [running]> on host 71d7292233fc
+[2025-09-15T23:39:44.580+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dds_to_clickhouse_enhanced' AIRFLOW_CTX_TASK_ID='load_user_engagement' AIRFLOW_CTX_EXECUTION_DATE='2025-09-15T23:09:51.191595+00:00' AIRFLOW_CTX_TRY_NUMBER='4' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-09-15T23:09:51.191595+00:00'
+[2025-09-15T23:39:45.713+0000] {taskinstance.py:1824} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/clickhouse_driver/columns/base.py", line 203, in write_items
+    buf.write(s.pack(*items))
+struct.error: required argument is not an integer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/clickhouse_driver/columns/service.py", line 167, in write_column
+    column.write_data(items, buf)
+  File "/home/airflow/.local/lib/python3.7/site-packages/clickhouse_driver/columns/base.py", line 145, in write_data
+    self._write_data(items, buf)
+  File "/home/airflow/.local/lib/python3.7/site-packages/clickhouse_driver/columns/base.py", line 149, in _write_data
+    self.write_items(prepared, buf)
+  File "/home/airflow/.local/lib/python3.7/site-packages/clickhouse_driver/columns/base.py", line 206, in write_items
+    raise exceptions.StructPackException(e)
+clickhouse_driver.columns.exceptions.StructPackException: required argument is not an integer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 181, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 198, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/dds_to_clickhouse.py", line 205, in load_user_engagement
+    ch_client.execute("INSERT INTO user_engagement VALUES", df.to_dict("records"))
+  File "/home/airflow/.local/lib/python3.7/site-packages/clickhouse_driver/client.py", line 379, in execute
+    columnar=columnar
+  File "/home/airflow/.local/lib/python3.7/site-packages/clickhouse_driver/client.py", line 608, in process_insert_query
+    types_check=types_check, columnar=columnar)
+  File "/home/airflow/.local/lib/python3.7/site-packages/clickhouse_driver/client.py", line 660, in send_data
+    self.connection.send_data(block)
+  File "/home/airflow/.local/lib/python3.7/site-packages/clickhouse_driver/connection.py", line 688, in send_data
+    self.block_out.write(block)
+  File "/home/airflow/.local/lib/python3.7/site-packages/clickhouse_driver/streams/native.py", line 49, in write
+    self.fout, types_check=block.types_check)
+  File "/home/airflow/.local/lib/python3.7/site-packages/clickhouse_driver/columns/service.py", line 183, in write_column
+    column_name, str(error)
+clickhouse_driver.errors.TypeMismatchError: Code: 53. Type mismatch in VALUES section. Repeat query with types_check=True for detailed info. Column total_events: required argument is not an integer
+[2025-09-15T23:39:46.242+0000] {taskinstance.py:1350} INFO - Marking task as FAILED. dag_id=dds_to_clickhouse_enhanced, task_id=load_user_engagement, execution_date=20250915T230951, start_date=20250915T233940, end_date=20250915T233946
+[2025-09-15T23:39:46.505+0000] {standard_task_runner.py:109} ERROR - Failed to execute job 600 for task load_user_engagement (Code: 53. Type mismatch in VALUES section. Repeat query with types_check=True for detailed info. Column total_events: required argument is not an integer; 4677)
+[2025-09-15T23:39:46.593+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 1
+[2025-09-15T23:39:46.858+0000] {taskinstance.py:2653} INFO - 0 downstream tasks scheduled from follow-on schedule check

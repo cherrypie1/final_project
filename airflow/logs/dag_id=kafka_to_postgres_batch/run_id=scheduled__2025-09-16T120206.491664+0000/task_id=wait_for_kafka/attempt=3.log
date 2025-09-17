@@ -1,0 +1,270 @@
+[2025-09-16T12:44:50.031+0000] {logging_mixin.py:150} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/sqlalchemy.py:124 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-09-16T12:44:50.211+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: kafka_to_postgres_batch.wait_for_kafka scheduled__2025-09-16T12:02:06.491664+00:00 [queued]>
+[2025-09-16T12:44:50.228+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: kafka_to_postgres_batch.wait_for_kafka scheduled__2025-09-16T12:02:06.491664+00:00 [queued]>
+[2025-09-16T12:44:50.230+0000] {taskinstance.py:1308} INFO - Starting attempt 3 of 3
+[2025-09-16T12:44:50.264+0000] {taskinstance.py:1327} INFO - Executing <Task(PythonSensor): wait_for_kafka> on 2025-09-16 12:02:06.491664+00:00
+[2025-09-16T12:44:50.281+0000] {standard_task_runner.py:57} INFO - Started process 531 to run task
+[2025-09-16T12:44:50.287+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'kafka_to_postgres_batch', 'wait_for_kafka', 'scheduled__2025-09-16T12:02:06.491664+00:00', '--job-id', '680', '--raw', '--subdir', 'DAGS_FOLDER/dags.py', '--cfg-path', '/tmp/tmptjk8xdkg']
+[2025-09-16T12:44:50.296+0000] {standard_task_runner.py:85} INFO - Job 680: Subtask wait_for_kafka
+[2025-09-16T12:44:50.345+0000] {logging_mixin.py:150} WARNING - /home/***/.local/lib/python3.7/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-09-16T12:44:50.417+0000] {task_command.py:410} INFO - Running <TaskInstance: kafka_to_postgres_batch.wait_for_kafka scheduled__2025-09-16T12:02:06.491664+00:00 [running]> on host 4dbbeb5aac02
+[2025-09-16T12:44:50.449+0000] {logging_mixin.py:150} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/sqlalchemy.py:124 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-09-16T12:44:50.653+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='kafka_to_postgres_batch' AIRFLOW_CTX_TASK_ID='wait_for_kafka' AIRFLOW_CTX_EXECUTION_DATE='2025-09-16T12:02:06.491664+00:00' AIRFLOW_CTX_TRY_NUMBER='3' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-09-16T12:02:06.491664+00:00'
+[2025-09-16T12:44:50.656+0000] {python.py:72} INFO - Poking callable: <function check_kafka_message at 0x7f0e726ccc20>
+[2025-09-16T12:44:50.672+0000] {conn.py:397} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:29092 <connecting> [IPv4 ('172.23.0.3', 29092)]>: connecting to kafka:29092 [('172.23.0.3', 29092) IPv4]
+[2025-09-16T12:44:51.078+0000] {conn.py:618} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:29092 <checking_api_versions_recv> [IPv4 ('172.23.0.3', 29092)]>: Broker version identified as 2.6
+[2025-09-16T12:44:51.080+0000] {conn.py:457} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:29092 <connected> [IPv4 ('172.23.0.3', 29092)]>: Connection complete.
+[2025-09-16T12:44:51.088+0000] {subscription_state.py:181} INFO - Updating subscribed topics to: ('user_events',)
+[2025-09-16T12:44:55.161+0000] {cluster.py:314} WARNING - Topic user_events is not available during auto-create initialization
+[2025-09-16T12:44:55.174+0000] {subscription_state.py:254} INFO - Updated partition assignment: []
+[2025-09-16T12:44:56.102+0000] {conn.py:945} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:29092 <connected> [IPv4 ('172.23.0.3', 29092)]>: Closing connection. 
+[2025-09-16T12:45:06.169+0000] {python.py:72} INFO - Poking callable: <function check_kafka_message at 0x7f0e726ccc20>
+[2025-09-16T12:45:06.250+0000] {conn.py:397} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:29092 <connecting> [IPv4 ('172.23.0.3', 29092)]>: connecting to kafka:29092 [('172.23.0.3', 29092) IPv4]
+[2025-09-16T12:45:06.505+0000] {conn.py:618} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:29092 <checking_api_versions_recv> [IPv4 ('172.23.0.3', 29092)]>: Broker version identified as 2.6
+[2025-09-16T12:45:06.507+0000] {conn.py:457} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:29092 <connected> [IPv4 ('172.23.0.3', 29092)]>: Connection complete.
+[2025-09-16T12:45:06.528+0000] {subscription_state.py:181} INFO - Updating subscribed topics to: ('user_events',)
+[2025-09-16T12:45:06.882+0000] {subscription_state.py:254} INFO - Updated partition assignment: [('user_events', 0)]
+[2025-09-16T12:45:06.899+0000] {conn.py:397} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1 host=kafka:29092 <connecting> [IPv4 ('172.23.0.3', 29092)]>: connecting to kafka:29092 [('172.23.0.3', 29092) IPv4]
+[2025-09-16T12:45:06.907+0000] {conn.py:457} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1 host=kafka:29092 <connected> [IPv4 ('172.23.0.3', 29092)]>: Connection complete.
+[2025-09-16T12:45:06.919+0000] {conn.py:945} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:29092 <connected> [IPv4 ('172.23.0.3', 29092)]>: Closing connection. 
+[2025-09-16T12:45:08.558+0000] {fetcher.py:418} INFO - Resetting offset for partition ('user_events', 0) to offset 0.
+[2025-09-16T12:45:11.531+0000] {conn.py:945} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1 host=kafka:29092 <connected> [IPv4 ('172.23.0.3', 29092)]>: Closing connection. 
+[2025-09-16T12:45:11.538+0000] {fetcher.py:786} INFO - Fetch to node 1 failed: Cancelled: <BrokerConnection client_id=kafka-python-2.2.15, node_id=1 host=kafka:29092 <connected> [IPv4 ('172.23.0.3', 29092)]>
+[2025-09-16T12:45:21.627+0000] {python.py:72} INFO - Poking callable: <function check_kafka_message at 0x7f0e726ccc20>
+[2025-09-16T12:45:21.639+0000] {conn.py:397} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:29092 <connecting> [IPv4 ('172.23.0.3', 29092)]>: connecting to kafka:29092 [('172.23.0.3', 29092) IPv4]
+[2025-09-16T12:45:21.673+0000] {conn.py:618} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:29092 <checking_api_versions_recv> [IPv4 ('172.23.0.3', 29092)]>: Broker version identified as 2.6
+[2025-09-16T12:45:21.674+0000] {conn.py:457} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:29092 <connected> [IPv4 ('172.23.0.3', 29092)]>: Connection complete.
+[2025-09-16T12:45:21.683+0000] {subscription_state.py:181} INFO - Updating subscribed topics to: ('user_events',)
+[2025-09-16T12:45:21.698+0000] {subscription_state.py:254} INFO - Updated partition assignment: [('user_events', 0)]
+[2025-09-16T12:45:21.702+0000] {conn.py:397} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1 host=kafka:29092 <connecting> [IPv4 ('172.23.0.3', 29092)]>: connecting to kafka:29092 [('172.23.0.3', 29092) IPv4]
+[2025-09-16T12:45:21.704+0000] {conn.py:457} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1 host=kafka:29092 <connected> [IPv4 ('172.23.0.3', 29092)]>: Connection complete.
+[2025-09-16T12:45:21.705+0000] {conn.py:945} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:29092 <connected> [IPv4 ('172.23.0.3', 29092)]>: Closing connection. 
+[2025-09-16T12:45:21.712+0000] {fetcher.py:418} INFO - Resetting offset for partition ('user_events', 0) to offset 0.
+[2025-09-16T12:45:26.709+0000] {conn.py:945} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1 host=kafka:29092 <connected> [IPv4 ('172.23.0.3', 29092)]>: Closing connection. 
+[2025-09-16T12:45:26.715+0000] {fetcher.py:786} INFO - Fetch to node 1 failed: Cancelled: <BrokerConnection client_id=kafka-python-2.2.15, node_id=1 host=kafka:29092 <connected> [IPv4 ('172.23.0.3', 29092)]>
+[2025-09-16T12:45:36.481+0000] {python.py:72} INFO - Poking callable: <function check_kafka_message at 0x7f0e726ccc20>
+[2025-09-16T12:45:36.486+0000] {conn.py:397} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:29092 <connecting> [IPv4 ('172.23.0.3', 29092)]>: connecting to kafka:29092 [('172.23.0.3', 29092) IPv4]
+[2025-09-16T12:45:36.510+0000] {conn.py:618} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:29092 <checking_api_versions_recv> [IPv4 ('172.23.0.3', 29092)]>: Broker version identified as 2.6
+[2025-09-16T12:45:36.512+0000] {conn.py:457} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:29092 <connected> [IPv4 ('172.23.0.3', 29092)]>: Connection complete.
+[2025-09-16T12:45:36.514+0000] {subscription_state.py:181} INFO - Updating subscribed topics to: ('user_events',)
+[2025-09-16T12:45:36.521+0000] {subscription_state.py:254} INFO - Updated partition assignment: [('user_events', 0)]
+[2025-09-16T12:45:36.525+0000] {conn.py:397} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1 host=kafka:29092 <connecting> [IPv4 ('172.23.0.3', 29092)]>: connecting to kafka:29092 [('172.23.0.3', 29092) IPv4]
+[2025-09-16T12:45:36.527+0000] {conn.py:457} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1 host=kafka:29092 <connected> [IPv4 ('172.23.0.3', 29092)]>: Connection complete.
+[2025-09-16T12:45:36.529+0000] {conn.py:945} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:29092 <connected> [IPv4 ('172.23.0.3', 29092)]>: Closing connection. 
+[2025-09-16T12:45:36.534+0000] {fetcher.py:418} INFO - Resetting offset for partition ('user_events', 0) to offset 0.
+[2025-09-16T12:45:41.515+0000] {conn.py:945} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1 host=kafka:29092 <connected> [IPv4 ('172.23.0.3', 29092)]>: Closing connection. 
+[2025-09-16T12:45:41.517+0000] {fetcher.py:786} INFO - Fetch to node 1 failed: Cancelled: <BrokerConnection client_id=kafka-python-2.2.15, node_id=1 host=kafka:29092 <connected> [IPv4 ('172.23.0.3', 29092)]>
+[2025-09-16T12:45:51.521+0000] {python.py:72} INFO - Poking callable: <function check_kafka_message at 0x7f0e726ccc20>
+[2025-09-16T12:45:51.526+0000] {conn.py:397} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:29092 <connecting> [IPv4 ('172.23.0.3', 29092)]>: connecting to kafka:29092 [('172.23.0.3', 29092) IPv4]
+[2025-09-16T12:45:51.534+0000] {conn.py:618} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:29092 <checking_api_versions_recv> [IPv4 ('172.23.0.3', 29092)]>: Broker version identified as 2.6
+[2025-09-16T12:45:51.535+0000] {conn.py:457} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:29092 <connected> [IPv4 ('172.23.0.3', 29092)]>: Connection complete.
+[2025-09-16T12:45:51.538+0000] {subscription_state.py:181} INFO - Updating subscribed topics to: ('user_events',)
+[2025-09-16T12:45:51.542+0000] {subscription_state.py:254} INFO - Updated partition assignment: [('user_events', 0)]
+[2025-09-16T12:45:51.545+0000] {conn.py:397} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1 host=kafka:29092 <connecting> [IPv4 ('172.23.0.3', 29092)]>: connecting to kafka:29092 [('172.23.0.3', 29092) IPv4]
+[2025-09-16T12:45:51.547+0000] {conn.py:457} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1 host=kafka:29092 <connected> [IPv4 ('172.23.0.3', 29092)]>: Connection complete.
+[2025-09-16T12:45:51.548+0000] {conn.py:945} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:29092 <connected> [IPv4 ('172.23.0.3', 29092)]>: Closing connection. 
+[2025-09-16T12:45:51.552+0000] {fetcher.py:418} INFO - Resetting offset for partition ('user_events', 0) to offset 0.
+[2025-09-16T12:45:56.542+0000] {conn.py:945} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1 host=kafka:29092 <connected> [IPv4 ('172.23.0.3', 29092)]>: Closing connection. 
+[2025-09-16T12:45:56.544+0000] {fetcher.py:786} INFO - Fetch to node 1 failed: Cancelled: <BrokerConnection client_id=kafka-python-2.2.15, node_id=1 host=kafka:29092 <connected> [IPv4 ('172.23.0.3', 29092)]>
+[2025-09-16T12:46:06.795+0000] {python.py:72} INFO - Poking callable: <function check_kafka_message at 0x7f0e726ccc20>
+[2025-09-16T12:46:06.816+0000] {conn.py:397} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:29092 <connecting> [IPv4 ('172.23.0.3', 29092)]>: connecting to kafka:29092 [('172.23.0.3', 29092) IPv4]
+[2025-09-16T12:46:06.846+0000] {conn.py:618} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:29092 <checking_api_versions_recv> [IPv4 ('172.23.0.3', 29092)]>: Broker version identified as 2.6
+[2025-09-16T12:46:06.847+0000] {conn.py:457} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:29092 <connected> [IPv4 ('172.23.0.3', 29092)]>: Connection complete.
+[2025-09-16T12:46:06.852+0000] {subscription_state.py:181} INFO - Updating subscribed topics to: ('user_events',)
+[2025-09-16T12:46:06.866+0000] {subscription_state.py:254} INFO - Updated partition assignment: [('user_events', 0)]
+[2025-09-16T12:46:06.873+0000] {conn.py:397} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1 host=kafka:29092 <connecting> [IPv4 ('172.23.0.3', 29092)]>: connecting to kafka:29092 [('172.23.0.3', 29092) IPv4]
+[2025-09-16T12:46:06.875+0000] {conn.py:457} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1 host=kafka:29092 <connected> [IPv4 ('172.23.0.3', 29092)]>: Connection complete.
+[2025-09-16T12:46:06.878+0000] {conn.py:945} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:29092 <connected> [IPv4 ('172.23.0.3', 29092)]>: Closing connection. 
+[2025-09-16T12:46:06.888+0000] {fetcher.py:418} INFO - Resetting offset for partition ('user_events', 0) to offset 0.
+[2025-09-16T12:46:11.854+0000] {conn.py:945} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1 host=kafka:29092 <connected> [IPv4 ('172.23.0.3', 29092)]>: Closing connection. 
+[2025-09-16T12:46:11.856+0000] {fetcher.py:786} INFO - Fetch to node 1 failed: Cancelled: <BrokerConnection client_id=kafka-python-2.2.15, node_id=1 host=kafka:29092 <connected> [IPv4 ('172.23.0.3', 29092)]>
+[2025-09-16T12:46:21.863+0000] {python.py:72} INFO - Poking callable: <function check_kafka_message at 0x7f0e726ccc20>
+[2025-09-16T12:46:21.877+0000] {conn.py:397} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:29092 <connecting> [IPv4 ('172.23.0.3', 29092)]>: connecting to kafka:29092 [('172.23.0.3', 29092) IPv4]
+[2025-09-16T12:46:21.891+0000] {conn.py:618} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:29092 <checking_api_versions_recv> [IPv4 ('172.23.0.3', 29092)]>: Broker version identified as 2.6
+[2025-09-16T12:46:21.891+0000] {conn.py:457} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:29092 <connected> [IPv4 ('172.23.0.3', 29092)]>: Connection complete.
+[2025-09-16T12:46:21.893+0000] {subscription_state.py:181} INFO - Updating subscribed topics to: ('user_events',)
+[2025-09-16T12:46:21.902+0000] {subscription_state.py:254} INFO - Updated partition assignment: [('user_events', 0)]
+[2025-09-16T12:46:21.907+0000] {conn.py:397} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1 host=kafka:29092 <connecting> [IPv4 ('172.23.0.3', 29092)]>: connecting to kafka:29092 [('172.23.0.3', 29092) IPv4]
+[2025-09-16T12:46:21.909+0000] {conn.py:457} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1 host=kafka:29092 <connected> [IPv4 ('172.23.0.3', 29092)]>: Connection complete.
+[2025-09-16T12:46:21.910+0000] {conn.py:945} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:29092 <connected> [IPv4 ('172.23.0.3', 29092)]>: Closing connection. 
+[2025-09-16T12:46:21.916+0000] {fetcher.py:418} INFO - Resetting offset for partition ('user_events', 0) to offset 0.
+[2025-09-16T12:46:26.896+0000] {conn.py:945} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1 host=kafka:29092 <connected> [IPv4 ('172.23.0.3', 29092)]>: Closing connection. 
+[2025-09-16T12:46:26.898+0000] {fetcher.py:786} INFO - Fetch to node 1 failed: Cancelled: <BrokerConnection client_id=kafka-python-2.2.15, node_id=1 host=kafka:29092 <connected> [IPv4 ('172.23.0.3', 29092)]>
+[2025-09-16T12:46:36.901+0000] {python.py:72} INFO - Poking callable: <function check_kafka_message at 0x7f0e726ccc20>
+[2025-09-16T12:46:36.972+0000] {conn.py:397} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:29092 <connecting> [IPv4 ('172.23.0.3', 29092)]>: connecting to kafka:29092 [('172.23.0.3', 29092) IPv4]
+[2025-09-16T12:46:37.022+0000] {conn.py:618} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:29092 <checking_api_versions_recv> [IPv4 ('172.23.0.3', 29092)]>: Broker version identified as 2.6
+[2025-09-16T12:46:37.023+0000] {conn.py:457} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:29092 <connected> [IPv4 ('172.23.0.3', 29092)]>: Connection complete.
+[2025-09-16T12:46:37.043+0000] {subscription_state.py:181} INFO - Updating subscribed topics to: ('user_events',)
+[2025-09-16T12:46:37.060+0000] {subscription_state.py:254} INFO - Updated partition assignment: [('user_events', 0)]
+[2025-09-16T12:46:37.062+0000] {conn.py:397} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1 host=kafka:29092 <connecting> [IPv4 ('172.23.0.3', 29092)]>: connecting to kafka:29092 [('172.23.0.3', 29092) IPv4]
+[2025-09-16T12:46:37.063+0000] {conn.py:457} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1 host=kafka:29092 <connected> [IPv4 ('172.23.0.3', 29092)]>: Connection complete.
+[2025-09-16T12:46:37.064+0000] {conn.py:945} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:29092 <connected> [IPv4 ('172.23.0.3', 29092)]>: Closing connection. 
+[2025-09-16T12:46:37.100+0000] {fetcher.py:418} INFO - Resetting offset for partition ('user_events', 0) to offset 0.
+[2025-09-16T12:46:42.049+0000] {conn.py:945} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1 host=kafka:29092 <connected> [IPv4 ('172.23.0.3', 29092)]>: Closing connection. 
+[2025-09-16T12:46:42.049+0000] {fetcher.py:786} INFO - Fetch to node 1 failed: Cancelled: <BrokerConnection client_id=kafka-python-2.2.15, node_id=1 host=kafka:29092 <connected> [IPv4 ('172.23.0.3', 29092)]>
+[2025-09-16T12:46:52.061+0000] {python.py:72} INFO - Poking callable: <function check_kafka_message at 0x7f0e726ccc20>
+[2025-09-16T12:46:52.152+0000] {conn.py:397} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:29092 <connecting> [IPv4 ('172.23.0.3', 29092)]>: connecting to kafka:29092 [('172.23.0.3', 29092) IPv4]
+[2025-09-16T12:46:52.201+0000] {conn.py:618} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:29092 <checking_api_versions_recv> [IPv4 ('172.23.0.3', 29092)]>: Broker version identified as 2.6
+[2025-09-16T12:46:52.202+0000] {conn.py:457} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:29092 <connected> [IPv4 ('172.23.0.3', 29092)]>: Connection complete.
+[2025-09-16T12:46:52.212+0000] {subscription_state.py:181} INFO - Updating subscribed topics to: ('user_events',)
+[2025-09-16T12:46:52.228+0000] {subscription_state.py:254} INFO - Updated partition assignment: [('user_events', 0)]
+[2025-09-16T12:46:52.229+0000] {conn.py:397} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1 host=kafka:29092 <connecting> [IPv4 ('172.23.0.3', 29092)]>: connecting to kafka:29092 [('172.23.0.3', 29092) IPv4]
+[2025-09-16T12:46:52.230+0000] {conn.py:457} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1 host=kafka:29092 <connected> [IPv4 ('172.23.0.3', 29092)]>: Connection complete.
+[2025-09-16T12:46:52.230+0000] {conn.py:945} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:29092 <connected> [IPv4 ('172.23.0.3', 29092)]>: Closing connection. 
+[2025-09-16T12:46:52.235+0000] {fetcher.py:418} INFO - Resetting offset for partition ('user_events', 0) to offset 0.
+[2025-09-16T12:46:57.226+0000] {conn.py:945} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1 host=kafka:29092 <connected> [IPv4 ('172.23.0.3', 29092)]>: Closing connection. 
+[2025-09-16T12:46:57.227+0000] {fetcher.py:786} INFO - Fetch to node 1 failed: Cancelled: <BrokerConnection client_id=kafka-python-2.2.15, node_id=1 host=kafka:29092 <connected> [IPv4 ('172.23.0.3', 29092)]>
+[2025-09-16T12:47:07.238+0000] {python.py:72} INFO - Poking callable: <function check_kafka_message at 0x7f0e726ccc20>
+[2025-09-16T12:47:07.243+0000] {conn.py:397} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:29092 <connecting> [IPv4 ('172.23.0.3', 29092)]>: connecting to kafka:29092 [('172.23.0.3', 29092) IPv4]
+[2025-09-16T12:47:07.249+0000] {conn.py:618} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:29092 <checking_api_versions_recv> [IPv4 ('172.23.0.3', 29092)]>: Broker version identified as 2.6
+[2025-09-16T12:47:07.250+0000] {conn.py:457} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:29092 <connected> [IPv4 ('172.23.0.3', 29092)]>: Connection complete.
+[2025-09-16T12:47:07.253+0000] {subscription_state.py:181} INFO - Updating subscribed topics to: ('user_events',)
+[2025-09-16T12:47:07.256+0000] {subscription_state.py:254} INFO - Updated partition assignment: [('user_events', 0)]
+[2025-09-16T12:47:07.258+0000] {conn.py:397} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1 host=kafka:29092 <connecting> [IPv4 ('172.23.0.3', 29092)]>: connecting to kafka:29092 [('172.23.0.3', 29092) IPv4]
+[2025-09-16T12:47:07.259+0000] {conn.py:457} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1 host=kafka:29092 <connected> [IPv4 ('172.23.0.3', 29092)]>: Connection complete.
+[2025-09-16T12:47:07.259+0000] {conn.py:945} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:29092 <connected> [IPv4 ('172.23.0.3', 29092)]>: Closing connection. 
+[2025-09-16T12:47:07.262+0000] {fetcher.py:418} INFO - Resetting offset for partition ('user_events', 0) to offset 0.
+[2025-09-16T12:47:12.254+0000] {conn.py:945} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1 host=kafka:29092 <connected> [IPv4 ('172.23.0.3', 29092)]>: Closing connection. 
+[2025-09-16T12:47:12.257+0000] {fetcher.py:786} INFO - Fetch to node 1 failed: Cancelled: <BrokerConnection client_id=kafka-python-2.2.15, node_id=1 host=kafka:29092 <connected> [IPv4 ('172.23.0.3', 29092)]>
+[2025-09-16T12:47:22.265+0000] {python.py:72} INFO - Poking callable: <function check_kafka_message at 0x7f0e726ccc20>
+[2025-09-16T12:47:22.273+0000] {conn.py:397} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:29092 <connecting> [IPv4 ('172.23.0.3', 29092)]>: connecting to kafka:29092 [('172.23.0.3', 29092) IPv4]
+[2025-09-16T12:47:22.880+0000] {conn.py:618} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:29092 <checking_api_versions_recv> [IPv4 ('172.23.0.3', 29092)]>: Broker version identified as 2.6
+[2025-09-16T12:47:22.881+0000] {conn.py:457} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:29092 <connected> [IPv4 ('172.23.0.3', 29092)]>: Connection complete.
+[2025-09-16T12:47:22.882+0000] {subscription_state.py:181} INFO - Updating subscribed topics to: ('user_events',)
+[2025-09-16T12:47:22.886+0000] {subscription_state.py:254} INFO - Updated partition assignment: [('user_events', 0)]
+[2025-09-16T12:47:22.888+0000] {conn.py:397} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1 host=kafka:29092 <connecting> [IPv4 ('172.23.0.3', 29092)]>: connecting to kafka:29092 [('172.23.0.3', 29092) IPv4]
+[2025-09-16T12:47:22.889+0000] {conn.py:457} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1 host=kafka:29092 <connected> [IPv4 ('172.23.0.3', 29092)]>: Connection complete.
+[2025-09-16T12:47:22.890+0000] {conn.py:945} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:29092 <connected> [IPv4 ('172.23.0.3', 29092)]>: Closing connection. 
+[2025-09-16T12:47:22.893+0000] {fetcher.py:418} INFO - Resetting offset for partition ('user_events', 0) to offset 0.
+[2025-09-16T12:47:27.883+0000] {conn.py:945} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1 host=kafka:29092 <connected> [IPv4 ('172.23.0.3', 29092)]>: Closing connection. 
+[2025-09-16T12:47:27.885+0000] {fetcher.py:786} INFO - Fetch to node 1 failed: Cancelled: <BrokerConnection client_id=kafka-python-2.2.15, node_id=1 host=kafka:29092 <connected> [IPv4 ('172.23.0.3', 29092)]>
+[2025-09-16T12:47:37.899+0000] {python.py:72} INFO - Poking callable: <function check_kafka_message at 0x7f0e726ccc20>
+[2025-09-16T12:47:37.912+0000] {conn.py:397} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:29092 <connecting> [IPv4 ('172.23.0.3', 29092)]>: connecting to kafka:29092 [('172.23.0.3', 29092) IPv4]
+[2025-09-16T12:47:37.927+0000] {conn.py:618} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:29092 <checking_api_versions_recv> [IPv4 ('172.23.0.3', 29092)]>: Broker version identified as 2.6
+[2025-09-16T12:47:37.928+0000] {conn.py:457} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:29092 <connected> [IPv4 ('172.23.0.3', 29092)]>: Connection complete.
+[2025-09-16T12:47:37.931+0000] {subscription_state.py:181} INFO - Updating subscribed topics to: ('user_events',)
+[2025-09-16T12:47:37.939+0000] {subscription_state.py:254} INFO - Updated partition assignment: [('user_events', 0)]
+[2025-09-16T12:47:37.941+0000] {conn.py:397} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1 host=kafka:29092 <connecting> [IPv4 ('172.23.0.3', 29092)]>: connecting to kafka:29092 [('172.23.0.3', 29092) IPv4]
+[2025-09-16T12:47:37.942+0000] {conn.py:457} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1 host=kafka:29092 <connected> [IPv4 ('172.23.0.3', 29092)]>: Connection complete.
+[2025-09-16T12:47:37.942+0000] {conn.py:945} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:29092 <connected> [IPv4 ('172.23.0.3', 29092)]>: Closing connection. 
+[2025-09-16T12:47:37.948+0000] {fetcher.py:418} INFO - Resetting offset for partition ('user_events', 0) to offset 0.
+[2025-09-16T12:47:42.934+0000] {conn.py:945} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1 host=kafka:29092 <connected> [IPv4 ('172.23.0.3', 29092)]>: Closing connection. 
+[2025-09-16T12:47:42.937+0000] {fetcher.py:786} INFO - Fetch to node 1 failed: Cancelled: <BrokerConnection client_id=kafka-python-2.2.15, node_id=1 host=kafka:29092 <connected> [IPv4 ('172.23.0.3', 29092)]>
+[2025-09-16T12:47:52.950+0000] {python.py:72} INFO - Poking callable: <function check_kafka_message at 0x7f0e726ccc20>
+[2025-09-16T12:47:52.956+0000] {conn.py:397} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:29092 <connecting> [IPv4 ('172.23.0.3', 29092)]>: connecting to kafka:29092 [('172.23.0.3', 29092) IPv4]
+[2025-09-16T12:47:52.965+0000] {conn.py:618} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:29092 <checking_api_versions_recv> [IPv4 ('172.23.0.3', 29092)]>: Broker version identified as 2.6
+[2025-09-16T12:47:52.966+0000] {conn.py:457} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:29092 <connected> [IPv4 ('172.23.0.3', 29092)]>: Connection complete.
+[2025-09-16T12:47:52.969+0000] {subscription_state.py:181} INFO - Updating subscribed topics to: ('user_events',)
+[2025-09-16T12:47:52.972+0000] {subscription_state.py:254} INFO - Updated partition assignment: [('user_events', 0)]
+[2025-09-16T12:47:52.975+0000] {conn.py:397} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1 host=kafka:29092 <connecting> [IPv4 ('172.23.0.3', 29092)]>: connecting to kafka:29092 [('172.23.0.3', 29092) IPv4]
+[2025-09-16T12:47:52.976+0000] {conn.py:457} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1 host=kafka:29092 <connected> [IPv4 ('172.23.0.3', 29092)]>: Connection complete.
+[2025-09-16T12:47:52.977+0000] {conn.py:945} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:29092 <connected> [IPv4 ('172.23.0.3', 29092)]>: Closing connection. 
+[2025-09-16T12:47:52.980+0000] {fetcher.py:418} INFO - Resetting offset for partition ('user_events', 0) to offset 0.
+[2025-09-16T12:47:57.969+0000] {conn.py:945} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1 host=kafka:29092 <connected> [IPv4 ('172.23.0.3', 29092)]>: Closing connection. 
+[2025-09-16T12:47:57.970+0000] {fetcher.py:786} INFO - Fetch to node 1 failed: Cancelled: <BrokerConnection client_id=kafka-python-2.2.15, node_id=1 host=kafka:29092 <connected> [IPv4 ('172.23.0.3', 29092)]>
+[2025-09-16T12:48:07.986+0000] {python.py:72} INFO - Poking callable: <function check_kafka_message at 0x7f0e726ccc20>
+[2025-09-16T12:48:07.999+0000] {conn.py:397} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:29092 <connecting> [IPv4 ('172.23.0.3', 29092)]>: connecting to kafka:29092 [('172.23.0.3', 29092) IPv4]
+[2025-09-16T12:48:08.016+0000] {conn.py:618} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:29092 <checking_api_versions_recv> [IPv4 ('172.23.0.3', 29092)]>: Broker version identified as 2.6
+[2025-09-16T12:48:08.017+0000] {conn.py:457} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:29092 <connected> [IPv4 ('172.23.0.3', 29092)]>: Connection complete.
+[2025-09-16T12:48:08.021+0000] {subscription_state.py:181} INFO - Updating subscribed topics to: ('user_events',)
+[2025-09-16T12:48:08.033+0000] {subscription_state.py:254} INFO - Updated partition assignment: [('user_events', 0)]
+[2025-09-16T12:48:08.037+0000] {conn.py:397} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1 host=kafka:29092 <connecting> [IPv4 ('172.23.0.3', 29092)]>: connecting to kafka:29092 [('172.23.0.3', 29092) IPv4]
+[2025-09-16T12:48:08.038+0000] {conn.py:457} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1 host=kafka:29092 <connected> [IPv4 ('172.23.0.3', 29092)]>: Connection complete.
+[2025-09-16T12:48:08.039+0000] {conn.py:945} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:29092 <connected> [IPv4 ('172.23.0.3', 29092)]>: Closing connection. 
+[2025-09-16T12:48:08.044+0000] {fetcher.py:418} INFO - Resetting offset for partition ('user_events', 0) to offset 0.
+[2025-09-16T12:48:13.024+0000] {conn.py:945} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1 host=kafka:29092 <connected> [IPv4 ('172.23.0.3', 29092)]>: Closing connection. 
+[2025-09-16T12:48:13.025+0000] {fetcher.py:786} INFO - Fetch to node 1 failed: Cancelled: <BrokerConnection client_id=kafka-python-2.2.15, node_id=1 host=kafka:29092 <connected> [IPv4 ('172.23.0.3', 29092)]>
+[2025-09-16T12:48:23.037+0000] {python.py:72} INFO - Poking callable: <function check_kafka_message at 0x7f0e726ccc20>
+[2025-09-16T12:48:23.040+0000] {conn.py:397} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:29092 <connecting> [IPv4 ('172.23.0.3', 29092)]>: connecting to kafka:29092 [('172.23.0.3', 29092) IPv4]
+[2025-09-16T12:48:23.045+0000] {conn.py:618} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:29092 <checking_api_versions_recv> [IPv4 ('172.23.0.3', 29092)]>: Broker version identified as 2.6
+[2025-09-16T12:48:23.046+0000] {conn.py:457} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:29092 <connected> [IPv4 ('172.23.0.3', 29092)]>: Connection complete.
+[2025-09-16T12:48:23.048+0000] {subscription_state.py:181} INFO - Updating subscribed topics to: ('user_events',)
+[2025-09-16T12:48:23.051+0000] {subscription_state.py:254} INFO - Updated partition assignment: [('user_events', 0)]
+[2025-09-16T12:48:23.053+0000] {conn.py:397} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1 host=kafka:29092 <connecting> [IPv4 ('172.23.0.3', 29092)]>: connecting to kafka:29092 [('172.23.0.3', 29092) IPv4]
+[2025-09-16T12:48:23.054+0000] {conn.py:457} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1 host=kafka:29092 <connected> [IPv4 ('172.23.0.3', 29092)]>: Connection complete.
+[2025-09-16T12:48:23.054+0000] {conn.py:945} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:29092 <connected> [IPv4 ('172.23.0.3', 29092)]>: Closing connection. 
+[2025-09-16T12:48:23.057+0000] {fetcher.py:418} INFO - Resetting offset for partition ('user_events', 0) to offset 0.
+[2025-09-16T12:48:28.050+0000] {conn.py:945} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1 host=kafka:29092 <connected> [IPv4 ('172.23.0.3', 29092)]>: Closing connection. 
+[2025-09-16T12:48:28.051+0000] {fetcher.py:786} INFO - Fetch to node 1 failed: Cancelled: <BrokerConnection client_id=kafka-python-2.2.15, node_id=1 host=kafka:29092 <connected> [IPv4 ('172.23.0.3', 29092)]>
+[2025-09-16T12:48:38.062+0000] {python.py:72} INFO - Poking callable: <function check_kafka_message at 0x7f0e726ccc20>
+[2025-09-16T12:48:38.069+0000] {conn.py:397} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:29092 <connecting> [IPv4 ('172.23.0.3', 29092)]>: connecting to kafka:29092 [('172.23.0.3', 29092) IPv4]
+[2025-09-16T12:48:38.076+0000] {conn.py:618} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:29092 <checking_api_versions_recv> [IPv4 ('172.23.0.3', 29092)]>: Broker version identified as 2.6
+[2025-09-16T12:48:38.077+0000] {conn.py:457} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:29092 <connected> [IPv4 ('172.23.0.3', 29092)]>: Connection complete.
+[2025-09-16T12:48:38.079+0000] {subscription_state.py:181} INFO - Updating subscribed topics to: ('user_events',)
+[2025-09-16T12:48:38.084+0000] {subscription_state.py:254} INFO - Updated partition assignment: [('user_events', 0)]
+[2025-09-16T12:48:38.086+0000] {conn.py:397} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1 host=kafka:29092 <connecting> [IPv4 ('172.23.0.3', 29092)]>: connecting to kafka:29092 [('172.23.0.3', 29092) IPv4]
+[2025-09-16T12:48:38.089+0000] {conn.py:457} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1 host=kafka:29092 <connected> [IPv4 ('172.23.0.3', 29092)]>: Connection complete.
+[2025-09-16T12:48:38.090+0000] {conn.py:945} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:29092 <connected> [IPv4 ('172.23.0.3', 29092)]>: Closing connection. 
+[2025-09-16T12:48:38.094+0000] {fetcher.py:418} INFO - Resetting offset for partition ('user_events', 0) to offset 0.
+[2025-09-16T12:48:43.080+0000] {conn.py:945} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1 host=kafka:29092 <connected> [IPv4 ('172.23.0.3', 29092)]>: Closing connection. 
+[2025-09-16T12:48:43.082+0000] {fetcher.py:786} INFO - Fetch to node 1 failed: Cancelled: <BrokerConnection client_id=kafka-python-2.2.15, node_id=1 host=kafka:29092 <connected> [IPv4 ('172.23.0.3', 29092)]>
+[2025-09-16T12:48:53.093+0000] {python.py:72} INFO - Poking callable: <function check_kafka_message at 0x7f0e726ccc20>
+[2025-09-16T12:48:53.111+0000] {conn.py:397} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:29092 <connecting> [IPv4 ('172.23.0.3', 29092)]>: connecting to kafka:29092 [('172.23.0.3', 29092) IPv4]
+[2025-09-16T12:48:53.142+0000] {conn.py:618} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:29092 <checking_api_versions_recv> [IPv4 ('172.23.0.3', 29092)]>: Broker version identified as 2.6
+[2025-09-16T12:48:53.143+0000] {conn.py:457} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:29092 <connected> [IPv4 ('172.23.0.3', 29092)]>: Connection complete.
+[2025-09-16T12:48:53.146+0000] {subscription_state.py:181} INFO - Updating subscribed topics to: ('user_events',)
+[2025-09-16T12:48:53.150+0000] {subscription_state.py:254} INFO - Updated partition assignment: [('user_events', 0)]
+[2025-09-16T12:48:53.157+0000] {conn.py:397} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1 host=kafka:29092 <connecting> [IPv4 ('172.23.0.3', 29092)]>: connecting to kafka:29092 [('172.23.0.3', 29092) IPv4]
+[2025-09-16T12:48:53.160+0000] {conn.py:457} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1 host=kafka:29092 <connected> [IPv4 ('172.23.0.3', 29092)]>: Connection complete.
+[2025-09-16T12:48:53.161+0000] {conn.py:945} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:29092 <connected> [IPv4 ('172.23.0.3', 29092)]>: Closing connection. 
+[2025-09-16T12:48:53.165+0000] {fetcher.py:418} INFO - Resetting offset for partition ('user_events', 0) to offset 0.
+[2025-09-16T12:48:58.149+0000] {conn.py:945} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1 host=kafka:29092 <connected> [IPv4 ('172.23.0.3', 29092)]>: Closing connection. 
+[2025-09-16T12:48:58.151+0000] {fetcher.py:786} INFO - Fetch to node 1 failed: Cancelled: <BrokerConnection client_id=kafka-python-2.2.15, node_id=1 host=kafka:29092 <connected> [IPv4 ('172.23.0.3', 29092)]>
+[2025-09-16T12:49:08.163+0000] {python.py:72} INFO - Poking callable: <function check_kafka_message at 0x7f0e726ccc20>
+[2025-09-16T12:49:08.166+0000] {conn.py:397} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:29092 <connecting> [IPv4 ('172.23.0.3', 29092)]>: connecting to kafka:29092 [('172.23.0.3', 29092) IPv4]
+[2025-09-16T12:49:08.172+0000] {conn.py:618} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:29092 <checking_api_versions_recv> [IPv4 ('172.23.0.3', 29092)]>: Broker version identified as 2.6
+[2025-09-16T12:49:08.173+0000] {conn.py:457} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:29092 <connected> [IPv4 ('172.23.0.3', 29092)]>: Connection complete.
+[2025-09-16T12:49:08.174+0000] {subscription_state.py:181} INFO - Updating subscribed topics to: ('user_events',)
+[2025-09-16T12:49:08.177+0000] {subscription_state.py:254} INFO - Updated partition assignment: [('user_events', 0)]
+[2025-09-16T12:49:08.179+0000] {conn.py:397} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1 host=kafka:29092 <connecting> [IPv4 ('172.23.0.3', 29092)]>: connecting to kafka:29092 [('172.23.0.3', 29092) IPv4]
+[2025-09-16T12:49:08.180+0000] {conn.py:457} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1 host=kafka:29092 <connected> [IPv4 ('172.23.0.3', 29092)]>: Connection complete.
+[2025-09-16T12:49:08.181+0000] {conn.py:945} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:29092 <connected> [IPv4 ('172.23.0.3', 29092)]>: Closing connection. 
+[2025-09-16T12:49:08.183+0000] {fetcher.py:418} INFO - Resetting offset for partition ('user_events', 0) to offset 0.
+[2025-09-16T12:49:13.175+0000] {conn.py:945} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1 host=kafka:29092 <connected> [IPv4 ('172.23.0.3', 29092)]>: Closing connection. 
+[2025-09-16T12:49:13.176+0000] {fetcher.py:786} INFO - Fetch to node 1 failed: Cancelled: <BrokerConnection client_id=kafka-python-2.2.15, node_id=1 host=kafka:29092 <connected> [IPv4 ('172.23.0.3', 29092)]>
+[2025-09-16T12:49:23.181+0000] {python.py:72} INFO - Poking callable: <function check_kafka_message at 0x7f0e726ccc20>
+[2025-09-16T12:49:23.239+0000] {conn.py:397} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:29092 <connecting> [IPv4 ('172.23.0.3', 29092)]>: connecting to kafka:29092 [('172.23.0.3', 29092) IPv4]
+[2025-09-16T12:49:23.257+0000] {conn.py:618} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:29092 <checking_api_versions_recv> [IPv4 ('172.23.0.3', 29092)]>: Broker version identified as 2.6
+[2025-09-16T12:49:23.263+0000] {conn.py:457} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:29092 <connected> [IPv4 ('172.23.0.3', 29092)]>: Connection complete.
+[2025-09-16T12:49:23.267+0000] {subscription_state.py:181} INFO - Updating subscribed topics to: ('user_events',)
+[2025-09-16T12:49:23.278+0000] {subscription_state.py:254} INFO - Updated partition assignment: [('user_events', 0)]
+[2025-09-16T12:49:23.283+0000] {conn.py:397} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1 host=kafka:29092 <connecting> [IPv4 ('172.23.0.3', 29092)]>: connecting to kafka:29092 [('172.23.0.3', 29092) IPv4]
+[2025-09-16T12:49:23.285+0000] {conn.py:457} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1 host=kafka:29092 <connected> [IPv4 ('172.23.0.3', 29092)]>: Connection complete.
+[2025-09-16T12:49:23.288+0000] {conn.py:945} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:29092 <connected> [IPv4 ('172.23.0.3', 29092)]>: Closing connection. 
+[2025-09-16T12:49:23.329+0000] {fetcher.py:418} INFO - Resetting offset for partition ('user_events', 0) to offset 0.
+[2025-09-16T12:49:28.274+0000] {conn.py:945} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1 host=kafka:29092 <connected> [IPv4 ('172.23.0.3', 29092)]>: Closing connection. 
+[2025-09-16T12:49:28.277+0000] {fetcher.py:786} INFO - Fetch to node 1 failed: Cancelled: <BrokerConnection client_id=kafka-python-2.2.15, node_id=1 host=kafka:29092 <connected> [IPv4 ('172.23.0.3', 29092)]>
+[2025-09-16T12:49:38.316+0000] {python.py:72} INFO - Poking callable: <function check_kafka_message at 0x7f0e726ccc20>
+[2025-09-16T12:49:38.385+0000] {conn.py:397} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:29092 <connecting> [IPv4 ('172.23.0.3', 29092)]>: connecting to kafka:29092 [('172.23.0.3', 29092) IPv4]
+[2025-09-16T12:49:38.560+0000] {conn.py:618} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:29092 <checking_api_versions_recv> [IPv4 ('172.23.0.3', 29092)]>: Broker version identified as 2.6
+[2025-09-16T12:49:38.564+0000] {conn.py:457} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:29092 <connected> [IPv4 ('172.23.0.3', 29092)]>: Connection complete.
+[2025-09-16T12:49:38.579+0000] {subscription_state.py:181} INFO - Updating subscribed topics to: ('user_events',)
+[2025-09-16T12:49:38.657+0000] {subscription_state.py:254} INFO - Updated partition assignment: [('user_events', 0)]
+[2025-09-16T12:49:38.676+0000] {conn.py:397} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1 host=kafka:29092 <connecting> [IPv4 ('172.23.0.3', 29092)]>: connecting to kafka:29092 [('172.23.0.3', 29092) IPv4]
+[2025-09-16T12:49:38.711+0000] {conn.py:457} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1 host=kafka:29092 <connected> [IPv4 ('172.23.0.3', 29092)]>: Connection complete.
+[2025-09-16T12:49:38.727+0000] {conn.py:945} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:29092 <connected> [IPv4 ('172.23.0.3', 29092)]>: Closing connection. 
+[2025-09-16T12:49:38.856+0000] {fetcher.py:418} INFO - Resetting offset for partition ('user_events', 0) to offset 0.
+[2025-09-16T12:49:43.585+0000] {conn.py:945} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1 host=kafka:29092 <connected> [IPv4 ('172.23.0.3', 29092)]>: Closing connection. 
+[2025-09-16T12:49:43.586+0000] {fetcher.py:786} INFO - Fetch to node 1 failed: Cancelled: <BrokerConnection client_id=kafka-python-2.2.15, node_id=1 host=kafka:29092 <connected> [IPv4 ('172.23.0.3', 29092)]>
+[2025-09-16T12:49:53.594+0000] {python.py:72} INFO - Poking callable: <function check_kafka_message at 0x7f0e726ccc20>
+[2025-09-16T12:49:53.610+0000] {conn.py:397} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:29092 <connecting> [IPv4 ('172.23.0.3', 29092)]>: connecting to kafka:29092 [('172.23.0.3', 29092) IPv4]
+[2025-09-16T12:49:53.624+0000] {conn.py:618} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:29092 <checking_api_versions_recv> [IPv4 ('172.23.0.3', 29092)]>: Broker version identified as 2.6
+[2025-09-16T12:49:53.626+0000] {conn.py:457} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:29092 <connected> [IPv4 ('172.23.0.3', 29092)]>: Connection complete.
+[2025-09-16T12:49:53.629+0000] {subscription_state.py:181} INFO - Updating subscribed topics to: ('user_events',)
+[2025-09-16T12:49:53.634+0000] {subscription_state.py:254} INFO - Updated partition assignment: [('user_events', 0)]
+[2025-09-16T12:49:53.638+0000] {conn.py:397} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1 host=kafka:29092 <connecting> [IPv4 ('172.23.0.3', 29092)]>: connecting to kafka:29092 [('172.23.0.3', 29092) IPv4]
+[2025-09-16T12:49:53.640+0000] {conn.py:457} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1 host=kafka:29092 <connected> [IPv4 ('172.23.0.3', 29092)]>: Connection complete.
+[2025-09-16T12:49:53.641+0000] {conn.py:945} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:29092 <connected> [IPv4 ('172.23.0.3', 29092)]>: Closing connection. 
+[2025-09-16T12:49:53.645+0000] {fetcher.py:418} INFO - Resetting offset for partition ('user_events', 0) to offset 0.
+[2025-09-16T12:49:58.631+0000] {conn.py:945} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1 host=kafka:29092 <connected> [IPv4 ('172.23.0.3', 29092)]>: Closing connection. 
+[2025-09-16T12:49:58.632+0000] {fetcher.py:786} INFO - Fetch to node 1 failed: Cancelled: <BrokerConnection client_id=kafka-python-2.2.15, node_id=1 host=kafka:29092 <connected> [IPv4 ('172.23.0.3', 29092)]>
+[2025-09-16T12:49:58.678+0000] {taskinstance.py:1824} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/sensors/base.py", line 242, in execute
+    raise AirflowSensorTimeout(message)
+airflow.exceptions.AirflowSensorTimeout: Sensor has timed out; run duration of 308.01922965799986 seconds exceeds the specified timeout of 300.
+[2025-09-16T12:49:59.080+0000] {taskinstance.py:1350} INFO - Immediate failure requested. Marking task as FAILED. dag_id=kafka_to_postgres_batch, task_id=wait_for_kafka, execution_date=20250916T120206, start_date=20250916T124450, end_date=20250916T124959
+[2025-09-16T12:49:59.175+0000] {logging_mixin.py:150} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:205 AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+[2025-09-16T12:50:00.305+0000] {standard_task_runner.py:109} ERROR - Failed to execute job 680 for task wait_for_kafka (Sensor has timed out; run duration of 308.01922965799986 seconds exceeds the specified timeout of 300.; 531)
+[2025-09-16T12:50:00.420+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 1
+[2025-09-16T12:50:00.763+0000] {taskinstance.py:2653} INFO - 0 downstream tasks scheduled from follow-on schedule check

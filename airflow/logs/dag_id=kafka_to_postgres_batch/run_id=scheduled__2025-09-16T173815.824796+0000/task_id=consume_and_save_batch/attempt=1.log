@@ -1,0 +1,185 @@
+[2025-09-16T18:44:11.969+0000] {logging_mixin.py:150} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/sqlalchemy.py:124 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-09-16T18:44:12.614+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: kafka_to_postgres_batch.consume_and_save_batch scheduled__2025-09-16T17:38:15.824796+00:00 [queued]>
+[2025-09-16T18:44:12.643+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: kafka_to_postgres_batch.consume_and_save_batch scheduled__2025-09-16T17:38:15.824796+00:00 [queued]>
+[2025-09-16T18:44:12.644+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 3
+[2025-09-16T18:44:12.695+0000] {taskinstance.py:1327} INFO - Executing <Task(PythonOperator): consume_and_save_batch> on 2025-09-16 17:38:15.824796+00:00
+[2025-09-16T18:44:12.715+0000] {standard_task_runner.py:57} INFO - Started process 4011 to run task
+[2025-09-16T18:44:12.728+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'kafka_to_postgres_batch', 'consume_and_save_batch', 'scheduled__2025-09-16T17:38:15.824796+00:00', '--job-id', '727', '--raw', '--subdir', 'DAGS_FOLDER/dags.py', '--cfg-path', '/tmp/tmptjxzawm9']
+[2025-09-16T18:44:12.748+0000] {standard_task_runner.py:85} INFO - Job 727: Subtask consume_and_save_batch
+[2025-09-16T18:44:13.483+0000] {logging_mixin.py:150} WARNING - /home/***/.local/lib/python3.7/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-09-16T18:44:13.781+0000] {task_command.py:410} INFO - Running <TaskInstance: kafka_to_postgres_batch.consume_and_save_batch scheduled__2025-09-16T17:38:15.824796+00:00 [running]> on host d6e2a7c8b3ee
+[2025-09-16T18:44:13.868+0000] {logging_mixin.py:150} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/sqlalchemy.py:124 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-09-16T18:44:15.245+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='kafka_to_postgres_batch' AIRFLOW_CTX_TASK_ID='consume_and_save_batch' AIRFLOW_CTX_EXECUTION_DATE='2025-09-16T17:38:15.824796+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-09-16T17:38:15.824796+00:00'
+[2025-09-16T18:44:15.264+0000] {conn.py:397} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:29092 <connecting> [IPv4 ('172.23.0.4', 29092)]>: connecting to kafka:29092 [('172.23.0.4', 29092) IPv4]
+[2025-09-16T18:44:15.284+0000] {conn.py:618} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:29092 <checking_api_versions_recv> [IPv4 ('172.23.0.4', 29092)]>: Broker version identified as 2.6
+[2025-09-16T18:44:15.286+0000] {conn.py:457} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:29092 <connected> [IPv4 ('172.23.0.4', 29092)]>: Connection complete.
+[2025-09-16T18:44:15.294+0000] {subscription_state.py:181} INFO - Updating subscribed topics to: ('user_events',)
+[2025-09-16T18:44:15.341+0000] {conn.py:397} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1 host=kafka:29092 <connecting> [IPv4 ('172.23.0.4', 29092)]>: connecting to kafka:29092 [('172.23.0.4', 29092) IPv4]
+[2025-09-16T18:44:15.344+0000] {conn.py:457} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1 host=kafka:29092 <connected> [IPv4 ('172.23.0.4', 29092)]>: Connection complete.
+[2025-09-16T18:44:15.345+0000] {conn.py:945} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:29092 <connected> [IPv4 ('172.23.0.4', 29092)]>: Closing connection. 
+[2025-09-16T18:44:15.503+0000] {cluster.py:401} INFO - Coordinator for group/***_batch_consumer is ('coordinator-1', 'kafka', 29092, None)
+[2025-09-16T18:44:15.507+0000] {base.py:789} INFO - Discovered coordinator coordinator-1 for group ***_batch_consumer
+[2025-09-16T18:44:15.511+0000] {base.py:848} INFO - Starting new heartbeat thread
+[2025-09-16T18:44:15.523+0000] {consumer.py:366} INFO - Revoking previously assigned partitions () for group ***_batch_consumer
+[2025-09-16T18:44:15.526+0000] {base.py:419} INFO - Failed to join group ***_batch_consumer: NodeNotReadyError: coordinator-1
+[2025-09-16T18:44:15.542+0000] {conn.py:397} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=coordinator-1 host=kafka:29092 <connecting> [IPv4 ('172.23.0.4', 29092)]>: connecting to kafka:29092 [('172.23.0.4', 29092) IPv4]
+[2025-09-16T18:44:15.544+0000] {conn.py:457} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=coordinator-1 host=kafka:29092 <connected> [IPv4 ('172.23.0.4', 29092)]>: Connection complete.
+[2025-09-16T18:44:15.648+0000] {base.py:532} INFO - (Re-)joining group ***_batch_consumer
+[2025-09-16T18:44:15.681+0000] {base.py:638} INFO - Received member id kafka-python-2.2.15-9c9bddc7-c268-4651-af0b-22a6b0709119 for group ***_batch_consumer; will retry join-group
+[2025-09-16T18:44:15.682+0000] {base.py:419} INFO - Failed to join group ***_batch_consumer: [Error 79] MemberIdRequiredError
+[2025-09-16T18:44:15.683+0000] {base.py:532} INFO - (Re-)joining group ***_batch_consumer
+[2025-09-16T18:44:18.701+0000] {base.py:594} INFO - Successfully joined group ***_batch_consumer <Generation 3 (member_id: kafka-python-2.2.15-9c9bddc7-c268-4651-af0b-22a6b0709119, protocol: range)>
+[2025-09-16T18:44:18.702+0000] {base.py:597} INFO - Elected group leader -- performing partition assignments using range
+[2025-09-16T18:44:18.716+0000] {subscription_state.py:254} INFO - Updated partition assignment: [('user_events', 0)]
+[2025-09-16T18:44:18.717+0000] {consumer.py:250} INFO - Setting newly assigned partitions (('user_events', 0),) for group ***_batch_consumer
+[2025-09-16T18:44:18.729+0000] {dags_utils.py:109} INFO - Received message: {
+  "type": "user_profile",
+  "user_id": 3914,
+  "name": "Jason Anderson",
+  "email": "diana37@example.com",
+  "birth_date": "1971-04-08",
+  "gender": "other",
+  "generated_at": "2025-09-16T18:44:15.192210+00:00"
+}
+[2025-09-16T18:44:18.729+0000] {dags_utils.py:109} INFO - Received message: {
+  "type": "user_device",
+  "user_id": 3914,
+  "device_type": "mobile",
+  "os": "Linux",
+  "browser": "Edge",
+  "generated_at": "2025-09-16T18:44:15.192312+00:00"
+}
+[2025-09-16T18:44:18.730+0000] {dags_utils.py:109} INFO - Received message: {
+  "type": "user_location",
+  "user_id": 3914,
+  "city": "Unknown",
+  "country": null,
+  "lat": 80.226615,
+  "lon": 104.780092,
+  "weather_temp": -1.88,
+  "weather_desc": "overcast clouds",
+  "generated_at": "2025-09-16T18:44:15.192344+00:00"
+}
+[2025-09-16T18:44:18.731+0000] {dags_utils.py:109} INFO - Received message: {
+  "type": "campaign_event",
+  "user_id": 3914,
+  "campaign_id": "camp5",
+  "campaign_name": "Winter Discount",
+  "channel": "social",
+  "action": "conversion",
+  "cost": 593.46,
+  "generated_at": "2025-09-16T18:44:15.233882+00:00"
+}
+[2025-09-16T18:44:18.731+0000] {dags_utils.py:109} INFO - Received message: {
+  "type": "event",
+  "user_id": 3914,
+  "session_id": "2b2aff60-61bb-45b4-b889-64b2591e82be",
+  "event_type": "purchase",
+  "product_id": 4,
+  "product_name": "Samsung TV",
+  "product_category": "electronics",
+  "order_id": "d1016af5-8efe-415c-a40d-e0eb48db277b",
+  "quantity": 3,
+  "city": "Unknown",
+  "country": null,
+  "lat": 7.64482,
+  "lon": -139.486142,
+  "cost_usd": 297.88,
+  "cost_eur": 253.28,
+  "cost_rub": 24677.4,
+  "weather_temp": 26.83,
+  "weather_desc": "overcast clouds",
+  "timestamp": "2025-09-16T18:44:16.884715+00:00"
+}
+[2025-09-16T18:44:18.732+0000] {dags_utils.py:109} INFO - Received message: {
+  "type": "order",
+  "order_id": "d1016af5-8efe-415c-a40d-e0eb48db277b",
+  "user_id": 3914,
+  "order_ts": "2025-09-16T18:44:16.887017+00:00",
+  "total_usd": 5999.97,
+  "generated_at": "2025-09-16T18:44:16.887065+00:00"
+}
+[2025-09-16T18:44:18.732+0000] {dags_utils.py:109} INFO - Received message: {
+  "type": "order_item",
+  "order_id": "d1016af5-8efe-415c-a40d-e0eb48db277b",
+  "product_id": 4,
+  "quantity": 3,
+  "price_usd": 1999.99,
+  "generated_at": "2025-09-16T18:44:16.887076+00:00"
+}
+[2025-09-16T18:44:18.733+0000] {dags_utils.py:109} INFO - Received message: {
+  "type": "order_status",
+  "order_id": "d1016af5-8efe-415c-a40d-e0eb48db277b",
+  "status": "pending",
+  "generated_at": "2025-09-16T18:44:16.888258+00:00"
+}
+[2025-09-16T18:44:18.733+0000] {dags_utils.py:109} INFO - Received message: {
+  "type": "event",
+  "user_id": 3914,
+  "session_id": "65ce051d-4145-4ba3-8bb1-5c7cd935735b",
+  "event_type": "session_start",
+  "product_id": null,
+  "product_name": null,
+  "product_category": null,
+  "order_id": null,
+  "quantity": null,
+  "city": "Unknown",
+  "country": null,
+  "lat": -71.951418,
+  "lon": 167.213349,
+  "cost_usd": 811.31,
+  "cost_eur": 689.84,
+  "cost_rub": 67211.69,
+  "weather_temp": -30.64,
+  "weather_desc": "clear sky",
+  "timestamp": "2025-09-16T18:44:18.420292+00:00"
+}
+[2025-09-16T18:44:24.732+0000] {base.py:952} WARNING - Heartbeat failed for group ***_batch_consumer because it is rebalancing
+[2025-09-16T18:44:24.738+0000] {consumer.py:366} INFO - Revoking previously assigned partitions (('user_events', 0),) for group ***_batch_consumer
+[2025-09-16T18:44:24.739+0000] {base.py:532} INFO - (Re-)joining group ***_batch_consumer
+[2025-09-16T18:44:24.745+0000] {base.py:594} INFO - Successfully joined group ***_batch_consumer <Generation 4 (member_id: kafka-python-2.2.15-9c9bddc7-c268-4651-af0b-22a6b0709119, protocol: range)>
+[2025-09-16T18:44:24.746+0000] {base.py:597} INFO - Elected group leader -- performing partition assignments using range
+[2025-09-16T18:44:24.755+0000] {subscription_state.py:254} INFO - Updated partition assignment: []
+[2025-09-16T18:44:24.756+0000] {consumer.py:250} INFO - Setting newly assigned partitions () for group ***_batch_consumer
+[2025-09-16T18:44:46.016+0000] {base.py:952} WARNING - Heartbeat failed for group ***_batch_consumer because it is rebalancing
+[2025-09-16T18:44:46.037+0000] {consumer.py:366} INFO - Revoking previously assigned partitions () for group ***_batch_consumer
+[2025-09-16T18:44:46.038+0000] {base.py:532} INFO - (Re-)joining group ***_batch_consumer
+[2025-09-16T18:44:46.167+0000] {base.py:594} INFO - Successfully joined group ***_batch_consumer <Generation 5 (member_id: kafka-python-2.2.15-9c9bddc7-c268-4651-af0b-22a6b0709119, protocol: range)>
+[2025-09-16T18:44:46.170+0000] {base.py:597} INFO - Elected group leader -- performing partition assignments using range
+[2025-09-16T18:44:46.348+0000] {base.py:728} INFO - SyncGroup for group ***_batch_consumer failed due to coordinator rebalance
+[2025-09-16T18:44:46.349+0000] {base.py:419} INFO - Failed to join group ***_batch_consumer: [Error 27] RebalanceInProgressError: airflow_batch_consumer
+[2025-09-16T18:44:46.350+0000] {base.py:532} INFO - (Re-)joining group ***_batch_consumer
+[2025-09-16T18:44:46.355+0000] {base.py:594} INFO - Successfully joined group ***_batch_consumer <Generation 6 (member_id: kafka-python-2.2.15-9c9bddc7-c268-4651-af0b-22a6b0709119, protocol: range)>
+[2025-09-16T18:44:46.355+0000] {base.py:597} INFO - Elected group leader -- performing partition assignments using range
+[2025-09-16T18:44:46.361+0000] {subscription_state.py:254} INFO - Updated partition assignment: []
+[2025-09-16T18:44:46.361+0000] {consumer.py:250} INFO - Setting newly assigned partitions () for group ***_batch_consumer
+[2025-09-16T18:44:48.735+0000] {dags_utils.py:201} ERROR - Consumer failed
+Traceback (most recent call last):
+  File "/opt/airflow/dags/dags_utils.py", line 195, in consume_and_save
+    insert_devices, insert_locations, insert_orders, insert_order_items, insert_campaigns)
+TypeError: _flush_buffers() missing 1 required positional argument: 'insert_order_status'
+[2025-09-16T18:44:48.743+0000] {base.py:1052} INFO - Stopping heartbeat thread
+[2025-09-16T18:44:48.744+0000] {base.py:891} INFO - Leaving consumer group (***_batch_consumer).
+[2025-09-16T18:44:48.748+0000] {base.py:907} INFO - LeaveGroup request for group ***_batch_consumer returned successfully
+[2025-09-16T18:44:48.750+0000] {conn.py:945} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1 host=kafka:29092 <connected> [IPv4 ('172.23.0.4', 29092)]>: Closing connection. 
+[2025-09-16T18:44:48.751+0000] {conn.py:945} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=coordinator-1 host=kafka:29092 <connected> [IPv4 ('172.23.0.4', 29092)]>: Closing connection. 
+[2025-09-16T18:44:48.784+0000] {taskinstance.py:1824} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/opt/airflow/dags/dags_utils.py", line 195, in consume_and_save
+    insert_devices, insert_locations, insert_orders, insert_order_items, insert_campaigns)
+TypeError: _flush_buffers() missing 1 required positional argument: 'insert_order_status'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 181, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 198, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/dags_utils.py", line 202, in consume_and_save
+    raise AirflowException(f"Consumer failed: {e}")
+airflow.exceptions.AirflowException: Consumer failed: _flush_buffers() missing 1 required positional argument: 'insert_order_status'
+[2025-09-16T18:44:48.796+0000] {taskinstance.py:1350} INFO - Marking task as UP_FOR_RETRY. dag_id=kafka_to_postgres_batch, task_id=consume_and_save_batch, execution_date=20250916T173815, start_date=20250916T184412, end_date=20250916T184448
+[2025-09-16T18:44:48.845+0000] {standard_task_runner.py:109} ERROR - Failed to execute job 727 for task consume_and_save_batch (Consumer failed: _flush_buffers() missing 1 required positional argument: 'insert_order_status'; 4011)
+[2025-09-16T18:44:48.903+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 1
+[2025-09-16T18:44:48.948+0000] {taskinstance.py:2653} INFO - 0 downstream tasks scheduled from follow-on schedule check
