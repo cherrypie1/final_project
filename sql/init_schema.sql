@@ -200,3 +200,10 @@ CREATE TABLE IF NOT EXISTS dds.campaign_events (
     cost NUMERIC(18,2),
     generated_at TIMESTAMP
 );
+
+CREATE TABLE IF NOT EXISTS dds.order_status_events (
+    event_id SERIAL PRIMARY KEY,
+    order_id UUID NOT NULL REFERENCES dds.orders(order_id),
+    status TEXT CHECK (status IN ('pending', 'success', 'failed', 'cancelled')),
+    generated_at TIMESTAMP DEFAULT NOW()
+);
