@@ -49,7 +49,7 @@ ____
 
 ## **Архитектура**
 
-![scheme]([https://github.com/user-attachments/assets/feac26b8-70b0-42b5-ac04-752ce0cb0f0b](https://github.com/cherrypie1/final_project/blob/main/arch.pdf))
+[arch.pdf](https://github.com/user-attachments/files/22725798/arch.pdf)
 
 ____
 
@@ -132,6 +132,8 @@ ____
 
 ### 2. DAG заполнение RAW слоя
 
+<img width="973" height="657" alt="raw" src="https://github.com/user-attachments/assets/664fc1e8-0c34-4ee6-9a54-931eba808c73" />
+
 *kafka_to_postgres*
 
 Каждые 30 минут забирает данные из Kafka
@@ -143,6 +145,8 @@ ____
  Читает сообщения из Kafka и кладёт их в соответствующие raw таблицы
 
 ### 3. DAG заполнение DDS слоя
+
+<img width="562" height="243" alt="dds" src="https://github.com/user-attachments/assets/87eb7cf6-9b20-434a-9a04-d64352e7d672" />
 
 *raw_to_dds_enhanced*
 
@@ -178,7 +182,9 @@ ____
   *init_clickhouse*
  Выполняет SQL-скрипт init_clickhouse.sql Создает все витрины
 
-### 7. Визуализация
+### 7. Metabase
+
+[dashboard.pdf](https://github.com/user-attachments/files/22725815/dashboard.pdf)
 
   **- Продажи по категориям**
   **- Ежедневная выручка**
