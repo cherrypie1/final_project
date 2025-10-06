@@ -49,7 +49,7 @@ ____
 
 ## **Архитектура**
 
-[arch.pdf](https://github.com/user-attachments/files/22725798/arch.pdf)
+<img width="840" height="1193" alt="arch" src="https://github.com/user-attachments/assets/08be53c0-4aac-43a0-b91d-b370c6aa6e7c" />
 
 ____
 
@@ -184,7 +184,7 @@ ____
 
 ### 7. Metabase
 
-[dashboard.pdf](https://github.com/user-attachments/files/22725815/dashboard.pdf)
+<img width="1511" height="1032" alt="dashboard" src="https://github.com/user-attachments/assets/3698b04d-e572-43d9-add3-7290d396f7c0" />
 
   **- Продажи по категориям**
   **- Ежедневная выручка**
