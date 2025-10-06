@@ -57,3 +57,5 @@ class OrderItemModel(BaseModel):
     product_id: int
     quantity: int
     price_usd: Optional[float] = None
+
+

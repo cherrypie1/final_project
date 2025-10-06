@@ -2,7 +2,7 @@ import json
 import random
 import socket
 import uuid
-from datetime import datetime, timezone
+from datetime import datetime, timezone, timedelta
 from typing import Dict, Any, Optional
 import requests
 from faker import Faker
@@ -22,7 +22,7 @@ WEATHER_API = "https://api.openweathermap.org/data/2.5/weather"
 WEATHER_API_KEY = "1c65bcbc810738b26c1cbf7ead663376"
 
 # API для поиска городов по координатам
-POSITIONSTACK_KEY = "7cb0abf85dc261e923fd4900bf0b3a5a"
+POSITIONSTACK_KEY = "99d229300e625e862cad04bb7a575b6f"
 POSITIONSTACK_URL = "https://api.positionstack.com/v1/reverse"
 
 PRODUCT_CATEGORIES = [
@@ -56,6 +56,10 @@ CAMPAIGNS = [
     {"id": "camp5", "name": "Winter Discount", "channel": "social", "base_cost": 600}
 ]
 
+ACTIVE_USERS = set()
+CHURNED_USERS = set()
+SESSION_ORDERS = {}
+
 
 def generate_campaign_event(user_id: int):
     # Генерирует событие взаимодействия с маркетинговой кампанией
@@ -77,10 +81,10 @@ def generate_order_status_event(order_id: str):
     # Генерирует событие смены статуса заказа
 
     statuses = [
-        ("pending", 0.5),  # 50% — заказ создан, ожидает оплаты/обработки
-        ("success", 0.3),  # 30% — успешно оплачен и обработан
-        ("failed", 0.15),  # 15% — оплата не прошла
-        ("cancelled", 0.05)  # 5% — отменён пользователем
+        ("pending", 0.15),  # 15% — заказ создан, ожидает оплаты/обработки
+        ("success", 0.75),  # 75% — успешно оплачен и обработан
+        ("failed", 0.07),  # 7% — оплата не прошла
+        ("cancelled", 0.03)  # 3% — отменён пользователем
     ]
 
     # Выбираем статус на основе весов
@@ -108,18 +112,17 @@ def is_kafka_available(broker: str = KAFKA_BROKER) -> bool:
         return False
 
 
-def get_currency_rates():
+def get_currency_rates(usd_price):
     # Получает актуальные курсы валют от API или генерирует случайные значения при ошибке
     try:
         r = requests.get(CURRENCY_API, timeout=5)
         data = r.json()
         rates = data.get("rates", {})
-        usd_price = round(random.uniform(1, 1000), 2)
         eur_price = round(usd_price * rates.get("EUR", 0), 2) if "EUR" in rates else None
         rub_price = round(usd_price * rates.get("RUB", 0), 2) if "RUB" in rates else None
-        return usd_price, eur_price, rub_price
+        return eur_price, rub_price
     except Exception:
-        return round(random.uniform(1, 1000), 2), None, None
+        return None, None
 
 
 def get_random_city(lat: float, lon: float, max_retries: int = 5) -> Dict[str, Optional[float]]:
@@ -231,9 +234,8 @@ def generate_order(order_id: str, user_id: int, product: Dict, quantity: int):
     return [order_msg, order_item_msg]
 
 
-def generate_event(user_id: int) -> Dict[str, Any]:
+def generate_event(user_id: int, session_id: str, existing_order_id: str = None) -> Dict[str, Any]:
     # Генерирует одно событие пользовательской активности с различными типами действий
-    session_id = str(uuid.uuid4())
     event_type = random.choice(["session_start", "session_end", "view_page", "view_product",
                                 "add_to_cart", "remove_from_cart", "purchase", "payment_success",
                                 "search", "filter", "login", "logout", "signup"])
@@ -241,11 +243,29 @@ def generate_event(user_id: int) -> Dict[str, Any]:
     lon = float(faker.longitude())
     geo = get_random_city(lat, lon)
     weather = get_weather(lat, lon)
-    usd, eur, rub = get_currency_rates()
 
     product = random.choice(PRODUCTS) if event_type in ("view_product", "add_to_cart", "purchase") else None
-    order_id = str(uuid.uuid4()) if event_type in ("add_to_cart", "purchase") else None
+
+    # ИСПРАВЛЕНИЕ: Используем одинаковый order_id для всех связанных событий
+    if event_type in ("add_to_cart", "purchase"):
+        if existing_order_id:
+            # Используем существующий order_id из сессии
+            order_id = existing_order_id
+        else:
+            # Создаем новый order_id и сохраняем для сессии
+            order_id = str(uuid.uuid4())
+            SESSION_ORDERS[session_id] = order_id
+    else:
+        order_id = None
+
     quantity = random.randint(1, 5) if event_type in ("add_to_cart", "purchase") else None
+
+    # ИСПРАВЛЕНИЕ: Определяем product_price правильно
+    if product is not None:
+        usd = product["price"]
+        eur, rub = get_currency_rates(usd)
+    else:
+        usd, eur, rub = None, None, None
 
     event = {
         "type": "event",
@@ -271,7 +291,65 @@ def generate_event(user_id: int) -> Dict[str, Any]:
     return event
 
 
-def produce_batch(send_count_users: int = 1, events_per_user: int = 1, broker: str = KAFKA_BROKER) -> int:
+def generate_signup(user_id: int):
+    # Регистрация нового пользователя
+    ACTIVE_USERS.add(user_id)
+    return {
+        "type": "signup",
+        "user_id": user_id,
+        "timestamp": datetime.now(timezone.utc).isoformat()
+    }
+
+
+def generate_session(user_id: int, events: list):
+    # Генерация сессии
+    session_id = str(uuid.uuid4())
+    start_ts = datetime.now(timezone.utc)
+
+    # начало
+    start_event = {
+        "type": "session_start",
+        "session_id": session_id,
+        "user_id": user_id,
+        "timestamp": start_ts.isoformat()
+    }
+
+    # конец
+    end_ts = start_ts + timedelta(seconds=random.randint(30, 600))
+    end_event = {
+        "type": "session_end",
+        "session_id": session_id,
+        "user_id": user_id,
+        "timestamp": end_ts.isoformat()
+    }
+
+    # Очищаем order_id для этой сессии после завершения
+    if session_id in SESSION_ORDERS:
+        del SESSION_ORDERS[session_id]
+
+    return [start_event] + events + [end_event]
+
+
+def maybe_churn_user(user_id: int, churn_rate: float = 0.05):
+    # Генерируем процент пользователей которые могут отвалится
+    if random.random() < churn_rate:
+        ACTIVE_USERS.discard(user_id)
+        CHURNED_USERS.add(user_id)
+
+
+def generate_order_with_campaign(user_id: int, product: dict, quantity: int, order_id: str):
+    # Заказ, который может быть связан с кампанией
+    base_order, order_item = generate_order(order_id, user_id, product, quantity)
+
+    # 30% заказов привязываем к кампании
+    if random.random() < 0.3:
+        campaign = random.choice(CAMPAIGNS)
+        base_order["campaign_id"] = campaign["id"]
+
+    return [base_order, order_item]
+
+
+def produce_batch(send_count_users: int = 5, events_per_user: int = 3, broker: str = KAFKA_BROKER) -> int:
     if not is_kafka_available(broker):
         raise RuntimeError(f"Kafka broker {broker} недоступен")
 
@@ -284,33 +362,71 @@ def produce_batch(send_count_users: int = 1, events_per_user: int = 1, broker: s
     sent = 0
     for _ in range(send_count_users):
         user_id = random.randint(1, 5000)
-        for msg in generate_user(user_id):
-            producer.send(TOPIC, value=msg)
-            sent += 1
 
-        # Генерация кампаний (20% вероятность)
-        if random.random() < 0.2:
+        # Если новый юзер → генерим signup
+        if user_id not in ACTIVE_USERS and user_id not in CHURNED_USERS:
+            signup_event = generate_signup(user_id)
+            producer.send(TOPIC, value=signup_event)
+            sent += 1
+            for msg in generate_user(user_id):
+                producer.send(TOPIC, value=msg)
+                sent += 1
+
+        # Если юзер ушёл → пропускаем
+        if user_id in CHURNED_USERS:
+            continue
+
+        # Генерируем события кампаний для активных пользователей
+        if random.random() < 0.3:  # 30% chance для кампании
             campaign_event = generate_campaign_event(user_id)
             producer.send(TOPIC, value=campaign_event)
             sent += 1
 
+        # Генерим сессию
+        session_events = []
+        session_id = str(uuid.uuid4())
+        current_order_id = None
+
         for _ in range(events_per_user):
-            ev = generate_event(user_id)
-            producer.send(TOPIC, value=ev)
+            product = None
+            if random.choice([True, False]):
+                product = random.choice(PRODUCTS)
+
+            # Генерируем событие с передачей session_id и текущего order_id
+            ev = generate_event(user_id, session_id, current_order_id)
+            session_events.append(ev)
+
+            # Обновляем текущий order_id если он был создан в событии
+            if ev["order_id"]:
+                current_order_id = ev["order_id"]
+
+
+            if ev["event_type"] == "purchase" and ev["order_id"] and product:
+                # Генерируем заказ
+                order_msgs = generate_order_with_campaign(user_id, product, ev["quantity"], ev["order_id"])
+                for order_msg in order_msgs:
+                    producer.send(TOPIC, value=order_msg)
+                    sent += 1
+
+
+                status_event = generate_order_status_event(ev["order_id"])
+                producer.send(TOPIC, value=status_event)
+                sent += 1
+
+
+                if "campaign_id" in order_msgs[0]:
+                    campaign_event = generate_campaign_event(user_id)
+                    campaign_event["campaign_id"] = order_msgs[0]["campaign_id"]
+                    campaign_event["action"] = "conversion"
+                    producer.send(TOPIC, value=campaign_event)
+                    sent += 1
+
+        # Добавляем начало и конец сессии
+        for msg in generate_session(user_id, session_events):
+            producer.send(TOPIC, value=msg)
             sent += 1
 
-            if ev["event_type"] == "purchase" and ev["order_id"]:
-                product = next((p for p in PRODUCTS if p["id"] == ev["product_id"]), None)
-                if product:
-                    order_msgs = generate_order(ev["order_id"], user_id, product, ev["quantity"])
-                    for order_msg in order_msgs:
-                        producer.send(TOPIC, value=order_msg)
-                        sent += 1
-
-                    if random.random() < 0.8:  # 80% заказов получают статус (не все сразу)
-                        status_event = generate_order_status_event(ev["order_id"])
-                        producer.send(TOPIC, value=status_event)
-                        sent += 1
+        maybe_churn_user(user_id)
 
     producer.flush()
     producer.close()
