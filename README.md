@@ -113,22 +113,22 @@ ____
 Создает пользователей, события, заказы, кампании
 Отправляет в Kafka (топик user_events)
 
-  *generator.py/def generate_campaign_event*
- Генерирует событие взаимодействия с маркетинговой кампанией
-  *generator.py/def get_currency_rates*
- Получает актуальные курсы валют от API
-  *generator.py/def get_random_city*
- Генерирует координаты и город по ним через PositionStack API
-  *generator.py/def get_weather*
- Получает данные о погоде по координатам через OpenWeatherMap API
-   *generator.py/def generate_user*
- Генерирует набор событий профиля пользователя
-  *generator.py/def generate_order*
- Генерирует события заказа и позиции заказа
-    *generator.py/def generate_event*
- Генерирует одно событие пользовательской активности
-  *generator.py/def produce_batch*
- Отправляет событие в Kafka
+*generator.py/def generate_campaign_event*
+Генерирует событие взаимодействия с маркетинговой кампанией
+*generator.py/def get_currency_rates*
+Получает актуальные курсы валют от API
+*generator.py/def get_random_city*
+Генерирует координаты и город по ним через PositionStack API
+*generator.py/def get_weather*
+Получает данные о погоде по координатам через OpenWeatherMap API
+*generator.py/def generate_user*
+Генерирует набор событий профиля пользователя
+*generator.py/def generate_order*
+Генерирует события заказа и позиции заказа
+*generator.py/def generate_event*
+Генерирует одно событие пользовательской активности
+*generator.py/def produce_batch*
+Отправляет событие в Kafka
 
 ### 2. DAG заполнение RAW слоя
 
@@ -139,10 +139,10 @@ ____
 Каждые 30 минут забирает данные из Kafka
 Сохраняет в RAW-слой PostgreSQL (сырые данные)
 
-  *dags_utils.py/def def check_kafka_message*
- Проверяет, есть ли хотя бы одно сообщение в Kafka
-  *generator.py/def consume_and_save*
- Читает сообщения из Kafka и кладёт их в соответствующие raw таблицы
+*dags_utils.py/def def check_kafka_message*
+Проверяет, есть ли хотя бы одно сообщение в Kafka
+*generator.py/def consume_and_save*
+Читает сообщения из Kafka и кладёт их в соответствующие raw таблицы
 
 ### 3. DAG заполнение DDS слоя
 
@@ -154,33 +154,33 @@ ____
 Валидация, очистка, нормализация данных
 Создает структурированные таблицы 
 
-  *raw_to_dds.py/def upsert_users_from_raw* 
- объединяет данные пользователей из разных источников
-  *raw_to_dds.py/def validate_and_load_events* 
- валидирует и загружает события
-  *raw_to_dds.py/def load_orders_from_events* 
- извлекает заказы из событий
-  *raw_to_dds.py/def load_products_and_categories* 
- обрабатывает продукты и категории
-  *raw_to_dds.py/def clean_and_validate* 
- утилита очистки и валидации данных
+*raw_to_dds.py/def upsert_users_from_raw* 
+объединяет данные пользователей из разных источников
+*raw_to_dds.py/def validate_and_load_events* 
+валидирует и загружает события
+*raw_to_dds.py/def load_orders_from_events* 
+извлекает заказы из событий
+*raw_to_dds.py/def load_products_and_categories* 
+обрабатывает продукты и категории
+*raw_to_dds.py/def clean_and_validate* 
+утилита очистки и валидации данных
 
 ### 4. DAG подготовки данных для витрин(Clickhouse)
 
 *dds_to_clickhouse*
 
-  *ch_utils.py/def transfer_table* 
- Переносит данные из PostgreSQL в ClickHouse, денормализация данных и последующая загрузка в витрины
+*ch_utils.py/def transfer_table* 
+Переносит данные из PostgreSQL в ClickHouse, денормализация данных и последующая загрузка в витрины
 
 ### 5. DAG инициализация DWH
 
-  *init_dwh*
- Выполняет SQL-скрипт init_schema.sql Создает все таблицы и схемы
+*init_dwh*
+Выполняет SQL-скрипт init_schema.sql Создает все таблицы и схемы
 
 ### 6. DAG инициализация Clickhouse
 
-  *init_clickhouse*
- Выполняет SQL-скрипт init_clickhouse.sql Создает все витрины
+*init_clickhouse*
+Выполняет SQL-скрипт init_clickhouse.sql Создает все витрины
 
 ### 7. Metabase
 
@@ -191,6 +191,12 @@ ____
   **- Активные пользователи**
   **- Устройства**
 
+<img width="1346" height="708" alt="dashboard2" src="https://github.com/user-attachments/assets/b5cc6a01-0b39-447e-8261-f34eac9f2c39" />
+
+  **- Выручка за 7 дней**
+  **- Количество заказов за 7 дней**
+  **- Топ странпо выручке за 7 дней**
+  **- Динамика выручки**
 
 ### 8. Запуск проекта
 
