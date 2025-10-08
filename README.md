@@ -173,14 +173,23 @@ ____
 Создает структурированные таблицы 
 
 *raw_to_dds.py/def upsert_users_from_raw* 
+
 объединяет данные пользователей из разных источников
+
 *raw_to_dds.py/def validate_and_load_events* 
+
 валидирует и загружает события
+
 *raw_to_dds.py/def load_orders_from_events* 
+
 извлекает заказы из событий
+
 *raw_to_dds.py/def load_products_and_categories* 
+
 обрабатывает продукты и категории
+
 *raw_to_dds.py/def clean_and_validate* 
+
 утилита очистки и валидации данных
 
 ### 4. DAG подготовки данных для витрин(Clickhouse)
@@ -188,16 +197,19 @@ ____
 *dds_to_clickhouse*
 
 *ch_utils.py/def transfer_table* 
+
 Переносит данные из PostgreSQL в ClickHouse, денормализация данных и последующая загрузка в витрины
 
 ### 5. DAG инициализация DWH
 
 *init_dwh*
+
 Выполняет SQL-скрипт init_schema.sql Создает все таблицы и схемы
 
 ### 6. DAG инициализация Clickhouse
 
 *init_clickhouse*
+
 Выполняет SQL-скрипт init_clickhouse.sql Создает все витрины
 
 ### 7. Metabase
