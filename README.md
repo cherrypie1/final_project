@@ -114,20 +114,35 @@ ____
 Отправляет в Kafka (топик user_events)
 
 *generator.py/def generate_campaign_event*
+
 Генерирует событие взаимодействия с маркетинговой кампанией
+
 *generator.py/def get_currency_rates*
+
 Получает актуальные курсы валют от API
+
 *generator.py/def get_random_city*
+
 Генерирует координаты и город по ним через PositionStack API
+
 *generator.py/def get_weather*
+
 Получает данные о погоде по координатам через OpenWeatherMap API
+
 *generator.py/def generate_user*
+
 Генерирует набор событий профиля пользователя
+
 *generator.py/def generate_order*
+
 Генерирует события заказа и позиции заказа
+
 *generator.py/def generate_event*
+
 Генерирует одно событие пользовательской активности
+
 *generator.py/def produce_batch*
+
 Отправляет событие в Kafka
 
 ### 2. DAG заполнение RAW слоя
@@ -140,8 +155,11 @@ ____
 Сохраняет в RAW-слой PostgreSQL (сырые данные)
 
 *dags_utils.py/def def check_kafka_message*
+
 Проверяет, есть ли хотя бы одно сообщение в Kafka
+
 *generator.py/def consume_and_save*
+
 Читает сообщения из Kafka и кладёт их в соответствующие raw таблицы
 
 ### 3. DAG заполнение DDS слоя
